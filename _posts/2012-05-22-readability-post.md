@@ -14,13 +14,13 @@ I bought two of these heat sticks from amazon last week for 6.78 each, and have 
 
 http://www.amazon.com/gp/aw/d/B00FO8FY68?pc_redir=1413886912&robot_redir=1
 
-Heating times:
+## Heating times:
 
 From 140F tap water to a rolling boil it took my stovetop about an hour and a half. With one heatstick, in additon to the stovetop, I went from 70F tap water to boil in 36 minutes! I also timed to strike temp, 70F to 170F in 16 minutes! That's faster than my propane burner was, and a lot cheaper.
 
 Using a single heat stick to speed up the heating times, I completed a brew day in 3.5 hours. A half hour of that was spent dealing with draining and sparging the sparge buckets then I had to boil down .4 gallons after the 60 minute boil and that added about 20 minutes. So using both heat sticks, no chill, and a no sparge full volume mash I might be able to complete my next brew day in under 3 hours.
 
-FIrst use and a word of warning
+## First use and a word of warning
 
 So there are two things to remember when dealing with these psuedo heat sticks.
 
@@ -37,9 +37,9 @@ So there are two things to remember when dealing with these psuedo heat sticks.
 
 One more thing, I would recommend measuring your boil off again with these, as you can create local hot spots in the water before a real boil is reached.
 
-Recommendation:
+## Recommendation:
 
-All in all I'm very happy I bought these up. However at the current price ($18~) I would be more inclined to build one instead.  At the original price they were amazing, cutting my time down significantly each brew day. Recommendation is to buy at least one of these once the price drops down again, if you use an amazon price tracking service it'll alert you when the price drops back down to a reasonable amount.
+All in all I'm very happy I bought these up. However at the current price ($18~) I would be more inclined to build one instead.  At the original price they were amazing, cutting my time down significantly each brew day for very little money. My current recommendation is to buy at least one of these once the price drops down again, if you use an amazon price tracking service it'll alert you when the price drops back down to a reasonable amount.
 
 https://thetracktor.com/detail/B00NJ156B0/
 
