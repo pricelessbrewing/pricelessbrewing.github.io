@@ -25,14 +25,14 @@ kramdown:
 
 
 # Site owner
-owner:
+owner: Priceless Brewing
   name: Mark
   avatar: bio-photo.jpg
   bio: "Home Brewer, Son of Liberty, and Physics Researcher. "
   email: Pricelessbrewing@gmail.com
   disqus-shortname: 
-  twitter: #priceless_Mark
-  facebook: #username
+  twitter: priceless_Mark
+  facebook: Mark.Price.543
   google:
     plus: #username
     analytics: 
