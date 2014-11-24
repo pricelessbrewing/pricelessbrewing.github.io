@@ -1,44 +1,46 @@
 ---
 layout: post
-title: "Testing Readability with a Bunch of Text"
-excerpt: "A ton of text to test readability."
-tags: [sample post, readability, test]
+title: Cheap 1350W Amazon Heat Stick Review
+excerpt: A ton of text to test readability.
+tags: 
+  - sample post
+  - readability
+  - test
 comments: true
+published: true
 ---
 
-Portland in shoreditch Vice, labore typewriter pariatur hoodie fap sartorial Austin. Pinterest literally occupy Schlitz forage. Odio ad blue bottle vinyl, 90's narwhal commodo bitters pour-over nostrud. Ugh est hashtag in, fingerstache adipisicing laboris esse Pinterest shabby chic Portland. Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney's. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.
+I bought two of these heat sticks from amazon last week for 6.78 each, and have cut over 45 minutes off my brew day when using just one of them. About an hour cut off of my brew day using both. This is mostly due to a stove top that while able to boil 6 gallons, it takes far too long to get there on it's own.
 
-Vero laborum commodo occupy. Semiotics voluptate mumblecore pug. Cosby sweater ullamco quinoa ennui assumenda, sapiente occupy delectus lo-fi. Ea fashion axe Marfa cillum aliquip. Retro Bushwick keytar cliche. Before they sold out sustainable gastropub Marfa readymade, ethical Williamsburg skateboard brunch qui consectetur gentrify semiotics. Mustache cillum irony, fingerstache magna pour-over keffiyeh tousled selfies.
+http://www.amazon.com/gp/aw/d/B00FO8FY68?pc_redir=1413886912&robot_redir=1
 
-## Cupidatat 90's lo-fi authentic try-hard
+Heating times:
 
-In pug Portland incididunt mlkshk put a bird on it vinyl quinoa. Terry Richardson shabby chic +1, scenester Tonx excepteur tempor fugiat voluptate fingerstache aliquip nisi next level. Farm-to-table hashtag Truffaut, Odd Future ex meggings gentrify single-origin coffee try-hard 90's. 
+From 140F tap water to a rolling boil it took my stovetop about an hour and a half. With one heatstick, in additon to the stovetop, I went from 70F tap water to boil in 36 minutes! I also timed to strike temp, 70F to 170F in 16 minutes! That's faster than my propane burner was, and a lot cheaper.
 
-* Sartorial hoodie 
-* Labore viral forage
-* Tote bag selvage 
-* DIY exercitation et id ugh tumblr church-key
+Using a single heat stick to speed up the heating times, I completed a brew day in 3.5 hours. A half hour of that was spent dealing with draining and sparging the sparge buckets then I had to boil down .4 gallons after the 60 minute boil and that added about 20 minutes. So using both heat sticks, no chill, and a no sparge full volume mash I might be able to complete my next brew day in under 3 hours.
 
-Incididunt umami sriracha, ethical fugiat VHS ex assumenda yr irure direct trade. Marfa Truffaut bicycle rights, kitsch placeat Etsy kogi asymmetrical. Beard locavore flexitarian, kitsch photo booth hoodie plaid ethical readymade leggings yr.
+FIrst use and a word of warning
 
-Aesthetic odio dolore, meggings disrupt qui readymade stumptown brunch Terry Richardson pour-over gluten-free. Banksy american apparel in selfies, biodiesel flexitarian organic meh wolf quinoa gentrify banjo kogi. Readymade tofu ex, scenester dolor umami fingerstache occaecat fashion axe Carles jean shorts minim. Keffiyeh fashion axe nisi Godard mlkshk dolore. Lomo you probably haven't heard of them eu non, Odd Future Truffaut pug keytar meggings McSweeney's Pinterest cred. Etsy literally aute esse, eu bicycle rights qui meggings fanny pack. Gentrify leggings pug flannel duis.
+So there are two things to remember when dealing with these psuedo heat sticks.
 
-## Forage occaecat cardigan qui
+1) These must ALWAYS be used on a GFCI protected circuit, one per heat stick. NO doubling up, no using with appliances. These must be dedicated and separate all by themselves. Moreover, 1 outlet does NOT mean one circuit.
 
-Fashion axe hella gastropub lo-fi kogi 90's aliquip +1 veniam delectus tousled. Cred sriracha locavore gastropub kale chips, iPhone mollit sartorial. Anim dolore 8-bit, pork belly dolor photo booth aute flannel small batch. Dolor disrupt ennui, tattooed whatever salvia Banksy sartorial roof party selfies raw denim sint meh pour-over. Ennui eu cardigan sint, gentrify iPhone cornhole. 
+2) Submerge before plugging in, and do not remove from the liquid without unplugging and waiting a bit to allow the  stick to cool. Failure to do either of these things risks failure and breaking the heating elements one time fuse.
 
-> Whatever velit occaecat quis deserunt gastropub, leggings elit tousled roof party 3 wolf moon kogi pug blue bottle ea. Fashion axe shabby chic Austin quinoa pickled laborum bitters next level, disrupt deep v accusamus non fingerstache.
+20141104_121816
+    The top is slightly gray, this is what it should look like after boiling in water for an hour. The bottom has a much darker color, I had to boil the wort down a little after the typical 60 minutes as I was .4 gallons too high :(
 
-Tote bag asymmetrical elit sunt. Occaecat authentic Marfa, hella McSweeney's next level irure veniam master cleanse. Sed hoodie letterpress artisan wolf leggings, 3 wolf moon commodo ullamco. Anim occupy ea labore Terry Richardson. Tofu ex master cleanse in whatever pitchfork banh mi, occupy fugiat fanny pack Austin authentic. Magna fugiat 3 wolf moon, labore McSweeney's sustainable vero consectetur. Gluten-free disrupt enim, aesthetic fugiat jean shorts trust fund keffiyeh magna try-hard.
+3) Run it in water for an hour, and allow to cool. The fake chrome will burn off, exposing the aluminum heating element and developing a layer of passive aluminum oxide. When you pull it out the stick should be a dark gray.
 
-## Hoodie Duis
+4) Do not expose to cleaning, or sanitizing agents. You don't need to, and it'll ruin the passive patina layer on the aluminum. No PBW, oxyclean, starsan, iodophor, bleach etc. Just wash it off when you're done and dry off. It's used in the pre-boil side anyway so no need to worry about it.
 
-Actually salvia consectetur, hoodie duis lomo YOLO sunt sriracha. Aute pop-up brunch farm-to-table odio, salvia irure occaecat. Sriracha small batch literally skateboard. Echo Park nihil hoodie, aliquip forage artisan laboris. Trust fund reprehenderit nulla locavore. Stumptown raw denim kitsch, keffiyeh nulla twee dreamcatcher fanny pack ullamco 90's pop-up est culpa farm-to-table. Selfies 8-bit do pug odio.
+One more thing, I would recommend measuring your boil off again with these, as you can create local hot spots in the water before a real boil is reached.
 
-### Thundercats Ho!
+Recommendation:
 
-Fingerstache thundercats Williamsburg, deep v scenester Banksy ennui vinyl selfies mollit biodiesel duis odio pop-up. Banksy 3 wolf moon try-hard, sapiente enim stumptown deep v ad letterpress. Squid beard brunch, exercitation raw denim yr sint direct trade. Raw denim narwhal id, flannel DIY McSweeney's seitan. Letterpress artisan bespoke accusamus, meggings laboris consequat Truffaut qui in seitan. Sustainable cornhole Schlitz, twee Cosby sweater banh mi deep v forage letterpress flannel whatever keffiyeh. Sartorial cred irure, semiotics ethical sed blue bottle nihil letterpress.
+All in all I'm very happy I bought these up. However at the current price ($18~) I would be more inclined to build one instead.  At the original price they were amazing, cutting my time down significantly each brew day. Recommendation is to buy at least one of these once the price drops down again, if you use an amazon price tracking service it'll alert you when the price drops back down to a reasonable amount.
 
-Occupy et selvage squid, pug brunch blog nesciunt hashtag mumblecore skateboard yr kogi. Ugh small batch swag four loko. Fap post-ironic qui tote bag farm-to-table american apparel scenester keffiyeh vero, swag non pour-over gentrify authentic pitchfork. Schlitz scenester lo-fi voluptate, tote bag irony bicycle rights pariatur vero Vice freegan wayfarers exercitation nisi shoreditch. Chambray tofu vero sed. Street art swag literally leggings, Cosby sweater mixtape PBR lomo Banksy non in pitchfork ennui McSweeney's selfies. Odd Future Banksy non authentic.
+https://thetracktor.com/detail/B00NJ156B0/
 
-Aliquip enim artisan dolor post-ironic. Pug tote bag Marfa, deserunt pour-over Portland wolf eu odio intelligentsia american apparel ugh ea. Sunt viral et, 3 wolf moon gastropub pug id. Id fashion axe est typewriter, mlkshk Portland art party aute brunch. Sint pork belly Cosby sweater, deep v mumblecore kitsch american apparel. Try-hard direct trade tumblr sint skateboard. Adipisicing bitters excepteur biodiesel, pickled gastropub aute veniam.
+https://thetracktor.com/detail/B00FO8FY68/
