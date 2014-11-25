@@ -1,6 +1,7 @@
 ---
 layout: page
 title: How I do things
+author: pricelessbrewing
 excerpt: "My Methods."
 ---
 

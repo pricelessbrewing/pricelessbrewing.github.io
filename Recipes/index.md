@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Recipes
+author: pricelessbrewing
 excerpt: "Would you like to kill some evil today?"
 ---
 

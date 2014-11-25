@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Sample Articles
+author: pricelessbrewing
 excerpt: "An archive of articles sorted by date."
 ---
 
