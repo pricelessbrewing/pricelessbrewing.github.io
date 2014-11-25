@@ -1,11 +1,9 @@
 # Site wide configuration
 
-title:
-description:
-logo: # 120x120 px default image used for Twitter summary card
-teaser: # 400x250 px default teaser image used in image archive grid
-locale:
-url:
+title:PricelessBrewing
+description:"Where I brew, and you read about it."
+locale:en_US
+url:""
 
 # Jekyll configuration
 
@@ -14,20 +12,38 @@ sass:
     style: compressed
 permalink: /:categories/:title/
 markdown: kramdown
-highlighter: pygments
 gems:
   - jekyll-sitemap
 
 
 # Site owner
-owner:
-  name:
-  email:
-  twitter:
-  google:
-    ad-client: 
-    ad-slot: 
-  bio: 
+owner: Priceless Brewing
+ name:Mark
+ avatar:images/bio-photo.jpg
+ bio:"Homebrewer"
+ email:Pricelessbrewing@gmaii.com
+ #disqus-shortname: 
+ #twitter: #username
+ #facebook: #username
+ #google:
+ #plus: #username
+ #analytics: 
+ #verify: 
+ #ad-client: 
+ #ad-slot: 
+ #bing-verify: 
+ #github: #username
+ #stackoverflow: #http://stackoverflow.com/users/123456/username
+ #linkedin: #username
+ #instagram: #username
+ #lastfm: #username
+ #tumblr: #username
+ #pinterest: #username
+ #foursquare: #username
+ #steam: #username
+ #dribbble: #username
+ #youtube: #username
+ #soundcloud: #username
   avatar: bio-photo.jpg # 160x160 px image for author byline
 disqus-shortname:
 
