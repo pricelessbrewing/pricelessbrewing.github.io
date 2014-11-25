@@ -2,7 +2,7 @@
 layout: post
 title: "Yeast Harvesting"
 modified:
-categories: Methods
+categories: methods
 excerpt:
 tags: []
 image:
@@ -10,3 +10,4 @@ image:
 date: 2014-11-24T22:05:59-05:00
 ---
 
+Placeholder for harvesting yeast from yeast starters.

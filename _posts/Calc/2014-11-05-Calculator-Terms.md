@@ -2,9 +2,9 @@
 layout: post
 title: Explanation of Calculator Variables
 excerpt: A ton of text to test readability.
-category: Calc
+categories: calc
 tags: 
-  - [Calc]
+  - [calc]
 comments: true
 published: true
 ---

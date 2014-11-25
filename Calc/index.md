@@ -1,14 +1,11 @@
 ---
-layout: archive
-title: "Calculator"
-date: 2014-06-02T15:05:16-04:00
-modified: 2014-06-02T15:05:16-04:00
-excerpt: "All things related to my Calculator."
+layout: page
+title: Sample Articles
+excerpt: "An archive of articles sorted by date."
 ---
 
-<div class="tiles">
-{% for post in site.categories.Calc %}
-  {% include post-grid.html %}
+<ul class="post-list">
+{% for post in site.categories.calc %} 
+  <li><article><a href="{{ site.url }}{{ post.url }}">{{ post.title }} <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></span></a></article></li>
 {% endfor %}
-</div><!-- /.tiles -->
-
+</ul>

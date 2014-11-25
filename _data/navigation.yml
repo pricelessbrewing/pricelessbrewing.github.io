@@ -1,9 +1,7 @@
 # Site navigation links
 
-- title: Calculator
-  url: /posts/Calc/
  
-- title: Calculators
+- title: Mash Calculators
   url: /Calc/
 
 - title: Brewing Posts
@@ -16,7 +14,7 @@
   url: /Methods/
     
 - title: ExBeeriments
-  url: /ExBeeriments/
+  url: /exbeeriments/
 
 - title: About
   url: /about/

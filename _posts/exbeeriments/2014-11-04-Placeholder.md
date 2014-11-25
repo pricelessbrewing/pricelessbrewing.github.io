@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Oatmeal Stout"
+title: "Exbeeriment 1"
 modified:
-categories: recipes
+categories: exbeeriments
 excerpt:
 tags: []
 image:
