@@ -1,10 +1,6 @@
 # Site wide configuration
 
 title: Priceless Brewing
-title: PricelessBrewing
-description: "This is where I Brew."
-logo: site-logo.png
-teaser: default-teaser.png
 locale: en_US
 url: ""
 
@@ -30,11 +26,12 @@ kramdown:
 # Site owner
 owner: Priceless Brewing
  name:Mark
-  avatar: bio-photo.jpg # 160x160 px image for author byline bio: "Homebrewer"
- email: Pricelessbrewing@gmaii.com
+ avatar:images/bio-photo.jpg
+ bio:"Homebrewer"
+ email:Pricelessbrewing@gmaii.com
  #disqus-shortname: 
- twitter: priceless_mark
- facebook: mark.price.543
+ #twitter: #username
+ #facebook: #username
  #google:
  #plus: #username
  #analytics: 
@@ -42,7 +39,7 @@ owner: Priceless Brewing
  #ad-client: 
  #ad-slot: 
  #bing-verify: 
- github: pricelessbrewing
+ #github: #username
  #stackoverflow: #http://stackoverflow.com/users/123456/username
  #linkedin: #username
  #instagram: #username
