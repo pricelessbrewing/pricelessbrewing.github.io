@@ -14,7 +14,7 @@ excerpt: "All things related to my Calculator."
 ---
 
 <div class="tiles">
-{% for post in site.categories.calc %}
+{% for post in site.categories.Calc %}
   {% include post-grid.html %}
 {% endfor %}
 </div><!-- /.tiles -->
