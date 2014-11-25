@@ -1,13 +1,22 @@
 # Site navigation links
 
-- title: About
+- title: Calculator
+  url: /posts/Calculator
+  
+title: How I brew
+  url: /posts/Methods
+
+title: Recipes
+  url: /posts/Calculator
+  
+title: ExBeeriments
+  url: /posts/ExBeeriments
+  
+title: Brewing Tips
+ url: /posts/Tips
+
+title: About
   url: /about/
-
-- title: Sample Posts
-  url: /posts/
-
-- title: Theme Setup
-  url: /theme-setup/
-
-- title: Made Mistakes
-  url: http://mademistakes.com
+title: Contact
+  url: /posts/Contact
+  
