@@ -1,22 +1,19 @@
 # Site navigation links
 
 - title: Calculator
-  url: /posts/Calculator
-  
-title: How I brew
-  url: /posts/Methods
+  url: /Calc/
 
-title: Recipes
-  url: /posts/Calculator
-  
-title: ExBeeriments
-  url: /posts/ExBeeriments
-  
-title: Brewing Tips
- url: /posts/Tips
+- title: Brewing Posts
+  url: /posts/
 
-title: About
+- title: Recipes
+  url: /Recipes/
+  
+- title: Methods
+  url: /Methods/
+
+- title: About
   url: /about/
-title: Contact
-  url: /posts/Contact
   
+- title: Contact
+  url: /Contact/
