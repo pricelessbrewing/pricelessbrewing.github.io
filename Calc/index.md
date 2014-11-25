@@ -2,15 +2,8 @@
 layout: archive
 title: "Calculator"
 date: 2014-06-02T15:05:16-04:00
-modified:
-<<<<<<< HEAD
-excerpt:
-tags: [Calc]
-image:
-  feature:
-=======
+modified: 2014-06-02T15:05:16-04:00
 excerpt: "All things related to my Calculator."
->>>>>>> origin/master
 ---
 
 <div class="tiles">

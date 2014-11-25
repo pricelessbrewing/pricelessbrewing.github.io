@@ -2,8 +2,9 @@
 layout: post
 title: Explanation of Calculator Variables
 excerpt: A ton of text to test readability.
+category: Calc
 tags: 
-  - Calc
+  - [Calc]
 comments: true
 published: true
 ---
@@ -13,7 +14,6 @@ Going from Top to bottom, and left to right.
 
 Default BIAB values for my equipment.
     Default BIAB values for my equipment.
-
  
 ## Enter your details
 
