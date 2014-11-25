@@ -1,51 +1,61 @@
 # Site wide configuration
 
-title:PricelessBrewing
-description:"Where I brew, and you read about it."
-locale:en_US
-url:""
+title: PricelessBrewing
+description: "This is where I Brew."
+logo: site-logo.png
+teaser: default-teaser.png
+locale: en_US
+url: ""
+
 
 # Jekyll configuration
 
+permalink: /:categories/:title/
 sass:
     sass_dir: _sass
     style: compressed
-permalink: /:categories/:title/
 markdown: kramdown
+highlighter: pygments
 gems:
   - jekyll-sitemap
+exclude: ["lib", "config.rb", ".sass-cache", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "*.sublime-project", "*.sublime-workspace", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "node_modules", "Gruntfile.js", "package.json"]
+
+
+# Plugin: jekyll-assets
+
+assets:
+  sources:
+    - _assets/javascripts
+    - _assets/stylesheets
+  js_compressor: uglifier
+  css_compressor: sass
+  cachebust: hard
+  cache: true
+  debug: false
+  version: 1
 
 
 # Site owner
-owner: Priceless Brewing
- name:Mark
- avatar:images/bio-photo.jpg
- bio:"Homebrewer"
- email:Pricelessbrewing@gmaii.com
- #disqus-shortname: 
- #twitter: #username
- #facebook: #username
- #google:
- #plus: #username
- #analytics: 
- #verify: 
- #ad-client: 
- #ad-slot: 
- #bing-verify: 
- #github: #username
- #stackoverflow: #http://stackoverflow.com/users/123456/username
- #linkedin: #username
- #instagram: #username
- #lastfm: #username
- #tumblr: #username
- #pinterest: #username
- #foursquare: #username
- #steam: #username
- #dribbble: #username
- #youtube: #username
- #soundcloud: #username
+
+owner:
+  name: PricelessBrewing
+  email: pricelessbrewing@gmail.com
+  twitter: Priceless_mark
+  facebook: mark.price.543
+  instagram: 
+  tumblr:
+  google:
+    ad-client: 
+    ad-slot: 
+    analytics: 
+    plus: 
+    verify: 
+  bing:   
+    verify: 
+  alexa:
+    verify: 
+  yandex:
+    verify: 
+  bio: "Just another Homebrew trying to spread the word"
   avatar: bio-photo.jpg # 160x160 px image for author byline
-disqus-shortname:
-
-
-exclude: ["lib", "config.rb", ".sass-cache", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "*.sublime-project", "*.sublime-workspace", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "node_modules", "Gruntfile.js", "package.json"]
+disqus-shortname: 
