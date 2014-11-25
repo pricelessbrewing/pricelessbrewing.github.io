@@ -1,6 +1,9 @@
 # Site navigation links
 
 - title: Calculator
+  url: /posts/Calc/
+ 
+- title: Calculators
   url: /Calc/
 
 - title: Brewing Posts

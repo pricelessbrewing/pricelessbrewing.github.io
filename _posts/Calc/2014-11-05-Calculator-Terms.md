@@ -1,11 +1,9 @@
 ---
 layout: post
-title: Cheap 1350W Amazon Heat Stick Review
+title: Explanation of Calculator Variables
 excerpt: A ton of text to test readability.
 tags: 
-  - sample post
-  - readability
-  - test
+  - Calc
 comments: true
 published: true
 ---
