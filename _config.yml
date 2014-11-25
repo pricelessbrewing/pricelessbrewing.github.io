@@ -1,8 +1,8 @@
 # Site wide configuration
 
-title:Priceless Brewing
-locale:en_US
-url:""
+title: Priceless Brewing
+locale: en_US
+url: ""
 
 
 # Jekyll configuration
@@ -14,7 +14,7 @@ sass:
   sass_dir: _sass
   style: compressed
 gems:
-  - jekyll-sitemap
+  -jekyll -sitemap
 
 kramdown:
   auto_ids: true
@@ -26,13 +26,13 @@ kramdown:
 
 # Site owner
 owner: Priceless Brewing
-name: "Mark"
- avatar: bio-photo.jpg
- bio: "Home Brewer, Son of Liberty, and Physics Researcher. "
- email: Pricelessbrewing@gmail.com
- disqus-shortname: 
- twitter: priceless_Mark
- facebook: Mark.Price.543
+  name: Your Name
+  avatar: bio-photo.jpg
+  bio: "Describe your self."
+  email: 
+  disqus-shortname: 
+  twitter: #username
+  facebook: #username
   google:
     plus: #username
     analytics: 
@@ -40,7 +40,7 @@ name: "Mark"
     ad-client: 
     ad-slot: 
   bing-verify: 
-  github: pricelessbrewing
+  github: #username
   stackoverflow: #http://stackoverflow.com/users/123456/username
   linkedin: #username
   instagram: #username
@@ -52,8 +52,6 @@ name: "Mark"
   dribbble: #username
   youtube: #username
   soundcloud: #username
-  require 'rbconfig'
-gem 'wdm', '~> 0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin|mingw/i
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
