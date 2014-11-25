@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Calculator Re-Release"
+author: pricelessbrewing
 modified:
 categories: calc
 excerpt:

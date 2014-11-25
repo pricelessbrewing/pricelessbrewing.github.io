@@ -2,6 +2,7 @@
 layout: post
 title: Explanation of Calculator Variables
 excerpt: A ton of text to test readability.
+author: pricelessbrewing
 categories: calc
 tags: 
   - [calc]

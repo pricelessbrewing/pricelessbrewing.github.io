@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Oatmeal Stout"
+author: pricelessbrewing
 modified:
 categories: recipes
 excerpt:

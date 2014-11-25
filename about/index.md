@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About the Brewer
+author: pricelessbrewing
 tags: 
   - about
   - Jekyll

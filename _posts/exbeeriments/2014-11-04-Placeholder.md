@@ -3,6 +3,7 @@ layout: post
 title: "Exbeeriment 1"
 modified:
 categories: exbeeriments
+author: pricelessbrewing
 excerpt:
 tags: []
 image:
