@@ -41,50 +41,50 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>/about/</loc>
-    <lastmod>2014-11-25T13:54:08-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>/Contact/</loc>
-    <lastmod>2014-11-25T13:54:08-05:00</lastmod>
+    <loc>/exbeeriments/</loc>
+    <lastmod>2014-11-25T14:19:16-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>/Calc/</loc>
-    <lastmod>2014-11-25T13:54:08-05:00</lastmod>
+    <lastmod>2014-11-25T14:19:16-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/Methods/</loc>
-    <lastmod>2014-11-25T13:54:08-05:00</lastmod>
+    <loc>/Contact/</loc>
+    <lastmod>2014-11-25T14:19:16-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>/posts/</loc>
-    <lastmod>2014-11-25T13:54:08-05:00</lastmod>
+    <lastmod>2014-11-25T14:19:16-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>/Methods/</loc>
+    <lastmod>2014-11-25T14:19:16-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>/Recipes/</loc>
-    <lastmod>2014-11-25T13:54:08-05:00</lastmod>
+    <lastmod>2014-11-25T14:19:16-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>/</loc>
-    <lastmod>2014-11-25T13:54:08-05:00</lastmod>
+    <lastmod>2014-11-25T14:19:16-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>/exbeeriments/</loc>
-    <lastmod>2014-11-25T13:54:08-05:00</lastmod>
+    <loc>/about/</loc>
+    <lastmod>2014-11-25T14:19:16-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
