@@ -30,8 +30,7 @@ kramdown:
 # Site owner
 owner: Priceless Brewing
  name:Mark
- avatar: bio-photo.jpg
- bio: "Homebrewer"
+  avatar: bio-photo.jpg # 160x160 px image for author byline bio: "Homebrewer"
  email: Pricelessbrewing@gmaii.com
  #disqus-shortname: 
  twitter: priceless_mark
