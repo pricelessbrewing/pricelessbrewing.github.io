@@ -1,12 +1,20 @@
 # Site wide configuration
 
+<<<<<<< HEAD
 title: Priceless Brewing
+=======
+title: PricelessBrewing
+description: "This is where I Brew."
+logo: site-logo.png
+teaser: default-teaser.png
+>>>>>>> 45804a0c385940eb81cd0f9cc4e7afe4b5d6f9ed
 locale: en_US
 url: ""
 
 
 # Jekyll configuration
 
+<<<<<<< HEAD
 permalink:   /:categories/:title/
 markdown:    kramdown
 sass:
@@ -54,3 +62,54 @@ owner: Priceless Brewing
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
+=======
+permalink: /:categories/:title/
+sass:
+    sass_dir: _sass
+    style: compressed
+markdown: kramdown
+highlighter: pygments
+gems:
+  - jekyll-sitemap
+exclude: ["lib", "config.rb", ".sass-cache", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "*.sublime-project", "*.sublime-workspace", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "node_modules", "Gruntfile.js", "package.json"]
+
+
+# Plugin: jekyll-assets
+
+assets:
+  sources:
+    - _assets/javascripts
+    - _assets/stylesheets
+  js_compressor: uglifier
+  css_compressor: sass
+  cachebust: hard
+  cache: true
+  debug: false
+  version: 1
+
+
+# Site owner
+
+owner:
+  name: PricelessBrewing
+  email: pricelessbrewing@gmail.com
+  twitter: Priceless_mark
+  facebook: mark.price.543
+  instagram: 
+  tumblr:
+  google:
+    ad-client: 
+    ad-slot: 
+    analytics: 
+    plus: 
+    verify: 
+  bing:   
+    verify: 
+  alexa:
+    verify: 
+  yandex:
+    verify: 
+  bio: "Just another Homebrew trying to spread the word"
+  avatar: bio-photo.jpg # 160x160 px image for author byline
+disqus-shortname: 
+>>>>>>> 45804a0c385940eb81cd0f9cc4e7afe4b5d6f9ed

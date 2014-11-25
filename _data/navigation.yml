@@ -1,5 +1,6 @@
 # Site navigation links
 
+<<<<<<< HEAD
  
 - title: Mash Calculators
   url: /Calc/
@@ -21,3 +22,9 @@
   
 - title: Contact
   url: /Contact/
+=======
+- title:
+  url:
+  excerpt:
+  image:
+>>>>>>> 45804a0c385940eb81cd0f9cc4e7afe4b5d6f9ed

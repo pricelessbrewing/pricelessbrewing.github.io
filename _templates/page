@@ -4,7 +4,15 @@ title: {{ title }}
 date: {{ date }}
 modified:
 excerpt:
+<<<<<<< HEAD
 tags: []
 image:
   feature: 
+=======
+image:
+  feature:
+  teaser:
+  thumb:
+ads: false  
+>>>>>>> 45804a0c385940eb81cd0f9cc4e7afe4b5d6f9ed
 ---

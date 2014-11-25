@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+<title type="text">Priceless Brewing</title>
+<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
+<link rel="self" type="application/atom+xml" href="/feed.xml" />
+<link rel="alternate" type="text/html" href="" />
+<updated>2014-11-25T13:54:08-05:00</updated>
+<id>/</id>
+<author>
+  <name></name>
+  <uri>/</uri>
+  
+</author>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[Calculator Re-Release]]></title>
+  <link rel="alternate" type="text/html" href="/calc/calculator/" />
+  <id>/calc/calculator</id>
+  <published>2014-11-25T12:53:43-05:00</published>
+  <updated>2014-11-25T12:53:43-05:00</updated>
+  <author>
+    <name></name>
+    <uri></uri>
+    
+  </author>
+  <content type="html">&lt;p&gt;So I made a pretty useful BIAB calculator based on the spreadsheet on Biabbrewing.com
+and with his consent. If you’re on reddit or HBT, you’ve probably seen it come up a pretty
+frequently. However I’m looking to merge my blog and my calculator, so it’ll now be located here. &lt;/p&gt;
+
+&lt;p&gt;Variables are defined in another post http://127.0.0.1:4000/calc/Calculator-Terms/&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/calc/calculator/&quot;&gt;Calculator Re-Release&lt;/a&gt; was originally published by  at &lt;a href=&quot;&quot;&gt;Priceless Brewing&lt;/a&gt; on November 25, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[Saving Yeast Cake]]></title>
+  <link rel="alternate" type="text/html" href="/methods/saving-yeast-cake/" />
+  <id>/methods/saving-yeast-cake</id>
+  <published>2014-11-24T22:06:12-05:00</published>
+  <updated>2014-11-24T22:06:12-05:00</updated>
+  <author>
+    <name></name>
+    <uri></uri>
+    
+  </author>
+  <content type="html">&lt;p&gt;Placeholder for how I save my yeast cakes, although I much prefer to harvest from starters. &lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/methods/saving-yeast-cake/&quot;&gt;Saving Yeast Cake&lt;/a&gt; was originally published by  at &lt;a href=&quot;&quot;&gt;Priceless Brewing&lt;/a&gt; on November 24, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[Yeast Harvesting]]></title>
+  <link rel="alternate" type="text/html" href="/methods/yeast-harvesting/" />
+  <id>/methods/yeast-harvesting</id>
+  <published>2014-11-24T22:05:59-05:00</published>
+  <updated>2014-11-24T22:05:59-05:00</updated>
+  <author>
+    <name></name>
+    <uri></uri>
+    
+  </author>
+  <content type="html">&lt;p&gt;Placeholder for harvesting yeast from yeast starters.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/methods/yeast-harvesting/&quot;&gt;Yeast Harvesting&lt;/a&gt; was originally published by  at &lt;a href=&quot;&quot;&gt;Priceless Brewing&lt;/a&gt; on November 24, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[Yeast Starter]]></title>
+  <link rel="alternate" type="text/html" href="/methods/yeast-starter/" />
+  <id>/methods/yeast-starter</id>
+  <published>2014-11-24T22:05:45-05:00</published>
+  <updated>2014-11-24T22:05:45-05:00</updated>
+  <author>
+    <name></name>
+    <uri></uri>
+    
+  </author>
+  <content type="html">&lt;p&gt;Placeholder for how I make yeast starters, starting with Homebrewdads wonderful yeast calculator. &lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/methods/yeast-starter/&quot;&gt;Yeast Starter&lt;/a&gt; was originally published by  at &lt;a href=&quot;&quot;&gt;Priceless Brewing&lt;/a&gt; on November 24, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[Oatmeal Stout]]></title>
+  <link rel="alternate" type="text/html" href="/recipes/oatmeal-stout/" />
+  <id>/recipes/oatmeal-stout</id>
+  <published>2014-11-24T22:05:22-05:00</published>
+  <updated>2014-11-24T22:05:22-05:00</updated>
+  <author>
+    <name></name>
+    <uri></uri>
+    
+  </author>
+  <content type="html">&lt;p&gt;To be announced later.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/recipes/oatmeal-stout/&quot;&gt;Oatmeal Stout&lt;/a&gt; was originally published by  at &lt;a href=&quot;&quot;&gt;Priceless Brewing&lt;/a&gt; on November 24, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[Exbeeriment 1]]></title>
+  <link rel="alternate" type="text/html" href="/exbeeriments/Placeholder/" />
+  <id>/exbeeriments/Placeholder</id>
+  <published>2014-11-24T22:05:22-05:00</published>
+  <updated>2014-11-24T22:05:22-05:00</updated>
+  <author>
+    <name></name>
+    <uri></uri>
+    
+  </author>
+  <content type="html">&lt;p&gt;To be announced later.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/exbeeriments/Placeholder/&quot;&gt;Exbeeriment 1&lt;/a&gt; was originally published by  at &lt;a href=&quot;&quot;&gt;Priceless Brewing&lt;/a&gt; on November 24, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[Explanation of Calculator Variables]]></title>
+  <link rel="alternate" type="text/html" href="/calc/Calculator-Terms/" />
+  <id>/calc/Calculator-Terms</id>
+  <published>2014-11-05T00:00:00-05:00</published>
+  <updated>2014-11-05T00:00:00-05:00</updated>
+  <author>
+    <name></name>
+    <uri></uri>
+    
+  </author>
+  <content type="html">&lt;p&gt;Hoping to make this easier for new brewers, and wanted to clarify a couple things about my Calculator which can be found at the top of this page.&lt;/p&gt;
+
+&lt;p&gt;Going from Top to bottom, and left to right.&lt;/p&gt;
+
+&lt;p&gt;Default BIAB values for my equipment.
+    Default BIAB values for my equipment.&lt;/p&gt;
+
+&lt;h2 id=&quot;enter-your-details&quot;&gt;Enter your details&lt;/h2&gt;
+
+&lt;h2 id=&quot;batch-size-gallons&quot;&gt;Batch Size Gallons&lt;/h2&gt;
+&lt;p&gt;This is the volume into the fermenter, and will equal Post boil volume once chilled.&lt;/p&gt;
+
+&lt;h2 id=&quot;grain-bill-in-lb&quot;&gt;Grain Bill in Lb&lt;/h2&gt;
+
+&lt;p&gt;Total weight of all grains, exclude any additional sugar adjuncts (table, sucrose, corn, belgian candy etc) added during the boil&lt;/p&gt;
+
+&lt;h2 id=&quot;hop-bill-in-oz&quot;&gt;Hop Bill in Oz&lt;/h2&gt;
+&lt;p&gt;For now this is the total amount of all hops in any form. Pellet, dry, or wet, doesn’t matter.
+    If I can find the requisite data, I would like to seperate these as they absorb different amounts of water.&lt;/p&gt;
+
+&lt;h2 id=&quot;length-of-boil-in-mins&quot;&gt;Length of Boil in Min(s)&lt;/h2&gt;
+&lt;p&gt;Self evident.&lt;/p&gt;
+
+&lt;h2 id=&quot;boil-off-rate-galhr&quot;&gt;Boil-Off Rate (Gal/Hr)&lt;/h2&gt;
+&lt;p&gt;Self Evident. I highly recommend you do a test boil, measuring your starting water volume and temp, and your final water volume and temp. I’m going to make another little calculator to figure out your boil off rate.&lt;/p&gt;
+
+&lt;h2 id=&quot;grain-temp-in-fahrenheit-for-imperial-and-celsius-for-metric&quot;&gt;Grain Temp in Fahrenheit for Imperial, and Celsius for Metric&lt;/h2&gt;
+&lt;p&gt;This is important, I know I’ve been guilty of not checking it but it can change your mash temp about a half degree.&lt;/p&gt;
+
+&lt;h2 id=&quot;mash-temp-in-fahrenheit-for-imperial-and-celsius-for-metric&quot;&gt;Mash Temp in Fahrenheit for Imperial, and Celsius for Metric&lt;/h2&gt;
+&lt;p&gt;This is your mash temp, after dough in, and mixing thoroughly. If different locations have different temps, you haven’t stirred enough.&lt;/p&gt;
+
+&lt;h2 id=&quot;sparging-volume-in-gallons&quot;&gt;Sparging Volume in Gallons&lt;/h2&gt;
+&lt;p&gt;Amount of water you’re sparging with, at 68F, This can either be batch sparge, dunk sparge, or pour over.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-big-is-your-kettlemashtun-gallons&quot;&gt;How Big is your Kettle/Mashtun? (Gallons)&lt;/h2&gt;
+&lt;p&gt;Maximum volume of your mash tun if mash in a bag, or Brew kettle if BIAB.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-wide-is-your-kettlemashtun-inches&quot;&gt;How Wide is your Kettle/Mashtun? (Inches)&lt;/h2&gt;
+&lt;p&gt;Diameter of your brew kettle, used for determining water volume heights.&lt;/p&gt;
+
+&lt;h2 id=&quot;trub-loss-gallons&quot;&gt;Trub Loss (Gallons)&lt;/h2&gt;
+&lt;p&gt;Trub loss is currently trub loss from brew kettle after chilling, and before racking to fermenter.&lt;/p&gt;
+
+&lt;h2 id=&quot;grain-absorption-gallonslb&quot;&gt;Grain Absorption (Gallons/Lb)&lt;/h2&gt;
+&lt;p&gt;How much water your grain absorps, and does not release from squeeze/sparging.
+Hard Squeeze is the default, you may get very close if allowed to drain naturally and suspended.
+If allowing to drain in a bucket with no self pressure from suspending the bag I recommend 0.1
+If doing traditional mashing in a cooler, and not squeezing or allowing the bag to drain I recommend 0.125.&lt;/p&gt;
+
+&lt;h2 id=&quot;hop-absorption-gallonsoz&quot;&gt;Hop Absorption (Gallons/oz)&lt;/h2&gt;
+&lt;p&gt;Amount of wort your hops absorb. This absorption rate was cited for dry leaf hops, I know pellets and wet will be slightly different, but haven’t found a credible source for them yet.&lt;/p&gt;
+
+&lt;h2 id=&quot;general-results&quot;&gt;General Results&lt;/h2&gt;
+
+&lt;h2 id=&quot;total-water-needed&quot;&gt;Total water needed&lt;/h2&gt;
+&lt;p&gt;8.50 Gallons
+18.114 Inches high
+This is the total amount of water used to end at desired batch size into fermenter. Assumed at 68F&lt;/p&gt;
+
+&lt;h2 id=&quot;strike-temp&quot;&gt;Strike temp&lt;/h2&gt;
+&lt;p&gt;163.64 F
+Calculated Strike temp for Strike volume.&lt;/p&gt;
+
+&lt;h2 id=&quot;mash-thickness&quot;&gt;Mash Thickness&lt;/h2&gt;
+&lt;p&gt;1.70 Quarts/Lb
+Calculated mash thickness from grain bill and strike volume @ mash temp.&lt;/p&gt;
+
+&lt;h2 id=&quot;total-volume-loss&quot;&gt;Total volume loss&lt;/h2&gt;
+&lt;p&gt;3.00 Gallons&lt;/p&gt;
+
+&lt;h2 id=&quot;total-amount-of-wortwater-lost-from-trub-grain-absorption-and-hop-absorption&quot;&gt;Total amount of wort/water lost, from trub, grain absorption, and hop absorption.&lt;/h2&gt;
+
+&lt;h2 id=&quot;gallon-height&quot;&gt;Gallon height&lt;/h2&gt;
+&lt;p&gt;2.1303 Inches high
+Height of each gallon, assuming straight walled perfect cylinder.&lt;/p&gt;
+
+&lt;h2 id=&quot;minimum-sparging-volume&quot;&gt;Minimum Sparging Volume&lt;/h2&gt;
+&lt;p&gt;2.83 Gallons
+Recommended minimum sparging volume given pot size and mash volume.&lt;/p&gt;
+
+&lt;h2 id=&quot;water-volumes-and-heights&quot;&gt;Water Volumes and Heights&lt;/h2&gt;
+
+&lt;h2 id=&quot;water-volume-at-68f&quot;&gt;Water volume at 68F&lt;/h2&gt;
+&lt;p&gt;8.50 Gallons
+18.114 Inches high
+Total water needed, calibrated for 68F and calculated height.&lt;/p&gt;
+
+&lt;h2 id=&quot;strike-water-volume-temp-adjusted-at-strike-temp&quot;&gt;Strike water volume (temp. adjusted at strike temp)&lt;/h2&gt;
+&lt;p&gt;8.54 Gallons
+18.203 Inches high
+Strike water needed, calibrated for strike temp and calculated height.&lt;/p&gt;
+
+&lt;h2 id=&quot;volume-of-mash-with-grains-temp-adjusted-at-mash-temp&quot;&gt;Volume of mash with grains (temp. adjusted at mash temp)&lt;/h2&gt;
+&lt;p&gt;10.3 Gallons
+21.985 Inches high
+Mash water needed and grain volume after dough in, calibrated for strike temp and calculated height.&lt;/p&gt;
+
+&lt;h2 id=&quot;pre-boil-temp-adjusted-at-212f&quot;&gt;Pre boil (temp. adjusted at 212F)&lt;/h2&gt;
+&lt;p&gt;7.21 Gallons
+15.350 Inches high
+Desired pre boil volume, at boil temp. If different and you trust your boil off rate, boil down to this volume.&lt;/p&gt;
+
+&lt;h2 id=&quot;post-boil-temp-adjusted-at-212f&quot;&gt;Post boil (temp. adjusted at 212F)&lt;/h2&gt;
+&lt;p&gt;5.74 Gallons
+12.230 Inches high
+Post boil volume, at boil temp, This is about 4.4% higher than desired batch size due to thermal expansion at boil.&lt;/p&gt;
+
+&lt;p&gt;Alternative calculator form for entering mash thickness instead of sparging volume is the exact same terms besides those two variables.&lt;/p&gt;
+
+&lt;h2 id=&quot;mash-thickness-qtlb&quot;&gt;Mash Thickness (Qt/Lb)&lt;/h2&gt;
+&lt;p&gt;Desired Mash thickness after dough in.dangers from happening.&lt;/p&gt;
+
+&lt;h2 id=&quot;default-biab-values-for-my-equipment&quot;&gt;Default BIAB values for my equipment.&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;Default BIAB values for my equipment.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;maximum-mash-thickness-335-qtlb&quot;&gt;Maximum Mash Thickness (3.35 Qt/Lb)&lt;/h2&gt;
+&lt;p&gt;Maximum Mash thickness determined from your grain bill, batch size, losses, and pot size. Would recommend keeping Mash Volume .5 gallons below Pot size, for ease of dough in, stirring, and to keep any potential &lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/calc/Calculator-Terms/&quot;&gt;Explanation of Calculator Variables&lt;/a&gt; was originally published by  at &lt;a href=&quot;&quot;&gt;Priceless Brewing&lt;/a&gt; on November 05, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[Cheap 1350W Amazon Heat Stick Review]]></title>
+  <link rel="alternate" type="text/html" href="/1350-Review/" />
+  <id>/1350-Review</id>
+  <published>2014-11-04T00:00:00-05:00</published>
+  <updated>2014-11-04T00:00:00-05:00</updated>
+  <author>
+    <name></name>
+    <uri></uri>
+    
+  </author>
+  <content type="html">&lt;p&gt;I bought two of these heat sticks from amazon last week for 6.78 each, and have cut over 45 minutes off my brew day when using just one of them. About an hour cut off of my brew day using both. This is mostly due to a stove top that while able to boil 6 gallons, it takes far too long to get there on it’s own.&lt;/p&gt;
+
+&lt;p&gt;http://www.amazon.com/gp/aw/d/B00FO8FY68?pc_redir=1413886912&amp;amp;robot_redir=1&lt;/p&gt;
+
+&lt;h2 id=&quot;heating-times&quot;&gt;Heating times:&lt;/h2&gt;
+
+&lt;p&gt;From 140F tap water to a rolling boil it took my stovetop about an hour and a half. With one heatstick, in additon to the stovetop, I went from 70F tap water to boil in 36 minutes! I also timed to strike temp, 70F to 170F in 16 minutes! That’s faster than my propane burner was, and a lot cheaper.&lt;/p&gt;
+
+&lt;p&gt;Using a single heat stick to speed up the heating times, I completed a brew day in 3.5 hours. A half hour of that was spent dealing with draining and sparging the sparge buckets then I had to boil down .4 gallons after the 60 minute boil and that added about 20 minutes. So using both heat sticks, no chill, and a no sparge full volume mash I might be able to complete my next brew day in under 3 hours.&lt;/p&gt;
+
+&lt;h2 id=&quot;first-use-and-a-word-of-warning&quot;&gt;First use and a word of warning&lt;/h2&gt;
+
+&lt;p&gt;So there are two things to remember when dealing with these psuedo heat sticks.&lt;/p&gt;
+
+&lt;p&gt;1) These must ALWAYS be used on a GFCI protected circuit, one per heat stick. NO doubling up, no using with appliances. These must be dedicated and separate all by themselves. Moreover, 1 outlet does NOT mean one circuit.&lt;/p&gt;
+
+&lt;p&gt;2) Submerge before plugging in, and do not remove from the liquid without unplugging and waiting a bit to allow the  stick to cool. Failure to do either of these things risks failure and breaking the heating elements one time fuse.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;images\HeatStick.jpg&quot;&gt;&lt;img src=&quot;images\HeatStick.jpg&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;&amp;lt;a href=&quot;\images\HeatStick.jpg&quot; title=&quot;The top is slightly gray, this is what it should look like after boiling in water for an hour. The bottom has a much darker color, I had to boil the wort down a little after the typical 60 minutes as I was .4 gallons too high :(.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;3) Run it in water for an hour, and allow to cool. The fake chrome will burn off, exposing the aluminum heating element and developing a layer of passive aluminum oxide. When you pull it out the stick should be a dark gray.&lt;/p&gt;
+
+&lt;p&gt;4) Do not expose to cleaning, or sanitizing agents. You don’t need to, and it’ll ruin the passive patina layer on the aluminum. No PBW, oxyclean, starsan, iodophor, bleach etc. Just wash it off when you’re done and dry off. It’s used in the pre-boil side anyway so no need to worry about it.&lt;/p&gt;
+
+&lt;p&gt;One more thing, I would recommend measuring your boil off again with these, as you can create local hot spots in the water before a real boil is reached.&lt;/p&gt;
+
+&lt;h2 id=&quot;recommendation&quot;&gt;Recommendation:&lt;/h2&gt;
+
+&lt;p&gt;All in all I’m very happy I bought these up. However at the current price ($18~) I would be more inclined to build one instead.  At the original price they were amazing, cutting my time down significantly each brew day for very little money. My current recommendation is to buy at least one of these once the price drops down again, if you use an amazon price tracking service it’ll alert you when the price drops back down to a reasonable amount.&lt;/p&gt;
+
+&lt;p&gt;https://thetracktor.com/detail/B00NJ156B0/&lt;/p&gt;
+
+&lt;p&gt;https://thetracktor.com/detail/B00FO8FY68/&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/1350-Review/&quot;&gt;Cheap 1350W Amazon Heat Stick Review&lt;/a&gt; was originally published by  at &lt;a href=&quot;&quot;&gt;Priceless Brewing&lt;/a&gt; on November 04, 2014.&lt;/p&gt;</content>
+</entry>
+
+</feed>

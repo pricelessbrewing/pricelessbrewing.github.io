@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "minimal-mistakes-theme",
   "author": "Michael Rose <michael@mademistakes.com>",
   "homepage": "http://mmistakes.github.io/minima-mistakes/",
@@ -21,5 +22,22 @@
     "grunt-recess": "~0.3.5",
     "grunt-contrib-imagemin": "~0.2.0",
     "grunt-svgmin": "~0.2.0"
+=======
+  "name": "skinny-bones-jekyll",
+  "version": "0.0.1",
+  "description": "A Jekyll starter site",
+  "author": "Michael Rose <michael@mademistakes.com>",
+  "homepage": "http://mademistakes.com/",
+  "license": "The MIT License (MIT)",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-uglify": "~0.3.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-imagemin": "~0.5.0",
+    "grunt-svgmin": "~0.3.1",
+    "grunt-imgcompress": "~0.1.1",
+    "grunt-newer": "^0.7.0"
+>>>>>>> 45804a0c385940eb81cd0f9cc4e7afe4b5d6f9ed
   }
 }
