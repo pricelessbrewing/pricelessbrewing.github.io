@@ -1,6 +1,7 @@
 # Site wide configuration
 
 title:pricelessbrewing
+disqus_shortname: pricelessbrewing
 locale:en_US
 url:""
 
