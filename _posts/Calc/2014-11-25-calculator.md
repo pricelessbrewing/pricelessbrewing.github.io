@@ -2,6 +2,7 @@
 layout: post
 title: "Calculator Re-Release"
 author: pricelessbrewing
+comments: true
 modified:
 categories: calc
 excerpt:
