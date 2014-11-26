@@ -19,10 +19,10 @@ published: true
 I made my first batch of beer at my parents house last winter, November 2013. Over the 6 months or so I only brewed a couple times until I upgraded my setup to a BIAB all grain setup in the summer. More on this later. I'm still attending undergrad, with a Physics and Math double major. I currently brew 5 gallons or so once a month since it's usually just me drinking it with a a couple beers shared amongst friends.
 
 
-I had a great opportunity recently to brew for a friends wedding. I jumped at it. It allowed me to do them a favor, get a lot of feedback from a huge crowd (200~ people) and allowed me to brew some more and learn more about this great hobby. Probably the biggest task about this endeavour was that I don't keg, so we had to bottle some 400ish bottles of homebrew and cider.
+I had a great opportunity recently to brew for a friends wedding. I jumped at it. It allowed me to do them a favor, get a lot of feedback from a huge crowd (200~ people) and allowed me to brew some more and lean more about this great hobby. Probably the biggest task about this endeavour was that I don't keg, so we had to bottle some 400ish bottles of homebrew and cider.
 
 
-My taste preferences currently learn towards malty rather than hoppy. Favorite styles are browns, porters, stouts, in addition to most belgian ales. While I don't prefer hop bombs, I'll have a nice pale ale, or esb as long as it isn't too bitter it rips my face off.
+My taste preferences currently learn towards malty rather than hoppy. Favorite styles are browns, porters, stouts, in addition to most belgian ales. While I don't prefer hop bombs, I'll have a nice pale ale, or esb as long as its not too bitter that it rips my face off.
 
 
 I have great admiration for Brulospher, http://brulosophy.com/, and seem to share a similar goal and attention to brewing. I'd love to say I have as great a setup or the flexibility of his tools but I'm in an apartment and an undergrad student working at a certain swedish furniture retail store.
