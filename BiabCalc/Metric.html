@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Priceless Brew in a Bag Calculator</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link href="styles.css" rel="stylesheet">
+
+</head>
+<html>
+<body>
+<header>	<div class="container header-container">
+<h1><img class="logo" src="images/logo.png" alt=""></h1>
+<p>All the numbers you need to make <br>your own home brewed beer using<br> the brew in a bag method.</p>
+<ul class="units" align>
+<br> <li> <a href="http://pricelessbrewing.github.io">Imperial</a></li>
+<p></P><li class="active"><a href="http://pricelessbrewing.github.io/Metric">Metric</a></li>
+<li><a href="http://pricelessbrewing.github.io/ImperialG">Imperial (with hops in grams)</a></li> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mash Thickness calculators <br>
+<p></p><li><a href="http://pricelessbrewing.github.io">Imperial</a></li>
+<li><a href="http://pricelessbrewing.github.io/Mash/Metric">Metric</a></li>
+<li><a href="http://pricelessbrewing.github.io/Mash/ImperialG">Imperial (with hops in grams)</a></li>
+</ul>
+</div>
+</header>
+<div role="main">
+<form id="calcForm" class="form-horizontal">
+<div class="left-column">
+<div class="container">
+<h2>Enter your details</h2>
+					<div class="control-group">
+						<label class="control-label" for="BatchVol">Batch Size</label> 
+						<div class="controls">
+							<input type="text" class="input-mini" id="BatchVol" name="BatchVol" value="20.8">Liters 
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="GBill">Grain Bill</label>
+						<div class="controls">
+							<input type="text" class="input-mini" id="GBill" name="GBill" value="3.63" required> Kg
+						</div>
+					</div>
+				<div class="control-group">
+						<label class="control-label" for="HBill">Hop Bill</label>
+						<div class="controls">
+							<input type="text" class="input-mini" id="HBill" name="HBill" value="56.7" required> grams
+						</div>
+					</div>
+				<div class="control-group">
+						<label class="control-label" for="BoilTime">Length of Boil</label>
+						<div class="controls">
+							<input type="text" class="input-mini" id="BoilTime" name="BoilTime" value="60" required> Min
+						</div>
+					</div>
+		<div class="control-group">
+						<label class="control-label" for="BoilRate">Boil-Off Rate</label>
+						<div class="controls">
+							<input type="text" class="input-mini" id="BoilRate" name="BoilRate" value="3.134" required> L/Hr
+						</div>
+					</div>
+		<div class="control-group">
+						<label class="control-label" for="TempGrain">Grain Temp</label>
+						<div class="controls">
+							<input type="text" class="input-mini" id="TempGrain" name="TempGrain" value="22.2" required> C
+						</div>
+					</div>
+		<div class="control-group">
+						<label class="control-label" for="TempMash">Mash Temp</label>
+						<div class="controls">
+							<input type="text" class="input-mini" id="TempMash" name="TempMash" value="67.78" required> C
+						</div>
+					</div>
+		<div class="control-group">
+						<label class="control-label" for="VolSparge">Sparging Volume</label>
+						<div class="controls">
+							<input type="text" class="input-mini" id="VolSparge" name="VolSparge" value="5.68" required> Liters
+						</div>
+					</div>
+		<div class="control-group">
+						<label class="control-label" for="PotSize">How Big is your Kettle/Mashtun?</label>
+						<div class="controls">
+							<input type="text" class="input-mini" id="PotSize" name="PotSize" value="28.4" required> Liters
+						</div>
+					</div>
+		<div class="control-group">
+						<label class="control-label" for="KettleID">How Wide is your Kettle/Mashtun?</label>
+						<div class="controls">
+							<input type="text" class="input-mini" id="KettleID" name="KettleID" value="29.845" required> Centimeters
+						</div>
+					</div>
+		<div class="control-group">
+						<label class="control-label" for="LossTrub">Trub Loss</label>
+						<div class="controls">
+							<input type="text" class="input-mini" id="LossTrub" name="LossTrub" value="1.89" required> Liters
+						</div>
+					</div>
+		<div class="control-group">
+						<label class="control-label" for="Gabs">Grain Absorption</label>
+						<div class="controls">
+							<input type="text" class="input-mini" id="Gabs" value="0.668" required> Liters/Kg
+						</div>
+					</div>
+		<div class="control-group">
+						<label class="control-label" for="Habs">Hop Absorption</label>
+						<div class="controls">
+							<input type="text" class="input-mini" id="Habs" name="Habs" value="0.004874" required> Liters/g
+						</div>
+					</div>
+					<div class="form-actions">
+						<button type="submit" id="btnUpdate" class="btn btn-primary">Reset Calculations</button>
+					</div>
+				</div><!-- end left column -->
+			</div>
+
+
+			<div class="right-column">
+				<div class="container">
+					<h2>General Results</h2>		
+
+					<div class="control-group">
+						<label class="control-label">Total Water Needed</label>
+						<div class="controls">
+							<span class="calc" id="WaterTot">1</span> Liters <br>
+							<span class="calc" id="HTot">4</span> Centimeters
+						</div>
+					</div>
+		      		<div class="control-group">
+						<label class="control-label">Strike Temp</label>
+						<div class="controls">
+							<span class="calc" id="TempStrike">9</span> C
+						</div>
+					</div>
+				<div class="control-group">
+						<label class="control-label">Mash Thickness</label>
+						<div class="controls">
+							<span class="calc" id="MashThick">7</span> Liters/Kg.
+						</div>
+				</div>
+		      		<div class="control-group">
+						<label class="control-label"> Total Volume Loss</label>
+						<div class="controls">
+							<span class="calc" id="LossTot">2</span> Liters
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">Gallon height</label>
+						<div class="controls">
+							<span class="calc" id="GalH">4</span> Inches high
+						</div>
+					</div>
+					<div class="control-group">
+					<label class="control-label">Minimum Sparging Volume <br><span class="note"></span></label>
+					<div class="controls">
+						<span class="calc" id="VolMinSparge">4</span> Liters <br>
+						</div>
+					</div>
+						<h3>Water Volumes and Heights</h3>
+					<div class="control-group">
+						<label class="control-label">Water volume at 68F</label>
+						<div class="controls">
+							<span class="calc" id="VolStart">4</span> Liters <br>
+							<span class="calc" id="HStart">4</span> Centimeters
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">Strike Water Volume (Temp Adjusted @ Strike temp)</label>
+						<div class="controls">
+							<span class="calc" id="VolStrike">0</span> Liters <br>
+							<span class="calc" id="HStrike">5</span> Centimeters
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">Volume of Mash with grains (Temp Adjusted @ Mash temp)</label>
+						<div class="controls">
+							<span class="calc" id="VolMash">4.6</span> Liters <br>
+							<span class="calc" id="HMash">5</span> Centimeters
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">Pre-Boil Volume (Temp adjusted @ 212F)</label>
+						<div class="controls">
+							<span class="calc" id="VolPre">4</span> Liters <br>
+							<span class="calc" id="HPre">5</span> Centimeters
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">Post Boil Volume (temp adjusted @ 212F)</label>
+						<div class="controls">
+							<span class="calc" id="VolPost">4</span> Liters <br>
+							<span class="calc" id="HPost">5</span> Centimeters
+						</div>
+					</div>
+				</div><!-- end container -->
+			</div><!-- end right column -->
+	</form>
+</div>
+</div>
+
+	<footer>
+		<p>Made by <a href="http://pricelessbrewing.github.io">Mark</a> and <a href="http://www.jedlehmann.com.au">Jed</a>. <span class="what-is">What is <a href="http://www.homebrewtalk.com/wiki/index.php/Brew_in_a_Bag">brew in a bag</a>?</span></p>
+		<p>This calculator would not be possible if not for the great tips at <a href="http://Homebrewtalk.com">HomebrewTalk Forums</a> and <a href="http://biabbrewing.com/brew-day-prep/biab-calculators-and-software">BIAB Calculator & Converter @ biabbrewing.com</a></p>
+
+		
+	</footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+  <script src="http://pricelessbrewing.github.io/Calc/PricelessCalc-Metric.js"></script>
+</body>
+</html>

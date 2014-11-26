@@ -1,8 +1,11 @@
 # Site navigation links
 
 
-- title: Mash Calculators
+- title: Calculator Releases
   url: /Calc/
+  
+- title: Calculators
+  url: /BiabCalc/
 
 - title: Brewing Posts
   url: /posts/
