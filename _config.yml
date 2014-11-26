@@ -1,8 +1,8 @@
 # Site wide configuration
 
-title:pricelessbrewing
-locale:en_US
-url:""
+title: pricelessbrewing
+locale: en_US
+url: ""
 
 
 # Jekyll configuration
@@ -24,33 +24,33 @@ kramdown:
 
 
 # Site owner
-owner: Priceless Brewing
- name:Mark
- avatar: biophoto.jpg
- bio:"Homebrewer"
- email:Pricelessbrewing@gmaii.com
- disqus-shortname: pricelessbrewing
- twitter: priceless_mark
- #facebook: #username
- #google:
- #plus: #username
- #analytics: 
- #verify: 
- #ad-client: 
- #ad-slot: 
- #bing-verify: 
- github: pricelessbrewing
- #stackoverflow: #http://stackoverflow.com/users/123456/username
- #linkedin: #username
- #instagram: #username
- #lastfm: #username
- #tumblr: #username
- #pinterest: #username
- #foursquare: #username
- #steam: #username
- #dribbble: #username
- #youtube: #username
- #soundcloud: #username
+owner:
+  name: Mark
+  avatar: biophoto.jpg
+  bio: "Homebrewer"
+  email: Pricelessbrewing@gmaii.com
+  disqus-shortname: pricelessbrewing
+  twitter: priceless_mark
+  #facebook: #username
+  #google:
+  #plus: #username
+  #analytics: 
+  #verify: 
+  #ad-client: 
+  #ad-slot: 
+  #bing-verify: 
+  github: pricelessbrewing
+  #stackoverflow: #http://stackoverflow.com/users/123456/username
+  #linkedin: #username
+  #instagram: #username
+  #lastfm: #username
+  #tumblr: #username
+  #pinterest: #username
+  #foursquare: #username
+  #steam: #username
+  #dribbble: #username
+  #youtube: #username
+  #soundcloud: #username
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
