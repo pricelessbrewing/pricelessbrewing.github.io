@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-    
-
-    <title>Priceless Brewing</title>
+    <title></title>
     <generator uri="https://github.com/jekyll/jekyll">Jekyll v2.5.1</generator>
 		<icon>/apple-touch-icon-precomposed.png</icon>
     <subtitle></subtitle>
     <link href="/atom.xml" rel="self"/>
     <link href="/" rel="alternate" type="text/html"/>
-    <updated>2014-11-25T15:02:05-05:00</updated>
+    <updated>2014-11-25T22:51:49-05:00</updated>
     <id>/</id>
     <author>
 			<name></name>
@@ -20,9 +18,9 @@
     
     <entry>
         <title>Calculator Re-Release</title>
-        <link href="/calc/calculator/"/>
+        <link href="/calc/2014/11/25/calculator.html"/>
         <updated>2014-11-25T12:53:43-05:00</updated>
-        <id>/calc/calculator</id>
+        <id>/calc/2014/11/25/calculator</id>
         <author>
 					<name></name>
 					<uri>/</uri>
@@ -41,9 +39,9 @@ frequently. However I’m looking to merge my blog and my calculator, so it’ll
     
     <entry>
         <title>Saving Yeast Cake</title>
-        <link href="/methods/saving-yeast-cake/"/>
+        <link href="/methods/2014/11/24/saving-yeast-cake.html"/>
         <updated>2014-11-24T22:06:12-05:00</updated>
-        <id>/methods/saving-yeast-cake</id>
+        <id>/methods/2014/11/24/saving-yeast-cake</id>
         <author>
 					<name></name>
 					<uri>/</uri>
@@ -58,9 +56,9 @@ frequently. However I’m looking to merge my blog and my calculator, so it’ll
     
     <entry>
         <title>Yeast Harvesting</title>
-        <link href="/methods/yeast-harvesting/"/>
+        <link href="/methods/2014/11/24/yeast-harvesting.html"/>
         <updated>2014-11-24T22:05:59-05:00</updated>
-        <id>/methods/yeast-harvesting</id>
+        <id>/methods/2014/11/24/yeast-harvesting</id>
         <author>
 					<name></name>
 					<uri>/</uri>
@@ -75,9 +73,9 @@ frequently. However I’m looking to merge my blog and my calculator, so it’ll
     
     <entry>
         <title>Yeast Starter</title>
-        <link href="/methods/yeast-starter/"/>
+        <link href="/methods/2014/11/24/yeast-starter.html"/>
         <updated>2014-11-24T22:05:45-05:00</updated>
-        <id>/methods/yeast-starter</id>
+        <id>/methods/2014/11/24/yeast-starter</id>
         <author>
 					<name></name>
 					<uri>/</uri>
@@ -92,9 +90,9 @@ frequently. However I’m looking to merge my blog and my calculator, so it’ll
     
     <entry>
         <title>Oatmeal Stout</title>
-        <link href="/recipes/oatmeal-stout/"/>
+        <link href="/recipes/2014/11/24/oatmeal-stout.html"/>
         <updated>2014-11-24T22:05:22-05:00</updated>
-        <id>/recipes/oatmeal-stout</id>
+        <id>/recipes/2014/11/24/oatmeal-stout</id>
         <author>
 					<name></name>
 					<uri>/</uri>
@@ -109,9 +107,9 @@ frequently. However I’m looking to merge my blog and my calculator, so it’ll
     
     <entry>
         <title>Exbeeriment 1</title>
-        <link href="/exbeeriments/Placeholder/"/>
+        <link href="/exbeeriments/2014/11/24/Placeholder.html"/>
         <updated>2014-11-24T22:05:22-05:00</updated>
-        <id>/exbeeriments/Placeholder</id>
+        <id>/exbeeriments/2014/11/24/Placeholder</id>
         <author>
 					<name></name>
 					<uri>/</uri>
@@ -126,9 +124,9 @@ frequently. However I’m looking to merge my blog and my calculator, so it’ll
     
     <entry>
         <title>Explanation of Calculator Variables</title>
-        <link href="/calc/Calculator-Terms/"/>
+        <link href="/calc/2014/11/05/Calculator-Terms.html"/>
         <updated>2014-11-05T00:00:00-05:00</updated>
-        <id>/calc/Calculator-Terms</id>
+        <id>/calc/2014/11/05/Calculator-Terms</id>
         <author>
 					<name></name>
 					<uri>/</uri>
@@ -261,9 +259,9 @@ Post boil volume, at boil temp, This is about 4.4% higher than desired batch siz
     
     <entry>
         <title>Cheap 1350W Amazon Heat Stick Review</title>
-        <link href="/1350-Review/"/>
+        <link href="/2014/11/04/1350-Review.html"/>
         <updated>2014-11-04T00:00:00-05:00</updated>
-        <id>/1350-Review</id>
+        <id>/2014/11/04/1350-Review</id>
         <author>
 					<name></name>
 					<uri>/</uri>

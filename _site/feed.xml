@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-<title type="text">Priceless Brewing</title>
+<title type="text"></title>
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2014-11-25T15:02:05-05:00</updated>
+<updated>2014-11-25T22:51:49-05:00</updated>
 <id>/</id>
 <author>
   <name></name>
@@ -17,8 +17,8 @@
 
 <entry>
   <title type="html"><![CDATA[Calculator Re-Release]]></title>
-  <link rel="alternate" type="text/html" href="/calc/calculator/" />
-  <id>/calc/calculator</id>
+  <link rel="alternate" type="text/html" href="/calc/2014/11/25/calculator.html" />
+  <id>/calc/2014/11/25/calculator</id>
   <published>2014-11-25T12:53:43-05:00</published>
   <updated>2014-11-25T12:53:43-05:00</updated>
   <author>
@@ -32,7 +32,7 @@ frequently. However I’m looking to merge my blog and my calculator, so it’ll
 
 &lt;p&gt;Variables are defined in another post http://127.0.0.1:4000/calc/Calculator-Terms/&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;/calc/calculator/&quot;&gt;Calculator Re-Release&lt;/a&gt; was originally published by Mark at &lt;a href=&quot;&quot;&gt;Priceless Brewing&lt;/a&gt; on November 25, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;/calc/2014/11/25/calculator.html&quot;&gt;Calculator Re-Release&lt;/a&gt; was originally published by Mark at &lt;a href=&quot;&quot;&gt;&lt;/a&gt; on November 25, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -40,8 +40,8 @@ frequently. However I’m looking to merge my blog and my calculator, so it’ll
 
 <entry>
   <title type="html"><![CDATA[Saving Yeast Cake]]></title>
-  <link rel="alternate" type="text/html" href="/methods/saving-yeast-cake/" />
-  <id>/methods/saving-yeast-cake</id>
+  <link rel="alternate" type="text/html" href="/methods/2014/11/24/saving-yeast-cake.html" />
+  <id>/methods/2014/11/24/saving-yeast-cake</id>
   <published>2014-11-24T22:06:12-05:00</published>
   <updated>2014-11-24T22:06:12-05:00</updated>
   <author>
@@ -51,7 +51,7 @@ frequently. However I’m looking to merge my blog and my calculator, so it’ll
   </author>
   <content type="html">&lt;p&gt;Placeholder for how I save my yeast cakes, although I much prefer to harvest from starters. &lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;/methods/saving-yeast-cake/&quot;&gt;Saving Yeast Cake&lt;/a&gt; was originally published by Mark at &lt;a href=&quot;&quot;&gt;Priceless Brewing&lt;/a&gt; on November 24, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;/methods/2014/11/24/saving-yeast-cake.html&quot;&gt;Saving Yeast Cake&lt;/a&gt; was originally published by Mark at &lt;a href=&quot;&quot;&gt;&lt;/a&gt; on November 24, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -59,8 +59,8 @@ frequently. However I’m looking to merge my blog and my calculator, so it’ll
 
 <entry>
   <title type="html"><![CDATA[Yeast Harvesting]]></title>
-  <link rel="alternate" type="text/html" href="/methods/yeast-harvesting/" />
-  <id>/methods/yeast-harvesting</id>
+  <link rel="alternate" type="text/html" href="/methods/2014/11/24/yeast-harvesting.html" />
+  <id>/methods/2014/11/24/yeast-harvesting</id>
   <published>2014-11-24T22:05:59-05:00</published>
   <updated>2014-11-24T22:05:59-05:00</updated>
   <author>
@@ -70,7 +70,7 @@ frequently. However I’m looking to merge my blog and my calculator, so it’ll
   </author>
   <content type="html">&lt;p&gt;Placeholder for harvesting yeast from yeast starters.&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;/methods/yeast-harvesting/&quot;&gt;Yeast Harvesting&lt;/a&gt; was originally published by Mark at &lt;a href=&quot;&quot;&gt;Priceless Brewing&lt;/a&gt; on November 24, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;/methods/2014/11/24/yeast-harvesting.html&quot;&gt;Yeast Harvesting&lt;/a&gt; was originally published by Mark at &lt;a href=&quot;&quot;&gt;&lt;/a&gt; on November 24, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -78,8 +78,8 @@ frequently. However I’m looking to merge my blog and my calculator, so it’ll
 
 <entry>
   <title type="html"><![CDATA[Yeast Starter]]></title>
-  <link rel="alternate" type="text/html" href="/methods/yeast-starter/" />
-  <id>/methods/yeast-starter</id>
+  <link rel="alternate" type="text/html" href="/methods/2014/11/24/yeast-starter.html" />
+  <id>/methods/2014/11/24/yeast-starter</id>
   <published>2014-11-24T22:05:45-05:00</published>
   <updated>2014-11-24T22:05:45-05:00</updated>
   <author>
@@ -89,7 +89,7 @@ frequently. However I’m looking to merge my blog and my calculator, so it’ll
   </author>
   <content type="html">&lt;p&gt;Placeholder for how I make yeast starters, starting with Homebrewdads wonderful yeast calculator. &lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;/methods/yeast-starter/&quot;&gt;Yeast Starter&lt;/a&gt; was originally published by Mark at &lt;a href=&quot;&quot;&gt;Priceless Brewing&lt;/a&gt; on November 24, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;/methods/2014/11/24/yeast-starter.html&quot;&gt;Yeast Starter&lt;/a&gt; was originally published by Mark at &lt;a href=&quot;&quot;&gt;&lt;/a&gt; on November 24, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -97,8 +97,8 @@ frequently. However I’m looking to merge my blog and my calculator, so it’ll
 
 <entry>
   <title type="html"><![CDATA[Oatmeal Stout]]></title>
-  <link rel="alternate" type="text/html" href="/recipes/oatmeal-stout/" />
-  <id>/recipes/oatmeal-stout</id>
+  <link rel="alternate" type="text/html" href="/recipes/2014/11/24/oatmeal-stout.html" />
+  <id>/recipes/2014/11/24/oatmeal-stout</id>
   <published>2014-11-24T22:05:22-05:00</published>
   <updated>2014-11-24T22:05:22-05:00</updated>
   <author>
@@ -108,7 +108,7 @@ frequently. However I’m looking to merge my blog and my calculator, so it’ll
   </author>
   <content type="html">&lt;p&gt;To be announced later.&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;/recipes/oatmeal-stout/&quot;&gt;Oatmeal Stout&lt;/a&gt; was originally published by Mark at &lt;a href=&quot;&quot;&gt;Priceless Brewing&lt;/a&gt; on November 24, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;/recipes/2014/11/24/oatmeal-stout.html&quot;&gt;Oatmeal Stout&lt;/a&gt; was originally published by Mark at &lt;a href=&quot;&quot;&gt;&lt;/a&gt; on November 24, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -116,8 +116,8 @@ frequently. However I’m looking to merge my blog and my calculator, so it’ll
 
 <entry>
   <title type="html"><![CDATA[Exbeeriment 1]]></title>
-  <link rel="alternate" type="text/html" href="/exbeeriments/Placeholder/" />
-  <id>/exbeeriments/Placeholder</id>
+  <link rel="alternate" type="text/html" href="/exbeeriments/2014/11/24/Placeholder.html" />
+  <id>/exbeeriments/2014/11/24/Placeholder</id>
   <published>2014-11-24T22:05:22-05:00</published>
   <updated>2014-11-24T22:05:22-05:00</updated>
   <author>
@@ -127,7 +127,7 @@ frequently. However I’m looking to merge my blog and my calculator, so it’ll
   </author>
   <content type="html">&lt;p&gt;To be announced later.&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;/exbeeriments/Placeholder/&quot;&gt;Exbeeriment 1&lt;/a&gt; was originally published by Mark at &lt;a href=&quot;&quot;&gt;Priceless Brewing&lt;/a&gt; on November 24, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;/exbeeriments/2014/11/24/Placeholder.html&quot;&gt;Exbeeriment 1&lt;/a&gt; was originally published by Mark at &lt;a href=&quot;&quot;&gt;&lt;/a&gt; on November 24, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -135,8 +135,8 @@ frequently. However I’m looking to merge my blog and my calculator, so it’ll
 
 <entry>
   <title type="html"><![CDATA[Explanation of Calculator Variables]]></title>
-  <link rel="alternate" type="text/html" href="/calc/Calculator-Terms/" />
-  <id>/calc/Calculator-Terms</id>
+  <link rel="alternate" type="text/html" href="/calc/2014/11/05/Calculator-Terms.html" />
+  <id>/calc/2014/11/05/Calculator-Terms</id>
   <published>2014-11-05T00:00:00-05:00</published>
   <updated>2014-11-05T00:00:00-05:00</updated>
   <author>
@@ -264,7 +264,7 @@ Post boil volume, at boil temp, This is about 4.4% higher than desired batch siz
 &lt;h2 id=&quot;maximum-mash-thickness-335-qtlb&quot;&gt;Maximum Mash Thickness (3.35 Qt/Lb)&lt;/h2&gt;
 &lt;p&gt;Maximum Mash thickness determined from your grain bill, batch size, losses, and pot size. Would recommend keeping Mash Volume .5 gallons below Pot size, for ease of dough in, stirring, and to keep any potential &lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;/calc/Calculator-Terms/&quot;&gt;Explanation of Calculator Variables&lt;/a&gt; was originally published by Mark at &lt;a href=&quot;&quot;&gt;Priceless Brewing&lt;/a&gt; on November 05, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;/calc/2014/11/05/Calculator-Terms.html&quot;&gt;Explanation of Calculator Variables&lt;/a&gt; was originally published by Mark at &lt;a href=&quot;&quot;&gt;&lt;/a&gt; on November 05, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -272,8 +272,8 @@ Post boil volume, at boil temp, This is about 4.4% higher than desired batch siz
 
 <entry>
   <title type="html"><![CDATA[Cheap 1350W Amazon Heat Stick Review]]></title>
-  <link rel="alternate" type="text/html" href="/1350-Review/" />
-  <id>/1350-Review</id>
+  <link rel="alternate" type="text/html" href="/2014/11/04/1350-Review.html" />
+  <id>/2014/11/04/1350-Review</id>
   <published>2014-11-04T00:00:00-05:00</published>
   <updated>2014-11-04T00:00:00-05:00</updated>
   <author>
@@ -318,7 +318,7 @@ Post boil volume, at boil temp, This is about 4.4% higher than desired batch siz
 
 &lt;p&gt;https://thetracktor.com/detail/B00FO8FY68/&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;/1350-Review/&quot;&gt;Cheap 1350W Amazon Heat Stick Review&lt;/a&gt; was originally published by Mark at &lt;a href=&quot;&quot;&gt;Priceless Brewing&lt;/a&gt; on November 04, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;/2014/11/04/1350-Review.html&quot;&gt;Cheap 1350W Amazon Heat Stick Review&lt;/a&gt; was originally published by Mark at &lt;a href=&quot;&quot;&gt;&lt;/a&gt; on November 04, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
