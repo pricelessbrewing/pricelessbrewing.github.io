@@ -1,8 +1,8 @@
 # Site wide configuration
 
 title:pricelessbrewing
-locale: en_US
-url: ""
+locale:en_US
+url:""
 
 
 # Jekyll configuration
