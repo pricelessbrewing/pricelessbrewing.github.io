@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2014-11-26T17:45:24-05:00</updated>
+<updated>2014-11-26T20:20:07-05:00</updated>
 <id>/</id>
 <author>
   <name>Mark</name>
@@ -50,7 +50,25 @@ frequently. However I’m looking to merge my blog and my calculator, so it’ll
     <uri></uri>
     <email>priclessbrewing@gmail.com</email>
   </author>
-  <content type="html">&lt;p&gt;Placeholder for how I save my yeast cakes, although I much prefer to harvest from starters. &lt;/p&gt;
+  <content type="html">&lt;p&gt;While I much prefer to harvest yeast from a starter, this is still a viable option of saving your yeast after a good clean fermentation. Note of caution to not using after fermentation where it was under excessively warm, under pitched, harsh environment, high OG, low nutrients etc etc.&lt;/p&gt;
+
+&lt;h2 id=&quot;sanitize-all-the-things&quot;&gt;Sanitize all the things.&lt;/h2&gt;
+&lt;p&gt;This is even more crucial than in brewing, as any contaminations will be extended due to the much longer storage time and will be continued through each generation and pitch. &lt;/p&gt;
+
+&lt;p&gt;When fermentation is done, and I’m racking the beer from the primary fermentation vessel, I leave a little beer on the cake. This makes it easier to pour, as the cake loosens up in the remaining beer. The actual process I use is pretty simple, as I just do the following:&lt;/p&gt;
+
+&lt;h1 id=&quot;how-to-save-your-cake-in-three-easy-steps&quot;&gt;How to save your cake in three easy steps&lt;/h1&gt;
+&lt;p&gt;Leave some beer on cake. 
+Swish to suspend the yeast.
+Pour beer and suspended cake into a cleaned and sanitized container. 
+Done!&lt;/p&gt;
+
+&lt;p&gt;Optional Steps to slightly clarify saved yeast slurry
+(Optional) Leave single large container alone for a half hour to settle out the trub and hop matter.
+(Optional)After heavy trub and hops settles, slowly pour the remiaing liquid and yeast into a smaller (but still sanitized) container so that the thick layer on the bottom of the large container remains behind. New smaller contains can be saved until your next brewday!&lt;/p&gt;
+
+&lt;h2 id=&quot;to-use-your-slurry&quot;&gt;To use your slurry&lt;/h2&gt;
+&lt;p&gt;For now I’m using the yeast pitch rate calculator on brewers friend and selecting the “yeast type” to be Slurry. Since I’d rather over pitch than under pitch, I enter 1B cells/ml. That means that in 1C of slurry, I have about 237B cells.  http://www.brewersfriend.com/yeast-pitch-rate-and-starter-calculator/&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;/methods/saving-yeast-cake/&quot;&gt;Saving Yeast Cake&lt;/a&gt; was originally published by Mark at &lt;a href=&quot;&quot;&gt;pricelessbrewing&lt;/a&gt; on November 24, 2014.&lt;/p&gt;</content>
 </entry>
