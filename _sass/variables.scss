@@ -8,7 +8,7 @@ $code-font: Monaco, "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono
 $alt-font: $base-font;
 
 // COLOR ======================================================
-$bodycolor      : #fff;
+$bodycolor      : #6ba6c9;
 $body-color     : $bodycolor;
 $textcolor      : #333332;
 $text-color     : $textcolor;
@@ -25,10 +25,10 @@ $primary			: $black;
 $success			: #5cb85c;
 $warning			: #dd8338;
 $danger				: #C64537;
-$info				  : #308cbc;
+$info				  : #343434;
 
 // Links
-$linkcolor 		    : #343434;
+$linkcolor 		    : #111;
 $link-color       : $linkcolor;
 $linkcolorhover 	: darken($linkcolor, 10);
 $linkcolorvisited : lighten($linkcolorhover, 20);
