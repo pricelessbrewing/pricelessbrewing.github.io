@@ -9,7 +9,7 @@
     <subtitle></subtitle>
     <link href="/atom.xml" rel="self"/>
     <link href="/" rel="alternate" type="text/html"/>
-    <updated>2014-11-26T20:50:42-05:00</updated>
+    <updated>2014-11-26T21:18:37-05:00</updated>
     <id>/</id>
     <author>
 			<name>Mark</name>
@@ -110,7 +110,7 @@ Done!&lt;/p&gt;
     </entry>
     
     <entry>
-        <title>Yeast Starter</title>
+        <title>Yeast Starters</title>
         <link href="/methods/yeast-starter/"/>
         <updated>2014-11-24T22:05:45-05:00</updated>
         <id>/methods/yeast-starter</id>
@@ -121,12 +121,42 @@ Done!&lt;/p&gt;
 				</author>
         <content type="html">
         	
-        	&lt;p&gt;Placeholder for how I make yeast starters, starting with Homebrewdads wonderful yeast calculator. &lt;/p&gt;
+        	&lt;p&gt;Now I’m sure you’ve been in the situation where you bought a vial of liquid yeast and were told it’s fine to pitch directly. This is true sometimes, and yes it will still make beer even in the worst of cases. However, it’s not a very good practice. Healthy yeast means better bear. The three things you can easily control are pitching rates, fermentation temperatures, and oxygenation of the wort. This post is my current process for making starters, feel free to leave any feedback or questions you have. I’m open to considering alternative processes, especially if they save me time!&lt;/p&gt;
 
 &lt;p&gt;I use homebrewdads wonderful yeast starter calculator, as it builds up your starter volume for you and accounts for harvesting yeast by cell count. &lt;/p&gt;
 
 &lt;h1 id=&quot;starter-gear&quot;&gt;Starter Gear:&lt;/h1&gt;
-&lt;p&gt;DIY stir place, made from a 12V 120mm Antec tri-cool computer fan, 6V/12V DC power adapter, and some magnets I appropriated from work. &lt;/p&gt;
+&lt;p&gt;DIY stir place, made from a 12V 120mm Antec tri-cool computer fan, 6V/12V DC power adapter, and some magnets I appropriated from work. 
+My “Flask” is actually a kitchen jar for storing dried spaghetti noodles. It’s narrow, tall, and about 3.5L which is pretty much perfect for me. 
+Stainless steel pots of various sizes.&lt;/p&gt;
+
+&lt;p&gt;So onto the actually starter process.&lt;/p&gt;
+
+&lt;h1 id=&quot;step-1-add-dme&quot;&gt;Step 1: Add DME&lt;/h1&gt;
+&lt;p&gt;Use the above mentioned calculator, HBDC since I’m lazy, to determine how much DME you need. &lt;/p&gt;
+
+&lt;h1 id=&quot;step-2-add-water-to-flaskpot&quot;&gt;Step 2: Add Water to Flask/Pot&lt;/h1&gt;
+&lt;p&gt;Since I don’t use a flask I can boil in, and direct fire, I use a stainless steel pot. Which one depends on the size of the starter needed, but it’s usually a 1G/4L pot. With that said, add hot water to the mini-brew kettle and mix to dissolve the DME until you’re at the volume dictated by the HBDC. Note that this volume is NOT the volume of the liquid, but the volume of the DME + the liquid. &lt;/p&gt;
+
+&lt;h1 id=&quot;step-3-boil&quot;&gt;Step 3: Boil&lt;/h1&gt;
+&lt;p&gt;I usually only boil for about ten minutes. Make sure you don’t have a boil over, as they are very easy to do in a flask due to the narrow mouth. &lt;/p&gt;
+
+&lt;h1 id=&quot;step-4-cool&quot;&gt;Step 4: Cool&lt;/h1&gt;
+&lt;p&gt;After the bol you have to cool the flask/pot before you can pitch. For flasks resistant to thermal shock, this means you can place it in a cold water bath. For my pot, this means I usually just put the lid on it and come back later. When I absolutely need to speed things up, I’ll place the pot in another pot filled with ice water. &lt;/p&gt;
+
+&lt;h1 id=&quot;step-5-pitch&quot;&gt;Step 5: Pitch.&lt;/h1&gt;
+&lt;p&gt;Once the wort is cooled to the warm side of pitching temp, 70F is a fair standard. &lt;/p&gt;
+
+&lt;h1 id=&quot;step-6-start-your--starters&quot;&gt;Step 6: Start your … Starters&lt;/h1&gt;
+&lt;p&gt;Set the flask, or in my case spaghetti jar thing, on your stir plate and let it go for a about 36 hours. &lt;/p&gt;
+
+&lt;h1 id=&quot;step-7-cold-crash&quot;&gt;Step 7: Cold Crash&lt;/h1&gt;
+&lt;p&gt;After your starter is done fermenting, let it crash in the fridge, covered by a sanitized piece of foil/lid/stopper until brewday. &lt;/p&gt;
+
+&lt;h1 id=&quot;step-8-pitch&quot;&gt;Step 8: Pitch&lt;/h1&gt;
+&lt;p&gt;Remove the starter from the fridge a few hours before you pitch so that it warms up to room temp. I then decant most of the liquid on top, leaving about two cups and the yeast cake. Swirl the flask/jar and pitch the remaining yeast slurry. &lt;/p&gt;
+
+&lt;p&gt;Enjoy the healthy fermentation, and make sure you have enough headspace/blowoff tube! If you haven’t been pitching the necessary cell counts, then this may be more vigorous than you’re used to. &lt;/p&gt;
 
         </content>
     </entry>

@@ -4,6 +4,7 @@ title: "Yeast Harvesting"
 modified:
 author: pricelessbrewing
 categories: methods
+comments: true
 excerpt:
 tags: []
 image:

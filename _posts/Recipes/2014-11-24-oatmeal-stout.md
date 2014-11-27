@@ -4,6 +4,7 @@ title: "Oatmeal Stout"
 author: pricelessbrewing
 modified:
 categories: recipes
+comments: true
 excerpt:
 tags: []
 image:
