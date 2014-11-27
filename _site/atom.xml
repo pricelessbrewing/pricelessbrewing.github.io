@@ -9,7 +9,7 @@
     <subtitle></subtitle>
     <link href="/atom.xml" rel="self"/>
     <link href="/" rel="alternate" type="text/html"/>
-    <updated>2014-11-26T20:20:07-05:00</updated>
+    <updated>2014-11-26T20:50:42-05:00</updated>
     <id>/</id>
     <author>
 			<name>Mark</name>
@@ -17,6 +17,40 @@
 			<email>Pricelessbrewing@gmaii.com</email>
 		</author>
 
+    
+    <entry>
+        <title>Yeast Harvesting</title>
+        <link href="/methods/yeast-harvesting/"/>
+        <updated>2014-11-26T22:05:59-05:00</updated>
+        <id>/methods/yeast-harvesting</id>
+        <author>
+					<name>Mark</name>
+					<uri>/</uri>
+					<email>Pricelessbrewing@gmaii.com</email>
+				</author>
+        <content type="html">
+        	
+        	&lt;p&gt;I use the same method that Brulosopher made popular to harvest yeast directly from your starter, and use Homebrewdads wonderful yeast starter calculator. Can’t promote his caculator enough, it really is great! Most of this should look familiar to you if you’ve read or used this process before but it bears repeating.&lt;/p&gt;
+
+&lt;h1 id=&quot;step-1-finish-starter-fermentation&quot;&gt;Step 1: Finish Starter Fermentation&lt;/h1&gt;
+&lt;p&gt;Make sure you leave enough time to complete the starter fermentation, typically 2 days then a day to cold crash. &lt;/p&gt;
+
+&lt;h1 id=&quot;step-2-harvesting&quot;&gt;Step 2: Harvesting&lt;/h1&gt;
+&lt;p&gt;After 30-48 hours, the starter is usually done. More time is actually detrimental to your yeast as it will deplete it’s reservoirs of nutrients in order to keep itself alive. At this time, I harvest my overbuilt yeast and save that for next time. To do this, I sanitize a clean mason jar, swirl the starter once or twice to ensure it’s homogenous, hold the stirbar in place with a magnet, and fill the jar with the calculated volume from Homebrewdads calculator. &lt;/p&gt;
+
+&lt;h1 id=&quot;step-3-cold-crashing&quot;&gt;Step 3: Cold Crashing&lt;/h1&gt;
+&lt;p&gt;Once I harvest the yeast, I place the starter flask in the fridge covered by a sanitized piece of foil or a stopper if you have one. To be clear, this should not be air tight as the yeast will continue to produce gas. &lt;/p&gt;
+
+&lt;h1 id=&quot;step-4-pitch-away&quot;&gt;Step 4: Pitch Away&lt;/h1&gt;
+&lt;p&gt;You should know what to do here. Either decant the liquid, and the suspended yeast, and pitch or pitch the whole thing. I usually decant and pitch. &lt;/p&gt;
+
+&lt;h1 id=&quot;step-5-using-harvested-yeast&quot;&gt;Step 5: Using Harvested Yeast&lt;/h1&gt;
+&lt;p&gt;Just pretend it’s a fresh vial and do everything you’d do normally and enjoy the money, gas and time getting fresh yeast you just saved!&lt;/p&gt;
+
+&lt;p&gt;Some people still suggest washing the harvested yeast, or decanting the beer atop the harvested yeast. I’m not convinced that this is actually helpful, aside from the extra step it would require. &lt;/p&gt;
+
+        </content>
+    </entry>
     
     <entry>
         <title>Calculator Re-Release</title>
@@ -76,23 +110,6 @@ Done!&lt;/p&gt;
     </entry>
     
     <entry>
-        <title>Yeast Harvesting</title>
-        <link href="/methods/yeast-harvesting/"/>
-        <updated>2014-11-24T22:05:59-05:00</updated>
-        <id>/methods/yeast-harvesting</id>
-        <author>
-					<name>Mark</name>
-					<uri>/</uri>
-					<email>Pricelessbrewing@gmaii.com</email>
-				</author>
-        <content type="html">
-        	
-        	&lt;p&gt;Placeholder for harvesting yeast from yeast starters.&lt;/p&gt;
-
-        </content>
-    </entry>
-    
-    <entry>
         <title>Yeast Starter</title>
         <link href="/methods/yeast-starter/"/>
         <updated>2014-11-24T22:05:45-05:00</updated>
@@ -105,6 +122,11 @@ Done!&lt;/p&gt;
         <content type="html">
         	
         	&lt;p&gt;Placeholder for how I make yeast starters, starting with Homebrewdads wonderful yeast calculator. &lt;/p&gt;
+
+&lt;p&gt;I use homebrewdads wonderful yeast starter calculator, as it builds up your starter volume for you and accounts for harvesting yeast by cell count. &lt;/p&gt;
+
+&lt;h1 id=&quot;starter-gear&quot;&gt;Starter Gear:&lt;/h1&gt;
+&lt;p&gt;DIY stir place, made from a 12V 120mm Antec tri-cool computer fan, 6V/12V DC power adapter, and some magnets I appropriated from work. &lt;/p&gt;
 
         </content>
     </entry>
