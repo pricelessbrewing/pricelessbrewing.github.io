@@ -57,8 +57,10 @@
 			VolStart = (WaterTot - VolSparge * G2L),
 			TempStrike = ((TempMash + (.05 * GBill / VolStart) * ( TempMash - TempGrain ))-32) / 1.8;	
 			TempStrikeF = TempMash + (.05 * GBill / VolStart) * ( TempMash - TempGrain )
-			MashAdj = (4.13643E-16 * TempMashF * TempMashF * TempMashF * TempMashF * TempMashF * TempMashF - 4.05998E-13*  TempMashF * TempMashF * TempMashF * TempMashF * TempMashF + 1.61536E-10 * TempMashF * TempMashF * TempMashF * TempMashF - 3.44854E-8 * TempMashF * TempMashF * TempMashF + 5.32769E-6 * TempMashF * TempMashF - 2.92675E-4 * TempMashF  + 1.00493),
-			StrikeAdj = (4.13643E-16 * TempStrikeF * TempStrikeF * TempStrikeF * TempStrikeF * TempStrikeF * TempStrikeF - 4.05998E-13*  TempStrikeF * TempStrikeF * TempStrikeF * TempStrikeF * TempStrikeF + 1.61536E-10 * TempStrikeF * TempStrikeF * TempStrikeF * TempStrikeF - 3.44854E-8 * TempStrikeF * TempStrikeF * TempStrikeF + 5.32769E-6 * TempStrikeF * TempStrikeF - 2.92675E-4 * TempStrikeF  + 1.00493),
+			MashAdj = 1.022494888,
+//(4.13643E-16 * TempMashF * TempMashF * TempMashF * TempMashF * TempMashF * TempMashF - 4.05998E-13*  TempMashF * TempMashF * TempMashF * TempMashF * TempMashF + 1.61536E-10 * TempMashF * TempMashF * TempMashF * TempMashF - 3.44854E-8 * TempMashF * TempMashF * TempMashF + 5.32769E-6 * TempMashF * TempMashF - 2.92675E-4 * TempMashF  + 1.00493),
+			StrikeAdj = 1.025641026,
+//(4.13643E-16 * TempStrikeF * TempStrikeF * TempStrikeF * TempStrikeF * TempStrikeF * TempStrikeF - 4.05998E-13*  TempStrikeF * TempStrikeF * TempStrikeF * TempStrikeF * TempStrikeF + 1.61536E-10 * TempStrikeF * TempStrikeF * TempStrikeF * TempStrikeF - 3.44854E-8 * TempStrikeF * TempStrikeF * TempStrikeF + 5.32769E-6 * TempStrikeF * TempStrikeF - 2.92675E-4 * TempStrikeF  + 1.00493),
 			VolStrike = (VolStart * StrikeAdj),
 			LossHop = HBill * Habs,
 			LossGrain = GBill * Gabs,
