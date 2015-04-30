@@ -12,6 +12,7 @@
       'PotSize',
       'KettleID',
       'LossTrub',
+      'LossFermTrub',
       'Gabs',
       'Habs'
     ];
@@ -41,6 +42,7 @@
     Habs = parseFloat($('#Habs').val()),
     MashAdj = parseFloat($('#MashAdj').val()),
     StrikeAdj = parseFloat($('#StrikeAdj').val()),
+    LossFermTrub = parseFloat($('#LossFermTrub').val()),
     LossBoil = BoilTime * BoilRate / 60,
     LossHop = HBill * Habs,
     LossGrain = GBill * Gabs,
@@ -61,7 +63,9 @@
     LossGrain = GBill * Gabs,
     VolMash = (VolStart + GBill * 0.08) * MashAdj,
     VolPre = (WaterTot - LossGrain) * 1.043841336,
-    VolPost = (WaterTot - LossTot) * 1.043841336,
+    VolPost = (WaterTot - LossTot + LossTrub) * 1.043841336,
+    VolChilled = (VolPos / 1.043841336) - VolTrub,
+    VolPackaged = VolChilled - VolFermTrub;
     GalH = 294.118334834 / (KettleID * KettleID),
     HTot = GalH * WaterTot,
     HStart = GalH * VolStart,
@@ -71,6 +75,8 @@
     MashThick = VolStart * 4 / GBill,
     VolMinSparge = ( ( WaterTot + GBill * 0.08) * MashAdj ) - ( ( PotSize -0.01 ) ), 
     HPost = GalH * VolPost;
+    
+    
     // console.log(VolStrike, WaterTot, MashThick, TempStrike);
     $('#WaterTot').text(WaterTot.toPrecision(3));
     $('#VolStrike').text(VolStrike.toPrecision(3));
@@ -82,7 +88,7 @@
     $('#VolMash').text(VolMash.toPrecision(3));
     $('#VolPre').text(VolPre.toPrecision(3));
     $('#VolPost').text(VolPost.toPrecision(3));
-    $('#TempStrike').text(TempStrike.toPrecision(5));
+    $('#TempStrike').text(TempStrike.toPrecision(4));
     $('#MashAdj').text(MashAdj.toPrecision(12));
     $('#Strikeadj').text(StrikeAdj.toPrecision(12));
     $('#GalH').text(GalH.toPrecision(5));
@@ -94,6 +100,8 @@
     $('#HPost').text(HPost.toPrecision(5));
     $('#MashThick').text(MashThick.toPrecision(3));
     $('#VolMinSparge').text(VolMinSparge.toPrecision(3));
+    $('#VolChilled').text(VolChilled.toPrecision(3));
+    $('#VolPackaged').text(VolPackaged.toPrecision(3));
   }
   function validateField(field) {
     $field = $(field);
