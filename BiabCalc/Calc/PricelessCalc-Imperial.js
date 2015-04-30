@@ -61,12 +61,11 @@
     VolStrike = VolStart * StrikeAdj,
     LossHop = HBill * Habs,
     LossGrain = GBill * Gabs,
-    LossDHop = Gabs * DHop,
     VolMash = (VolStart + GBill * 0.08) * MashAdj,
     VolPre = (WaterTot - LossGrain) * 1.043841336,
     VolPost = (WaterTot - LossTot + LossTrub) * 1.043841336,
-    VolChilled = (VolPos / 1.043841336) - VolTrub,
-    VolPackaged = VolChilled - LossFermTrub - (DHop * Gabs),
+    VolChilled = ( VolPos / 1.043841336 ) - VolTrub,
+    VolPackaged = VolChilled - LossFermTrub - ( DHop * Gabs ),
     GalH = 294.118334834 / (KettleID * KettleID),
     HTot = GalH * WaterTot,
     HStart = GalH * VolStart,
@@ -86,7 +85,6 @@
     $('#LossHop').text(LossHop.toPrecision(3));
     $('#LossGrain').text(LossGrain.toPrecision(3));
     $('#LossTot').text(LossTot.toPrecision(3));
-    $('#LossDHop').text(LossDHop.toPrecision(3));
     $('#LossFermTrub').text(LossDHop.toPrecision(3));    
     $('#VolStart').text(VolStart.toPrecision(3));
     $('#VolMash').text(VolMash.toPrecision(3));
