@@ -4,6 +4,7 @@
       'BatchVol',
       'GBill',
       'HBill',
+      'DHop',
       'BoilTime',
       'BoilRate',
       'TempGrain',
@@ -13,6 +14,9 @@
       'KettleID',
       'LossTrub',
       'LossFermTrub',
+      'LossDHop',
+      'HChilled',
+      'VolPackaged',
       'Gabs',
       'Habs'
     ];
@@ -50,22 +54,23 @@
     WaterTot = BatchVol + LossTot,
     VolStart = (WaterTot - VolSparge),
     TempStrike = TempMash + (0.05 * GBill / VolStart) * (TempMash - TempGrain),
-    
     MashAdj = 1.022494888,
 
     //( 4.13643 * Math.pow(10,-16) * Math.pow($('#TempMash').val(),6) - 4.05998 * Math.pow(10,-13) * Math.pow($('#TempMash').val(),5) + 1.61536 * Math.pow(10,-10) * Math.pow($('#TempMash').val(),4) - 3.44854 * Math.pow(10,-8) * Math.pow($('#TempMash').val(),3) + 0.00000532769 * Math.pow($('#TempMash').val(),2) - 0.000292675 * $('#TempMash').val() + 1.00493),  
-    
     StrikeAdj = 1.025641026,
 //( 4.13643 * Math.pow(10,-16) * Math.pow($('#TempStrike').val(),6) - 4.05998 * Math.pow(10,-13) * Math.pow($('#TempStrike').val(),5) + 1.61536 * Math.pow(10,-10) * Math.pow($('#TempStrike').val(),4) - 3.44854 * Math.pow(10,-8) * Math.pow($('#TempStrike').val(),3) + 0.00000532769 * Math.pow($('#TempStrike').val(),2) - 0.000292675 * $('#TempStrike').val() + 1.00493), 
     
     VolStrike = VolStart * StrikeAdj,
     LossHop = HBill * Habs,
     LossGrain = GBill * Gabs,
+    LossDHop = Gabs * DHop,
     VolMash = (VolStart + GBill * 0.08) * MashAdj,
     VolPre = (WaterTot - LossGrain) * 1.043841336,
     VolPost = (WaterTot - LossTot + LossTrub) * 1.043841336,
     VolChilled = (VolPos / 1.043841336) - VolTrub,
-    VolPackaged = VolChilled - VolFermTrub;
+    VolPackaged = VolChilled - VolFermTrub- LossDHop;
+    HChilled = GalH * VolChilled,
+    
     GalH = 294.118334834 / (KettleID * KettleID),
     HTot = GalH * WaterTot,
     HStart = GalH * VolStart,
@@ -84,6 +89,8 @@
     $('#LossHop').text(LossHop.toPrecision(3));
     $('#LossGrain').text(LossGrain.toPrecision(3));
     $('#LossTot').text(LossTot.toPrecision(3));
+    $('#LossDHop').text(LossDHop.toPrecision(3));
+    $('#LossFermTrub').text(LossDHop.toPrecision(3));    
     $('#VolStart').text(VolStart.toPrecision(3));
     $('#VolMash').text(VolMash.toPrecision(3));
     $('#VolPre').text(VolPre.toPrecision(3));
@@ -98,6 +105,8 @@
     $('#HMash').text(HMash.toPrecision(5));
     $('#HPre').text(HPre.toPrecision(5));
     $('#HPost').text(HPost.toPrecision(5));
+    $('#DHop').text(DHop.toPrecision(5));    
+    $('#HChilled').text(VolPackaged.toPrecision(5));
     $('#MashThick').text(MashThick.toPrecision(3));
     $('#VolMinSparge').text(VolMinSparge.toPrecision(3));
     $('#VolChilled').text(VolChilled.toPrecision(3));
