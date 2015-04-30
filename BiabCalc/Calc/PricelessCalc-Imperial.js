@@ -103,7 +103,7 @@
     $('#HPre').text(HPre.toPrecision(5));
     $('#HPost').text(HPost.toPrecision(5));
     $('#DHop').text(DHop.toPrecision(5));    
-    $('#HChilled').text(VolPackaged.toPrecision(5));
+    $('#HChilled').text(HChilled.toPrecision(5));
     $('#MashThick').text(MashThick.toPrecision(3));
     $('#VolMinSparge').text(VolMinSparge.toPrecision(3));
     $('#VolChilled').text(VolChilled.toPrecision(3));
