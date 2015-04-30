@@ -90,9 +90,15 @@
 						</div>
 					</div>
 		<div class="control-group">
-						<label class="control-label" for="LossTrub">Trub Loss</label>
+						<label class="control-label" for="LossTrub">Trub Loss from Kettle</label>
 						<div class="controls">
 							<input type="text" class="input-mini" id="LossTrub" name="LossTrub" value="0.2" required> Gallons
+						</div>
+					</div>
+		<div class="control-group">
+						<label class="control-label" for="Habs">Trub Loss from Fermenter (10% of batch size)</label>
+						<div class="controls">
+							<input type="text" class="input-mini" id="LossFermTrub" name="LossFermTrub" value="0.5" required> Gallons
 						</div>
 					</div>
 		<div class="control-group">
@@ -107,7 +113,8 @@
 							<input type="text" class="input-mini" id="Habs" name="Habs" value="0.0365" required> Gallons/oz
 						</div>
 					</div>
-					<div class="form-actions">
+					
+					<!--<div class="form-actions">
 						<button type="submit" id="btnUpdate" class="btn btn-primary">Reset Calculations</button>
 					</div>
 				</div><!-- end left column -->
