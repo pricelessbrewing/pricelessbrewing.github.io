@@ -85,7 +85,7 @@
     $('#LossHop').text(LossHop.toPrecision(3));
     $('#LossGrain').text(LossGrain.toPrecision(3));
     $('#LossTot').text(LossTot.toPrecision(3));
-    $('#LossFermTrub').text(LossDHop.toPrecision(3));    
+    $('#LossFermTrub').text(LossFermTrub.toPrecision(3));    
     $('#VolStart').text(VolStart.toPrecision(3));
     $('#VolMash').text(VolMash.toPrecision(3));
     $('#VolPre').text(VolPre.toPrecision(3));
