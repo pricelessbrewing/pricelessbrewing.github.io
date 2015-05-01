@@ -64,7 +64,7 @@
     VolMash = (VolStart + GBill * 0.08) * MashAdj,
     VolPre = (WaterTot - LossGrain) * 1.043841336,
     VolPost = (WaterTot - LossTot + LossTrub) * 1.043841336,
-    VolChilled = ( VolPos / 1.043841336 ) - VolTrub,
+    VolChilled = ( VolPos / 1.043841336 ) - LossTrub,
     VolPackaged = VolChilled - LossFermTrub - ( DHop * Gabs ),
     GalH = 294.118334834 / (KettleID * KettleID),
     HTot = GalH * WaterTot,
