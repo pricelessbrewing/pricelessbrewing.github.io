@@ -74,7 +74,7 @@
     HPre = GalH * VolPre,
     HChilled = GalH * VolChilled,
     MashThick = VolStart * 4 / GBill,
-    VolMinSparge = ( ( WaterTot + GBill * 0.08) * MashAdj ) - ( ( PotSize -0.01 ) ), 
+    VolMinSparge = Math.max(0,((WaterTot + GBill * 0.08) * MashAdj) - (PotSize - 0.01 )), 
     HPost = GalH * VolPost;
     
     
