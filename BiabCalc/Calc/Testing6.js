@@ -112,10 +112,10 @@
     $('#VolMinSparge').text(VolMinSparge.toFixed(2));
     $('#VolChilled').text(VolChilled.toFixed(2));
     $('#VolPackaged').text(VolPackaged.toFixed(2));
-    $('#FirstRun').text(1Run.toFixed(2));
-    $('#HFirstRun').text(H1Run.toFixed(2));
-    $('#HSecRun').text(H2Run.toFixed(2));
-    $('#SecRun').text(2Run.toFixed(2));
+    $('#FirstRun').text(FirstRun.toFixed(2));
+    $('#HFirstRun').text(HFirstRun.toFixed(2));
+    $('#HSecRun').text(HSecRun.toFixed(2));
+    $('#SecRun').text(SecRun.toFixed(2));
     $('#EBoil').text(EBoil.toFixed(2));
   }
   function validateField(field) {
