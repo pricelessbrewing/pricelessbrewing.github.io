@@ -108,7 +108,7 @@
     $('#VolMinSparge').text(VolMinSparge.toFixed(2));
     $('#VolChilled').text(VolChilled.toFixed(2));
     $('#VolPackaged').text(VolPackaged.toFixed(2));
-    $('#EBoil').text(VolPackaged.toFixed(2));
+    $('#EBoil').text(EBoil.toFixed(2));
   }
   function validateField(field) {
     $field = $(field);
