@@ -78,9 +78,9 @@
     VolMinSparge = Math.max(0,((WaterTot + GBill * 0.08) * MashAdj) - (PotSize - 0.01 )), 
     HPost = GalH * VolPost,
     FirstRun = ( VolStart - LossGrain),
-    HFirstRun = 1Run * GalH,
-    SecRun = ( ( VolPre / 1.043841336 ) * MashAdj) - 1Run,
-    HSecRun = 2Run * GalH,
+    HFirstRun = FirstRun * GalH,
+    SecRun = ( ( VolPre / 1.043841336 ) * MashAdj) - FirstRun,
+    HSecRun = SecRun * GalH,
     EBoil = (0.0058 * KettleID * KettleID) - (0.0009 * KettleID) + 0.0038;
     
     
