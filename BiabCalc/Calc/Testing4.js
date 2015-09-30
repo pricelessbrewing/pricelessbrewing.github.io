@@ -78,7 +78,9 @@
     VolMinSparge = Math.max(0,((WaterTot + GBill * 0.08) * MashAdj) - (PotSize - 0.01 )), 
     HPost = GalH * VolPost,
     1Run = ( VolStart - LossGrain),
+    H1Run = 1Run * GalH,
     2Run = ( ( VolPre / 1.043841336 ) * MashAdj) - 1Run,
+    H2Run = 2Run * GalH,
     EBoil = (0.0058 * KettleID * KettleID) - (0.0009 * KettleID) + 0.0038;
     
     
@@ -110,6 +112,10 @@
     $('#VolMinSparge').text(VolMinSparge.toFixed(2));
     $('#VolChilled').text(VolChilled.toFixed(2));
     $('#VolPackaged').text(VolPackaged.toFixed(2));
+    $('#1Run').text(1Run.toFixed(2));
+    $('#H1Run').text(H1Run.toFixed(2));
+    $('#H2Run').text(H2Run.toFixed(2));
+    $('#2Run').text(2Run.toFixed(2));
     $('#EBoil').text(EBoil.toFixed(2));
   }
   function validateField(field) {
