@@ -17,7 +17,8 @@
       'HChilled',
       'VolPackaged',
       'Gabs',
-      'Habs'
+      'Habs',
+      'EBoil',
     ];
     for (i = 0; i < fields.length; i++) {
       if (!$('#' + fields[i]).val().match(/^d*(.\d+)?/)) {
@@ -76,7 +77,7 @@
     MashThick = VolStart * 4 / GBill,
     VolMinSparge = Math.max(0,((WaterTot + GBill * 0.08) * MashAdj) - (PotSize - 0.01 )), 
     HPost = GalH * VolPost,
-    EBoil = (0.058 * KettleID * KettleID) - (0.0009 * KettleID) + 0.0038;
+    EBoil = (0.0058 * KettleID * KettleID) - (0.0009 * KettleID) + 0.0038;
     
     
     // console.log(VolStrike, WaterTot, MashThick, TempStrike);
