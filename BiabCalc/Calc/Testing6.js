@@ -77,7 +77,7 @@
     MashThick = VolStart * 4 / GBill,
     VolMinSparge = Math.max(0,((WaterTot + GBill * 0.08) * MashAdj) - (PotSize - 0.01 )), 
     HPost = GalH * VolPost,
-    FirstRun = ( VolStart - LossGrain),
+    FirstRun = ( VolStart - LossGrain) * MashAdj,
     HFirstRun = FirstRun * GalH,
     SecRun = ( ( VolPre / 1.043841336 ) * MashAdj) - FirstRun,
     HSecRun = SecRun * GalH,
