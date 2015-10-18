@@ -1,6 +1,6 @@
 ---
 layout: home
-excerpt: "A minimal Jekyll theme for your blog by designer Michael Rose."
+excerpt: "Where I ramble on about homebrewing, math, and BIAB stuffs."
 tags: [Jekyll, theme, responsive, blog, template]
 author: pricelessbrewing
 image:
