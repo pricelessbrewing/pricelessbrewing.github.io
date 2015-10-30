@@ -125,7 +125,7 @@ input:focus {
 }
 .left-column .control-group {
     padding: 0.8em 0;
-    width: 50%;
+    width: 33%;
     float: left;
     margin: 0;
     display: inline-block;
@@ -140,6 +140,7 @@ input:focus {
 .right-column .control-group {
     border-top: 1px solid #93321f;
     padding: 0.3em 0 0.3em 0;
+    width:33%;
     clear: both;
     overflow: auto;
     color: #b4af9a;
@@ -156,6 +157,33 @@ input:focus {
     margin-right: 5%;
 }
 .right-column .controls {
+    width: 30%;
+    display: inline-block;
+    float: left;
+    font-size: 0.9em;
+    color: white;
+    font-weight: 600;
+}
+.center-column .control-group {
+    border-top: 1px solid #93321f;
+    padding: 0.3em 0 0.3em 0;
+    width:33%;
+    clear: both;
+    overflow: auto;
+    color: #b4af9a;
+}
+.center-column .control-group:last-of-type {
+    border-bottom: 1px solid #93321f;
+}
+.center-column label {
+    width: 65%;
+    font-size: 0.9em;
+    display: inline-block;
+    float: left;
+    clear: both;
+    margin-right: 5%;
+}
+.center-column .controls {
     width: 30%;
     display: inline-block;
     float: left;
