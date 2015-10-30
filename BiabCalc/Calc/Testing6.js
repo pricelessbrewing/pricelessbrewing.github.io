@@ -200,7 +200,7 @@
         $('#PlatoPost2').text(PlatoPost2.toFixed(2));
         $('#SGPre2').text(SGPre2.toFixed(2));
         $('#SGPost2').text(SGPost2.toFixed(2));
-        $('#TotalPoints2').text(TotalPoints2.toFixed(2));
+        $('#TotalPoints').text(TotalPoints.toFixed(2));
 
 
     }
