@@ -118,7 +118,12 @@
             TrueAbs2 = (RetSugarS2 + RetWat2) / (SG2 * DenseWater * GBill),
             RecSugarTot = RecSugarS1 + RecSugarS2,
             EstLauterEff = RecSugarTot / MashSugarWt1,
-            EstMashEff = EstLauterEff * MAGEstConv;
+            EstMashEff = EstLauterEff * MAGEstConv,
+            PlatoPre = (100 * RecSugarTot) / (RecSugarTot + VolPre),
+            PlatoPost = (100 * RecSugarTot) / (RecSugarTot + VolPost),
+            SGPre = 1 + (PlatoPre / (258.6 - 0.879551 * PlatoPre)),
+            SGPost = 1 + (PlatoPost / (258.6 - 0.879551 * PlatoPost)),
+            TotalPoints = (VolPre * (SGPre - 1 ) * 100);
 
 
         // console.log(VolStrike, WaterTot, MashThick, TempStrike);
@@ -191,6 +196,12 @@
         $('#RecSugarTot').text(RecSugarTot.toFixed(2));
         $('#EstLauterEff').text(EstLauterEff.toFixed(2));
         $('#EstMashEff').text(EstMashEff.toFixed(2));
+        $('#PlatoPre2').text(PlatoPre2.toFixed(2));
+        $('#PlatoPost2').text(PlatoPost2.toFixed(2));
+        $('#SGPre2').text(SGPre2.toFixed(2));
+        $('#SGPost2').text(SGPost2.toFixed(2));
+        $('#TotalPoints2').text(TotalPoints2.toFixed(2));
+
 
     }
 
