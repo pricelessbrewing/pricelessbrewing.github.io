@@ -81,7 +81,27 @@
     HFirstRun = FirstRun * GalH,
     SecRun = ( ( VolPre / 1.043841336 ) * MashAdj) - FirstRun,
     HSecRun = SecRun * GalH,
-    EBoil = (0.0058 * KettleID * KettleID) - (0.0009 * KettleID) + 0.0038;
+    EBoil = (0.0058 * KettleID * KettleID) - (0.0009 * KettleID) + 0.0038,
+    MAGPot = 36,
+    MAGFine = 79.5%,
+    MagMoist = 0.04,
+    MagEstConv = 95%,
+    MagRunRatio = FirstRun / SecondRun,
+    DenseWater = 8.3304,
+    SGSuccrose = 46.173
+    MAGDryG = (1-MAGMoist) * GBill,
+    MAGVolWater = GBill * MAGMoist,
+    MAGWtWater = MAGVolWater * DenseWater,
+    MAGTotWater = WaterTot * DenseWater,
+    ExPot = MAGPot / SGSuccrose,
+    ExConv = ExPot * MAGEstConv, 
+    TotalPot = GBill * MAGPot * ( 1 - MAGMoist ),
+    MashWaterWt1 = VolStart * WaterDense,
+    MashWaterWt2 = VolSparge * WaterDense,
+    MashSugarWt1 = MAGDryG * ExConv,
+    Plato1 = ( 100 * MashSugarWt1 ) / ( MashSugarWt1 + MashWaterWt1),
+    SG1 = (1 + ( Plato1 / ( 258.6 - ( ( Plato1/258.2*227.1)))))
+    MashSugarwt2 = RetSugar1,
     
     
     // console.log(VolStrike, WaterTot, MashThick, TempStrike);
