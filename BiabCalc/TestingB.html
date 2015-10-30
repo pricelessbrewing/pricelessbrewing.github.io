@@ -5,7 +5,7 @@
   <title>Priceless Brew in a Bag Calculator</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
-  <link href="styles.css" rel="stylesheet">
+  <link href="styles2.css" rel="stylesheet">
 
 </head>
 <html>
@@ -35,6 +35,8 @@
 </header>
 <div role="main">
 <form id="calcForm" class="form-horizontal">
+  
+  
 <div class="left-column">
 <div class="container">
 <h2>Enter your details</h2>
@@ -132,6 +134,121 @@
 					<div class="form-actions">						<button type="submit" id="btnUpdate" class="btn btn-primary">Reset Calculations</button>
 					</div>				</div><!-- end left column -->
 			</div>
+			
+			<div class="center-column">
+				<div class="container">
+					<h2>General Results</h2>		
+
+					<div class="control-group">
+						<label class="control-label">Total water needed</label>
+						<div class="controls">
+							<span class="calc" id="WaterTot">1</span> Gallons <br>
+							<span class="calc" id="HTot">4</span> Inches high
+						</div>
+					</div>
+		      		<div class="control-group">
+						<label class="control-label">Strike temp</label>
+						<div class="controls">
+							<span class="calc" id="TempStrike">9</span> F
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">Mash Thickness</label>
+						<div class="controls">
+							<span class="calc" id="MashThick">7</span> Quarts/Lb
+						</div>
+					</div>
+		      		<div class="control-group">
+						<label class="control-label"> Total volume loss</label>
+						<div class="controls">
+							<span class="calc" id="LossTot">2</span> Gallons
+						</div>
+					</div>
+					<div class="control-group">
+					<label class="control-label">Gallon height</label>
+						<div class="controls">
+							<span class="calc" id="GalH">4</span> Inches high
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">Estimated Boil off</label>
+						<div class="controls">
+							<span class="calc" id="EBoil">.5</span> Gal/hr
+						</div>
+					</div>
+					<div class="control-group">
+					<label class="control-label">Minimum Sparging Volume <br><span class="note"></span></label>
+					<div class="controls">
+						<span class="calc" id="VolMinSparge">4</span> Gallons <br>
+						</div>
+					</div>
+					<h2>Water Volumes and Heights</h2>
+					<div class="control-group">
+						<label class="control-label">Water volume at 68F</label>
+						<div class="controls">
+							<span class="calc" id="VolStart">4</span> Gallons <br>
+							<span class="calc" id="HStart">4</span> Inches high
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">Strike water volume <br><span class="note">(temp. adjusted at strike temp)</span></label>
+						<div class="controls">
+							<span class="calc" id="VolStrike">0</span> Gallons <br>
+							<span class="calc" id="HStrike">4</span> Inches high
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">Volume of mash with grains <br><span class="note">(temp. adjusted at mash temp)</span></label>
+						<div class="controls">
+						<span class="calc" id="VolMash">4.6</span> Gallons <br>-						<span class="calc" id="HMash">5</span> Inches high
+					</div>
+					</div>
+										<div class="control-group">
+						<label class="control-label">First Runnings <br><span class="note">(temp. adjusted at mash temp)</span></label>
+						<div class="controls">
+							<span class="calc" id="FirstRun">4.6</span> Gallons <br>
+							<span class="calc" id="HFirstRun">5</span> Inches high
+						</div>
+					</div>
+										<div class="control-group">
+						<label class="control-label">2nd Runnings<br><span class="note">(temp. adjusted at mash temp)</span></label>
+						<div class="controls">
+							<span class="calc" id="SecRun">4.6</span> Gallons <br>
+							<span class="calc" id="HSecRun">5</span> Inches high
+						</div>
+					</div>
+					
+					<div class="control-group">
+						<label class="control-label">Pre boil <br><span class="note">(temp. adjusted at 212F)</span></label>
+						<div class="controls">
+							<span class="calc" id="VolPre">4</span> Gallons <br>
+							<span class="calc" id="HPre">5</span> Inches high
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">Post boil <br><span class="note">(temp. adjusted at 212F)</span></label>
+						<div class="controls">
+							<span class="calc" id="VolPost">4</span> Gallons <br> 
+							<span class="calc" id="HPost">5</span> Inches high
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">Out of Kettle Chilled <br><span class="note">(If no chill adjust trub volumes)</span></label>
+						<div class="controls">
+							<span class="calc" id="VolChilled">5.5</span> Gallons <br>
+							<span class="calc" id="HChilled">5</span> Inches high
+					</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">Volume Packaged<br><span class="note">(To Bottle or keg)</span></label>
+						<div class="controls">
+							<span class="calc" id="VolPackaged">4</span> Gallons
+						</div>
+					</div>
+				</div>	<!-- end container -->
+			</div><!-- end center column -->
+			
+			
 			
 			<div class="right-column">
 				<div class="container">
@@ -257,7 +374,7 @@
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
-  <script src="http://pricelessbrewing.github.io/BiabCalc/Calc/Testing6.js"></script>
+  <script src="http://pricelessbrewing.github.io/BiabCalc/Calc/TestingB.js"></script>
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 </body>
 </html>
