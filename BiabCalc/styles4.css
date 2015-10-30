@@ -84,17 +84,17 @@ footer a:hover {
     padding: 2em 0 3em 0;
 }
 .left-column {
-    width: 33%;
+    width: 30%;
     background: #fbf4d3;
     clear: left;
 }
 
 .right-column {
-    width: 33%;
+    width: 30%;
     padding-left: 2%;
 }
 .center-column {
-    width: 33%;
+    width: 30%;
     padding-left: 2%;
 }
 h1, h2 {
@@ -126,7 +126,7 @@ input:focus {
 }
 .left-column .control-group {
     padding: 0.8em 0;
-    width: 33%;
+    width: 30%;
     float: left;
     margin: 0;
     display: inline-block;
@@ -141,7 +141,7 @@ input:focus {
 .right-column .control-group {
     border-top: 1px solid #93321f;
     padding: 0.3em 0 0.3em 0;
-    width:33%;
+    width:30%;
     clear: both;
     overflow: auto;
     color: #b4af9a;
@@ -168,7 +168,7 @@ input:focus {
 .center-column .control-group {
     border-top: 1px solid #93321f;
     padding: 0.3em 0 0.3em 0;
-    width:33%;
+    width:30%;
     clear: both;
     overflow: auto;
     color: #b4af9a;
