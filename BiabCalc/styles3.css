@@ -88,11 +88,12 @@ footer a:hover {
     background: #fbf4d3;
     clear: left;
 }
-.center-column {
+
+.right-column {
     width: 33%;
     padding-left: 2%;
 }
-.right-column {
+.center-column {
     width: 33%;
     padding-left: 2%;
 }
@@ -149,7 +150,7 @@ input:focus {
     border-bottom: 1px solid #93321f;
 }
 .right-column label {
-    width: 65%;
+    width: 30%;
     font-size: 0.9em;
     display: inline-block;
     float: left;
@@ -176,7 +177,7 @@ input:focus {
     border-bottom: 1px solid #93321f;
 }
 .center-column label {
-    width: 65%;
+    width: 30%;
     font-size: 0.9em;
     display: inline-block;
     float: left;
@@ -267,7 +268,7 @@ ul, menu, dir {
     color: #D76711;
 }
 @media all and (max-width: 1050px) {
-    .left-column, .right-column {
+    .left-column, .center-column,.right-column {
         width: 100%;
     }
     .right-column {
@@ -329,7 +330,7 @@ ul, menu, dir {
     .units {
         display: none !important;
     }
-    .left-column, .right-column {
+    .left-column, .center-column, .right-column {
         width: 45%;
         font-size: 10pt;
         padding: 0 0 0 0;
@@ -347,17 +348,17 @@ ul, menu, dir {
     }
     .center-column .controls {
         color:#000000 !important;
-        width: 40%;
+        width: 20%;
     }
     .center-column label {
-        width: 55%;
+        width: 27.5%;
     }
     .right-column .controls {
         color:#000000 !important;
-        width: 40%;
+        width: 20%;
     }
     .right-column label {
-        width: 55%;
+        width: 27.5%;
     }
     .container {
         padding: 0 0 0 0;
