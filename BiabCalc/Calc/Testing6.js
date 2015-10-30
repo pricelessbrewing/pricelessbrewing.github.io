@@ -100,7 +100,13 @@
     MashWaterWt2 = VolSparge * WaterDense,
     MashSugarWt1 = MAGDryG * ExConv,
     Plato1 = ( 100 * MashSugarWt1 ) / ( MashSugarWt1 + MashWaterWt1),
-    SG1 = (1 + ( Plato1 / ( 258.6 - ( ( Plato1/258.2*227.1)))))
+    SG1 = 1 + ( Plato1 / (258.6 - 0.879551 * Plato1 ) ),
+    RecWortWt1 = SG1 * FirstRun * WaterDense,
+    RecSugarS1 = ( RecWort1 * Plato1 ) / 100,
+    RecWaterWt1 = RecWortW1 - RecSugarS1,
+    RetSugarS1 = MashSugarWt1 - RecSugarS1,
+    RetWat1 = VolStart * DenseWater - RecWaterWtW1,
+    TrueAbs1 = ( RetSugarS1 + RetWaterWt1 ) / ( SG1 * WaterDense * GBill)
     MashSugarwt2 = RetSugar1,
     
     
