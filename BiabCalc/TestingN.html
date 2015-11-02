@@ -6,7 +6,7 @@
   <title>Priceless Brew in a Bag Calculator</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
-  <link href="styles8.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
 </head>
 
 <body>
@@ -111,7 +111,7 @@
             <div class="control-group">
               <label class="control-label" for="VolSparge">Sparging Volume</label>
               <div class="controls">
-                <input type="text" class="input-mini" id="VolSparge" name="VolSparge" value="0" required>Gallons</div>
+                <input type="text" class="input-mini" id="VolSparge" name="VolSparge" value="3" required>Gallons</div>
             </div>
             <div class="control-group">
               <label class="control-label" for="PotSize">How Big is your Kettle/Mashtun?</label>
@@ -158,16 +158,16 @@
 
           <div class="control-group">
             <label class="control-label">Total available sugar</label>
-            <div class="controls"> <span class="calc" id="MashSugarWt1">15.5</span> Lb
-             </div>
+            <div class="controls"> <span class="calc" id="SugarTot">15.5</span> Lb
+            </div>
           </div>
           <div class="control-group">
             <label class="control-label">Total Recovered sugar</label>
-            <div class="controls"> <span class="calc" id="RecSugarTot">14</span> Lb</div>
+            <div class="controls"> <span class="calc" id="RCSTot">14</span> Lb</div>
           </div>
           <div class="control-group">
             <label class="control-label">Retained sugar</label>
-            <div class="controls"> <span class="calc" id="RetSugarS2">1.5</span> Lb</div>
+            <div class="controls"> <span class="calc" id="RetS2">1.5</span> Lb</div>
           </div>
           <div class="control-group">
             <label class="control-label">Total Gravity points Recovered </label>
@@ -190,35 +190,52 @@
               <br><span class="note"></span>
 
             </label>
-            <div class="controls"> <span class="calc" id="MAGRunRatio">0.75</span> 
+            <div class="controls"> <span class="calc" id="MAGRunRatio">0.75</span>
               <br>
             </div>
           </div>
           <h2>Initial Mash</h2>
 
-   <div class="control-group">
+          <div class="control-group">
             <label class="control-label">Available Sugar
               <br><span class="note">Recovered Sugar</span>
-               <br><span class="note">Retained Sugar</span>
-
+                <br><span class="note">Retained Sugar</span>
+               <br><span class="note">Gravity of first runnings</span>
             </label>
-            <div class="controls"> <span class="calc" id="MashSugarWt1">0</span> Lb
-              <br> <span class="calc" id="RecSugarS1">4</span> Lb
-      <br> <span class="calc" id="RetSugarS1">4</span> Lb</div>
+            <div class="controls"> <span class="calc" id="MSW1">0</span> Lb
+              <br> <span class="calc" id="RS1">4</span> Lb
+            <br> <span class="calc" id="RetS1">4</span> Lb
+               <br> <span class="calc" id="SG1">4</span> SG
+            </div>
           </div>
-             <h2>First Sparge</h2>
+          
+     
+          <h2>First Sparge</h2>
 
-   <div class="control-group">
+            <div class="control-group">
             <label class="control-label">Available Sugar
               <br><span class="note">Recovered Sugar</span>
-               <br><span class="note">Retained Sugar</span>
-
+                <br><span class="note">Retained Sugar</span>
+               <br><span class="note">Gravity of first runnings</span>
             </label>
             <div class="controls"> <span class="calc" id="MashSugarWt2">0</span> Lb
-              <br> <span class="calc" id="RecSugarS2">4</span> Lb
-      <br> <span class="calc" id="RetSugarS2">4</span> Lb</div>
+              <br> <span class="calc" id="RS2">4</span> Lb
+            <br> <span class="calc" id="RetS2">4</span> Lb
+               <br> <span class="calc" id="SG2">4</span> SG
+            </div>
           </div>
-         
+          
+              <h2>Pre and Post boil</h2>
+
+            <div class="control-group">
+            <label class="control-label">Pre Boil SG
+              <br><span class="note">Post Boil SG</span>
+            </label>
+            <div class="controls"> <span class="calc" id="SGPre">0</span> Lb
+              <br> <span class="calc" id="SGPost">4</span> Lb
+            </div>
+          </div>
+        
         </div>
         <!-- end container -->
       </div>
@@ -285,7 +302,7 @@
 
             </label>
             <div class="controls"> <span class="calc" id="VolMash">4.6</span> Gallons
-              <br>- <span class="calc" id="HMash">5</span> Inches high</div>
+              <br> <span class="calc" id="HMash">5</span> Inches high</div>
           </div>
           <div class="control-group">
             <label class="control-label">First Runnings
@@ -354,7 +371,7 @@
   <script>
     window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')
   </script>
-  <script src="http://pricelessbrewing.github.io/BiabCalc/Calc/Testing9.js"></script>
+  <script src="http://pricelessbrewing.github.io/BiabCalc/Calc/Testing3.js"></script>
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 </body>
 
