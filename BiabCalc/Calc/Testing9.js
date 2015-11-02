@@ -96,7 +96,8 @@
       ExPot = MAGPot / SGSuccrose,
       ExConv = ExPot * MAGEstConv,
       TotalPot = GBill * MAGPot * (1 - MAGMoist),
-      MashWaterWt1 = VolStart * 8.3304;
+      MashWaterWt1 = VolStart * 8.3304,
+        SugarTot = MAGDryG * ExPot;
 
     var MSW1 = MAGDryG * ExConv,
       Plato1 = (100 * MSW1) / (MSW1 + MashWaterWt1),
@@ -201,6 +202,7 @@
     $('#TotalPoints').text(TotalPoints.toFixed(0));
     $('#PlatoPost').text(PlatoPost.toFixed(0));
     $('#SGPost').text(SGPost.toFixed(4));
+        $('#SugarTot').text(SugarTot.toFixed(4));
 
 
   }
