@@ -35,6 +35,9 @@ You should know what to do here. Pitch the remaining yeast slurry into your beer
 # Step 7: Using Harvested Yeast
 Just pretend it's a fresh vial and do everything you'd do normally and enjoy the money, gas and time getting fresh yeast you just saved! I use the same viability model as Olan over at Brewunited.com where you retain 80% of your viable cells every month (100*.8=80, 80*.8=64. 64*.8=51.2), note that this differs from the more common linear model (100-20=80, 80-20-60, 60-20=40. etc)
 
+
+
 I've taken yeast as far as six months to success and have had no infections to date* using this method.  
+
 
 *knock on wood
