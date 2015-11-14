@@ -1,0 +1,387 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Priceless Brew in a Bag Calculator</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link href="stylesQ.css" rel="stylesheet">
+
+</head>
+<html>
+
+<body>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-60124200-2', 'auto');-  ga('send', 'pageview');
+  </script>
+  <header>
+    <div class="container header-container">
+      <h1><img class="logo" src="images/logo.png" alt=""></h1>
+      <p>All the numbers you need to make
+        <br>your own home brewed beer using
+        <br> the brew in a bag method.</p>
+      <ul class="units" align>
+        <br>
+        <li class="active"> <a href="http://pricelessbrewing.github.io/BiabCalc">Imperial</a></li>
+        <p>
+        </P>
+        <li><a href="http://pricelessbrewing.github.io/BiabCalc/Metric">Metric</a></li>
+        <li><a href="http://pricelessbrewing.github.io/BiabCalc/ImperialG">Imperial (with hops in grams)</a></li>
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mash Thickness calculators
+        <br>
+        <p></p>
+        <li><a href="http://pricelessbrewing.github.io/BiabCalc/Mash/Imperial.html">Imperial</a></li>
+        <li><a href="http://pricelessbrewing.github.io/BiabCalc/Mash/Metric">Metric</a></li>
+        <li><a href="http://pricelessbrewing.github.io/BiabCalc/Mash/ImperialG">Imperial (with hops in grams)</a></li>
+      </ul>
+    </div>
+  </header>
+  <div role="main">
+    <form id="calcForm" class="form-horizontal">
+      <div class="left-column column">
+        <div class="container">
+          <h2>Enter your details</h2>
+
+          <div class="control-group">
+            <label class="control-label" for="BatchVol">Batch Size</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="BatchVol" name="BatchVol" value="5.5">G</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="GBill">Grain Bill</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="GBill" name="GBill" value="19.71" required>Lb</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="HBill">Hop Bill</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="HBill" name="HBill" value="2" required>Oz</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="Dhop">Dry Hops</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="DHop" name="Dhop" value="0" required>Oz</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="BoilTime">Length of Boil</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="BoilTime" name="BoilTime" value="60" required>Min</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="BoilRate">Boil-Off Rate</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="BoilRate" name="BoilRate" value="1.2" required>Gal/Hr</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="TempGrain">Grain Temp</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="TempGrain" name="TempGrain" value="72" required>F</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="TempMash">Mash Temp</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="TempMash" name="TempMash" value="154" required>F</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="VolSparge">Sparging Volume</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="VolSparge" name="VolSparge" value="3" required>Gallons</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="PotSize">How Big is your Kettle/Mashtun?</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="PotSize" name="PotSize" value="9.901" required>Gallons</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="KettleID">How Wide is your Kettle/Mashtun?</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="KettleID" name="KettleID" value="13.898" required>Inches</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="LossMashtun">MashTun Losses </label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="LossMashT" name="LossMashT" value="0.0" required>Gallons</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="LossTrub">Kettle Losses</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="LossTrub" name="LossTrub" value="0.0" required>Gallons</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="LossFermTrub">Trub Loss from Fermenter (10% of batch size)</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="LossFermTrub" name="LossFermTrub" value="0.5" required>Gallons</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="Conv">Conversion efficiency</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="Conv" name="Conv" value="99.1" required>%</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="Gabs">Grain Absorption</label>
+            <div class="controls">
+              <input type="text" id="Gabs" name="Gabs" value="0.08" required>Gallons/Lb</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="Habs">Hop Absorption</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="Habs" name="Habs" value="0.0365" required>Gallons/oz</div>
+          </div>
+        </div>
+        <!-- end left column -->
+      </div>
+      <div class="middle-column column">
+        <div class="container">
+          <h5>Mash Analysis</h5>
+
+          <div class="control-group">
+            <label class="control-label">Total available sugar</label>
+            <div class="controls"> <span class="calc" id="SugarTot">15.5</span> Lb
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Total Recovered sugar</label>
+            <div class="controls"> <span class="calc" id="RCSTot">14</span> Lb</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Retained sugar</label>
+            <div class="controls"> <span class="calc" id="RetSF">1.5</span> Lb</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Retained Grain Equivalent</label>
+            <div class="controls"> <span class="calc" id="RetSFGEQ">1.5</span> Lb</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Total Gravity points Recovered </label>
+            <div class="controls"> <span class="calc" id="TotalPoints">550</span> Points</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Estimated Lauter Efficiency</label>
+            <div class="controls"> <span class="calc" id="EstLauterEff">95</span> %</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Estimated Mash Efficiency</label>
+            <div class="controls"> <span class="calc" id="EstMashEff">73</span> %</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Estimated Brewhouse Efficiency</label>
+            <div class="controls"> <span class="calc" id="EstBHEff">73</span> %</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">True Absorption Rate</label>
+            <div class="controls"> <span class="calc" id="TrueAbs">0.13</span> Gal/Lb</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Run Off Ratio
+              <br><span class="note"></span>
+
+            </label>
+            <div class="controls"> <span class="calc" id="MAGRunRatio">0.75</span>
+              <br>
+            </div>
+          </div>
+          <h5>Initial Mash</h5>
+
+          <div class="control-group">
+            <label class="control-label">Available Sugar
+              <br><span class="note">Recovered Sugar</span>
+              <br><span class="note">Retained Sugar</span>
+              <br><span class="note">Retained Grain Equivalent</span>
+              <br><span class="note">Gravity of first runnings</span>
+            </label>
+            <div class="controls"> <span class="calc" id="MSW1">0</span> Lb
+              <br> <span class="calc" id="RS1">4</span> Lb
+              <br> <span class="calc" id="RetS1">4</span> Lb
+              <br> <span class="calc" id="RetS1GEQ">4</span> Lb
+              <br> <span class="calc" id="SG1">4</span> SG
+            </div>
+          </div>
+
+
+          <h5>First Sparge</h5>
+
+          <div class="control-group">
+            <label class="control-label">Available Sugar
+              <br><span class="note">Recovered Sugar</span>
+              <br><span class="note">Retained Sugar</span>
+              <br><span class="note">Retained Grain Equivalent</span>
+              <br><span class="note">Gravity of Second runnings</span>
+            </label>
+            <div class="controls"> <span class="calc" id="MashSugarWt2">0</span> Lb
+              <br> <span class="calc" id="RS2">4</span> Lb
+              <br> <span class="calc" id="RetS2">4</span> Lb
+              <br> <span class="calc" id="RetS2GEQ">4</span> Lb
+              <br> <span class="calc" id="SG2">4</span> SG
+            </div>
+          </div>
+
+          <h5>Pre and Post boil</h5>
+
+          <div class="control-group">
+            <label class="control-label">Pre Boil SG
+              <br><span class="note">Post Boil SG</span>
+            </label>
+            <div class="controls"> <span class="calc" id="SGPre">0</span> SG
+              <br> <span class="calc" id="SGPost">4</span> SG
+            </div>
+          </div>
+
+        </div>
+        <!-- end container -->
+      </div>
+      <div class="right-column column">
+        <div class="container">
+          <h2>General Results</h2>
+
+          <div class="control-group">
+            <label class="control-label">Total water needed</label>
+            <div class="controls">
+              <span class="calc" id="WaterTot">1</span> Gallons
+              <br>
+              <span class="calc" id="HTot">4</span> Inches high
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Strike temp</label>
+            <div class="controls">
+              <span class="calc" id="TempStrike">9</span> F
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Mash Thickness</label>
+            <div class="controls">
+              <span class="calc" id="MashThick">7</span> Quarts/Lb
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label"> Total volume loss</label>
+            <div class="controls">
+              <span class="calc" id="LossTot">2</span> Gallons
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Gallon height</label>
+            <div class="controls">
+              <span class="calc" id="GalH">4</span> Inches high
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Estimated Boil off</label>
+            <div class="controls">
+              <span class="calc" id="EBoil">.5</span> Gal/hr
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Minimum Sparging Volume
+              <br><span class="note"></span></label>
+            <div class="controls">
+              <span class="calc" id="VolMinSparge">4</span> Gallons
+              <br>
+            </div>
+          </div>
+          <h2>Water Volumes and Heights</h2>
+          <div class="control-group">
+            <label class="control-label">Water volume at 68F</label>
+            <div class="controls">
+              <span class="calc" id="VolStart">4</span> Gallons
+              <br>
+              <span class="calc" id="HStart">4</span> Inches high
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Strike water volume
+              <br><span class="note">(temp. adjusted at strike temp)</span></label>
+            <div class="controls">
+              <span class="calc" id="VolStrike">0</span> Gallons
+              <br>
+              <span class="calc" id="HStrike">4</span> Inches high
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Volume of mash with grains
+              <br><span class="note">(temp. adjusted at mash temp)</span></label>
+            <div class="controls">
+              <span class="calc" id="VolMash">4.6</span> Gallons
+              <br>- <span class="calc" id="HMash">5</span> Inches high
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">First Runnings
+              <br><span class="note">(temp. adjusted at mash temp)</span></label>
+            <div class="controls">
+              <span class="calc" id="FirstRun">4.6</span> Gallons
+              <br>
+              <span class="calc" id="HFirstRun">5</span> Inches high
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">2nd Runnings
+              <br><span class="note">(temp. adjusted at mash temp)</span></label>
+            <div class="controls">
+              <span class="calc" id="SecRun">4.6</span> Gallons
+              <br>
+              <span class="calc" id="HSecRun">5</span> Inches high
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label">Pre boil
+              <br><span class="note">(temp. adjusted at 212F)</span></label>
+            <div class="controls">
+              <span class="calc" id="VolPre">4</span> Gallons
+              <br>
+              <span class="calc" id="HPre">5</span> Inches high
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Post boil
+              <br><span class="note">(temp. adjusted at 212F)</span></label>
+            <div class="controls">
+              <span class="calc" id="VolPost">4</span> Gallons
+              <br>
+              <span class="calc" id="HPost">5</span> Inches high
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Out of Kettle Chilled
+              <br><span class="note">(If no chill adjust trub volumes)</span></label>
+            <div class="controls">
+              <span class="calc" id="VolChilled">5.5</span> Gallons
+              <br>
+              <span class="calc" id="HChilled">5</span> Inches high
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Volume Packaged
+              <br><span class="note">(To Bottle or keg)</span></label>
+            <div class="controls">
+              <span class="calc" id="VolPackaged">4</span> Gallons
+            </div>
+          </div>
+        </div>
+        <!-- end container -->
+      </div>
+      <!-- end right column -->
+    </form>
+  </div>
+
+  <footer>
+
+    <p>Made by <a href="http://pricelessbrewing.github.io">Mark</a> and <a href="http://www.jedlehmann.com.au">Jed</a>. <span class="what-is">What is <a href="http://www.homebrewtalk.com/wiki/index.php/Brew_in_a_Bag">brew in a bag</a>?</span></p>
+    <p>This calculator would not be possible if not for the great tips at <a href="http://Homebrewtalk.com">HomebrewTalk,</a><a href="www.biabrewer.info">Biabrewer forums,</a> and the <a href="http://biabbrewing.com/brew-day-prep/biab-calculators-and-software">BIAB Calculator & Converter @ biabbrewing.com</a></p>
+
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')
+  </script>
+  <script src="http://pricelessbrewing.github.io/BiabCalc/Calc/TestingQ.js"></script>
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+</body>
+
+</html>
