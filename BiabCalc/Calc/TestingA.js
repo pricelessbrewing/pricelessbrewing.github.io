@@ -34,8 +34,13 @@
     }
     var BatchVol = parseFloat($('#BatchVol').val()),
       GBill = parseFloat($('#GBill').val()),
+      MeasMashGrav = parseFloat($('#MeasMashGrav').val()),
+      MeasPrebGrav = parseFloat($('#MeasPrebGrav').val()),
+      MAGEstConv = parseFloat($('#MAGEstConv').val()),
       HBill = parseFloat($('#HBill').val()),
       DHop = parseFloat($('#DHop').val()),
+      MeasPrebVolume = parseFloat($('#MeasPrebVolume').val()),
+      TempSparge = parseFloat($('#TempSparge').val()),
       BoilTime = parseFloat($('#BoilTime').val()),
       BoilRate = parseFloat($('#BoilRate').val()),
       TempGrain = parseFloat($('#TempGrain').val()),
@@ -80,13 +85,12 @@
       HPost = GalH * VolPost,
       FirstRun = (VolStart - LossGrain) * MashAdj,
       HFirstRun = FirstRun * GalH,
-      SecRun = ((VolSparge ) ) ,
+      SecRun = ((VolSparge)),
       HSecRun = SecRun * GalH,
       EBoil = (0.0058 * KettleID * KettleID) - (0.0009 * KettleID) + 0.0038,
       MAGPot = 36,
-      MAGFine = 0.795,
+      MAGFine = 0.7797,
       MAGMoist = 0.04,
-      MAGEstConv = 0.95,
       MAGRunRatio = Math.max(SecRun / FirstRun, 0),
       SGSuccrose = 46.173,
       MAGDryG = (1 - MAGMoist) * GBill,
@@ -96,18 +100,17 @@
       ExPot = MAGPot / SGSuccrose,
       ExConv = ExPot * MAGEstConv,
       TotalPot = GBill * MAGPot * (1 - MAGMoist),
-      MashWaterWt1 = VolStart * 8.3304,
-        SugarTot = MAGDryG * ExPot;
-
-    var MSW1 = MAGDryG * ExConv,
+      MashWaterWt1 = (VolStart * 8.3304) + (GBill - MAGDryG),
+      SugarTot = MAGDryG * ExPot,
+       MSW1 = MAGDryG * ExConv,
       Plato1 = (100 * MSW1) / (MSW1 + MashWaterWt1),
       SG1 = 1 + (Plato1 / (258.6 - 0.879551 * Plato1)),
-      RW1 = (SG1 * ( FirstRun / 1.022494888 ) * 8.3304),
+      RW1 = (SG1 * (FirstRun / 1.022494888) * 8.3304),
       RS1 = (RW1 * Plato1) / 100,
       RCWtr1 = RW1 - RS1,
       RetS1 = MSW1 - RS1,
       RetWat1 = VolStart * 8.3304 - RCWtr1,
-      MWT2 = (( VolSparge * 8.3304) + RetWat1),
+      MWT2 = ((VolSparge * 8.3304) + RetWat1),
       TrueAbs1 = (RetS1 + RetWat1) / (SG1 * 8.3304 * GBill),
       MashSugarWt2 = RetS1,
       Plato2 = (100 * MashSugarWt2) / (MashSugarWt2 + MWT2),
@@ -119,16 +122,66 @@
       RetWat2 = MWT2 - RecW2,
       TrueAbs2 = (RetS2 + RetWat2) / (SG2 * 8.3304 * GBill),
       RCSTot = RS1 + RS2,
-      EstLauterEff = RCSTot / MSW1,
+      EstLauterEff = 100 * (RCSTot / MSW1),
       EstMashEff = EstLauterEff * MAGEstConv,
       PlatoPre = (100 * RCSTot) / (RCSTot + RecW2 + RCWtr1),
       SGPre = 1 + (PlatoPre / (258.6 - 0.879551 * PlatoPre)),
+      RetSF = RetS2,
+      EstConvWt = SugarTot * MAGEstConv,
       TotalPoints = ((VolPre / 1.044) * (SGPre - 1) * 1000),
-        PlatoPost = (100 * RCSTot) / (RCSTot + RecW2 + RCWtr1 - (BoilRate * 8.3304 * (BoilTime/60))),
-        SGPost = 1 + (PlatoPost / (258.6 - 0.879551 * PlatoPost));
+      PlatoPost = (100 * RCSTot) / (RCSTot + RecW2 + RCWtr1 - (BoilRate * 8.3304 * (BoilTime / 60))),
+      SGPost = 1 + (PlatoPost / (258.6 - 0.879551 * PlatoPost)),
+      TempMashout = (TempMash * (GBill + 5 * (GBill * Gabs)) + (5 * TempSparge * VolSparge)) / (GBill + 5 * (VolSparge + (GBill * Gabs))),
+      MeasMashPlato = -616.868 + (1111.14 * MeasMashGrav) - (630.272 * MeasMashGrav * MeasMashGrav) + (135.997 * MeasMashGrav * MeasMashGrav * MeasMashGrav),
+       MeasGabs = Math.min(MeasPrebVolume,(WaterTot - (MeasPrebVolume)/1.043841336)/GBill),
+      MeasMashWT = -((VolStart * 8.335 + (GBill * 0.04)) * MeasMashPlato) / (-100 + MeasMashPlato),
+      MeasConv = Math.max(100 * MeasMashWT / SugarTot,0),
+      MeasPrebPlato = -616.868 + (1111.14 * MeasPrebGrav) - (630.272 * MeasPrebGrav * MeasPrebGrav) + (135.997 * MeasPrebGrav * MeasPrebGrav * MeasPrebGrav),
+        MeasPrebWortWT = MeasPrebGrav * (MeasPrebVolume/1.043841336) * 8.3304,
+        MeasPrebSugarWT = (MeasPrebWortWT*MeasPrebPlato)/100,
+        MeasPrebWaterWT = MeasPrebWortWT - MeasPrebSugarWT,
+      MeasPrebWT = -(((MeasPrebWaterWT)) * MeasPrebPlato) / (-100 + MeasPrebPlato),
+      MeasMashEff = Math.max(0,100 * MeasPrebWT / SugarTot),
+      MeasLautWT = Math.max(0,MeasPrebWT - MeasMashWT),
+      MeasLautEff = 100 * MeasPrebWT / EstConvWt,
+      EstBrewhEff = VolChilled / (VolPost / 1.043841336)*EstMashEff,
+      MeasBrewhEff = VolChilled / (VolPost / 1.043841336)*MeasMashEff,
+        MeasPrebGrav2 = MeasPrebGrav,
+        MeasMashGrav2 = MeasMashGrav,
+
+        MeasMashPlato2 = -616.868 + (1111.14 * MeasMashGrav2) - (630.272 * MeasMashGrav2 * MeasMashGrav2) + (135.997 * MeasMashGrav2 * MeasMashGrav2 * MeasMashGrav2),
+        MeasMashWortWT =  MeasMashGrav2*(VolStart-(GBill*MeasGabs))*8.3304,
+        MeasMashSugarWT = (MeasMashWortWT*MeasMashPlato2)/100,
+        MeasSecRunWT = MeasPrebSugarWT - MeasMashSugarWT,
+      MeasSecRunPlato = (100 * MeasSecRunWT) / (MeasSecRunWT + VolSparge*8.3304),
+        MeasSecRunSG = 1 + (MeasSecRunPlato / (258.6 - 0.879551 * MeasSecRunPlato)),
+        MeasPostSG = 1+((((MeasPrebGrav2 - 1)*1000)*(MeasPrebVolume/1.043841336)/(VolPost/1.043841336))/1000);
 
     // console.log(VolStrike, WaterTot, MashThick, TempStrike);
     $('#WaterTot').text(WaterTot.toFixed(2));
+    $('#MeasConv').text(MeasConv.toFixed(1));
+    $('#MeasSecRunWT').text(MeasSecRunWT.toFixed(1));
+        $('#MeasSecRunWT').text(MeasSecRunWT.toFixed(1));
+    $('#MeasMashSugarWT').text(MeasMashSugarWT.toFixed(1));
+     $('#MeasSecRunSG').text(MeasMashWortWT.toFixed(1));
+    $('#MeasMashEff').text(MeasMashEff.toFixed(1));
+    $('#MeasPostSG').text(MeasPostSG.toFixed(4));
+    $('#MeasMashGrav2').text(MeasMashGrav2.toFixed(4));
+    $('#MeasSecRunSG').text(MeasSecRunSG.toFixed(4));
+    $('#MeasPrebSugarWT').text(MeasPrebSugarWT.toFixed(4));
+    $('#MeasSecRunPlato').text(MeasSecRunPlato.toFixed(4));
+    $('#MeasGabs').text(MeasGabs.toFixed(3));
+    $('#MeasBrewhEff').text(MeasBrewhEff.toFixed(1));
+    $('#MeasMashWT').text(MeasMashWT.toFixed(1));
+    $('#MeasMashEff').text(MeasMashEff.toFixed(1));
+     $('#EstBrewhEff').text(EstBrewhEff.toFixed(1));
+    $('#MeasPrebWT').text(MeasPrebWT.toFixed(2));
+    $('#MeasLautEff').text(MeasLautEff.toFixed(1));
+    $('#MeasLautWT').text(MeasLautWT.toFixed(2));
+    $('#EstConvWt').text(EstConvWt.toFixed(2));
+    $('#MeasMashPlato').text(MeasMashPlato.toFixed(2));
+    $('#MeasPrebPlato').text(MeasPrebPlato.toFixed(2));
+    $('#TempMashout').text(TempMashout.toFixed(2));
     $('#VolStrike').text(VolStrike.toFixed(2));
     $('#LossBoil').text(LossBoil.toFixed(2));
     $('#LossHop').text(LossHop.toFixed(2));
@@ -166,6 +219,7 @@
     $('#MAGEstConv').text(MAGEstConv.toFixed(2));
     $('#MAGRunRatio').text(MAGRunRatio.toFixed(2));
     $('#SGSuccrose').text(SGSuccrose.toFixed(2));
+    $('#MeasPrebGrav2').text(MeasPrebGrav2.toFixed(4));
     $('#MAGDryG').text(MAGDryG.toFixed(2));
     $('#MAGVolWater').text(MAGVolWater.toFixed(2));
     $('#MAGWtWater').text(MAGWtWater.toFixed(2));
@@ -194,16 +248,16 @@
     $('#RetWat2').text(RetWat2.toFixed(2));
     $('#TrueAbs2').text(TrueAbs2.toFixed(3));
     $('#RCSTot').text(RCSTot.toFixed(2));
-    $('#EstLauterEff').text(EstLauterEff.toFixed(2));
-    $('#EstMashEff').text(EstMashEff.toFixed(2));
+    $('#EstLauterEff').text(EstLauterEff.toFixed(1));
+    $('#EstMashEff').text(EstMashEff.toFixed(1));
     $('#PlatoPre').text(PlatoPre.toFixed(3));
     $('#SGPre').text(SGPre.toFixed(4));
     $('#BoilRate').text(BoilRate.toFixed(4));
     $('#TotalPoints').text(TotalPoints.toFixed(0));
     $('#PlatoPost').text(PlatoPost.toFixed(0));
     $('#SGPost').text(SGPost.toFixed(4));
-        $('#SugarTot').text(SugarTot.toFixed(4));
-
+    $('#SugarTot').text(SugarTot.toFixed(4));
+    $('#RetSF').text(RetSF.toFixed(4));
 
   }
 
