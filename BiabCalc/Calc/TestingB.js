@@ -102,7 +102,7 @@
       TotalPot = GBill * MAGPot * (1 - MAGMoist),
       MashWaterWt1 = (VolStart * 8.3304) + (GBill - MAGDryG),
       SugarTot = MAGDryG * ExPot,
-       MSW1 = MAGDryG * ExConv,
+      MSW1 = MAGDryG * ExConv,
       Plato1 = (100 * MSW1) / (MSW1 + MashWaterWt1),
       SG1 = 1 + (Plato1 / (258.6 - 0.879551 * Plato1)),
       RW1 = (SG1 * (FirstRun / 1.022494888) * 8.3304),
@@ -133,37 +133,37 @@
       SGPost = 1 + (PlatoPost / (258.6 - 0.879551 * PlatoPost)),
       TempMashout = (TempMash * (GBill + 5 * (GBill * Gabs)) + (5 * TempSparge * VolSparge)) / (GBill + 5 * (VolSparge + (GBill * Gabs))),
       MeasMashPlato = -616.868 + (1111.14 * MeasMashGrav) - (630.272 * MeasMashGrav * MeasMashGrav) + (135.997 * MeasMashGrav * MeasMashGrav * MeasMashGrav),
-       MeasGabs = Math.min(MeasPrebVolume,(WaterTot - (MeasPrebVolume)/1.043841336)/GBill),
+      MeasGabs = Math.min(MeasPrebVolume, (WaterTot - (MeasPrebVolume) / 1.043841336) / GBill),
       MeasMashWT = -((VolStart * 8.335 + (GBill * 0.04)) * MeasMashPlato) / (-100 + MeasMashPlato),
-      MeasConv = Math.max(100 * MeasMashWT / SugarTot,0),
+      MeasConv = Math.max(100 * MeasMashWT / SugarTot, 0),
       MeasPrebPlato = -616.868 + (1111.14 * MeasPrebGrav) - (630.272 * MeasPrebGrav * MeasPrebGrav) + (135.997 * MeasPrebGrav * MeasPrebGrav * MeasPrebGrav),
-        MeasPrebWortWT = MeasPrebGrav * (MeasPrebVolume/1.043841336) * 8.3304,
-        MeasPrebSugarWT = (MeasPrebWortWT*MeasPrebPlato)/100,
-        MeasPrebWaterWT = MeasPrebWortWT - MeasPrebSugarWT,
+      MeasPrebWortWT = MeasPrebGrav * (MeasPrebVolume / 1.043841336) * 8.3304,
+      MeasPrebSugarWT = (MeasPrebWortWT * MeasPrebPlato) / 100,
+      MeasPrebWaterWT = MeasPrebWortWT - MeasPrebSugarWT,
       MeasPrebWT = -(((MeasPrebWaterWT)) * MeasPrebPlato) / (-100 + MeasPrebPlato),
-      MeasMashEff = Math.max(0,100 * MeasPrebWT / SugarTot),
-      MeasLautWT = Math.max(0,MeasPrebWT - MeasMashWT),
+      MeasMashEff = Math.max(0, 100 * MeasPrebWT / SugarTot),
+      MeasLautWT = Math.max(0, MeasPrebWT - MeasMashWT),
       MeasLautEff = 100 * MeasPrebWT / EstConvWt,
-      EstBrewhEff = VolChilled / (VolPost / 1.043841336)*EstMashEff,
-      MeasBrewhEff = VolChilled / (VolPost / 1.043841336)*MeasMashEff,
-        MeasPrebGrav2 = MeasPrebGrav,
-        MeasMashGrav2 = MeasMashGrav,
+      EstBrewhEff = VolChilled / (VolPost / 1.043841336) * EstMashEff,
+      MeasBrewhEff = VolChilled / (VolPost / 1.043841336) * MeasMashEff,
+      MeasPrebGrav2 = MeasPrebGrav,
+      MeasMashGrav2 = MeasMashGrav,
 
-        MeasMashPlato2 = -616.868 + (1111.14 * MeasMashGrav2) - (630.272 * MeasMashGrav2 * MeasMashGrav2) + (135.997 * MeasMashGrav2 * MeasMashGrav2 * MeasMashGrav2),
-        MeasMashWortWT =  MeasMashGrav2*(VolStart-(GBill*MeasGabs))*8.3304,
-        MeasMashSugarWT = (MeasMashWortWT*MeasMashPlato2)/100,
-        MeasSecRunWT = MeasPrebSugarWT - MeasMashSugarWT,
-      MeasSecRunPlato = (100 * MeasSecRunWT) / (MeasSecRunWT + VolSparge*8.3304),
-        MeasSecRunSG = 1 + (MeasSecRunPlato / (258.6 - 0.879551 * MeasSecRunPlato)),
-        MeasPostSG = 1+((((MeasPrebGrav2 - 1)*1000)*(MeasPrebVolume/1.043841336)/(VolPost/1.043841336))/1000);
+      MeasMashPlato2 = -616.868 + (1111.14 * MeasMashGrav2) - (630.272 * MeasMashGrav2 * MeasMashGrav2) + (135.997 * MeasMashGrav2 * MeasMashGrav2 * MeasMashGrav2),
+      MeasMashWortWT = MeasMashGrav2 * (VolStart - (GBill * MeasGabs)) * 8.3304,
+      MeasMashSugarWT = (MeasMashWortWT * MeasMashPlato2) / 100,
+      MeasSecRunWT = MeasPrebSugarWT - MeasMashSugarWT,
+      MeasSecRunPlato = (100 * MeasSecRunWT) / (MeasSecRunWT + VolSparge * 8.3304),
+      MeasSecRunSG = 1 + (MeasSecRunPlato / (258.6 - 0.879551 * MeasSecRunPlato)),
+      MeasPostSG = 1 + ((((MeasPrebGrav2 - 1) * 1000) * (MeasPrebVolume / 1.043841336) / (VolPost / 1.043841336)) / 1000);
 
     // console.log(VolStrike, WaterTot, MashThick, TempStrike);
     $('#WaterTot').text(WaterTot.toFixed(2));
     $('#MeasConv').text(MeasConv.toFixed(1));
     $('#MeasSecRunWT').text(MeasSecRunWT.toFixed(1));
-        $('#MeasSecRunWT').text(MeasSecRunWT.toFixed(1));
+    $('#MeasSecRunWT').text(MeasSecRunWT.toFixed(1));
     $('#MeasMashSugarWT').text(MeasMashSugarWT.toFixed(1));
-     $('#MeasSecRunSG').text(MeasMashWortWT.toFixed(1));
+    $('#MeasSecRunSG').text(MeasMashWortWT.toFixed(1));
     $('#MeasMashEff').text(MeasMashEff.toFixed(1));
     $('#MeasPostSG').text(MeasPostSG.toFixed(4));
     $('#MeasMashGrav2').text(MeasMashGrav2.toFixed(4));
@@ -174,7 +174,7 @@
     $('#MeasBrewhEff').text(MeasBrewhEff.toFixed(1));
     $('#MeasMashWT').text(MeasMashWT.toFixed(1));
     $('#MeasMashEff').text(MeasMashEff.toFixed(1));
-     $('#EstBrewhEff').text(EstBrewhEff.toFixed(1));
+    $('#EstBrewhEff').text(EstBrewhEff.toFixed(1));
     $('#MeasPrebWT').text(MeasPrebWT.toFixed(2));
     $('#MeasLautEff').text(MeasLautEff.toFixed(1));
     $('#MeasLautWT').text(MeasLautWT.toFixed(2));
