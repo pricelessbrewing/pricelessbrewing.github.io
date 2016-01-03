@@ -44,121 +44,126 @@
     <form id="calcForm" class="form-horizontal">
       <div class="left-column column">
         <div class="container">
-          <h2>Enter your details</h2>
+            <h2>Recipe</h2>
 
-          <div class="control-group">
-            <label class="control-label" for="BatchVol">Batch Size</label>
+            <div class="control-group">
+              <label class="control-label" for="BatchVol">Batch Size</label>
+              <div class="controls">
+                <input type="text" class="input-mini" id="BatchVol" name="BatchVol" value="5.5">G</div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="GBill">Grain Bill</label>
+              <div class="controls">
+                <input type="text" class="input-mini" id="GBill" name="GBill" value="12" required>Lb</div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="HBill">Hop Bill</label>
+              <div class="controls">
+                <input type="text" class="input-mini" id="HBill" name="HBill" value="2" required>Oz</div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="Dhop">Dry Hops</label>
+              <div class="controls">
+                <input type="text" class="input-mini" id="DHop" name="Dhop" value="0" required>Oz</div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="BoilTime">Length of Boil</label>
+              <div class="controls">
+                <input type="text" class="input-mini" id="BoilTime" name="BoilTime" value="60" required>Min</div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="TempMash">Mash Temp</label>
+              <div class="controls">
+                <input type="text" class="input-mini" id="TempMash" name="TempMash" value="154" required>F</div>
+            </div>
+            <h2>Process</h2>
+            <div class="control-group">
+              <label class="control-label" for="BoilRate">Boil-Off Rate</label>
+              <div class="controls">
+                <input type="text" class="input-mini" id="BoilRate" name="BoilRate" value="1.2" required>Gal/Hr</div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="TempGrain">Grain Temp</label>
+              <div class="controls">
+                <input type="text" class="input-mini" id="TempGrain" name="TempGrain" value="72" required>F</div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="VolSparge">Sparging Volume</label>
+              <div class="controls">
+                <input type="text" class="input-mini" id="VolSparge" name="VolSparge" value="3" required>Gallons</div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="TempSparge">Sparging Temp</label>
+              <div class="controls">
+                <input type="text" class="input-mini" id="TempSparge" name="TempSparge" value="168" required>F</div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="LossTrub">Trub Loss from Kettle</label>
+              <div class="controls">
+                <input type="text" class="input-mini" id="LossTrub" name="LossTrub" value="0.0" required>Gallons</div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="LossFermTrub">Trub Loss from Fermenter (10% of batch size)</label>
+              <div class="controls">
+                <input type="text" class="input-mini" id="LossFermTrub" name="LossFermTrub" value="0.5" required>Gallons</div>
+            </div>
+                  
+            <div class="control-group">
+              <label class="control-label" for="Gabs">Grain Absorption</label>
+              <div class="controls">
+                <input type="text" id="Gabs" name="Gabs" value="0.08" required>Gallons/Lb</div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="Habs">Hop Absorption</label>
+              <div class="controls">
+                <input type="text" class="input-mini" id="Habs" name="Habs" value="0.0365" required>Gallons/oz</div>
+            </div>
+
+            <h2>Equipment</h2>
+
+
+            <div class="control-group">
+              <label class="control-label" for="PotSize">How Big is your Kettle/Mashtun?</label>
+              <div class="controls">
+                <input type="text" class="input-mini" id="PotSize" name="PotSize" value="9.901" required>Gallons</div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="KettleID">How Wide is your Kettle/Mashtun?</label>
+              <div class="controls">
+                <input type="text" class="input-mini" id="KettleID" name="KettleID" value="13.898" required>Inches</div>
+            </div>
+
+            <h2>Efficiencies</h2>
+
+
+            <div class="control-group">
+              <label class="control-label" for="MAGEstConv">Expected Conversion efficiency</label>
+              <div class="controls">
+                <input type="text" class="input-mini" id="MAGEstConv" name="MAGEstConv" value="0.95" required>%</div>
+            </div>
+            <div class="control-group">
+            <label class="control-label" for="MeasPrebVolume">Measured Preboil Volume @Boil</label>
             <div class="controls">
-              <input type="text" class="input-mini" id="BatchVol" name="BatchVol" value="5.5">G</div>
+              <input type="text" class="input-mini" id="MeasPrebVolume" name="MeasPrebVolume" value="0.00" required>Gallons</div>
           </div>
           <div class="control-group">
-            <label class="control-label" for="GBill">Grain Bill</label>
+            <label class="control-label" for="MeasMashGrav">Measured Mash Gravity</label>
             <div class="controls">
-              <input type="text" class="input-mini" id="GBill" name="GBill" value="19.71" required>Lb</div>
+              <input type="text" class="input-mini" id="MeasMashGrav" name="MeasMashGrav" value="1.000" required>S.G.</div>
           </div>
           <div class="control-group">
-            <label class="control-label" for="HBill">Hop Bill</label>
+            <label class="control-label" for="MeasPrebGrav">Measured Preboil Gravity</label>
             <div class="controls">
-              <input type="text" class="input-mini" id="HBill" name="HBill" value="2" required>Oz</div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="Dhop">Dry Hops</label>
-            <div class="controls">
-              <input type="text" class="input-mini" id="DHop" name="Dhop" value="0" required>Oz</div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="BoilTime">Length of Boil</label>
-            <div class="controls">
-              <input type="text" class="input-mini" id="BoilTime" name="BoilTime" value="60" required>Min</div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="BoilRate">Boil-Off Rate</label>
-            <div class="controls">
-              <input type="text" class="input-mini" id="BoilRate" name="BoilRate" value="1.2" required>Gal/Hr</div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="TempGrain">Grain Temp</label>
-            <div class="controls">
-              <input type="text" class="input-mini" id="TempGrain" name="TempGrain" value="72" required>F</div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="TempMash">Mash Temp</label>
-            <div class="controls">
-              <input type="text" class="input-mini" id="TempMash" name="TempMash" value="154" required>F</div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="VolSparge">Sparging Volume</label>
-            <div class="controls">
-              <input type="text" class="input-mini" id="VolSparge" name="VolSparge" value="3" required>Gallons</div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="PotSize">How Big is your Kettle/Mashtun?</label>
-            <div class="controls">
-              <input type="text" class="input-mini" id="PotSize" name="PotSize" value="9.901" required>Gallons</div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="KettleID">How Wide is your Kettle/Mashtun?</label>
-            <div class="controls">
-              <input type="text" class="input-mini" id="KettleID" name="KettleID" value="13.898" required>Inches</div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="LossMashtun">MashTun Losses </label>
-            <div class="controls">
-              <input type="text" class="input-mini" id="LossMashT" name="LossMashT" value="0.0" required>Gallons</div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="LossTrub">Kettle Losses</label>
-            <div class="controls">
-              <input type="text" class="input-mini" id="LossTrub" name="LossTrub" value="0.0" required>Gallons</div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="LossFermTrub">Trub Loss from Fermenter (10% of batch size)</label>
-            <div class="controls">
-              <input type="text" class="input-mini" id="LossFermTrub" name="LossFermTrub" value="0.5" required>Gallons</div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="Conv">Conversion efficiency</label>
-            <div class="controls">
-              <input type="text" class="input-mini" id="Conv" name="Conv" value="99.1" required>%</div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="Gabs">Grain Absorption</label>
-            <div class="controls">
-              <input type="text" id="Gabs" name="Gabs" value="0.08" required>Gallons/Lb</div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="Habs">Hop Absorption</label>
-            <div class="controls">
-              <input type="text" class="input-mini" id="Habs" name="Habs" value="0.0365" required>Gallons/oz</div>
+              <input type="text" class="input-mini" id="MeasPrebGrav" name="MeasPrebGrav" value="1.000" required>S.G.</div>
           </div>
         </div>
         <!-- end left column -->
       </div>
       <div class="middle-column column">
         <div class="container">
-          <h5>Mash Analysis</h5>
+          <h2>Estimated Efficiencies</h2>
 
-          <div class="control-group">
-            <label class="control-label">Total available sugar</label>
-            <div class="controls"> <span class="calc" id="SugarTot">15.5</span> Lb
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label">Total Recovered sugar</label>
-            <div class="controls"> <span class="calc" id="RCSTot">14</span> Lb</div>
-          </div>
-          <div class="control-group">
-            <label class="control-label">Retained sugar</label>
-            <div class="controls"> <span class="calc" id="RetSF">1.5</span> Lb</div>
-          </div>
-          <div class="control-group">
-            <label class="control-label">Retained Grain Equivalent</label>
-            <div class="controls"> <span class="calc" id="RetSFGEQ">1.5</span> Lb</div>
-          </div>
-          <div class="control-group">
-            <label class="control-label">Total Gravity points Recovered </label>
-            <div class="controls"> <span class="calc" id="TotalPoints">550</span> Points</div>
-          </div>
+
           <div class="control-group">
             <label class="control-label">Estimated Lauter Efficiency</label>
             <div class="controls"> <span class="calc" id="EstLauterEff">95</span> %</div>
@@ -169,12 +174,9 @@
           </div>
           <div class="control-group">
             <label class="control-label">Estimated Brewhouse Efficiency</label>
-            <div class="controls"> <span class="calc" id="EstBHEff">73</span> %</div>
+            <div class="controls"> <span class="calc" id="EstBrewhEff">73</span> %</div>
           </div>
-          <div class="control-group">
-            <label class="control-label">True Absorption Rate</label>
-            <div class="controls"> <span class="calc" id="TrueAbs">0.13</span> Gal/Lb</div>
-          </div>
+
           <div class="control-group">
             <label class="control-label">Run Off Ratio
               <br><span class="note"></span>
@@ -184,51 +186,69 @@
               <br>
             </div>
           </div>
-          <h5>Initial Mash</h5>
+          <div class="control-group">
+            <label class="control-label">Mashout Temp
+              <br><span class="note"></span>
+
+            </label>
+            <div class="controls"> <span class="calc" id="TempMashout">168</span> F
+              <br>
+            </div>
+          </div>
+          <h2>Measured Efficiencies</h2>
 
           <div class="control-group">
-            <label class="control-label">Available Sugar
-              <br><span class="note">Recovered Sugar</span>
-              <br><span class="note">Retained Sugar</span>
-              <br><span class="note">Retained Grain Equivalent</span>
-              <br><span class="note">Gravity of first runnings</span>
+            <label class="control-label"> Conversion Efficiency</label>
+            <div class="controls"> <span class="calc" id="MeasConv">0</span> %</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label"> Lauter Efficiency</label>
+            <div class="controls"> <span class="calc" id="MeasLautEff">0</span> %</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label"> Mash Efficiency</label>
+            <div class="controls"> <span class="calc" id="MeasMashEff">73</span> %</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label"> Brewhouse Efficiency</label>
+            <div class="controls"> <span class="calc" id="MeasBrewhEff">73</span> %</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Measured Grain Absorption</label>
+            <div class="controls"> <span class="calc" id="MeasGabs">0.111</span> Gal/Lb</div>
+          </div>
+
+          <h2>Estimated Gravity Readings</h2>
+
+          <div class="control-group">
+            <label class="control-label">Mash
+              <br><span class="note">Second Runnings</span>
+              <br><span class="note">Preboil</span>
+              <br><span class="note">Post Boil</span>
             </label>
-            <div class="controls"> <span class="calc" id="MSW1">0</span> Lb
-              <br> <span class="calc" id="RS1">4</span> Lb
-              <br> <span class="calc" id="RetS1">4</span> Lb
-              <br> <span class="calc" id="RetS1GEQ">4</span> Lb
-              <br> <span class="calc" id="SG1">4</span> SG
+            <div class="controls"> <span class="calc" id="SG1">0</span> SG
+              <br><span class="calc" id="SG2">0</span> SG
+              <br><span class="calc" id="SGPre">0</span> SG
+              <br><span class="calc" id="SGPost">0</span> SG
+            </div>
+          </div>
+          
+                    <h2>Measured Gravity Readings</h2>
+
+          <div class="control-group">
+            <label class="control-label">Mash
+              <br><span class="note">Second Runnings</span>
+              <br><span class="note">Preboil</span>
+              <br><span class="note">Post Boil</span>
+            </label>
+            <div class="controls"> <span class="calc" id="MeasMashGrav2">0</span> SG
+             <br><span class="calc" id="MeasSecRunSG">0</span> SG
+             <br><span class="calc" id="MeasPrebGrav2">0</span> SG
+             <br><span class="calc" id="MeasPostSG">0</span> SG
+
             </div>
           </div>
 
-
-          <h5>First Sparge</h5>
-
-          <div class="control-group">
-            <label class="control-label">Available Sugar
-              <br><span class="note">Recovered Sugar</span>
-              <br><span class="note">Retained Sugar</span>
-              <br><span class="note">Retained Grain Equivalent</span>
-              <br><span class="note">Gravity of Second runnings</span>
-            </label>
-            <div class="controls"> <span class="calc" id="MashSugarWt2">0</span> Lb
-              <br> <span class="calc" id="RS2">4</span> Lb
-              <br> <span class="calc" id="RetS2">4</span> Lb
-              <br> <span class="calc" id="RetS2GEQ">4</span> Lb
-              <br> <span class="calc" id="SG2">4</span> SG
-            </div>
-          </div>
-
-          <h5>Pre and Post boil</h5>
-
-          <div class="control-group">
-            <label class="control-label">Pre Boil SG
-              <br><span class="note">Post Boil SG</span>
-            </label>
-            <div class="controls"> <span class="calc" id="SGPre">0</span> SG
-              <br> <span class="calc" id="SGPost">4</span> SG
-            </div>
-          </div>
 
         </div>
         <!-- end container -->
@@ -380,7 +400,7 @@
   <script>
     window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')
   </script>
-  <script src="http://pricelessbrewing.github.io/BiabCalc/Calc/TestingQ.js"></script>
+  <script src="http://pricelessbrewing.github.io/BiabCalc/Calc/TestingB.js"></script>
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 </body>
 
