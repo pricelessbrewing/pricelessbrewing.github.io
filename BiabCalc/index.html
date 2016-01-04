@@ -45,11 +45,12 @@
       <div class="left-column column">
         <div class="container">
             <h2>Recipe</h2>
+          <h3>Mouseover text for input cell boxes</h3>
 
             <div class="control-group">
               <label class="control-label" for="BatchVol">Batch Size</label>
               <div class="controls">
-                <input type="text" class="input-mini" id="BatchVol" name="BatchVol" value="5.5">G</div>
+                <input type="text" class="input-mini" title="Desired volume into fermenter" id="BatchVol" name="BatchVol" value="5.5">G</div>
             </div>
             <div class="control-group">
               <label class="control-label" for="GBill">Grain Bill</label>
@@ -59,12 +60,12 @@
             <div class="control-group">
               <label class="control-label" for="HBill">Hop Bill</label>
               <div class="controls">
-                <input type="text" class="input-mini" id="HBill" name="HBill" value="2" required>Oz</div>
+                <input type="text" class="input-mini" id="HBill" title="How many hops are being added during the boil? Affects Post boil volume" name="HBill" value="2" required>Oz</div>
             </div>
             <div class="control-group">
               <label class="control-label" for="Dhop">Dry Hops</label>
               <div class="controls">
-                <input type="text" class="input-mini" id="DHop" name="Dhop" value="0" required>Oz</div>
+                <input type="text" class="input-mini" id="DHop" title="Dry hops will affect bottling volume due to absorption rates" name="Dhop" value="0" required>Oz</div>
             </div>
             <div class="control-group">
               <label class="control-label" for="BoilTime">Length of Boil</label>
@@ -80,7 +81,7 @@
             <div class="control-group">
               <label class="control-label" for="BoilRate">Boil-Off Rate</label>
               <div class="controls">
-                <input type="text" class="input-mini" id="BoilRate" name="BoilRate" value="1.2" required>Gal/Hr</div>
+                <input type="text" class="input-mini" id="BoilRate" name="BoilRate" value="1.2" title="Ambient Volume boiled off during 1 hour." required>Gal/Hr</div>
             </div>
             <div class="control-group">
               <label class="control-label" for="TempGrain">Grain Temp</label>
@@ -88,35 +89,45 @@
                 <input type="text" class="input-mini" id="TempGrain" name="TempGrain" value="72" required>F</div>
             </div>
             <div class="control-group">
-              <label class="control-label" for="VolSparge">Sparging Volume</label>
+              <label class="control-label" for="VolSparge2">Sparging Volume</label>
               <div class="controls">
-                <input type="text" class="input-mini" id="VolSparge" name="VolSparge" value="3" required>Gallons</div>
+                <input type="text" class="input-mini" id="VolSparge" title="Volume as meaasured at Sparge Temp Volume" name="VolSparge2" value="3" required>Gallons</div>
             </div>
             <div class="control-group">
               <label class="control-label" for="TempSparge">Sparging Temp</label>
               <div class="controls">
-                <input type="text" class="input-mini" id="TempSparge" name="TempSparge" value="168" required>F</div>
+                <input type="text" class="input-mini" title="Temp. of Sparge water, affects mashout temp" id="TempSparge" name="TempSparge" value="168" required>F</div>
             </div>
             <div class="control-group">
               <label class="control-label" for="LossTrub">Trub Loss from Kettle</label>
               <div class="controls">
-                <input type="text" class="input-mini" id="LossTrub" name="LossTrub" value="0.0" required>Gallons</div>
+                <input type="text" class="input-mini" title="Expected losses between after chilling the wort, and racking to the fermenter. Includes whirlpool losses. Affects brewhouse efficiency" id="LossTrub" name="LossTrub" value="0.0" required>Gallons</div>
             </div>
             <div class="control-group">
               <label class="control-label" for="LossFermTrub">Trub Loss from Fermenter (10% of batch size)</label>
               <div class="controls">
-                <input type="text" class="input-mini" id="LossFermTrub" name="LossFermTrub" value="0.5" required>Gallons</div>
+                <input type="text" class="input-mini" title="Expected losses between after after fermentations, and bottling/kegging. Includes yeast cake."  id="LossFermTrub" name="LossFermTrub" value="0.5" required>Gallons</div>
+            </div>
+           <div class="control-group">
+              <label class="control-label" for="LossTunTrub">Trub Loss from Mashtun (10% of batch size)</label>
+              <div class="controls">
+                <input type="text" class="input-mini" title="Expected wort loss from mashtun, includes undrainable deadspace. Affects Mash and Lauter efficiencies. See Blog post for more info."  id="LossTunTrub" name="LossTunTrub" value="0.0" required>Gallons</div>
+            </div>
+           <div class="control-group">
+              <label class="control-label" for="MashThickness">Fixed Mash Thickness. <br><span class="note">Overrides Sparge Volume</span> </label>
+              <div class="controls">
+                <input type="text" class="input-mini" title="I prefer a thickness around 1.75 for consistently high mash efficiency, prefernces vary with each brewer. Overrides Sparge volume, set to 0 to use custom sparge volume instead."  id="MashThickness" name="MashThickness" value="0.00" required>Quart/Lb</div>
             </div>
                   
             <div class="control-group">
               <label class="control-label" for="Gabs">Grain Absorption</label>
               <div class="controls">
-                <input type="text" id="Gabs" name="Gabs" value="0.08" required>Gallons/Lb</div>
+                <input type="text" id="Gabs" name="Gabs" title="Expected grain absorption rate. Biab is typically 0.08, but can vary from 0.04-0.10. Depending on squeeze/draining method. Mash tun brewers typically experience 0.125." value="0.08" required>Gallons/Lb</div>
             </div>
             <div class="control-group">
               <label class="control-label" for="Habs">Hop Absorption</label>
               <div class="controls">
-                <input type="text" class="input-mini" id="Habs" name="Habs" value="0.0365" required>Gallons/oz</div>
+                <input type="text" class="input-mini" title="This varies depending on type of hop. For now leave at the default unless you know better. Hopefulyl will have more info soon." id="Habs" name="Habs" value="0.0365" required>Gallons/oz</div>
             </div>
 
             <h2>Equipment</h2>
@@ -125,12 +136,12 @@
             <div class="control-group">
               <label class="control-label" for="PotSize">How Big is your Kettle/Mashtun?</label>
               <div class="controls">
-                <input type="text" class="input-mini" id="PotSize" name="PotSize" value="9.901" required>Gallons</div>
+                <input type="text" class="input-mini" title="Affects recommended sparge volume which is calculated to avoid mash tun overflow." id="PotSize" name="PotSize" value="9.901" required>Gallons</div>
             </div>
             <div class="control-group">
               <label class="control-label" for="KettleID">How Wide is your Kettle/Mashtun?</label>
               <div class="controls">
-                <input type="text" class="input-mini" id="KettleID" name="KettleID" value="13.898" required>Inches</div>
+                <input type="text" class="input-mini" id="KettleID" title="Used in Boil off estimation and all liquid heights, assumes circular straight walled cylinders. Keggles and non-circular kettles will vary." name="KettleID" value="13.898" required>Inches</div>
             </div>
 
             <h2>Efficiencies</h2>
@@ -139,22 +150,22 @@
             <div class="control-group">
               <label class="control-label" for="MAGEstConv">Expected Conversion efficiency</label>
               <div class="controls">
-                <input type="text" class="input-mini" id="MAGEstConv" name="MAGEstConv" value="0.95" required>%</div>
+                <input type="text" class="input-mini" id="MAGEstConv" title="Percentage of converted extract to potential extract. See Blog post for more info." name="MAGEstConv" value="0.95" required>%</div>
             </div>
             <div class="control-group">
             <label class="control-label" for="MeasPrebVolume">Measured Preboil Volume @Boil</label>
             <div class="controls">
-              <input type="text" class="input-mini" id="MeasPrebVolume" name="MeasPrebVolume" value="0.00" required>Gallons</div>
+              <input type="text" class="input-mini" title="Used to calculate measured mash,and lauter efficiencies and dissolved extract along with preboil gravity." id="MeasPrebVolume" name="MeasPrebVolume" value="7.07" required>Gallons</div>
           </div>
           <div class="control-group">
             <label class="control-label" for="MeasMashGrav">Measured Mash Gravity</label>
             <div class="controls">
-              <input type="text" class="input-mini" id="MeasMashGrav" name="MeasMashGrav" value="1.000" required>S.G.</div>
+              <input type="text" class="input-mini" id="MeasMashGrav" title="Assuming strike volume is accurate, used to calculate measured conversion efficiency." name="MeasMashGrav" value="1.0725" required>S.G.</div>
           </div>
           <div class="control-group">
             <label class="control-label" for="MeasPrebGrav">Measured Preboil Gravity</label>
             <div class="controls">
-              <input type="text" class="input-mini" id="MeasPrebGrav" name="MeasPrebGrav" value="1.000" required>S.G.</div>
+              <input type="text" class="input-mini" id="MeasPrebGrav" title="Assuming strike volume is accurate, used to calculate measured conversion efficiency. See blog post" name="MeasPrebGrav" value="1.0523" required>S.G.</div>
           </div>
         </div>
         <!-- end left column -->
@@ -162,27 +173,28 @@
       <div class="middle-column column">
         <div class="container">
           <h2>Estimated Efficiencies</h2>
+          <h3>Mouseover descriptions at variables on the right</h3>
 
 
           <div class="control-group">
-            <label class="control-label">Estimated Lauter Efficiency</label>
-            <div class="controls"> <span class="calc" id="EstLauterEff">95</span> %</div>
+            <label class="control-label">Estimated Lauter Efficiency </label>
+            <div class="controls"> <span class="calc" title="How effective was your sparge?. See blog post" id="EstLauterEff">95</span> %</div>
           </div>
           <div class="control-group">
             <label class="control-label">Estimated Mash Efficiency</label>
-            <div class="controls"> <span class="calc" id="EstMashEff">73</span> %</div>
+            <div class="controls"> <span class="calc" title="How effective was your mash and sparge? Mashtun losses will affect this. See blog post" id="EstMashEff">73</span> %</div>
           </div>
           <div class="control-group">
             <label class="control-label">Estimated Brewhouse Efficiency</label>
-            <div class="controls"> <span class="calc" id="EstBrewhEff">73</span> %</div>
+            <div class="controls"> <span class="calc" title="How effective was your sparge? Kettle losses will affect this. See blog post" id="EstBrewhEff">73</span> %</div>
           </div>
 
           <div class="control-group">
             <label class="control-label">Run Off Ratio
-              <br><span class="note"></span>
+              <br><span class="note" ></span>
 
             </label>
-            <div class="controls"> <span class="calc" id="MAGRunRatio">0.75</span>
+            <div class="controls"> <span class="calc" title="Ratio of first runnings and second runnings. 0 indicates no sparge, 1 indicates equal first and second running volumes. See blog post." id="MAGRunRatio">0.75</span>
               <br>
             </div>
           </div>
@@ -191,7 +203,7 @@
               <br><span class="note"></span>
 
             </label>
-            <div class="controls"> <span class="calc" id="TempMashout">168</span> F
+            <div class="controls"> <span class="calc" title="Temp of grain bed after sparge is thoroughly mixed. Do not exceed 170F." id="TempMashout">168</span> F
               <br>
             </div>
           </div>
@@ -199,23 +211,23 @@
 
           <div class="control-group">
             <label class="control-label"> Conversion Efficiency</label>
-            <div class="controls"> <span class="calc" id="MeasConv">0</span> %</div>
+            <div class="controls"> <span class="calc" title="Determined by mash gravity, relies on accurate strike volume. See Blog post."  id="MeasConv">0</span> %</div>
           </div>
           <div class="control-group">
             <label class="control-label"> Lauter Efficiency</label>
-            <div class="controls"> <span class="calc" id="MeasLautEff">0</span> %</div>
+            <div class="controls"> <span class="calc" title="Determined by Preboil gravity, relies on accurate preboil volume. See Blog post."  id="MeasLautEff">0</span> %</div>
           </div>
           <div class="control-group">
             <label class="control-label"> Mash Efficiency</label>
-            <div class="controls"> <span class="calc" id="MeasMashEff">73</span> %</div>
+            <div class="controls"> <span class="calc" title="Determined by preboil gravity, relies on accurate preboil volume. See Blog post." id="MeasMashEff">73</span> %</div>
           </div>
           <div class="control-group">
             <label class="control-label"> Brewhouse Efficiency</label>
-            <div class="controls"> <span class="calc" id="MeasBrewhEff">73</span> %</div>
+            <div class="controls"> <span class="calc" title="Determined by preboil gravity, relies on accurate preboil volume. Affected by Kettle losses. See Blog post." id="MeasBrewhEff">73</span> %</div>
           </div>
           <div class="control-group">
             <label class="control-label">Measured Grain Absorption</label>
-            <div class="controls"> <span class="calc" id="MeasGabs">0.111</span> Gal/Lb</div>
+            <div class="controls"> <span class="calc" title="Determined by preboil volume, relies on accurate strike and sparge volumes." id="MeasGabs">0.111</span> Gal/Lb</div>
           </div>
 
           <h2>Estimated Gravity Readings</h2>
@@ -326,7 +338,7 @@
               <br><span class="note">(temp. adjusted at mash temp)</span></label>
             <div class="controls">
               <span class="calc" id="VolMash">4.6</span> Gallons
-              <br>- <span class="calc" id="HMash">5</span> Inches high
+              <br> <span class="calc" id="HMash">5</span> Inches high
             </div>
           </div>
           <div class="control-group">
@@ -400,7 +412,7 @@
   <script>
     window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')
   </script>
-  <script src="http://pricelessbrewing.github.io/BiabCalc/Calc/TestingB.js"></script>
+  <script src="http://pricelessbrewing.github.io/BiabCalc/Calc/TestingQ.js"></script>
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 </body>
 
