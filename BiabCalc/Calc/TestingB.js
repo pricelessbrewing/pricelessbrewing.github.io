@@ -37,6 +37,7 @@
       MeasMashGrav = parseFloat($('#MeasMashGrav').val()),
       MeasPrebGrav = parseFloat($('#MeasPrebGrav').val()),
       MAGEstConv = parseFloat($('#MAGEstConv').val()),
+      LossTunTrub = parseFloat($('#LossTunTrub').val()),
       HBill = parseFloat($('#HBill').val()),
       DHop = parseFloat($('#DHop').val()),
       MeasPrebVolume = parseFloat($('#MeasPrebVolume').val()),
@@ -54,12 +55,23 @@
       MashAdj = parseFloat($('#MashAdj').val()),
       StrikeAdj = parseFloat($('#StrikeAdj').val()),
       LossFermTrub = parseFloat($('#LossFermTrub').val()),
+      MashThickness = parseFloat($('#MashThickness').val()),
       LossBoil = BoilTime * BoilRate / 60,
       LossHop = HBill * Habs,
       LossGrain = GBill * Gabs,
-      LossTot = LossGrain + LossHop + LossBoil + LossTrub,
+      LossTot = LossGrain + LossHop + LossBoil + LossTrub + LossTunTrub,
       WaterTot = BatchVol + LossTot,
-      VolStart = (WaterTot - VolSparge),
+       MashThick = (WaterTot - VolSparge) * 4 / GBill;
+      
+        if (MashThickness == 0) {
+    var VolSparge2 = 0;
+} else {
+    VolSparge2 = WaterTot - (GBill*MashThickness/4),
+      MashThick = MashThickness,
+      VolSparge = VolSparge2;
+}
+    
+      var VolStart = (WaterTot - VolSparge),
       TempStrike = TempMash + (0.05 * GBill / VolStart) * (TempMash - TempGrain),
       MashAdj = 1.022494888,
       //( 4.13643 * Math.pow(10,-16) * Math.pow($('#TempMash').val(),6) - 4.05998 * Math.pow(10,-13) * Math.pow($('#TempMash').val(),5) + 1.61536 * Math.pow(10,-10) * Math.pow($('#TempMash').val(),4) - 3.44854 * Math.pow(10,-8) * Math.pow($('#TempMash').val(),3) + 0.00000532769 * Math.pow($('#TempMash').val(),2) - 0.000292675 * $('#TempMash').val() + 1.00493),  
@@ -69,7 +81,7 @@
       LossHop = HBill * Habs,
       LossGrain = GBill * Gabs,
       VolMash = (VolStart + GBill * 0.08) * MashAdj,
-      VolPre = (WaterTot - LossGrain) * 1.043841336,
+      VolPre = (WaterTot - LossGrain - LossTunTrub) * 1.043841336,
       VolPost = (WaterTot - LossTot + LossTrub) * 1.043841336,
       VolChilled = (VolPost / 1.043841336) - LossTrub,
       VolPackaged = VolChilled - LossFermTrub - (DHop * Gabs),
@@ -80,10 +92,9 @@
       HMash = GalH * VolMash,
       HPre = GalH * VolPre,
       HChilled = GalH * VolChilled,
-      MashThick = VolStart * 4 / GBill,
-      VolMinSparge = Math.max(0, ((WaterTot + GBill * 0.08) * MashAdj) - (PotSize - 0.01)),
+      VolMinSparge = Math.max(0, ((WaterTot + GBill * 0.08) * MashAdj) - (PotSize - 0.1)),
       HPost = GalH * VolPost,
-      FirstRun = (VolStart - LossGrain) * MashAdj,
+      FirstRun = (VolStart - LossGrain - LossTunTrub) * MashAdj,
       HFirstRun = FirstRun * GalH,
       SecRun = ((VolSparge)),
       HSecRun = SecRun * GalH,
@@ -156,6 +167,7 @@
       MeasSecRunPlato = (100 * MeasSecRunWT) / (MeasSecRunWT + VolSparge * 8.3304),
       MeasSecRunSG = 1 + (MeasSecRunPlato / (258.6 - 0.879551 * MeasSecRunPlato)),
       MeasPostSG = 1 + ((((MeasPrebGrav2 - 1) * 1000) * (MeasPrebVolume / 1.043841336) / (VolPost / 1.043841336)) / 1000);
+    
 
     // console.log(VolStrike, WaterTot, MashThick, TempStrike);
     $('#WaterTot').text(WaterTot.toFixed(2));
@@ -183,6 +195,7 @@
     $('#MeasPrebPlato').text(MeasPrebPlato.toFixed(2));
     $('#TempMashout').text(TempMashout.toFixed(2));
     $('#VolStrike').text(VolStrike.toFixed(2));
+    $('#VolSparge2').text(VolSparge2.toFixed(2));
     $('#LossBoil').text(LossBoil.toFixed(2));
     $('#LossHop').text(LossHop.toFixed(2));
     $('#LossGrain').text(LossGrain.toFixed(2));
