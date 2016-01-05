@@ -11,7 +11,7 @@ published: true
 ---
 As I continue to work on my mash calculator, http://pricelessbrewing.github.io/BiabCalc/ , occassionally large updates occur that warrant a blog post. This is one of those times. Hopefully more updates will follow. 
 
-**New features:**
+# New features:
 
   New layout with subcategories. 
   
