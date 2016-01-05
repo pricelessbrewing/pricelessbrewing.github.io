@@ -9,7 +9,8 @@ tags:
 comments: true
 published: true
 ---
-As I continue to work on my mash calculator, http://pricelessbrewing.github.io/BiabCalc/ , occassionally large updates occur that warrant a blog post. This is one of those times. Hopefully more updates will follow. 
+As I continue to work on
+<a href="http://pricelessbrewing.github.io/BiabCalc/">my mash calculator</a> , occassionally large updates occur that warrant a blog post. This is one of those times. Hopefully more updates will follow. 
 
 <h2>New Features</h2>
 
