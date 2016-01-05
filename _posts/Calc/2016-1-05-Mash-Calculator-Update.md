@@ -66,25 +66,6 @@ As I continue to work on my mash calculator, http://pricelessbrewing.github.io/B
 
 </li>
 </ul>  
-
-Recipe formulation, automatic scaling of ingredients based on estimated efficiency.
- 
-SRM calculation.
- 
-Import/export BeerXml Files to pull ingredient list, and batch size. Water volumes optional.
- 
-Better Print page.
- 
-Dilution tool to hit target OG baed on post boil SG and volume.
- 
-Go back to doing temperature based thermal expansion, it's currently set to a fixed expansion based on either 152F for mash, 165 for strike, and x1.0438~ for boil.
-  
-New modification of Tinseth IBU estimation based on kettle geometry, and boil off rate that will account for your specific equipment using instantaneous gravity throughout the boil rather than average boil gravity.
-  
-Refractometer adjustments using Sean Terrils formulas.
-  
-Hops adjustment based on AA, substitutions, and potentially automatic scaling based on above IBU formulas. Bittering additions adjusted weights based on AA, flavor/aroma adjusted timing based on weight/batch size.
-
 <h2>Hopeful To Do, requires help from other homebrew bloggers:</h2>
 
 <ul style="list-style-type:disc">
