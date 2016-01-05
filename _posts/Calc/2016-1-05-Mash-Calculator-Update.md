@@ -13,7 +13,9 @@ As I continue to work on my mash calculator, http://pricelessbrewing.github.io/B
 
 ## New features:
 
-  New layout with subcategories. <br><br> Hopefully it makes it easier for new brewers to follow which variables do what. 
+  New layout with subcategories. 
+  
+  Hopefully it makes it easier for new brewers to follow which variables do what. 
   
   Mouseover text added to most of the variables, with a short description and typical values.
   
