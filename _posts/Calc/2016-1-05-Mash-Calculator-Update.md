@@ -64,7 +64,7 @@ Refractometer adjustments using Sean Terrils formulas.
   
 Hops adjustment based on AA, substitutions, and potentially automatic scaling based on above IBU formulas. Bittering additions adjusted weights based on AA, flavor/aroma adjusted timing based on weight/batch size.
 
-# Hopeful To Do, requires help from other homebrew bloggers:
+## Hopeful To Do, requires help from other homebrew bloggers:
   
 Implimentation of Scott Janish' Hop Oil calculator, http://scottjanish.com/hop-oils-calulator/ , which estimates flavor/aroma profiles based on hop additions and oil content.
 
