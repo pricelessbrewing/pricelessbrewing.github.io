@@ -11,14 +11,22 @@ published: true
 ---
 As I continue to work on my mash calculator, http://pricelessbrewing.github.io/BiabCalc/ , occassionally large updates occur that warrant a blog post. This is one of those times. Hopefully more updates will follow. 
 
-## New features:
+<h2>New Features</h2>
 
-New layout with subcategories. 
-  
-Hopefully it makes it easier for new brewers to follow which variables do what. 
-  
-Mouseover text added to most of the variables, with a short description and typical values.
-  
+<ul style="list-style-type:disc">
+  <li>Hopefully it makes it easier for new brewers to follow which variables do what. 
+ </li>
+  <li>Mouseover text added to most of the variables, with a short description and typical values.
+</li>
+  <li>Milk</li>
+    <li>Milk</li>
+      <li>Milk</li>
+        <li>Milk</li>
+          <li>Milk</li>
+            <li>Milk</li>
+              <li>Milk</li>
+</ul>  
+
 Enter measured preboil volume, used to calculate mash efficiency, lauter efficiency, second runnings gravity, and post boil gravity.
  
 Enter measured preboil gravity, used to calculate mash efficiency, lauter efficiency, second runnings gravity, and post boil gravity.
