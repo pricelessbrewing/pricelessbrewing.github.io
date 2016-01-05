@@ -41,7 +41,7 @@ As I continue to work on my mash calculator, http://pricelessbrewing.github.io/B
   
   
 
-**To do:**
+## To do:
 
 
   Support metric and imperial units.
