@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Explanation of Calculator Variables
-excerpt: A ton of text to test readability.
+title: Mash Calculator Update
+excerpt: Measured efficiencies and a bunch of other cool stuff.
 author: pricelessbrewing
 categories: calc
 tags: 
