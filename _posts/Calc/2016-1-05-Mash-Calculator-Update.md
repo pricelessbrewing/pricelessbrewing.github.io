@@ -41,7 +41,6 @@ As I continue to work on my mash calculator, http://pricelessbrewing.github.io/B
 
 </ul>  
 
-## To do:
 <h2>To do:</h2>
 
 <ul style="list-style-type:disc">
