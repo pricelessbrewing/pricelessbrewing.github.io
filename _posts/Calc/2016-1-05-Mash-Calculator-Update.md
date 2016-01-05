@@ -70,7 +70,7 @@ As I continue to work on
 <h2>Hopeful To Do, requires help from other homebrew bloggers:</h2>
 
 <ul style="list-style-type:disc">
-  <li>Implimentation of Scott Janish' Hop Oil calculator, http://scottjanish.com/hop-oils-calulator/ , which estimates flavor/aroma profiles based on hop additions and oil content.</li>
+  <li>Implimentation of Scott Janish' <a href="http://scottjanish.com/hop-oils-calulator/">Hop Oil calculator</a> which estimates flavor/aroma profiles based on hop additions and oil content.</li>
 </ul>  
 
 
