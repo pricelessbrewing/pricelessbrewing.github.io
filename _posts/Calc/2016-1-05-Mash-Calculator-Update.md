@@ -70,8 +70,6 @@ As I continue to work on my mash calculator, http://pricelessbrewing.github.io/B
 
 <ul style="list-style-type:disc">
   <li>Implimentation of Scott Janish' Hop Oil calculator, http://scottjanish.com/hop-oils-calulator/ , which estimates flavor/aroma profiles based on hop additions and oil content.</li>
-  <li>Tea</li>
-  <li>Milk</li>
 </ul>  
 
 
