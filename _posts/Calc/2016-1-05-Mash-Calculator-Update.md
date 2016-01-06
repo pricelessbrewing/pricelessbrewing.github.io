@@ -8,7 +8,7 @@ tags:
   - [calc]
 comments: true
 published: true
-image:
+image: logo.png
   feature: logo.png 
 ---
 As I continue to work on
