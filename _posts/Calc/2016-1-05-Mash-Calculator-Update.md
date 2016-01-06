@@ -8,6 +8,8 @@ tags:
   - [calc]
 comments: true
 published: true
+image:
+  feature: logo.jpg
 feature: logo.png 
 
 ---
