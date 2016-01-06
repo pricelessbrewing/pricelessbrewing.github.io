@@ -9,10 +9,6 @@ tags:
 comments: true
 published: true
 
-
-<link rel="image_src" href="http://pricelessbrewing.github.io/BiabCalc/images/logo.png " / >
-
-
 ---
 As I continue to work on
 <a href="http://pricelessbrewing.github.io/BiabCalc/">my mash calculator</a> , occassionally large updates occur that warrant a blog post. This is one of those times. Hopefully more updates will follow. 
