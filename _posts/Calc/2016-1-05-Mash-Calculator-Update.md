@@ -8,7 +8,7 @@ tags:
   - [calc]
 comments: true
 published: true
-feature: http://pricelessbrewing.github.io/BiabCalc/images/logo.png 
+feature: logo.png 
 
 ---
 As I continue to work on
