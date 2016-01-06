@@ -8,7 +8,7 @@ tags:
   - [calc]
 comments: true
 published: true
-image: http://pricelessbrewing.github.io/images/logo.png 
+image: 
   feature: logo.png 
 ---
 As I continue to work on
