@@ -109,7 +109,7 @@
       MAGWtWater = MAGVolWater,
       MAGTotWater = WaterTot * 8.3304,
       ExPot = MAGPot / SGSuccrose,
-      ExConv = ExPot * MAGEstConv,
+      ExConv = ExPot * (MAGEstConv/100),
       TotalPot = GBill * MAGPot * (1 - MAGMoist),
       MashWaterWt1 = (VolStart * 8.3304) + (GBill - MAGDryG),
       SugarTot = MAGDryG * ExPot,
@@ -134,11 +134,11 @@
       TrueAbs2 = (RetS2 + RetWat2) / (SG2 * 8.3304 * GBill),
       RCSTot = RS1 + RS2,
       EstLauterEff = 100 * (RCSTot / MSW1),
-      EstMashEff = EstLauterEff * MAGEstConv,
+      EstMashEff = EstLauterEff * MAGEstConv/100,
       PlatoPre = (100 * RCSTot) / (RCSTot + RecW2 + RCWtr1),
       SGPre = 1 + (PlatoPre / (258.6 - 0.879551 * PlatoPre)),
       RetSF = RetS2,
-      EstConvWt = SugarTot * MAGEstConv,
+      EstConvWt = SugarTot * MAGEstConv/100,
       TotalPoints = ((VolPre / 1.044) * (SGPre - 1) * 1000),
       PlatoPost = (100 * RCSTot) / (RCSTot + RecW2 + RCWtr1 - (BoilRate * 8.3304 * (BoilTime / 60))),
       SGPost = 1 + (PlatoPost / (258.6 - 0.879551 * PlatoPost)),
@@ -166,11 +166,19 @@
       MeasSecRunWT = MeasPrebSugarWT - MeasMashSugarWT,
       MeasSecRunPlato = (100 * MeasSecRunWT) / (MeasSecRunWT + VolSparge * 8.3304),
       MeasSecRunSG = 1 + (MeasSecRunPlato / (258.6 - 0.879551 * MeasSecRunPlato)),
-      MeasPostSG = 1 + ((((MeasPrebGrav2 - 1) * 1000) * (MeasPrebVolume / 1.043841336) / (VolPost / 1.043841336)) / 1000);
+      MeasPostSG = 1 + ((((MeasPrebGrav2 - 1) * 1000) * (MeasPrebVolume / 1.043841336) / (VolPost / 1.043841336)) / 1000),
+           MeasPostPlato = -616.868 + (1111.14 * MeasPostSG) - (630.272 * MeasPostSG * MeasPostSG) + (135.997 * MeasPostSG * MeasPostSG * MeasPostSG);
+    
+    if (MeasPostSG > 1) {
+    var YeastPitch = .75*3785.41*BatchVol*MeasPostPlato/1000;
+} else {
+     var YeastPitch = .75*3785.41*BatchVol*PlatoPost/1000;
+}
     
 
     // console.log(VolStrike, WaterTot, MashThick, TempStrike);
     $('#WaterTot').text(WaterTot.toFixed(2));
+        $('#YeastPitch').text(YeastPitch.toFixed(0));
     $('#MeasConv').text(MeasConv.toFixed(1));
     $('#MeasSecRunWT').text(MeasSecRunWT.toFixed(1));
     $('#MeasSecRunWT').text(MeasSecRunWT.toFixed(1));
