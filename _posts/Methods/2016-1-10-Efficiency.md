@@ -29,11 +29,8 @@ Volume_Chilled = V * ( 1.05606 x 10^-15 x Temp - 7.43014 x 10^-13 x A25 + 2.1999
 
 Unless you’re extremely comfortable in your brewing setup, and don’t care about these calculations, then don’t eyeball your volumes.
 
----
-
 ## Specific Gravity
-
-	Without a specific gravity reading, this entire post would be pointless. There are currently two tools typically used to measure your specific gravity, the hydrometer, and the refractometer.
+Without a specific gravity reading, this entire post would be pointless. There are currently two tools typically used to measure your specific gravity, the hydrometer, and the refractometer.
 
 ### Hydrometers
 
@@ -83,7 +80,7 @@ There’s not much to do for troubleshooting this aspect, if you’re doing it c
 
 ## Predictability vs Consistency
 
-	I have been seeing some misleading posts lately regarding consistency in their efficiencies, and so I propose separating these two concepts. A consistent efficiency should only apply to doing the same recipe repeatedly, while a predictable efficiency should be able to take your average efficiency and your process into account and using a simulator like my own to predict what a comparable efficiency would be for this new recipe. Stating that “I always get 76%” is very misleading for new brewers, and doesn’t tell them anything about your setup or process, without providing significantly more information. While getting exactly the same efficiency is great for nailing down a particular recipe, it’s not that useful for those that don’t repeatedly do the same brew. Predictable would instead say “I usually get 76% on an average brew, so for this large grain bill I should instead expect 64%.” Predictability should be the goal for understanding your system. 
+I have been seeing some misleading posts lately regarding consistency in their efficiencies, and so I propose separating these two concepts. A consistent efficiency should only apply to doing the same recipe repeatedly, while a predictable efficiency should be able to take your average efficiency and your process into account and using a simulator like my own to predict what a comparable efficiency would be for this new recipe. Stating that “I always get 76%” is very misleading for new brewers, and doesn’t tell them anything about your setup or process, without providing significantly more information. While getting exactly the same efficiency is great for nailing down a particular recipe, it’s not that useful for those that don’t repeatedly do the same brew. Predictable would instead say “I usually get 76% on an average brew, so for this large grain bill I should instead expect 64%.” Predictability should be the goal for understanding your system. 
 	
 ## Summary
 
@@ -91,7 +88,7 @@ You need three accurate measurements for any talk about efficiency; Gravity, Vol
 
 ### Useful Measurements on Brewday
 
-	To fully understand your system, and to figure out what went wrong, you need at least three sets of data. First runnings gravity and the strike volume gives grain absorption rate, and conversion efficiency. Pre-boil gravity and volume gives total mash efficiency, if you also have the first runnings info then you can calculate the lauter efficiency as well. Post boil gravity and volume gives the boil off rate and mash efficiency.
+To fully understand your system, and to figure out what went wrong, you need at least three sets of data. First runnings gravity and the strike volume gives grain absorption rate, and conversion efficiency. Pre-boil gravity and volume gives total mash efficiency, if you also have the first runnings info then you can calculate the lauter efficiency as well. Post boil gravity and volume gives the boil off rate and mash efficiency.
 	
 ## Mash Efficiency
 
