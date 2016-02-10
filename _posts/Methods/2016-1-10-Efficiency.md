@@ -5,7 +5,6 @@ modified:
 categories: methods
 comments: true
 author: pricelessbrewing
-excerpt:
 tags: []
 image:
   feature:
