@@ -35,7 +35,7 @@ I decant the spent starter wort at this point, leaving just enough in the bottom
 I typically observe about one billion cells per mL of harvested yeast slurry. This means that a pre sterilized <a href="http://www.amazon.com/SEOH-Centrifuge-Tubes-Sterile-disposable/dp/B0018MQ9TK"> 50 mLcentrifuged tubes</a> will usually contain 45-50B yeast cells. Alternatively, you may fill another vessel of your choosing, using the above estimation of 1B cells per mL, or fill a vessel then let it coldcrash further. Another anecdotal observation, the 45B cells within the 50 mL tubes usually occupy about 20% of the tube, meaning 9-10 mL per 45-50B cells or a cold crashed cell density of 5 billion cells per mL.
 
 <figure>
-	<a href="http://pricelessbrewing.github.io/images/Harvested_Conan.jpeg"><img src="http://pricelessbrewing.github.io/images/Harvested_Conan.jpeg" width="392" height="216"></a>
+	<a href="http://pricelessbrewing.github.io/images/Harvested_Conan.jpeg"><img src="http://pricelessbrewing.github.io/images/Harvested_Conan.jpeg" width="392" height="500"></a>
 	<figcaption><br><a href="http://pricelessbrewing.github.io/images/Harvested_Conan.jpeg" title="Harvested slurry">Harvested Slurry after decanting and cold crashing</a>.</figcaption>
 </figure>
 
