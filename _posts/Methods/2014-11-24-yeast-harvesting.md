@@ -18,7 +18,7 @@ I use the same method that Brulosopher made popular to harvest yeast directly fr
 . Can't promote his caculator enough, it really is great! Most of this should look familiar to you if you've read or used this process before but it bears repeating.
 
 <figure>
-	<a href="http://pricelessbrewing.github.io/images/20151207_200057.jpg"><img src="http://pricelessbrewing.github.io/images/20151207_200057.jpg" width="392" height="216""></a>
+	<a href="http://pricelessbrewing.github.io/images/20151207_200057.jpg"><img src="http://pricelessbrewing.github.io/images/20151207_200057.jpg" width="392" height="216"></a>
 	<figcaption><br><a href="http://pricelessbrewing.github.io/images/20151207_200057.jpg" title="Preparing to decant">Preparing to decant</a></figcaption>
 </figure>
 
