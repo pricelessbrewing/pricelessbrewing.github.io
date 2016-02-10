@@ -18,7 +18,7 @@ sitemap: false
 @import "normalize";
 @import "site";
 @import "typography";
-@import "pygments";
+@import "syntax";
 @import "coderay";
 @import "elements";
 @import "forms";
@@ -26,3 +26,4 @@ sitemap: false
 @import "vendor/font-awesome/font-awesome";
 @import "vendor/magnific-popup/magnific-popup";
 //@import "vendor/google/fonts";
+@import "print";
