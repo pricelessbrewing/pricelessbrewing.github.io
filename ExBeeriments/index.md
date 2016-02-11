@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Who wants to tinker with some beer?"
+title: "I wonder what happens if ..."
 author: pricelessbrewing
 excerpt:
 ---
