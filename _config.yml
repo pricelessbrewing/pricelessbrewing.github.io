@@ -14,6 +14,7 @@ sass:
   style: compressed
 gems:
   - jekyll-sitemap
+   - jekyll-gist
 
 kramdown:
   auto_ids: true
@@ -22,6 +23,18 @@ kramdown:
   toc_levels: 1..6
   use_coderay: false
 
+# Octopress
+
+# Default extensions
+post_ext: md
+page_ext: md
+
+# Found in _templates/
+post_layout: post
+page_layout: page
+
+# Format titles with titlecase?
+titlecase: true
 
 # Site owner
 owner:
