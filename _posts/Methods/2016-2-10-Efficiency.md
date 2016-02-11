@@ -11,6 +11,7 @@ image:
 date: 2016-1-10 T15:05:45-05:00
 ---
 {% include _toc.html %}
+
 ## Preliminaries
 
 Before we get started, I have to say something about the importance of having good information. Just like using any calculation, garbage in gives garbage out. If you tell the efficiency calculator that you have 5.5 gallons, but you actually have 5.7 gallons, then all of the calculations have a substantial margin of error. To that end I’m going to annoyingly list a couple methods of accurately measuring your volumes, how to read a hydrometer, and a refractometer.{: .notice}
