@@ -1,6 +1,6 @@
 # Site wide configuration
 
-title:            Site Title
+title:            Pricelessbrewing
 locale:           en_US
 url:
 
@@ -41,21 +41,21 @@ titlecase: true
 
 # Site owner
 owner:
-  name: Your Name
-  avatar: bio-photo.jpg
+  name: Mark 
+  avatar: biophoto.jpg
   bio: "Describe your self."
-  email:
+  email: Pricelessbrewing@gmail.com
   disqus-shortname:
-  twitter: #username
-  facebook: #username
+  twitter: Priceless_mark
+  facebook: Mark.Price.543
   google:
     plus: #username
-    analytics:
-    verify:
+    analytics: UA-60124200-1
+    verify: UA-60124200-1
     ad-client:
     ad-slot:
   bing-verify:
-  github: #username
+  github: Pricelessbrewing
   stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
   linkedin: #username
   xing: #username
