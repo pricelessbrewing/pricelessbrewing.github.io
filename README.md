@@ -1,4 +1,4 @@
-Personal homebrewing blog of Pricelessbrewing, and where I keep my calculators!
+Homebrewing blog of Pricelessbrewing, and where I keep my calculators!
 
 
 <script>
