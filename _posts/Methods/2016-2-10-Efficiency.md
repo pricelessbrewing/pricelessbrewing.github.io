@@ -55,11 +55,11 @@ We’ve all used a hydrometer before, but did you know that for most hydrometers
 
 Alright, now that we got the boring parts over with, time to talk about the important things, calculating the effectiveness of your brewing process and system. Now don’t get me wrong, efficiency chasing is not the goal of this article, but rather understanding your system and being able to make a change in order to produce consistent beer. There are multiple kinds of efficiencies, conversion efficiency, lauter efficiency, mash efficiency, kettle efficiency, brew house efficiency, and each one is useful in determining something about your process. Professional brewers have additional types of efficiencies, like casting and packaging efficiency, which accounts for loss of volume due to evaporation during whirl pooling and hop stands. Each efficiency will be explained in the order at which it comes up in your brewday. All calculations were done using a batch sparge simulator created by user [Doug293cz](http://www.homebrewtalk.com/members/doug293cz/) over at HBT, that was based on the findings and simulations of braukaiser then adapted for variable grain absorptions, which I then implemented into my calculator at [Priceless’ BiabCalc](http://pricelessbrewing.github.io/BiabCalc). 
 
-## Conversion Efficiency
+# Conversion Efficiency
 
 This calculation compares the total amount of extract available from your grains, the potential extract, to the amount of sugar converted from the mash. The measurements needed are the volume and gravity of the first runnings of the mash. For those that aren’t familiar, the first runnings are the sweet liquor (unhopped/unboiled wort) that is drained off from the mash before you lauter or sparge. If you BIAB, this would be the wort released after pulling the grain bag and squeezing or allowing it to drain via suspension. There are techniques and mash parameters that affect conversion efficiency, however the most important technique is a proper dough in. It’s not enough to simply mix together the strike water and grains like you’re making pancakes or muffins. You want that stuff to be completely homogenous, ie no dough balls. STIR THE CRAP OUT OF IT. The mash parameters that affect conversion efficiency are the grain crush, mash times, mash temps, diastic power, mash thickness, mash thickness, and mash pH. None of these variables will necessarily lower the conversion efficiency, but they all affect the speed at which the conversion occurs. By increasing your conversion rate you can increase your conversion efficiency given the same time period, and you can’t always mash longer as there is a point at which mashing longer will produce zero difference as the enzymes denature. Things that slow the conversion are: coarse grain crush, too high or too low of mash temps, low diastic power (low percentage of base malts in the recipe), thick mashes less than 1 qt/lb, thin mashes greater than 3.5 qt/lb and to a lesser extent poor mash ph. What I’ve read is that the mash ph will affect your flavor profile long before it significantly impacts the conversion efficiency. Do everything the opposite of the above to increase your conversion rate; mill finer, manage your mash ph, increase your diastic power or add enzymes, use a thinner mash in the 1.5-2.25 qt/lb range. Typical conversion efficiency is around 95%, with exceptional conversion rates being in the 97-98% range. Understand that each batch of malt will have slightly different grain specifics, and so your calculations are usually in the +-1% from that alone.
 
-### Calculating 
+## Calculating 
 
 {% highlight text %}
 T = Temperature in Fahrenheit.
@@ -67,15 +67,15 @@ V = Volume when measured.
 Volume_Chilled = V * ( 1.05606 x 10^-15 x Temp - 7.43014 x 10^-13 x A25 + 2.19998 x 10^-10 x A24 - 3.74236 x 10^-8 x A23 + 5.15858 x 10^-6 x A22 - 2.73712 x 10^-4 x A2 + 1.00452 )
 {% endhighlight %}
 
-### Troubleshooting 
+## Troubleshooting 
 
 Check the crush, then check the crush again. Then look at your mash Ph, check the crush, then look at your water chemistry, and check the crush again. If you still have low conversion efficiency it could mean your grains have a different yield than what is in the computers grain database, you might have issues with your strike temp and accidentally denatured some enzymes by doughing in too hot, you might need to crush finer, or mash longer. If you have a refractometer, take a gravity sample every 5 minutes, when the gravity has stopped increasing, mash another 10 minutes, if it's still the same then your mash is done and no further conversion is going to take place.
 
-## Lauter Efficiency
+# Lauter Efficiency
 
 The next step in the brewday after draining your mash tun is the sparge, or maybe you’re doing no sparge aka full volume mashing? Either way, you still have a lauter efficiency! This is a measure of how effective your sparge is, depending on your technique and equipment it's usually 70-80%*. The required measurements are volume** and gravity of preboil. Losses in mash tun, or high absorption rates will kill this and bring this efficiency down very quickly. A proper batch sparge is just done exactly the same as the initial dough in, take your grains, combine it with some water, and stir the crap out of it. I recommend stirring with a whisk if possible. Let it rest for a few minutes, then stir the crap out of it again, then drain the second runnings. No sparge mash tun brews usually are around 69%, the same setup for BIAB is usually around 72%* given the lower grain absorption rate. A batch sparge with a mash thickness around 1.5-1.75 qt/lb and near equal runnings should give about 80-81%* lauter efficiency. The same setup with a BIAB squeeze should increase that to about 86-87%* lauter efficiency. A fly sparge should at the very least increase your lauter efficiency by at least 3%, if you’re not at least matching the above batch sparge lauter efficiencies by fly sparging, you’re mash tun is probably not set up optimally for a proper fly sparge and you’re getting a considerable amount of channeling, my recommendation would be to do a proper batch sparge and see if you get better results.
 
-### Calculating
+## Calculating
 
 {% highlight text %}
 T = Temperature in Fahrenheit.
@@ -83,7 +83,7 @@ V = Volume when measured.
 Volume_Chilled = V * ( 1.05606 x 10^-15 x Temp - 7.43014 x 10^-13 x A25 + 2.19998 x 10^-10 x A24 - 3.74236 x 10^-8 x A23 + 5.15858 x 10^-6 x A22 - 2.73712 x 10^-4 x A2 + 1.00452 )
 {% endhighlight %}
 
-### Troubleshooting 
+## Troubleshooting 
 
 There’s not much to do for troubleshooting this aspect, if you’re doing it correctly then it’s pretty straight forward. Batch sparge should have lots of stirring, fly sparging should have minimal chandelling and are usually performed slowly. 
 
@@ -122,4 +122,4 @@ The second myth is related slightly, thin mashes do not give lower/slower conver
 
 This might upset some people but a mashouts a purpose is NOT to increase efficiency, nor is it to change the viscosity and make rinsing the sugars more effective. A mashout denatures the enzymes and locks in the wort composition. This really only applies in my mind for fly sparging, or other slow sparging methods. If you're doing biab, or doing a 5-15 minute batch sparge then there's no need to mash out at all. If you're reporting a efficiency gain from a mashout then the most likely explanation is either due to a second sparge volume or that you're really extending your mash time and not getting full conversion in the original mash time and you'll benefit as much or more by mashing longer, or crushing finer.
 
-Lastly, it would be wonderful if everyone could stop saying I get xx efficiency, without saying which efficiency you’re talking about, when discussing their issues with new brewers. As that’s so arbitrary it’s all but useless. Instead discuss your conversion efficiency, lauter efficiency and your process so that they understand!
+Lastly, I think it would be wonderful if everyone could stop saying I get xx efficiency, without saying which efficiency you’re talking about, when discussing their issues with new brewers. As that’s so arbitrary it’s all but useless. Instead discuss your conversion efficiency, lauter efficiency and your process so that they understand that there are more than one type and can actually try to figure out what went awry!
