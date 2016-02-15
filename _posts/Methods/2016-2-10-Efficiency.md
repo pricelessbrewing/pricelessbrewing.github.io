@@ -33,6 +33,7 @@ There are three common methods of measuring your volumes; dip sticks, rulers, an
 {% highlight text %}
 T = Temperature in Fahrenheit.
 V = Volume when measured at Temp T.
+
 Volume_Chilled = V / ((-4.93313863E-14 * Temp^5) + ( 0.0000000000436276055 * Temp^4)+( - 0.000000015543896 * Temp^3) + ( 0.00000378669661 * Temp^2) - ( 0.000233129892 * Temp) + 1.00407725 )
 
 Example: 7.25 @ 158F =  7.09 @ once chilled
@@ -55,7 +56,7 @@ We’ve all used a hydrometer before, but did you know that for some hydrometers
 
 # Efficiencies
 
-Alright, now that we got the boring parts over with, time to talk about the important things, calculating the effectiveness of your brewing process and system. Now don’t get me wrong, efficiency chasing is not the goal of this article, but rather understanding your system and being able to make a change in order to produce consistent beer. There are multiple kinds of efficiencies, conversion efficiency, lauter efficiency, mash efficiency, kettle efficiency, brew house efficiency, and each one is useful in determining something about your process. Professional brewers have additional types of efficiencies, like casting and packaging efficiency, which accounts for loss of volume due to evaporation during whirl pooling and hop stands. Each efficiency will be explained in the order at which it comes up in your brewday. All calculations were done using a batch sparge simulator created by <a href="http://www.homebrewtalk.com/members/doug293cz/"> user Doug293cz</a> over at HBT, that was based on the findings and simulations of braukaiser then adapted for variable grain absorptions, which I then implemented into my calculator at <a href="http://pricelessbrewing.github.io/BiabCalc">Priceless’ BiabCalcz</a> 
+Alright, now that we got the boring parts over with, time to talk about the important things, calculating the effectiveness of your brewing process and system. Now don’t get me wrong, efficiency chasing is not the goal of this article, but rather understanding your system and being able to make a change in order to produce consistent beer. There are multiple kinds of efficiencies, conversion efficiency, lauter efficiency, mash efficiency, kettle efficiency, brew house efficiency, and each one is useful in determining something about your process. Professional brewers have additional types of efficiencies, like casting and packaging efficiency, which accounts for loss of volume due to evaporation during whirl pooling and hop stands. Each efficiency will be explained in the order at which it comes up in your brewday. All calculations were done using a batch sparge simulator created by <a href="http://www.homebrewtalk.com/members/doug293cz/"> user Doug293cz</a> over at HBT, that was based on the findings and simulations of braukaiser then adapted for variable grain absorptions, which I then implemented into my calculator at <a href="http://pricelessbrewing.github.io/BiabCalc">Priceless’ BiabCal</a> 
 
 
 # Conversion Efficiency
