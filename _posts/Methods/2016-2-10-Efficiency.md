@@ -32,8 +32,10 @@ There are three common methods of measuring your volumes; dip sticks, rulers, an
 
 {% highlight text %}
 T = Temperature in Fahrenheit.
-V = Volume when measured.
-Volume_Chilled = V * ( 1.05606 x 10^-15 x Temp - 7.43014 x 10^-13 x A25 + 2.19998 x 10^-10 x A24 - 3.74236 x 10^-8 x A23 + 5.15858 x 10^-6 x A22 - 2.73712 x 10^-4 x A2 + 1.00452 )
+V = Volume when measured at Temp T.
+Volume_Chilled = V / ((-4.93313863E-14 * Temp^5) + ( 0.0000000000436276055 * Temp^4)+( - 0.000000015543896 * Temp^3) + ( 0.00000378669661 * Temp^2) - ( 0.000233129892 * Temp) + 1.00407725 )
+
+Example: 7.25 @ 158F =  7.09 @ once chilled
 {% endhighlight %}
 
 Unless you’re extremely comfortable in your brewing setup, and don’t care about these calculations, then don’t eyeball your volumes.
@@ -43,17 +45,18 @@ Without a specific gravity reading, this entire post would be pointless. There a
 
 ## Hydrometers
 
-We’ve all used a hydrometer before, but did you know that for most hydrometers you’re supposed to read the gravity from the TOP of the meniscus and not the bottom? Weird I know. Moreover, you should ensure the sample is cooled to the reference temperature indicated at the bottom of the hydrometer. There are temperature adjustment calculations, but they’re not precise and introduce yet another point of error, however if you at least cool to room temp, it should be less than the instrumental error of the hydrometer scale (0.005 for most wide range hydrometers). The exception being short range hydrometers such as fg hydrometers that have higher precision due to the smaller range of readings.
+We’ve all used a hydrometer before, but did you know that for some hydrometers you’re supposed to read the gravity from the TOP of the meniscus and not the bottom? Weird I know, but to determine how yours is calibrated, use distilled water at the calibration temp indicated at the bottom of the hydrometer and it should read 1.000. There are temperature adjustment calculations, but they’re not very precise and introduce yet another point of error, however if you at least cool to room temp, it should be less than the instrumental error of the hydrometer scale (0.005 for most wide range hydrometers). The exception being short range hydrometers such as fg hydrometers that have higher precision due to the smaller range of readings.
 
 ## Refractometer
 
- Using your refractometer may seem like a simple process, but there’s a correction factor to account for. The wort correction factor is typically assumed to be 1.040 but will range with different worts, some have attributed relationships between SRM and the wort correction factor. My intuition is that it will instead depend on the sugar composition in the wort, and since dark beers are generally mashed at a higher temp, they have a greater number of long chain sugars and dextrins, so it may correlate better with mash temp or expected fg. The simple approach is to: 1) Calibrate your refractometer and hydrometer to zero using some water. 2) Make up some wort of known gravity using some water and DME. 3)  Carefully measure the gravity using both instruments. 4) Divide the hydrometer reading by the refractometer reading, typical correction factors are 1.04 (sucrose based refractometer scales) or 1.00 (pre-calibrated in factory). Another thing to be aware of is the scale used during production of your hydrometer/refractometer, 25 brix should correspond to 1.106 and not 1.100. If it’s 1.100 then they used the old rule of thumb of multiplying by four, and so if this is the case you should always record the gravity reading in brix, and then convert to specific gravity using a tool of your choice. Lastly, you can use a refractometer to measure your final gravity but you have to use an accurate FG correction tool. The best ones at the moment are those based on the findings of Sean Terrill.
+ Using your refractometer may seem like a simple process, simply take a sample of wort/beer and look through the eye piece, but there’s a correction factor to account for. The wort correction factor is typically assumed to be 1.040 but will range with different worts and refractometers, some have attributed relationships between SRM and the wort correction factor. My hypothesis (I haven't done enough data collecting yet to say for sure) is that it will instead depend on the sugar composition in the wort, and since dark beers are generally mashed at a higher temp, they have tend a greater number of long chain sugars and dextrins, so it may correlate better with mash temp or expected fg. The simple approach is to: 1) Calibrate your refractometer and hydrometer to zero using some water. 2) Make up some wort of known gravity using some water and DME. 3)  Carefully measure the gravity using both instruments. 4) Divide the hydrometer reading by the refractometer reading, typical correction factors are 1.04 (sucrose based refractometer scales) or 1.00 (pre-calibrated in factory). Another thing to be aware of is the scale used during production of your hydrometer/refractometer, 25 brix should correspond to 1.106 and not 1.100. If it’s 1.100 then they used the old rule of thumb of multiplying by four, and so if this is the case you should always record the gravity reading in brix, and then convert to specific gravity using a tool of your choice. Lastly, you can use a refractometer to measure your final gravity but you have to use an accurate FG correction tool. The best ones at the moment are those based on the findings of <a href="http://seanterrill.com/2011/04/07/refractometer-fg-results/">Sean Terrill</a> who published some great data on this subject.
  
 ---
 
 # Efficiencies
 
-Alright, now that we got the boring parts over with, time to talk about the important things, calculating the effectiveness of your brewing process and system. Now don’t get me wrong, efficiency chasing is not the goal of this article, but rather understanding your system and being able to make a change in order to produce consistent beer. There are multiple kinds of efficiencies, conversion efficiency, lauter efficiency, mash efficiency, kettle efficiency, brew house efficiency, and each one is useful in determining something about your process. Professional brewers have additional types of efficiencies, like casting and packaging efficiency, which accounts for loss of volume due to evaporation during whirl pooling and hop stands. Each efficiency will be explained in the order at which it comes up in your brewday. All calculations were done using a batch sparge simulator created by user [Doug293cz](http://www.homebrewtalk.com/members/doug293cz/) over at HBT, that was based on the findings and simulations of braukaiser then adapted for variable grain absorptions, which I then implemented into my calculator at [Priceless’ BiabCalc](http://pricelessbrewing.github.io/BiabCalc). 
+Alright, now that we got the boring parts over with, time to talk about the important things, calculating the effectiveness of your brewing process and system. Now don’t get me wrong, efficiency chasing is not the goal of this article, but rather understanding your system and being able to make a change in order to produce consistent beer. There are multiple kinds of efficiencies, conversion efficiency, lauter efficiency, mash efficiency, kettle efficiency, brew house efficiency, and each one is useful in determining something about your process. Professional brewers have additional types of efficiencies, like casting and packaging efficiency, which accounts for loss of volume due to evaporation during whirl pooling and hop stands. Each efficiency will be explained in the order at which it comes up in your brewday. All calculations were done using a batch sparge simulator created by <a href="http://www.homebrewtalk.com/members/doug293cz/"> user Doug293cz</a> over at HBT, that was based on the findings and simulations of braukaiser then adapted for variable grain absorptions, which I then implemented into my calculator at <a href="http://pricelessbrewing.github.io/BiabCalc">Priceless’ BiabCalcz</a> 
+
 
 # Conversion Efficiency
 
@@ -64,7 +67,10 @@ This calculation compares the total amount of extract available from your grains
 {% highlight text %}
 T = Temperature in Fahrenheit.
 V = Volume when measured.
-Volume_Chilled = V * ( 1.05606 x 10^-15 x Temp - 7.43014 x 10^-13 x A25 + 2.19998 x 10^-10 x A24 - 3.74236 x 10^-8 x A23 + 5.15858 x 10^-6 x A22 - 2.73712 x 10^-4 x A2 + 1.00452 )
+Volume_Chilled = V * ((-4.93313863E-14 * Temp^5)+(0.0000000000436276055*Temp^4)+(-0.000000015543896*Temp^3)+(0.00000378669661*Temp^2)+(-0.000233129892*Temp)+1.00407725)
+
+For example, 7.25 Gallons at 158F is equivalent to 7.09 Gallons once chilled. 
+
 {% endhighlight %}
 
 ## Troubleshooting 
