@@ -58,9 +58,15 @@ We’ve all used a hydrometer before, but did you know that for some hydrometers
 
 Alright, now that we got the boring parts over with, time to talk about the important things, calculating the effectiveness of your brewing process and system. Now don’t get me wrong, efficiency chasing is not the goal of this article, but rather understanding your system and being able to make a change in order to produce consistent beer. There are multiple kinds of efficiencies, conversion efficiency, lauter efficiency, mash efficiency, kettle efficiency, brew house efficiency, and each one is useful in determining something about your process. Professional brewers have additional types of efficiencies, like casting and packaging efficiency, which accounts for loss of volume due to evaporation during whirl pooling and hop stands. Each efficiency will be explained in the order at which it comes up in your brewday. All calculations were done using a batch sparge simulator created by <a href="http://www.homebrewtalk.com/members/doug293cz/"> user Doug293cz</a> over at HBT, that was based on the findings and simulations of braukaiser then adapted for variable grain absorptions, which I then implemented into my calculator at <a href="http://pricelessbrewing.github.io/BiabCalc">Priceless’ BiabCal</a> 
 
+___
+
+
 # Potential Extract
 
 Before you can calculate any of your conversion efficiencies, you need to first know how to calculate your maximum potential extract. The potential extract is an upper bound on the amount of sugar that is able to be converted during the mash. In order to do that, you need to know the malt specifications, mainly the water content, and either the potential points per lb per gallon, or the fine grind extract (percentage). This varies for each batch of malt, as well as different malsters using the same type of grain, and unless you purchase the grain by the sack it’s unlikely you’ll be provided that information for this specific lot of malts. The best we can usually do is the databases of average malt specs, such as that at brewuniteds grain database, or within your recipe formulator of choice. Due to this variation in malt potential, there’s some margin of error in your potential extract and thus all of your efficiency calculations.
+
+
+___
 
 # Conversion Efficiency
 
@@ -91,6 +97,8 @@ For example, 7.25 Gallons at 158F is equivalent to 7.09 Gallons once chilled.
 
 Check the crush, then check the crush again, then look at your mash Ph, check the crush, then look at your water chemistry, and check the crush again. If you still have low conversion efficiency it could mean your grains have a different yield than what is in the computers grain database, you might have issues with your strike temp and accidentally denatured some enzymes by doughing in too hot, you might need to crush finer, try a thinner mash, or mash longer. If you have a refractometer, take a gravity sample every 5 minutes, when the gravity has stopped increasing, mash another 10 minutes, if it's still the same then your mash is done and no further conversion is going to take place. By taking gravity readings throughout the mash, you’ll determine when your mash completes total conversion which is useful for two reasons. First you can save yourself some time on brew day, and second you can determine the “quality” of your mash conditions.  My mashes are typically completed by 45 minutes, where larger grain bills or smaller percentages of base malt take slightly longer. Graphing your conversion rate vs time, as shown above from braukaiser, or in my ‘equal runnings biab’ thread at homebrewtalk6 is a useful technique as well as it will give you further insight into the quality of your mash conditions.
 
+___
+
 # Lauter Efficiency
 
 The next step in the brewday after draining your mash tun is the sparge, or maybe you’re doing no sparge aka full volume mashing? Either way, you still have a lauter efficiency! This is a measure of how effective your sparge is, depending on your technique and equipment it's usually 70-80%*. The required measurements are volume and gravity of preboil. Losses in mash tun, or high absorption rates will kill this and bring this efficiency down very quickly. A proper batch sparge is usually performed exactly the same as the initial dough in, take your grains, combine it with some water, and stir the crap out of it. I recommend stirring with a whisk if possible as this batch sparge can sometimes be very thick. Let it rest for a few minutes, then stir the crap out of it again, then drain the second runnings. No sparge mash tun brews usually are around 69%, the same setup for BIAB is usually around 72%* given the lower grain absorption rate. A batch sparge with a mash thickness around 1.5-1.75 qt/lb and near equal runnings should give about 80-81%* lauter efficiency. The same setup with a BIAB squeeze should increase that to about 86-87%* lauter efficiency. A fly sparge should at the very least increase your lauter efficiency by at least 3%, if you’re not at least matching the above batch sparge lauter efficiencies by fly sparging, you’re mash tun is probably not set up optimally for a proper fly sparge and you’re getting a considerable amount of channeling, my recommendation would be to do a proper batch sparge and see if you get better results. Even if you come out even, you're saving a bunch of time.
@@ -107,6 +115,8 @@ Lauter efficiency = Recovered_Extract / Total_Potential_Extract
 ## Troubleshooting and typical expected values
 
 Troubleshooting: A batch sparge with a mash thickness around 1.5-1.75 qt/lb and near equal runnings should easily be capable of 80-81%* lauter efficiency for 1.055 typical brew. The same setup with a BIAB squeeze should increase that to about 86-87%* lauter efficiency. A fly sparge should at the very least increase your lauter efficiency by at least 3%*, yielding ~84% or 90% lauter efficiency respectively. if you’re not at least matching the above batch sparge lauter efficiencies by fly sparging, you’re mash tun is probably not set up optimally for a proper fly sparge and you’re getting a considerable amount of channeling, my recommendation would be to do a proper batch sparge and see if you get better results. At the very least, you’ll save a substantial amount of time.
+
+___
 
 	
 # Mash Efficiency
@@ -133,6 +143,8 @@ V = Volume when measured.
 Volume_Chilled = V * ( 1.05606 x 10^-15 x Temp - 7.43014 x 10^-13 x A25 + 2.19998 x 10^-10 x A24 - 3.74236 x 10^-8 x A23 + 5.
 {% endhighlight %}
 
+___
+
 # Myths, Mashout, and More
 
 The first myth on the agenda is that BIAB gets low mash efficiency. This is just not true. I have never met any brewer that does biab regularly, and has consistently gotten less than 70% mash efficiency. The fact of the matter is that by squeezing the grain bag, they’re increasing their lauter efficiency. All other things held equal, there is no way that this can decrease any other efficiency measurement. Lower absorption rate = higher lauter efficiency. 
@@ -146,7 +158,7 @@ The second myth is related slightly, thin mashes do not give lower/slower conver
 This might upset some people but a mashouts a purpose is NOT to increase efficiency, nor is it to significantly change the viscosity and make rinsing the sugars more effective... A mashout denatures the enzymes and locks in the wort composition. This really only applies in my mind for fly sparging, or other slow sparging methods. If you're doing biab, or doing a 5-15 minute batch sparge then there's no need to mash out at all. If you're reporting a significant efficiency gain from a mashout then the most likely explanation is either due to a second sparge volume increasing your lauter efficiency or that you're really extending your mash time and not getting full conversion in the original mash time and you'll benefit as much or more by mashing longer, or crushing finer. However there is a special case here, where a higher temperature increases the activity of alpha enzymes which may further convert starches into complex chains of sugar. These long sugar molecules and dextrins are likely to give a higher fg however, and so I reiterate that you’re better off improving the characteristics of your mash to ensure a quick conversion rate. 
 
 
-## I always get ##% efficiency
+## A plea for clarity:"I always get ##% efficiency" 
 
 Lastly, I think it would be wonderful if everyone could stop saying I get xx efficiency, without saying which efficiency you’re talking about, when discussing their issues with new brewers. As that’s so arbitrary it’s all but useless. Instead discuss your conversion efficiency, lauter efficiency and your process so that they understand that there are more than one type and can actually try to figure out what went awry!
 
