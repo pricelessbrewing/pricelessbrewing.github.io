@@ -32,19 +32,27 @@ Since I don't use a flask I can boil in, and direct fire, I use a stainless stee
 # Step 3: Boil
 I usually only boil for about ten minutes. Make sure you don't have a boil over, as they are very easy to do in a flask due to the narrow mouth. 
 
+## Step 3B: Sterilize (optional) 
+This step is to kill off any possible remaining spores or bacteria that may remain in a boiled,  read: sanitized, but not sterilized starter media. This is of particular benefit for those that harvest from the starter for future propositions has any currently small culture of bacteria or Brett for instance will propagate much more quickly than saccaromyces and risks spoiling your working culture. My recommendation and preferred method is to achieve sterilizing via autoclaving/pressure cooking. Lately I've been microwaving my starters for 1 minute after boiling, after reading about this method in several academic and government sources. I've had good results so far. 
+
+
 # Step 4: Cool
 After the bol you have to cool the flask/pot before you can pitch. For flasks resistant to thermal shock, this means you can place it in a cold water bath. For my pot, this means I usually just put the lid on it and come back later. When I absolutely need to speed things up, I'll place the pot in another pot filled with ice water. 
 
-# Step 5: Pitch.
+# Step 5: innoculate.
 Once the wort is cooled to the warm side of pitching temp, 70F is a fair standard. 
 
 # Step 6: Start your ... Starters
 Set the flask, or in my case spaghetti jar thing, on your stir plate and let it go for a about 36 hours. 
 
-# Step 7: Cold Crash
+# Step 7: Cold Crash (optional) 
 After your starter is done fermenting, let it crash in the fridge, covered by a sanitized piece of foil/lid/stopper until brewday. 
 
-#Step 8: Pitch
+Step 7b: Pitch at krausen
+If not cold crashed, I see a large benefit of pitching at full krausen, typically 6-12 hours when innoculate properly. Low innoculation rates may cause large lag times. By this time the starter has already achieved maximum cell density and has a high amount of nutrients, further fermentation of the starter will only decrease the cell nutrients per capita as the cells share their reserves with the daughter cells. Moreover the starter is at peak activity. For these reasons there should be a small lag time associated with a peak krausen starter.  For more info read the threads relating to "Shaken not stirred" starters over at the aha forums, and the vitality starter method ala brulosphy. 
+
+
+#Step 8: Pitch (if cold crashed) 
 Remove the starter from the fridge a few hours before you pitch so that it warms up to room temp. I then decant most of the liquid on top, leaving about two cups and the yeast cake. Swirl the flask/jar and pitch the remaining yeast slurry. 
 
 Enjoy the healthy fermentation, and make sure you have enough headspace/blowoff tube! If you haven't been pitching the necessary cell counts, then this may be more vigorous than you're used to. 
