@@ -14,13 +14,13 @@ date: 2016-1-10 T15:05:45-05:00
 
 # Preliminaries
 
-Before we get started, I have to say something about the importance of having good information. Just like using any calculation, garbage in gives garbage out. If you tell the efficiency calculator that you have 5.5 gallons, but you actually have 5.7 gallons, then all of the calculations have a substantial margin of error. To that end I’m going to annoyingly list a couple methods of accurately measuring your volumes, how to read a hydrometer, and a refractometer.{: .notice}
+BBefore we get started, I have to say something about the importance of having good information. Just like using any calculation, garbage in gives garbage out. If you tell the efficiency calculator that you have 5.5 gallons, but you actually have 5.7 gallons, then all of the calculations have a substantial margin of error. To that end I’m going to annoyingly list a couple methods of accurately measuring your volumes, how to read a hydrometer, and a refractometer.{: .notice}
 
 ---
 
 # Useful Measurements on Brewday
 
-To fully understand your system, and to figure out what went wrong, you need at least three sets of data. First runnings gravity and the strike volume gives grain absorption rate, and conversion efficiency. Pre-boil gravity and volume gives total mash efficiency, if you also have the first runnings info then you can calculate the lauter efficiency as well. Post boil gravity and volume gives the boil off rate and mash efficiency.
+To fully understand your system, and to figure out what went wrong, you need at least three sets of data. First runnings gravity and the strike volume gives grain absorption rate, and conversion efficiency. Pre-boil gravity and volume gives total mash efficiency, if you also have the first runnings info then you can calculate the lauter efficiency as well. Post boil gravity and volume gives the boil off rate and mash efficiency. Note that all volume measurements should have temperature measurements associated with them, see #Volumes for more info. 
 
 # Predictability vs Consistency
 
@@ -28,7 +28,7 @@ I have been seeing some misleading posts lately regarding consistency in their e
 
 # Volumes
 
-There are three common methods of measuring your volumes; dip sticks, rulers, and kettle etching. Dip sticks are usually a wooden dowels with notches placed every so often to indicate a volume for that particular kettle. A dowel for one kettle will not work for another kettle as the diameters of the kettle, and thus the height of one gallon of water will be different. My main issue with this is that very act of notching the dowel introduces an unnecessary source of error, so I don’t usually suggest going this route. Next up is the dip stick 2.0, also known as the humble ruler. While these are not pre-marked with volume measurements, they’re going to be much more accurate and versatile*. Simply measure the interior of the kettle and use a little bit of math*, the formula for the volume of a cylinder, to determine the volume of water or wort. Lastly kettle etching, while an interesting and useful project, it suffers from the same drawbacks as the lowly dip stick, low instrumental precision and being specific to the kettle applied. If you do go this route, I would suggest doing it in smaller increments, as measurement error is half the smallest unit of measurement on the instrument. With that said, there’s one more thing to be aware of, and that’s thermal expansion ie. Liquids expand as they’re heated and contract when they’re cooled. This means that anytime you measure the volume, you should also measure the temperature and record both of these values, then calculate the volume when at room temperature using the formula below.* 
+There are three common methods of measuring your volumes; dip sticks, rulers, and kettle etching. Dip sticks are usually a wooden dowels with notches placed every so often to indicate a volume for that particular kettle. A dip stick for one kettle will not work for another kettle as the diameters of the kettle, and thus the height of one gallon of water will be different. My main issue with this is that the very act of notching the dowel introduces an unnecessary source of error, so I don’t usually suggest going this route. Next up is the dip stick 2.0, also known as the humble ruler. While these are not pre-marked with volume measurements, they’re going to be much more accurate and versatile*. Simply measure the interior of the kettle and use a little bit of math*, the formula for the volume of a cylinder, to determine the volume of water or wort. Lastly kettle etching, while an interesting and useful project, it suffers from the same drawbacks as the lowly dip stick, low instrumental precision and being specific to the kettle applied. If you do go this route, I would suggest doing it in smaller increments than the typical half gallon, as measurement error is half the smallest unit of measurement on the instrument. With that said, there’s one more thing to be aware of, and that’s thermal expansion ie. Liquids expand as they’re heated and contract when they’re cooled. This means that anytime you measure the volume, you should also measure the temperature and record both of these values, then calculate the volume when at room temperature using the formula below.* 
 
 {% highlight text %}
 T = Temperature in Fahrenheit.
@@ -58,10 +58,23 @@ We’ve all used a hydrometer before, but did you know that for some hydrometers
 
 Alright, now that we got the boring parts over with, time to talk about the important things, calculating the effectiveness of your brewing process and system. Now don’t get me wrong, efficiency chasing is not the goal of this article, but rather understanding your system and being able to make a change in order to produce consistent beer. There are multiple kinds of efficiencies, conversion efficiency, lauter efficiency, mash efficiency, kettle efficiency, brew house efficiency, and each one is useful in determining something about your process. Professional brewers have additional types of efficiencies, like casting and packaging efficiency, which accounts for loss of volume due to evaporation during whirl pooling and hop stands. Each efficiency will be explained in the order at which it comes up in your brewday. All calculations were done using a batch sparge simulator created by <a href="http://www.homebrewtalk.com/members/doug293cz/"> user Doug293cz</a> over at HBT, that was based on the findings and simulations of braukaiser then adapted for variable grain absorptions, which I then implemented into my calculator at <a href="http://pricelessbrewing.github.io/BiabCalc">Priceless’ BiabCal</a> 
 
+# Potential Extract
+
+Before you can calculate any of your conversion efficiencies, you need to first know how to calculate your maximum potential extract. The potential extract is an upper bound on the amount of sugar that is able to be converted during the mash. In order to do that, you need to know the malt specifications, mainly the water content, and either the potential points per lb per gallon, or the fine grind extract (percentage). This varies for each batch of malt, as well as different malsters using the same type of grain, and unless you purchase the grain by the sack it’s unlikely you’ll be provided that information for this specific lot of malts. The best we can usually do is the databases of average malt specs, such as that at brewuniteds grain database, or within your recipe formulator of choice. Due to this variation in malt potential, there’s some margin of error in your potential extract and thus all of your efficiency calculations.
 
 # Conversion Efficiency
 
-This calculation compares the total amount of extract available from your grains, the potential extract, to the amount of sugar converted from the mash. The measurements needed are the volume and gravity of the first runnings of the mash. For those that aren’t familiar, the first runnings are the sweet liquor (unhopped/unboiled wort) that is drained off from the mash before you lauter or sparge. If you BIAB, this would be the wort released after pulling the grain bag and squeezing or allowing it to drain via suspension. There are techniques and mash parameters that affect conversion efficiency, however the most important technique is a proper dough in. It’s not enough to simply mix together the strike water and grains like you’re making pancakes or muffins. You want that stuff to be completely homogenous, ie no dough balls. STIR THE CRAP OUT OF IT. The mash parameters that affect conversion efficiency are the grain crush, mash times, mash temps, diastic power, mash thickness, mash thickness, and mash pH. None of these variables will necessarily lower the conversion efficiency, but they all affect the speed at which the conversion occurs. By increasing your conversion rate you can increase your conversion efficiency given the same time period, and you can’t always mash longer as there is a point at which mashing longer will produce zero difference as the enzymes denature. Things that slow the conversion are: coarse grain crush, too high or too low of mash temps, low diastic power (low percentage of base malts in the recipe), thick mashes less than 1 qt/lb, thin mashes greater than 3.5 qt/lb and to a lesser extent poor mash ph. What I’ve read is that the mash ph will affect your flavor profile long before it significantly impacts the conversion efficiency. Do everything the opposite of the above to increase your conversion rate; mill finer, manage your mash ph, increase your diastic power or add enzymes, use a thinner mash in the 1.5-2.25 qt/lb range. Typical conversion efficiency is around 95%, with exceptional conversion rates being in the 97-98% range. Understand that each batch of malt will have slightly different grain specifics, and so your calculations are usually in the +-1% from that alone.
+This calculation compares the total amount of extract available from your grains, the potential extract, to the amount of sugar converted from the mash. The measurements needed are the volume and gravity of the first runnings of the mash. For those that aren’t familiar, the first runnings are the sweet liquor (unhopped/unboiled wort) that is drained off from the mash before you lauter or sparge. If you BIAB, this would be the wort released after pulling the grain bag and squeezing or allowing it to drain via suspension. There are techniques and mash parameters that affect conversion efficiency, however the most important technique is a proper dough in. It’s not enough to simply mix together the strike water and grains like you’re making pancakes or muffins. You want that stuff to be completely homogenous, ie no dough balls. STIR THE CRAP OUT OF IT. The mash parameters that affect conversion efficiency are the grain crush, mash times, mash temps, diastic power, mash thickness, and mash pH.
+
+## Conversion Rate
+
+While none of these variables will necessarily lower the conversion efficiency, but they all affect the speed at which the conversion occurs. By increasing your conversion rate you can increase your conversion efficiency given the same time period, and you can’t always mash longer as there is a point at which mashing longer will produce zero difference as the enzymes denature. It's my opinion that any mash that doesn't reach full conversion by 50 minutes at the latest, probably has some issue with grain crush or dough in. I regularly get complete conversion within 40 minutes, occassionaly sliding into 45 minutes for bigger brews. Things that slow the conversion are: coarse grain crush, too high or too low of mash temps, low diastic power (low percentage of base malts in the recipe), thick mashes less than 1 qt/lb, thin mashes greater than 3.5 qt/lb and to a lesser extent poor mash ph. What I’ve read is that the mash ph will affect your flavor profile long before it significantly impacts the conversion efficiency. Do everything the opposite of the above to increase your conversion rate; mill finer, manage your mash ph, increase your diastic power or add enzymes, use a thinner mash in the 1.5-2.25 qt/lb range. Typical conversion efficiency is around 95%, with exceptional conversion rates being in the 97-98% range. Understand that each batch of malt will have slightly different grain specifics, and so your calculations are usually in the +-1% from that alone.
+
+Conversion rate vs time from Braukaiser’s presentation at NHC 2010.
+
+## Relationship with Mash Thickness
+
+There’s a lot of conflicting information regarding this subject, but two main principles at work. One is that higher concentrations of enzymes produces faster conversion rates and thus higher final conversion efficiency, with a typical recommended thickness of 1.25 qt/lb. This theory is particularly popular in older brewing texts. The other is that modern matls provide more than enough enzymes, and that the bottleneck is gelatinization of the malt granules and providing sufficient water to grain contact surface area. I’m of the latter mindset, and my experience is that finer grain milling providers a faster conversion as well as there is more surface area exposed which provides more contact for the enzymes and reduces the need for thorough gelatinization as the distance from the outside edge to the center of the milled grain is reduced. My current recommendation is to stay at or above 1.75 qt/lb in order to maximize conversion efficiency, with the caveat that there is little difference in the 1.5-2.5 qt/lb range. Try to avoid going lower than 1.25 qt/lb, or higher than 3.5 qt/lb. The last point is rarely an issue, as very few brewers mash that thin, even amongst biab. 
 
 ## Calculating 
 
@@ -76,42 +89,41 @@ For example, 7.25 Gallons at 158F is equivalent to 7.09 Gallons once chilled.
 
 ## Troubleshooting 
 
-Check the crush, then check the crush again. Then look at your mash Ph, check the crush, then look at your water chemistry, and check the crush again. If you still have low conversion efficiency it could mean your grains have a different yield than what is in the computers grain database, you might have issues with your strike temp and accidentally denatured some enzymes by doughing in too hot, you might need to crush finer, or mash longer. If you have a refractometer, take a gravity sample every 5 minutes, when the gravity has stopped increasing, mash another 10 minutes, if it's still the same then your mash is done and no further conversion is going to take place.
+Check the crush, then check the crush again, then look at your mash Ph, check the crush, then look at your water chemistry, and check the crush again. If you still have low conversion efficiency it could mean your grains have a different yield than what is in the computers grain database, you might have issues with your strike temp and accidentally denatured some enzymes by doughing in too hot, you might need to crush finer, try a thinner mash, or mash longer. If you have a refractometer, take a gravity sample every 5 minutes, when the gravity has stopped increasing, mash another 10 minutes, if it's still the same then your mash is done and no further conversion is going to take place. By taking gravity readings throughout the mash, you’ll determine when your mash completes total conversion which is useful for two reasons. First you can save yourself some time on brew day, and second you can determine the “quality” of your mash conditions.  My mashes are typically completed by 45 minutes, where larger grain bills or smaller percentages of base malt take slightly longer. Graphing your conversion rate vs time, as shown above from braukaiser, or in my ‘equal runnings biab’ thread at homebrewtalk6 is a useful technique as well as it will give you further insight into the quality of your mash conditions.
 
 # Lauter Efficiency
 
-The next step in the brewday after draining your mash tun is the sparge, or maybe you’re doing no sparge aka full volume mashing? Either way, you still have a lauter efficiency! This is a measure of how effective your sparge is, depending on your technique and equipment it's usually 70-80%*. The required measurements are volume** and gravity of preboil. Losses in mash tun, or high absorption rates will kill this and bring this efficiency down very quickly. A proper batch sparge is just done exactly the same as the initial dough in, take your grains, combine it with some water, and stir the crap out of it. I recommend stirring with a whisk if possible. Let it rest for a few minutes, then stir the crap out of it again, then drain the second runnings. No sparge mash tun brews usually are around 69%, the same setup for BIAB is usually around 72%* given the lower grain absorption rate. A batch sparge with a mash thickness around 1.5-1.75 qt/lb and near equal runnings should give about 80-81%* lauter efficiency. The same setup with a BIAB squeeze should increase that to about 86-87%* lauter efficiency. A fly sparge should at the very least increase your lauter efficiency by at least 3%, if you’re not at least matching the above batch sparge lauter efficiencies by fly sparging, you’re mash tun is probably not set up optimally for a proper fly sparge and you’re getting a considerable amount of channeling, my recommendation would be to do a proper batch sparge and see if you get better results.
+The next step in the brewday after draining your mash tun is the sparge, or maybe you’re doing no sparge aka full volume mashing? Either way, you still have a lauter efficiency! This is a measure of how effective your sparge is, depending on your technique and equipment it's usually 70-80%*. The required measurements are volume and gravity of preboil. Losses in mash tun, or high absorption rates will kill this and bring this efficiency down very quickly. A proper batch sparge is usually performed exactly the same as the initial dough in, take your grains, combine it with some water, and stir the crap out of it. I recommend stirring with a whisk if possible as this batch sparge can sometimes be very thick. Let it rest for a few minutes, then stir the crap out of it again, then drain the second runnings. No sparge mash tun brews usually are around 69%, the same setup for BIAB is usually around 72%* given the lower grain absorption rate. A batch sparge with a mash thickness around 1.5-1.75 qt/lb and near equal runnings should give about 80-81%* lauter efficiency. The same setup with a BIAB squeeze should increase that to about 86-87%* lauter efficiency. A fly sparge should at the very least increase your lauter efficiency by at least 3%, if you’re not at least matching the above batch sparge lauter efficiencies by fly sparging, you’re mash tun is probably not set up optimally for a proper fly sparge and you’re getting a considerable amount of channeling, my recommendation would be to do a proper batch sparge and see if you get better results. Even if you come out even, you're saving a bunch of time.
+
+
 
 ## Calculating
-
+ The calculation for this is very simple, divide the recovered extract by the total potential extract and you get your lauter efficiency. Note that the majority of this lauter efficiency comes from your first runnings, and the remaining portion is attributed to the effectiveness of your sparge. 
+ 
 {% highlight text %}
-T = Temperature in Fahrenheit.
-V = Volume when measured.
-Volume_Chilled = V * ( 1.05606 x 10^-15 x Temp - 7.43014 x 10^-13 x A25 + 2.19998 x 10^-10 x A24 - 3.74236 x 10^-8 x A23 + 5.15858 x 10^-6 x A22 - 2.73712 x 10^-4 x A2 + 1.00452 )
+Lauter efficiency = Recovered_Extract / Total_Potential_Extract
 {% endhighlight %}
 
-## Troubleshooting 
+## Troubleshooting and typical expected values
 
-There’s not much to do for troubleshooting this aspect, if you’re doing it correctly then it’s pretty straight forward. Batch sparge should have lots of stirring, fly sparging should have minimal chandelling and are usually performed slowly. 
+Troubleshooting: A batch sparge with a mash thickness around 1.5-1.75 qt/lb and near equal runnings should easily be capable of 80-81%* lauter efficiency for 1.055 typical brew. The same setup with a BIAB squeeze should increase that to about 86-87%* lauter efficiency. A fly sparge should at the very least increase your lauter efficiency by at least 3%*, yielding ~84% or 90% lauter efficiency respectively. if you’re not at least matching the above batch sparge lauter efficiencies by fly sparging, you’re mash tun is probably not set up optimally for a proper fly sparge and you’re getting a considerable amount of channeling, my recommendation would be to do a proper batch sparge and see if you get better results. At the very least, you’ll save a substantial amount of time.
 
 	
 # Mash Efficiency
 
-Mash efficiency, is the combination of conversion and lauter efficiencies. The formula is simply Mash efficiency = conversion efficiency * lauter efficiency. However it’s of little use to anyone trying to troubleshoot or understand their setup despite being the second most commonly mentioned variable and I won’t go on much about it besides its usefulness for scaling recipes.
+Mash efficiency, is the combination of conversion and lauter efficiencies. However it’s of little use to anyone trying to troubleshoot or understand their setup despite being the second most commonly mentioned variable and I won’t go on much about it. That’s not to say that it’s a useless characteristic, as it’s extremely useful in formulating recipes. 
 
 ## Calculating Mash Efficiency
 
 {% highlight text %}
-T = Temperature in Fahrenheit.
-V = Volume when measured.
-Volume_Chilled = V * ( 1.05606 x 10^-15 x Temp - 7.43014 x 10^-13 x A25 + 2.19998 x 10^-10 x A24 - 3.74236 x 10^-8 x A23 + 5.15858 x 10^-6 x A22 - 2.73712 x 10^-4 x A2 + 1.00452 )
+Mash = Lauter * Conversion
 {% endhighlight %}
 
 ---
 
 # Brewhouse Efficiency
 
-Similar to Mash efficiency, there’s not much going on here. Any losses after the boil occurs will affect this number. For those with zero kettle losses, brew house efficiency = mash efficiency. While this is usually the reference point when people say “I get xx efficiency”, this is a pretty useless metric in my experience as unless you have significant losses after chilling, it’s not going to help much.
+Similar to Mash efficiency, there’s not much going on here. Any losses after the boil occurs will affect this number. For those with zero apparent* kettle losses, brew house efficiency = mash efficiency. While this is usually the reference point when people say “I get xx efficiency”, this is a pretty useless metric in my experience as unless you have significant losses after chilling, it’s not going to help much for understanding your setup or troubleshooting an issue with lower/higher than expected gravity. I say apparent above because for some people they account for the hot break that coagulates during the boil at this point, while others transfer all of the wort including the proteins into the fermenter and let it settle out after fermentation with the goal being that an extended rest, and cold crash, will compact the proteins further. However this approach will give you a slightly higher apparent brewhouse efficiency than is actually true, as you’re counting the volume occupied by the proteins as wort volume. Traditionally, this is the number that is reporting in most recipes, however I believe that mash efficiency is the more generalized measure of your brewing process, as it is tied to the gravity and volume of the preboil wort, while the kettle loss is tied to the brewhouse efficiency and so if you have a different kettle loss, you will need to adjust your grain weights while if it was listed with the mash efficiency, this would be unnecessary to achieve the same wort gravity.
 
 ## Calculating brewhouse Efficiency
 
@@ -125,8 +137,47 @@ Volume_Chilled = V * ( 1.05606 x 10^-15 x Temp - 7.43014 x 10^-13 x A25 + 2.1999
 
 The first myth on the agenda is that BIAB gets low mash efficiency. This is just not true. I have never met any brewer that does biab regularly, and has consistently gotten less than 70% mash efficiency. The fact of the matter is that by squeezing the grain bag, they’re increasing their lauter efficiency. All other things held equal, there is no way that this can decrease any other efficiency measurement. Lower absorption rate = higher lauter efficiency. 
 
-The second myth is related slightly, thin mashes do not give lower/slower conversion rates. Likewise, enzyme concentration is not a convincing model that can predict conversion rates, otherwise we would all be doing super thick mashes. You need sufficient enzyme concentrations, don’t go over ~3.5 qt/lb mash thickness, and you need good water to grain surface area exposure. This can be done by an inline hydration like in professional breweries, by recirculation, mashing thinner or by a thinner mash. I recommend 1.75-2.25 qt/lb for good conversion efficiency without sacrificing too much lauter efficiency due to the decreased sparge volume and runnings ratio.
+The second myth is related slightly, thin mashes do not give lower/slower conversion rates. Likewise, enzyme concentration has not been a convincing model in my experiments that can predict conversion rates, otherwise we would all be doing super thick mashes. You need sufficient enzyme concentrations, don’t go over ~3.5 qt/lb mash thickness, and you need good water to grain surface area exposure. This can be done by an inline hydration like in professional breweries, by recirculation, mashing thinner or by a thinner mash. I recommend 1.75-2.25 qt/lb if possible for good conversion efficiency  without sacrificing too much lauter efficiency due to the decreased sparge volume and runnings ratio.
 
-This might upset some people but a mashouts a purpose is NOT to increase efficiency, nor is it to change the viscosity and make rinsing the sugars more effective. A mashout denatures the enzymes and locks in the wort composition. This really only applies in my mind for fly sparging, or other slow sparging methods. If you're doing biab, or doing a 5-15 minute batch sparge then there's no need to mash out at all. If you're reporting a efficiency gain from a mashout then the most likely explanation is either due to a second sparge volume or that you're really extending your mash time and not getting full conversion in the original mash time and you'll benefit as much or more by mashing longer, or crushing finer.
+
+## Mashouts
+
+
+This might upset some people but a mashouts a purpose is NOT to increase efficiency, nor is it to significantly change the viscosity and make rinsing the sugars more effective... A mashout denatures the enzymes and locks in the wort composition. This really only applies in my mind for fly sparging, or other slow sparging methods. If you're doing biab, or doing a 5-15 minute batch sparge then there's no need to mash out at all. If you're reporting a significant efficiency gain from a mashout then the most likely explanation is either due to a second sparge volume increasing your lauter efficiency or that you're really extending your mash time and not getting full conversion in the original mash time and you'll benefit as much or more by mashing longer, or crushing finer. However there is a special case here, where a higher temperature increases the activity of alpha enzymes which may further convert starches into complex chains of sugar. These long sugar molecules and dextrins are likely to give a higher fg however, and so I reiterate that you’re better off improving the characteristics of your mash to ensure a quick conversion rate. 
+
+
+## I always get ##% efficiency
 
 Lastly, I think it would be wonderful if everyone could stop saying I get xx efficiency, without saying which efficiency you’re talking about, when discussing their issues with new brewers. As that’s so arbitrary it’s all but useless. Instead discuss your conversion efficiency, lauter efficiency and your process so that they understand that there are more than one type and can actually try to figure out what went awry!
+
+# References and further reading
+
+"BrewUnited's Grain Database." BrewUnited's Grain Database. Web. <https://www.brewunited.com/grain_database.php>.
+
+Doug293cz UserProfile - Homebrewtalk. Web. <http://www.homebrewtalk.com/members/doug293cz/>.
+
+"Equal Runnings BIAB - Home Brew Forums." Equal Runnings BIAB - Home Brew Forums. Web. <http://www.homebrewtalk.com/showthread.php?t=548329>.
+
+"How to Add Permanent Volume Markings to a Kettle." R/Homebrewing. Web. <https://www.reddit.com/comments/1zeig4>.
+
+"How to Determine Your Refractometer's Wort Correction Factor - Brewer's Friend." Brewers Friend. Web. <http://www.brewersfriend.com/how-to-determine-your-refractometers-wort-correction-factor/>.
+
+John J. Palmer, How to Brew, Brewers Publications, Boulder CO, 2006
+
+"Mash Efficiency. Brewhouse Efficiency. A Simple Explanation. - Home Brew Forums." Mash Efficiency. Brewhouse Efficiency. A Simple Explanation. - Home Brew Forums. Web. <http://www.homebrewtalk.com/showthread.php?t=540642>.
+
+"Refractometer FG Results." SeanTerrill.com. Web. <http://seanterrill.com/2011/04/07/refractometer-fg-results/>.
+
+Terril, Sean. "Refractometer Calculator." SeanTerrill.com. Web. <http://seanterrill.com/2012/01/06/refractometer-calculator/>.
+
+Terril, Sean. "Refractometer Calculator." SeanTerrill.com. Web. <http://seanterrill.com/2012/01/06/refractometer-calculator/>.
+
+Troeser, Kai. "First Wort Gravity and Mash Efficiency - Home Brew Forums." First Wort Gravity and Mash Efficiency - Home Brew Forums. Web. <http://www.homebrewtalk.com/showthread.php?t=68555>.
+
+Troeser, Kai. NHC 2010 presentation about efficiency and how to keep it predictable, 2010
+
+Troeser, Kai. “The Science of Mashing” - German Brewing and More. Web. <http://braukaiser.com/wiki/index.php?title=The_Science_of_Mashing>.
+
+Troeser, Kai. "Understanding Efficiency." - German Brewing and More. Web. <http://www.braukaiser.com/wiki/index.php?title=Understanding_Efficiency>.
+
+
