@@ -80,7 +80,11 @@ Conversion rate vs time from Braukaiser’s presentation at NHC 2010.
 
 ## Relationship with Mash Thickness
 
-There’s a lot of conflicting information regarding this subject, but two main principles at work. One is that higher concentrations of enzymes produces faster conversion rates and thus higher final conversion efficiency, with a typical recommended thickness of 1.25 qt/lb. This theory is particularly popular in older brewing texts. The other is that modern matls provide more than enough enzymes, and that the bottleneck is gelatinization of the malt granules and providing sufficient water to grain contact surface area. I’m of the latter mindset, and my experience is that finer grain milling providers a faster conversion as well as there is more surface area exposed which provides more contact for the enzymes and reduces the need for thorough gelatinization as the distance from the outside edge to the center of the milled grain is reduced. My current recommendation is to stay at or above 1.75 qt/lb in order to maximize conversion efficiency, with the caveat that there is little difference in the 1.5-2.5 qt/lb range. Try to avoid going lower than 1.25 qt/lb, or higher than 3.5 qt/lb. The last point is rarely an issue, as very few brewers mash that thin, even amongst biab. 
+There’s a lot of conflicting information regarding this subject, but two main principles at work. One is that higher concentrations of enzymes produces faster conversion rates and thus higher final conversion efficiency, with a typical recommended thickness of 1.25 qt/lb. This theory is particularly popular in older brewing texts. The other is that modern matls provide more than enough enzymes, and that the bottleneck is gelatinization of the malt granules, lowering the gravity of the mash which inhibits enzyme, and providing sufficient water to grain contact surface area. I’m of the latter mindset, and my experience is that finer grain milling providers a faster conversion as well as there is more surface area exposed which provides more contact for the enzymes and reduces the need for thorough gelatinization as the distance from the outside edge to the center of the milled grain is reduced. My current recommendation is to stay at or above 1.75 qt/lb in order to maximize conversion efficiency, with the caveat that there is little difference in the 1.5-2.5 qt/lb range. Try to avoid going lower than 1.25 qt/lb, or higher than 3.5 qt/lb. The last point is rarely an issue, as very few brewers mash that thin, even amongst biab. 
+
+## Typical expected values 
+
+Typical conversion efficiency is usually in the 90-95% range, but it will depend on a wide variety of factors that I've already talked above. I wouldn't start worrying about it unless you go below ~88% or so. If you do, or are otherwise concerned with your conversion efficiency, see the section on troubleshooting. Conversion rarely exceeds 96%, and if it does it usually is at least partially due to inaccurate grain parameters like the potential yield or the water content.
 
 ## Calculating 
 
@@ -128,6 +132,11 @@ Mash efficiency, is the combination of conversion and lauter efficiencies. Howev
 {% highlight text %}
 Mash = Lauter * Conversion
 {% endhighlight %}
+
+## Typical expected values 
+
+A batch sparge with a mash thickness around 1.5-1.75 qt/lb and near equal runnings should easily be capable of ~75%* mash efficiency for 1.055 typical brew. The same setup with a BIAB squeeze should increase that to about 79-80%* mash efficiency. A fly sparge should at the very least increase your mash efficiency by at least 3%*, yielding ~78% or 83% mash efficiency respectively. if you’re not at least matching the above batch sparge lauter efficiencies by fly sparging, you’re mash tun is probably not set up optimally for a proper fly sparge and you’re getting a considerable amount of channeling, my recommendation would be to do a proper batch sparge and see if you get better results. At the very least, you’ll save a substantial amount of time.
+
 
 ---
 
