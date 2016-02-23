@@ -65,6 +65,25 @@ ___
 
 Before you can calculate any of your conversion efficiencies, you need to first know how to calculate your maximum potential extract. The potential extract is an upper bound on the amount of sugar that is able to be converted during the mash. In order to do that, you need to know the malt specifications, mainly the water content, and either the potential points per lb per gallon, or the fine grind extract (percentage). This varies for each batch of malt, as well as different malsters using the same type of grain, and unless you purchase the grain by the sack it’s unlikely you’ll be provided that information for this specific lot of malts. The best we can usually do is the databases of average malt specs, such as that at brewuniteds grain database, or within your recipe formulator of choice. Due to this variation in malt potential, there’s some margin of error in your potential extract and thus all of your efficiency calculations.
 
+## How to calculate
+There's two ways you can calculate the potential, the more accurate way is listed first. 
+
+{% highlight text %}
+Grain_Potential (PPG): Most grains have a potential of 36 points per gallon, but it can also range from 27 to 45. 
+Grain_Moisture (% of weight): Most grains have water content equal to 4% of their weight as water, but it can range from 3% to 9%.
+Grain_Bill is the total weight of the grain bill added to the mash.
+Dry_Weight  = (1 - Grain_Moisture) * (Grain_Bill) = (1 - 0.04) * 12 = 11.52
+Potential_Extract = Grain_Potential * Dry_Weight / Sugar_Density. 
+Potential_Extract = 36 * 12 / 46.173 = 9.35 Lb of extract
+{% endhighlight %}
+
+Somewhat less accurate, but easier to calculate, is using total gravity points. 
+
+{% highlight text %}
+Grain_Potential (PPG): Most grains have a potential of 36 points per gallon, but it can also range from 27 to 45. 
+Total_Gravity_Points = Grain_Potential .
+Total_Gravity_Points = 36 * 12 = 432 total points.
+{% endhighlight %}
 
 ___
 
@@ -88,13 +107,27 @@ Typical conversion efficiency is usually in the 90-95% range, but it will depend
 
 ## Calculating 
 
+Conversion efficiency is simple to calculate from measured data, and requires strike volume, first running gravity, and temp. As noted above, temp needs to be taken to calculate the room temp volume. Be sure to take a gravity reading while the sample is at the calibrated temperature as previously mentioned.  
+
+Calculating using extract method, you'll need to convert the gravity reading into plato to use this approach. 
 {% highlight text %}
-T = Temperature in Fahrenheit.
-V = Volume when measured.
-Volume_Chilled = V * ((-4.93313863E-14 * Temp^5)+(0.0000000000436276055*Temp^4)+(-0.000000015543896*Temp^3)+(0.00000378669661*Temp^2)+(-0.000233129892*Temp)+1.00407725)
+Volume_Strike being the room temperature strike volume added to the mash.
+Grain_Moisture (% of weight): Most grains have water content equal to 4% of their weight as water, but it can range from 3% to 9%.
+Grain_Bill is the total weight of the grain bill added to the mash.
+Measured_First_Running_Plato is the gravity reading, in Plato, of the first runnings sweet liquor.
 
-For example, 7.25 Gallons at 158F is equivalent to 7.09 Gallons once chilled. 
+Converted_Extract = -((Volume_Strike * 8.335 + (GBill * Grain_Moisture)) * Measured_First_Running_Plato) / (-100 + Measured_First_Running_Plato)
 
+Conversion Efficiency = Converted_Extract / Potential_Extract
+{% endhighlight %}
+
+Calculating using gravity points method. 
+
+{% highlight text %}
+Volume_Strike being the room temperature strike volume added to the mash.
+Grain_Bill is the total weight of the grain bill added to the mash.
+Measured_First_Running_Plato is the gravity reading, in Plato, of the first runnings sweet liquor.
+Converted_Extract = ( Measured_First_Running_Plato * Volume_Strike ) / Potential_Total_Gravity_Points
 {% endhighlight %}
 
 ## Troubleshooting 
@@ -113,6 +146,12 @@ The next step in the brewday after draining your mash tun is the sparge, or mayb
  The calculation for this is very simple, divide the recovered extract by the total potential extract and you get your lauter efficiency. Note that the majority of this lauter efficiency comes from your first runnings, and the remaining portion is attributed to the effectiveness of your sparge. 
  
 {% highlight text %}
+Volume_Strike being the room temperature strike volume added to the mash.
+Grain_Moisture (% of weight): Most grains have water content equal to 4% of their weight as water, but it can range from 3% to 9%.
+Grain_Bill is the total weight of the grain bill added to the mash.
+Measured_First_Running_Plato is the gravity reading, in Plato, of the first runnings sweet liquor.
+Converted_Extract = -((Volume_Strike * 8.335 + (GBill * Grain_Moisture)) * Measured_First_Running_Plato) / (-100 + Measured_First_Running_Plato)
+
 Lauter efficiency = Recovered_Extract / Total_Potential_Extract
 {% endhighlight %}
 
