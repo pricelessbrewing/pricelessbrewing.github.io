@@ -36,7 +36,7 @@
               <div class="control-group">
   <label for="imperial"><input name="units" value="imperial" data-units="lb|Gallon|Oz|F|Gal/Hr|Gal/Lb|Quart/Lb|Gal/Oz|Inches" type="radio" id="imperial" onchange="radioSelect(this);">imperial</label><br>
   <label for="metric"><input name="units" value="metric" data-units="kg|Liter|gram|C|Liter/Hr|Liter/Kg|Liter/Kg|Liter/g|cm" type="radio" id="metric" onchange="radioSelect(this);">Metric</label><br>
-  <label for="grams"><input name="units" value="grams" data-units="lb|Gallon|gram|F|Gal/Hr|Gal/Lb|Quart/Lb|Gal/g|Inches" type="radio" id="grams" onchange="radioSelect(this);">Imperial (hops as grams)</label><br>
+  <label for="grams"><input name="units" value="grams" data-units="lb|Gallon|gram|F|Gal/Hr|Gal/Lb|Quart/Lb|Gal/g|Inches" type="radio" checked="checked" id="grams" onchange="radioSelect(this);">Imperial (hops as grams)</label><br>
  </div>
           <h2>Recipe</h2>
           <h3>Mouseover text for input cell boxes</h3>
@@ -54,12 +54,12 @@
           <div class="control-group">
             <label class="control-label" for="HBill">Hop Bill</label>
             <div class="controls">
-              <input type="text" class="input-mini" id="HBill" title="How many hops are being added during the boil? Affects Post boil volume" name="HBill" value="2" required><span id="Unit_Hop">Oz</span></div>
+              <input type="text" class="input-mini" id="HBill" title="How many hops are being added during the boil? Affects Post boil volume" name="HBill" value="57" required><span id="Unit_Hop">gram</span></div>
           </div>
           <div class="control-group">
             <label class="control-label" for="Dhop">Dry Hops</label>
             <div class="controls">
-              <input type="text" class="input-mini" id="DHop" title="Dry hops will affect bottling volume due to absorption rates" name="Dhop" value="0" required><span id="Unit_DHop">Oz</span></div>
+              <input type="text" class="input-mini" id="DHop" title="Dry hops will affect bottling volume due to absorption rates" name="Dhop" value="0" required><span id="Unit_DHop">gram</span></div>
           </div>
           <div class="control-group">
             <label class="control-label" for="BoilTime">Length of Boil</label>
@@ -122,7 +122,7 @@
           <div class="control-group">
             <label class="control-label" for="Habs">Hop Absorption</label>
             <div class="controls">
-              <input type="text" class="input-mini" title="This varies depending on type of hop. For now leave at the default unless you know better. Hopefulyl will have more info soon." id="Habs" name="Habs" value="0.0365" required><span id="Unit_Habs">Gallon/Oz</span></div>
+              <input type="text" class="input-mini" title="This varies depending on type of hop. For now leave at the default unless you know better. Hopefulyl will have more info soon." id="Habs" name="Habs" value="0.0014" required><span id="Unit_Habs">Gallon/gram</span></div>
           </div>
 
           <h2>Equipment</h2>
@@ -150,17 +150,17 @@
           <div class="control-group">
             <label class="control-label" for="MeasPrebVolume">Measured Preboil Volume @Boil</label>
             <div class="controls">
-              <input type="text" class="input-mini" title="Used to calculate measured mash,and lauter efficiencies and dissolved extract along with preboil gravity." id="MeasPrebVolume" name="MeasPrebVolume" value="7.07" required><span id="Unit_PreboilVolume">Gallons</span></div>
+              <input type="text" class="input-mini" title="Used to calculate measured mash,and lauter efficiencies and dissolved extract along with preboil gravity." id="MeasPrebVolume" name="MeasPrebVolume" value="0.00" required><span id="Unit_PreboilVolume">Gallons</span></div>
           </div>
           <div class="control-group">
             <label class="control-label" for="MeasMashGrav">Measured Mash Gravity</label>
             <div class="controls">
-              <input type="text" class="input-mini" id="MeasMashGrav" title="Assuming strike volume is accurate, used to calculate measured conversion efficiency." name="MeasMashGrav" value="1.0725" required>S.G.</div>
+              <input type="text" class="input-mini" id="MeasMashGrav" title="Assuming strike volume is accurate, used to calculate measured conversion efficiency." name="MeasMashGrav" value="1.000" required>S.G.</div>
           </div>
           <div class="control-group">
             <label class="control-label" for="MeasPrebGrav">Measured Preboil Gravity</label>
             <div class="controls">
-              <input type="text" class="input-mini" id="MeasPrebGrav" title="Assuming strike volume is accurate, used to calculate measured conversion efficiency. See blog post" name="MeasPrebGrav" value="1.0523" required>S.G.</div>
+              <input type="text" class="input-mini" id="MeasPrebGrav" title="Assuming strike volume is accurate, used to calculate measured conversion efficiency. See blog post" name="MeasPrebGrav" value="1.000" required>S.G.</div>
           </div>
         </div>
         <!-- end left column -->
@@ -408,7 +408,7 @@
   <script>
     window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')
   </script>
-  <script src="https://pricelessbrewing.github.io/BiabCalc/Calc/TestingA.js"></script>
+  <script src="https://pricelessbrewing.github.io/BiabCalc/Calc/Latest.js"></script>
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 </body>
 
