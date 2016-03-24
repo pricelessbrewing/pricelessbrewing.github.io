@@ -213,7 +213,7 @@ function radioSelect(elem) {
 
       BatchVol = 5.5;
       GBill = 12;
-      HBill = 56.699;
+      HBill = 57;
       DHop = 0;
       BoilTime = 60;
       BoilRate = 1.25;
@@ -226,7 +226,7 @@ function radioSelect(elem) {
       LossTrub = 0;
       LossFermTrub = 0.5;
       Gabs = 0.08;
-      Habs = 0.001410958;
+      Habs = 0.0014;
 
       break;
     default:
