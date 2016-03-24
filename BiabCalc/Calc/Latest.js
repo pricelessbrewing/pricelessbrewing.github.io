@@ -587,11 +587,11 @@ BatchVol = BatchVol * 0.264172;
     
      if ( Radio == 2 ) {
 BatchVol = BatchVol / 0.264172;
-      TempMashout = ( TempMashout / 1.8 ) - 32;
+      TempMashout = ( TempMashout - 32 ) / 1.8;
        MeasGabs = MeasGabs * 8.3454;
        WaterTot = WaterTot / 0.264172; 
        HTot = HTot * 2.54;
-      TempStrike = ( TempStrike / 1.8 ) - 32;
+      TempStrike = ( TempStrike - 32 ) / 1.8;
        MashThick = MashThick * 2.08635;
        LossTot = LossTot / 0.264172;
        GalH = GalH * 2.54;
