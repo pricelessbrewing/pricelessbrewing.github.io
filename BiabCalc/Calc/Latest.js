@@ -1,5 +1,31 @@
+var radio = 1;
+
 function radioSelect(elem) {
-  var Weights_Big, Volumes, Weights_Small, Temps, coefficient, Units_Sparge, Units_GBill, Units_Hop, Units_DHop, Units_MTemp, Units_STemp, Units_Trub_Volume, Units_GTemp, Units_FTrub_Volume, Units_MTrub_Volume, Units_LossTot, Units_Gabs, Units_MeasuredGabs, Units_MashThickness, Units_Habs, Units_BoilOff, Units_KettleVolume, Units_KettleWidth, Units_PreboilVolume, Units_MashoutTemp, Units_WaterTot, Units_VolStrike, Units_VolStart, Units_FirstRun, Units_SecondRun, Units_Pre, Units_Post, Units_VChilled, Units_VPackaged, Units_VolMash, Units_MinSparge, Units_HTot, Units_GallonHeight, Units_HVolStart, Units_HStrike, Units_HVolMash, Units_HFirstRun, Units_HSecondRun, Units_HPre, Units_HPost, Units_HChilled, BatchVol, Volume_Coeff, Weight_Coeff, Weight_Small_Coeff, Temp_Coeff, GBill, HBill, DHop, Units_TempStrike, BoilTime, BoilRate, TempGrain, TempMash, TempSparge, VolSparge, PotSize, KettleID, LossTrub, LossFermTrub, HChilled, VolPackaged, Gabs, Habs, EBoil, Units_MashThickness2, Units_EBoil;
+  var Weights_Big, Volumes, Weights_Small, Temps, coefficient, Units_Sparge, Units_GBill, Units_Hop, Units_DHop, Units_MTemp, Units_STemp, Units_Trub_Volume, Units_GTemp, Units_FTrub_Volume, Units_MTrub_Volume, Units_LossTot, Units_Gabs, Units_MeasuredGabs, Units_MashThickness, Units_Habs, Units_BoilOff, Units_KettleVolume, Units_KettleWidth, Units_PreboilVolume, Units_MashoutTemp, Units_WaterTot, Units_VolStrike, Units_VolStart, Units_FirstRun, Units_SecondRun, Units_Pre, Units_Post, Units_VChilled, Units_VPackaged, Units_VolMash, Units_MinSparge, Units_HTot, Units_GallonHeight, Units_HVolStart, Units_HStrike, Units_HVolMash, Units_HFirstRun, Units_HSecondRun, Units_HPre, Units_HPost, Units_HChilled, BatchVol, Volume_Coeff, Weight_Coeff, Weight_Small_Coeff, Temp_Coeff, GBill, HBill, DHop, Units_TempStrike, BoilTime, BoilRate, TempGrain, TempMash, TempSparge, VolSparge, PotSize, KettleID, MashThickness, LossTrub,LossTunTrub, LossFermTrub, HChilled, VolPackaged, Gabs, Habs, HopRatio, EBoil, radio, Units_MashThickness2, Units_EBoil;
+  
+    BatchVol = document.getElementById('BatchVol').value;
+  
+  
+  
+  GBill = document.getElementById('GBill').value;
+HBill = document.getElementById('HBill').value;
+DHop = document.getElementById('DHop').value;
+TempMash = document.getElementById('TempMash').value;
+BoilRate = document.getElementById('BoilRate').value;
+TempGrain = document.getElementById('TempGrain').value;
+VolSparge = document.getElementById('VolSparge').value;
+TempSparge = document.getElementById('TempSparge').value;
+LossTrub = document.getElementById('LossTrub').value;
+LossFermTrub = document.getElementById('LossFermTrub').value;
+LossTunTrub = document.getElementById('LossTunTrub').value;
+MashThickness = document.getElementById('MashThickness').value;
+Gabs = document.getElementById('Gabs').value;
+Habs = document.getElementById('Habs').value;
+PotSize = document.getElementById('PotSize').value;
+KettleID = document.getElementById('KettleID').value;
+MeasPrebVolume = document.getElementById('MeasPrebVolume').value;
+
+  
   var uarr = elem.getAttribute('data-units').split("|");
   switch (elem.id) {
     case 'imperial':
@@ -59,22 +85,47 @@ function radioSelect(elem) {
       Units_HPost = Units_KettleWidth;
       Units_HChilled = Units_KettleWidth;
 
-      BatchVol = 5.5;
-      GBill = 12;
-      HBill = 2;
-      DHop = 0;
-      BoilTime = 60;
-      BoilRate = 1.25;
-      TempGrain = 70;
-      TempMash = 152;
-      VolSparge = 0;
-      TempSparge = 168
-      PotSize = 10;
+         if ( TempMash < 100) {
+    BatchVol = BatchVol * 0.264172;
+     BatchVol = BatchVol.toFixed(2);
+     BoilRate =  BoilRate * 0.264172;
+      BoilRate = BoilRate.toFixed(2);
+     VolSparge = VolSparge * 0.264172;
+    VolSparge = VolSparge.toFixed(2);
+    LossTrub = LossTrub * 0.264172;
+   LossTrub = LossTrub.toFixed(2); 
+LossFermTrub = LossFermTrub * 0.264172;
+           LossFermTrub = LossFermTrub.toFixed(2);
+    HBill = HBill * 0.035274;
+HBill = HBill.toFixed(2);
+      DHop = DHop * 0.035274;
+                 DHop = DHop.toFixed(2);
+
+           TempMash = ( TempMash * 1.8 ) + 32;
+           TempMash = TempMash.toFixed(1);
+
+           TempSparge = ( TempSparge * 1.8 ) + 32;
+           TempSparge = TempSparge.toFixed(1)
+                      TempGrain = ( TempGrain * 1.8 ) + 32;
+           TempGrain = TempGrain.toFixed(1);                    
+     MashThickness = MashThickness * 0.479306;
+           MashThickness = MashThickness.toFixed(2);
+
+           GBill = GBill * 2.54;
+           GBill = GBill.toFixed(2);
+           
+    } else {
+      HBill = HBill * 0.035274;
+      HBill = HBill.toFixed(2);
+      DHop = DHop * 0.035274;
+      DHop = DHop.toFixed(2);
+    }
+
       KettleID = 13.5;
-      LossTrub = 0;
-      LossFermTrub = 0.5;
       Gabs = 0.08;
       Habs = 0.04;
+      radio = 1;
+      
       break;
 
     case 'metric':
@@ -134,25 +185,47 @@ function radioSelect(elem) {
       Units_HPre = Units_KettleWidth;
       Units_HPost = Units_KettleWidth;
       Units_HChilled = Units_KettleWidth;
+      
+          BatchVol = BatchVol / 0.264172;
+     BatchVol = BatchVol.toFixed(2);
+     BoilRate =  BoilRate / 0.264172;
+      BoilRate = BoilRate.toFixed(2);
+     VolSparge = VolSparge / 0.264172;
+    VolSparge = VolSparge.toFixed(2);
+    LossTrub = LossTrub / 0.264172;
+   LossTrub = LossTrub.toFixed(2); 
+LossFermTrub = LossFermTrub / 0.264172;
+           LossFermTrub = LossFermTrub.toFixed(2);
+           TempMash = ( TempMash - 32 ) / 1.8;
+           TempMash = TempMash.toFixed(1);
+           TempSparge = ( TempSparge - 32 ) / 1.8;
+           TempSparge = TempSparge.toFixed(1)
+                      TempGrain = ( TempGrain - 32 ) / 1.8;
+           TempGrain = TempGrain.toFixed(1);                 
+     MashThickness = MashThickness / 0.479306;
+           MashThickness = MashThickness.toFixed(2);
+           GBill = GBill / 2.54;
+           GBill = GBill.toFixed(2);
+      HopRatio = HBill / BatchVol;
 
-      BatchVol = 20;
-      GBill = 5.5;
-      HBill = 57;
-      DHop = 0;
-      BoilTime = 60;
-      BoilRate = 4.5;
-      TempGrain = 22;
-      TempMash = 68;
-      VolSparge = 0;
-      TempSparge = 76;
-      PotSize = 38;
+               if ( HopRatio < 1 ) {
+    HBill = HBill / 0.035274;
+      HBill = HBill.toFixed(2);
+      DHop = DHop / 0.035274;
+      DHop = DHop.toFixed(2);     
+    } 
+      
+      else {
+        
+    }
+      
       KettleID = 35.5;
-      LossTrub = 0;
-      LossFermTrub = 2;
       Gabs = 0.66;
       Habs = 0.005;
-
+      radio = 2;
+      
       break;
+      
     case 'grams':
       Weights_Big = uarr[0];
       Units_GBill = Weights_Big;
@@ -210,23 +283,43 @@ function radioSelect(elem) {
       Units_HPre = Units_KettleWidth;
       Units_HPost = Units_KettleWidth;
       Units_HChilled = Units_KettleWidth;
+      
+               if ( TempMash < 100) {
+    BatchVol = BatchVol * 0.264172;
+     BatchVol = BatchVol.toFixed(2);
+     BoilRate =  BoilRate * 0.264172;
+      BoilRate = BoilRate.toFixed(2);
+     VolSparge = VolSparge * 0.264172;
+    VolSparge = VolSparge.toFixed(2);
+    LossTrub = LossTrub * 0.264172;
+   LossTrub = LossTrub.toFixed(2); 
+LossFermTrub = LossFermTrub * 0.264172;
+           LossFermTrub = LossFermTrub.toFixed(2);
+           TempMash = ( TempMash * 1.8 ) + 32;
+           TempMash = TempMash.toFixed(1);
 
-      BatchVol = 5.5;
-      GBill = 12;
-      HBill = 57;
-      DHop = 0;
-      BoilTime = 60;
-      BoilRate = 1.25;
-      TempGrain = 70;
-      TempMash = 152;
-      VolSparge = 0;
-      TempSparge = 168;
-      PotSize = 10;
+           TempSparge = ( TempSparge * 1.8 ) + 32;
+           TempSparge = TempSparge.toFixed(1)
+                      TempGrain = ( TempGrain * 1.8 ) + 32;
+           TempGrain = TempGrain.toFixed(1);                    
+     MashThickness = MashThickness * 0.479306;
+           MashThickness = MashThickness.toFixed(2);
+
+           GBill = GBill * 2.54;
+           GBill = GBill.toFixed(2);
+           
+    } else {
+   HBill = HBill / 0.035274;
+HBill = HBill.toFixed(2);
+      DHop = DHop / 0.035274;
+    DHop = DHop.toFixed(2);
+    }
+
+
       KettleID = 13.5;
-      LossTrub = 0;
-      LossFermTrub = 0.5;
       Gabs = 0.08;
       Habs = 0.0014;
+      radio = 3;
 
       break;
     default:
@@ -302,6 +395,7 @@ function radioSelect(elem) {
       LossFermTrub = 0.5;
       Gabs = 0.08;
       Habs = 0.04;
+      radio = 3;
       break;
   }
   document.getElementById('unit_batchvol').innerHTML = Volumes;
@@ -431,40 +525,7 @@ function radioSelect(elem) {
       StrikeAdj = parseFloat($('#StrikeAdj').val()),
       LossFermTrub = parseFloat($('#LossFermTrub').val()),
       MashThickness = parseFloat($('#MashThickness').val());
-    var HopRatio = HBill/BatchVol;
-    var Radio = 1;
-    
-    if (TempMash < 80) {
-     Radio = 2;
-BatchVol = BatchVol * 0.264172;
-      GBill = GBill * 2.20462;
-      HBill = HBill * 0.035274;
-      DHop = DHop * 0.035274;
-      TempMash = ( TempMash * 1.8 ) + 32;
-      BoilRate = BoilRate * 0.264172;
-      TempGrain = ( TempGrain * 1.8 ) + 32;
-      VolSparge = VolSparge * 0.264172;
-      TempSparge = ( TempSparge * 1.8 ) + 32;
-      LossTrub = LossTrub * 0.264172;
-      LossFermTrub = LossFermTrub * 0.264172;
-      LossTunTrub = LossTunTrub * 0.264172;
-      MashThickness = MashThickness * 0.479306;
-      Gabs = Gabs / 8.3454;
-      Habs = Habs * 7.48915;
-      PotSize = PotSize * 0.264172;
-      KettleID = KettleID * 0.393701;
-      MeasPrebVolume = MeasPrebVolume * 0.264172;
-      
-      
 
-    } else if ( TempMash > 80 ){
-      if ( HopRatio > 5 ){
-      Radio = 3;
-      HBill = HBill * 0.035274;
-      DHop = DHop * 0.035274;
-      Habs = Habs / 0.035274;
-    }
-    }
   
       var LossBoil = BoilTime * BoilRate / 60,
       LossHop = HBill * Habs,
@@ -591,7 +652,7 @@ BatchVol = BatchVol / 0.264172;
        MeasGabs = MeasGabs * 8.3454;
        WaterTot = WaterTot / 0.264172; 
        HTot = HTot * 2.54;
-      TempStrike = ( TempStrike - 32 ) / 1.8;
+      TempStrike = ( TempStrike - 32 )/ 1.8;
        MashThick = MashThick * 2.08635;
        LossTot = LossTot / 0.264172;
        GalH = GalH * 2.54;
