@@ -492,7 +492,7 @@ function radioSelect(elem) {
     if (!allFieldsValid()) {
       return;
     }
-
+    
     var BatchVol = parseFloat($('#BatchVol').val()),
       GBill = parseFloat($('#GBill').val()),
       MeasMashGrav = parseFloat($('#MeasMashGrav').val()),
@@ -517,8 +517,42 @@ function radioSelect(elem) {
       StrikeAdj = parseFloat($('#StrikeAdj').val()),
       LossFermTrub = parseFloat($('#LossFermTrub').val()),
       MashThickness = parseFloat($('#MashThickness').val());
+    var HopRatio = HBill/BatchVol;
+    var Radio = 1;
+    
+    if (TempMash < 80) {
+     Radio = 2;
+BatchVol = BatchVol * 0.264172;
+      GBill = GBill * 2.20462;
+      HBill = HBill * 0.035274;
+      DHop = DHop * 0.035274;
+      TempMash = ( TempMash * 1.8 ) + 32;
+      BoilRate = BoilRate * 0.264172;
+      TempGrain = ( TempGrain * 1.8 ) + 32;
+      VolSparge = VolSparge * 0.264172;
+      TempSparge = ( TempSparge * 1.8 ) + 32;
+      LossTrub = LossTrub * 0.264172;
+      LossFermTrub = LossFermTrub * 0.264172;
+      LossTunTrub = LossTunTrub * 0.264172;
+      MashThickness = MashThickness * 0.479306;
+      Gabs = Gabs / 8.3454;
+      Habs = Habs * 7.48915;
+      PotSize = PotSize * 0.264172;
+      KettleID = KettleID * 0.393701;
+      MeasPrebVolume = MeasPrebVolume * 0.264172;
+      
+      
 
-    var LossBoil = BoilTime * BoilRate / 60,
+    } else if ( TempMash > 80 ){
+      if ( HopRatio > 5 ){
+      Radio = 3;
+      HBill = HBill * 0.035274;
+      DHop = DHop * 0.035274;
+      Habs = Habs / 0.035274;
+    }
+    }
+  
+      var LossBoil = BoilTime * BoilRate / 60,
       LossHop = HBill * Habs,
       LossGrain = GBill * Gabs,
       LossTot = LossGrain + LossHop + LossBoil + LossTrub + LossTunTrub,
@@ -636,36 +670,36 @@ function radioSelect(elem) {
     } else {
       var YeastPitch = .75 * 3785.41 * BatchVol * PlatoPost / 1000;
     }
-
-    if (Radio == 2) {
-      BatchVol = BatchVol / 0.264172;
-      TempMashout = (TempMashout - 32) / 1.8;
-      MeasGabs = MeasGabs * 8.3454;
-      WaterTot = WaterTot / 0.264172;
-      HTot = HTot * 2.54;
-      TempStrike = (TempStrike - 32) / 1.8;
-      MashThick = MashThick * 2.08635;
-      LossTot = LossTot / 0.264172;
-      GalH = GalH * 2.54;
-      EBoil = EBoil / 0.264172;
-      VolMinSparge = VolMinSparge / 0.264172;
-      VolStart = VolStart / 0.264172;
-      HStart = HStart * 2.54;
-      VolMash = VolMash / 0.264172;
-      VolStrike = VolStrike / 0.264172;
-      HStrike = HStrike * 2.54;
-      HMash = HMash * 2.54;
+    
+     if ( Radio == 2 ) {
+BatchVol = BatchVol / 0.264172;
+      TempMashout = ( TempMashout - 32 ) / 1.8;
+       MeasGabs = MeasGabs * 8.3454;
+       WaterTot = WaterTot / 0.264172; 
+       HTot = HTot * 2.54;
+      TempStrike = ( TempStrike - 32 ) / 1.8;
+       MashThick = MashThick * 2.08635;
+       LossTot = LossTot / 0.264172;
+       GalH = GalH * 2.54;
+       EBoil = EBoil / 0.264172;
+      VolMinSparge = VolMinSparge /  0.264172;
+       VolStart = VolStart / 0.264172;
+       HStart = HStart * 2.54;
+       VolMash = VolMash / 0.264172;
+       VolStrike = VolStrike / 0.264172;
+       HStrike = HStrike * 2.54;
+       HMash = HMash * 2.54;
       FirstRun = FirstRun / 0.264172;
-      HFirstRun = HFirstRun * 2.54;
-      SecRun = SecRun / 0.264172;
-      HSecRun = HSecRun * 2.54;
-      VolPre = VolPre / 0.264172;
-      HPre = HPre * 2.54;
-      VolPost = VolPost / 0.264172;
-      HPost = HPost * 2.54;
-      VolChilled = VolChilled / 0.264172;
-      HChilled = HChilled * 2.54;
-      VolPackaged = VolPackaged / 0.264172;
+       HFirstRun = HFirstRun * 2.54;
+       SecRun = SecRun / 0.264172;
+       HSecRun = HSecRun * 2.54;
+       VolPre = VolPre / 0.264172;
+       HPre = HPre * 2.54;
+       VolPost = VolPost / 0.264172;
+       HPost = HPost * 2.54;
+       VolChilled = VolChilled / 0.264172;
+       HChilled = HChilled * 2.54;
+       VolPackaged = VolPackaged / 0.264172;
     }
 
     // console.log(VolStrike, WaterTot, MashThick, TempStrike);
