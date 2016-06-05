@@ -1,3 +1,36 @@
+var observe;
+if (window.attachEvent) {
+    observe = function (element, event, handler) {
+        element.attachEvent('on'+event, handler);
+    };
+}
+else {
+    observe = function (element, event, handler) {
+        element.addEventListener(event, handler, false);
+    };
+}
+function init () {
+    var text = document.getElementById('notes');
+    function resize () {
+        text.style.height = 'auto';
+        text.style.height = text.scrollHeight+'px';
+    }
+    /* 0-timeout to get the already changed text */
+    function delayedResize () {
+        window.setTimeout(resize, 0);
+    }
+    observe(text, 'change',  resize);
+    observe(text, 'cut',     delayedResize);
+    observe(text, 'paste',   delayedResize);
+    observe(text, 'drop',    delayedResize);
+    observe(text, 'keydown', delayedResize);
+
+    text.focus();
+    text.select();
+    resize();
+}
+
+init();
 function setInputDate(_id) {
   var _dat = document.querySelector(_id);
   var hoy = new Date(),
@@ -118,11 +151,7 @@ function radioSelect(elem) {
         HBill = HBill.toFixed(2);
         DHop = DHop * 0.035274;
         DHop = DHop.toFixed(2);
-
-        TempMash = (TempMash * 1.8) + 32;
-        TempMash = TempMash.toFixed(1);
-
-        TempSparge = (TempSparge * 1.8) + 32;
+ TempSparge = (TempSparge * 1.8) + 32;
         TempSparge = TempSparge.toFixed(1)
         TempGrain = (TempGrain * 1.8) + 32;
         TempGrain = TempGrain.toFixed(1);
@@ -131,6 +160,10 @@ function radioSelect(elem) {
 
         GBill = GBill * 2.54;
         GBill = GBill.toFixed(2);
+        TempMash = (TempMash * 1.8) + 32;
+        TempMash = TempMash.toFixed(1);
+
+       
 
       } else {
         HBill = HBill * 0.035274;
@@ -213,8 +246,6 @@ function radioSelect(elem) {
       LossTrub = LossTrub.toFixed(2);
       LossFermTrub = LossFermTrub / 0.264172;
       LossFermTrub = LossFermTrub.toFixed(2);
-      TempMash = (TempMash - 32) / 1.8;
-      TempMash = TempMash.toFixed(1);
       TempSparge = (TempSparge - 32) / 1.8;
       TempSparge = TempSparge.toFixed(1)
       TempGrain = (TempGrain - 32) / 1.8;
@@ -224,6 +255,8 @@ function radioSelect(elem) {
       GBill = GBill / 2.54;
       GBill = GBill.toFixed(2);
       HopRatio = HBill / BatchVol;
+      TempMash = (TempMash - 32) / 1.8;
+      TempMash = TempMash.toFixed(1);
 
       if (HopRatio < 1) {
         HBill = HBill / 0.035274;
