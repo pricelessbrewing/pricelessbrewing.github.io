@@ -18,13 +18,13 @@ header {
   padding: 0em 0 1em 0;
   background: #3e2e21;
   color: white;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .header-container {
   margin: 0 auto;
   display: block;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .left-column-header {
