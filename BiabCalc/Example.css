@@ -11,20 +11,20 @@ body {
   padding: 0;
   margin: 0;
   background: #802e1d;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 header {
   padding: 0em 0 1em 0;
   background: #3e2e21;
   color: white;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .header-container {
   margin: 0 auto;
   display: block;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .left-column-header {
