@@ -27,7 +27,7 @@ header {
 }
 
 .left-column-header {
-  background: #802e1d;
+  background: #3e2e21;
   clear: left;
 }
 
@@ -262,6 +262,25 @@ input:focus {
   clear: both;
   overflow: auto;
   color: #b4af9a;
+}
+.right-column .control-group {
+  border-top: 1px solid #93321f;
+  padding: 0.3em 0 0.3em 0;
+  clear: both;
+  overflow: auto;
+  color: #b4af9a;
+}
+textarea {
+    border: 3px solid #b4af9a;
+    overflow: hidden;
+    padding: 1em 1em;
+    outline: none;
+    background-color: #802e1d;
+    resize: none;
+    width: 65%;
+  font-family:Raleway, sans-serif;
+  font-size: 1em;
+  color:#b4af9a;
 }
 
 .right-column-header .control-group {
