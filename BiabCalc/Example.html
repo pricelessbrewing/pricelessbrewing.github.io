@@ -25,7 +25,7 @@
     ga('create', 'UA-60124200-2', 'auto'); - ga('send', 'pageview');
   </script>
   <header>
-    <div class="left-column-header column2">
+    <div class="left-column-header column">
       <div class="container header-container">
         <h1><img class="logo" src="images/logo.png" alt=""></h1>
         <p>All the numbers you need on brew day.</p>
@@ -102,17 +102,17 @@
             <div class="controls">
               <input type="text" class="input-mini" id="TempGrain" name="TempGrain" value="72" required><span id="Unit_GTemp">F</span></div>
           </div>
+         
           <div class="control-group">
-            <label class="control-label" for="VolSparge">Sparging Volume</label>
-            <div class="controls">
-              <input type="text" class="input-mini" id="VolSparge" title="Volume as measured at Sparge Temp Volume" name="VolSparge" value="3" required><span id="Unit_Sparge">Gal</span></div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="TempSparge">Sparging <br> Temp</label>
+            <label class="control-label" for="TempSparge">Sparge Temp</label>
             <div class="controls">
               <input type="text" class="input-mini" title="Temp. of Sparge water, affects mashout temp" id="TempSparge" name="TempSparge" value="168" required><span id="Unit_STemp">F</span></div>
           </div>
-
+ <div class="control-group">
+   <label class="control-label" for="VolSparge">Sparging Volume <p></p></label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="VolSparge" title="Volume as measured at Sparge Temp Volume" name="VolSparge" value="3" required><span id="Unit_Sparge">Gal</span></div>
+          </div>
           <div class="control-group">
             <label class="control-label" for="MashThickness">Fixed Mash Thickness.* <br><span class="note"></span> </label>
             <div class="controls">
@@ -435,6 +435,13 @@
             </div>
           </div>
         </div>
+        
+<textarea id="notes" overflow: hidden; background-color: #D0D0D0; rows=6; style="margin-left: 62px;"
+placeholder="Yeast Strain: WYeast 1968              
+Yeast Cell count: 300B                    
+Brewday Notes:
+  Preboil was 0.2G high, adjust grain absorption lower next time.                                    
+  Remember to clean as you go!..."></textarea>
         <!-- end container -->
       </div>
       <!-- end right column -->
