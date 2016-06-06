@@ -232,7 +232,7 @@ function updateCalc()
  VolPre = (WaterTot - LossGrain - LossTunTrub) * 1.043841336;
  VolPost = (WaterTot - LossTot + LossTrub) * 1.043841336;
  VolChilled = (VolPost / 1.043841336) - LossTrub;
- VolPackaged = VolChilled - LossFermTrub - (DHop * Gabs);
+ VolPackaged = VolChilled - LossFermTrub - (DHop * Habs);
  GalH = 294.118334834 / (KettleID * KettleID);
  HTot = GalH * WaterTot;
  HStart = GalH * VolStart;
