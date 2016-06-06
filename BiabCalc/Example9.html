@@ -6,10 +6,10 @@ r
  <title>Priceless Brew in a Bag Calculato</title>
  <meta name="description" content="">
  <meta name="viewport" content="width=device-width">
- <link href="Example.css" type="text/css" rel="stylesheet">
+ <link href="css.css" type="text/css" rel="stylesheet">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
- <script type="text/javascript" src="https://pricelessbrewing.github.io/BiabCalc/Calc/Example.js"></script>
+ <script type="text/javascript" src="temp.js"></script>
 </head>
 <body>
   <script>
@@ -35,8 +35,8 @@ r
 
         <div class="control-group3">
           <label for="imperial"><input name="units" value="imperial" data-units="lb|Gallon|Oz|F|Gal/Hr|Gal/Lb|Qt/Lb|Gal/Oz|Inches" type="radio" id="imperial"  onchange="radioSelect(this);updateCalc;">Imperial</label><br>
-          <label for="metric"><input name="units" value="metric" data-units="kg|Liter|g|C|Liter/Hr|Liter/Kg|Liter/Kg|Liter/g|cm" type="radio" id="metric" onchange="radioSelect(this);updateCalc;">Metric</label><br>
-          <label for="grams"><input name="units" value="grams" data-units="lb|Gallon|g|F|Gal/Hr|Gal/Lb|Qt/Lb|Gal/g|Inches" type="radio"  id="grams" onchange="radioSelect(this);updateCalc;">Imperial (hops as grams)</label><br>
+          <label for="metric"><input name="units" value="metric" data-units="kg|L|g|C|L/Hr|L/Kg|L/Kg|L/g|cm" type="radio" id="metric" onchange="radioSelect(this);updateCalc;">Metric</label><br>
+          <label for="grams"><input name="units" value="grams" data-units="lb|Gallon|g|F|Gal/Hr|Gal/Lb|Qt/Lb|Gal/g|Inches" type="radio" id="grams" onchange="radioSelect(this);updateCalc;">Imperial (hops as grams)</label><br>
         </div>
 
       </div>
@@ -55,9 +55,9 @@ r
               <input type="text" class="input-mini" id="BeerName" name="BeerName" value="InitiAle" title="Every brew deserves a name."></div>
           </div>
           <div class="control-group">
-            <label class="control-label" for="BeerName">Brewday</label>
+            <label class="control-label" for="Brewday">Brewday</label>
             <div class="controls">
-              <input type="text" class="input-mini" id="Brewday" name="Brewday" value="InitiAle" title="Defaults to today"></div>
+              <input type="text" class="input-mini" id="Brewday" name="Brewday" value="" title="Defaults to today"></div>
           </div>
 
           <div class="control-group">
@@ -77,7 +77,8 @@ r
           </div>
           <div class="control-group">
             <div class="controls">
-              <label class="control-label" for="DHop">Dry Hops</label>
+              <label class="control-label" for="DHop">Dry Hops <br>
+			  </label>
               <input type="text" class="input-mini" id="DHop" title="Dry hops will affect bottling volume due to absorption rates" name="Dhop" value="0" required><span id="Unit_DHop">g</span></div>
           </div>
           <div class="control-group">
@@ -129,7 +130,7 @@ r
           <h2>Equipment</h2>
 
 <div class="control-group">
-            <label class="control-label" for="BoilRate">Boil-Off Rate</label>
+            <label class="control-label" for="BoilRate">Boil-Off Rate<br><br></label>
             <div class="controls">
               <input type="text" class="input-mini" id="BoilRate" name="BoilRate" value="1.2" title="Ambient Volume boiled off during 1 hour." required><span id="Unit_BoilOff">Gal/Hr</span></div>
           </div>
@@ -144,21 +145,22 @@ r
               <input type="text" class="input-mini" id="KettleID" title="Used in Boil off estimation and all liquid heights, assumes circular straight walled cylinders. Keggles and non-circular kettles will vary." name="KettleID" value="13.898" required><span id="Unit_KettleWidth">Inches</span></div>
           </div>
   <div class="control-group">
-            <label class="control-label" for="LossTrub">Trub Loss from Kettle</label>
+            <label class="control-label" for="LossTrub">Trub Loss from Kettle <p></label>
             <div class="controls">
               <input type="text" class="input-mini" title="Expected losses between after chilling the wort, and racking to the fermenter. Includes whirlpool losses. Affects brewhouse efficiency" id="LossTrub" name="LossTrub" value="0.0" required><span id="Unit_Trub_Volume">Gallons</span></div>
           </div>
-          <div class="control-group">
-            <label class="control-label" for="LossFermTrub">Trub Loss from Fermenter (10% of batch size)</label>
-            <div class="controls">
-              <input type="text" class="input-mini" title="Expected losses between after after fermentations, and bottling/kegging. Includes yeast cake." id="LossFermTrub" name="LossFermTrub" value="0.5" required><span id="Unit_FTrub_Volume">Gallons</span></div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="LossTunTrub">Trub Loss from Mashtun (10% of batch size)</label>
+		            <div class="control-group">
+            <label class="control-label" for="LossTunTrub">Mashtun Loss</label>
             <div class="controls">
               <input type="text" class="input-mini" title="Expected wort loss from mashtun, includes undrainable deadspace. Affects Mash and Lauter efficiencies. See Blog post for more info." id="LossTunTrub" name="LossTunTrub" value="0.0" required><span id="Unit_MTrub_Volume">Gallons</span></div>
           </div>
 
+          <div class="control-group">
+            <label class="control-label" for="LossFermTrub">Fermenter Loss</label>
+            <div class="controls">
+              <input type="text" class="input-mini" title="Expected losses between after after fermentations, and bottling/kegging. Includes yeast cake." id="LossFermTrub" name="LossFermTrub" value="0.5" required><span id="Unit_FTrub_Volume">Gallons</span></div>
+          </div>
+ 
 
 
         </div>
@@ -291,46 +293,46 @@ r
           <div class="control-group">
             <label class="control-label">Total water needed</label>
             <div class="controls">
-              <span class="calc" id="WaterTot">1</span> <span id="Unit_WaterTot">Gallon</span>
+              <span class="calc" id="WaterTot">7.74</span> <span id="Unit_WaterTot">Gallon</span>
               <br>
-              <span class="calc" id="HTot">4</span> <span id="Unit_HTot">Inches</span>
+              <span class="calc" id="HTot">11.79</span> <span id="Unit_HTot">Inches</span>
             </div>
           </div>
           <div class="control-group">
             <label class="control-label">Strike temp</label>
             <div class="controls">
-              <span class="calc" id="TempStrike">9</span> <span id="Unit_TempStrike">F</span>
+              <span class="calc" id="TempStrike">160.36</span> <span id="Unit_TempStrike">F</span>
             </div>
           </div>
           <div class="control-group">
             <label class="control-label">Mash Thickness</label>
             <div class="controls">
-              <span class="calc" id="MashThick">7</span> <span id="Unit_MashThickness2">Qt/Lb</span>
+              <span class="calc" id="MashThick">2.58</span> <span id="Unit_MashThickness2">Qt/Lb</span>
             </div>
           </div>
           <div class="control-group">
             <label class="control-label"> Total volume loss</label>
             <div class="controls">
-              <span class="calc" id="LossTot">2</span> <span id="Unit_LossTot">Gallon</span>
+              <span class="calc" id="LossTot">2.24</span> <span id="Unit_LossTot">Gallon</span>
             </div>
           </div>
           <div class="control-group">
             <label class="control-label">Gallon height</label>
             <div class="controls">
-              <span class="calc" id="GalH">4</span> <span id="Unit_GallonHeight">Inches</span>
+              <span class="calc" id="GalH">1.523</span> <span id="Unit_GallonHeight">Inches</span>
             </div>
           </div>
           <div class="control-group">
             <label class="control-label">Estimated Boil off</label>
             <div class="controls">
-              <span class="calc" id="EBoil">.5</span> <span id="Unit_EBoil">Gal/Hr</span>
+              <span class="calc" id="EBoil">1.11</span> <span id="Unit_EBoil">Gal/Hr</span>
             </div>
           </div>
           <div class="control-group">
             <label class="control-label">Minimum Sparging Volume
               <br><span class="note"></span></label>
             <div class="controls">
-              <span class="calc" id="VolMinSparge">4</span> <span id="Unit_MinSparge">Gal</span>
+              <span class="calc" id="VolMinSparge">0.00</span> <span id="Unit_MinSparge">Gal</span>
               <br>
             </div>
           </div>
@@ -338,44 +340,44 @@ r
           <div class="control-group">
             <label class="control-label">Water volume at 68F</label>
             <div class="controls">
-              <span class="calc" id="VolStart">4</span> <span id="Unit_VolStart">Gal</span>
+              <span class="calc" id="VolStart">7.74</span> <span id="Unit_VolStart">Gal</span>
               <br>
-              <span class="calc" id="HStart">4</span> <span id="Unit_HVolStart">Inches</span>
+              <span class="calc" id="HStart">11.79</span> <span id="Unit_HVolStart">Inches</span>
             </div>
           </div>
           <div class="control-group">
             <label class="control-label">Strike water volume
               <br><span class="note">(temp. adjusted at strike temp)</span></label>
             <div class="controls">
-              <span class="calc" id="VolStrike">0</span> <span id="Unit_VolStrike">Gal</span>
+              <span class="calc" id="VolStrike">7.94</span> <span id="Unit_VolStrike">Gal</span>
               <br>
-              <span class="calc" id="HStrike">4</span> <span id="Unit_HStrike">Inches</span>
+              <span class="calc" id="HStrike">12.09</span> <span id="Unit_HStrike">Inches</span>
             </div>
           </div>
           <div class="control-group">
             <label class="control-label">Volume of mash with grains
               <br><span class="note">(temp. adjusted at mash temp)</span></label>
             <div class="controls">
-              <span class="calc" id="VolMash">4.6</span> <span id="Unit_VolMash">Gal</span>
-              <br> <span class="calc" id="HMash">5</span> <span id="Unit_HVolMash">Inches</span>
+              <span class="calc" id="VolMash">8.90</span> <span id="Unit_VolMash">Gal</span>
+              <br> <span class="calc" id="HMash">13.55</span> <span id="Unit_HVolMash">Inches</span>
             </div>
           </div>
           <div class="control-group">
             <label class="control-label">First Runnings
               <br><span class="note">(temp. adjusted at mash temp)</span></label>
             <div class="controls">
-              <span class="calc" id="FirstRun">4.6</span> <span id="Unit_FirstRun">Gal</span>
+              <span class="calc" id="FirstRun">6.93</span> <span id="Unit_FirstRun">Gal</span>
               <br>
-              <span class="calc" id="HFirstRun">5</span> <span id="Unit_HFirstRun">Inches</span>
+              <span class="calc" id="HFirstRun">10.56</span> <span id="Unit_HFirstRun">Inches</span>
             </div>
           </div>
           <div class="control-group">
             <label class="control-label">2nd Runnings
               <br><span class="note">(temp. adjusted at mash temp)</span></label>
             <div class="controls">
-              <span class="calc" id="SecRun">4.6</span> <span id="Unit_SecondRun">Gal</span>
+              <span class="calc" id="SecRun">0.00</span> <span id="Unit_SecondRun">Gal</span>
               <br>
-              <span class="calc" id="HSecRun">5</span> <span id="Unit_HSecondRun">Inches</span>
+              <span class="calc" id="HSecRun">0</span> <span id="Unit_HSecondRun">Inches</span>
             </div>
           </div>
 
@@ -383,18 +385,18 @@ r
             <label class="control-label">Pre boil
               <br><span class="note">(temp. adjusted at 212F)</span></label>
             <div class="controls">
-              <span class="calc" id="VolPre">4</span> <span id="Unit_Pre">Gal</span>
+              <span class="calc" id="VolPre">7.08</span> <span id="Unit_Pre">Gal</span>
               <br>
-              <span class="calc" id="HPre">5</span> <span id="Unit_HPre">Inches</span>
+              <span class="calc" id="HPre">10.78</span> <span id="Unit_HPre">Inches</span>
             </div>
           </div>
           <div class="control-group">
             <label class="control-label">Post boil
               <br><span class="note">(temp. adjusted at 212F)</span></label>
             <div class="controls">
-              <span class="calc" id="VolPost">4</span> <span id="Unit_Post">Gal</span>
+              <span class="calc" id="VolPost">5.74</span> <span id="Unit_Post">Gal</span>
               <br>
-              <span class="calc" id="HPost">5</span> <span id="Unit_HPost">Inches</span>
+              <span class="calc" id="HPost">8.74</span> <span id="Unit_HPost">Inches</span>
             </div>
           </div>
           <div class="control-group">
@@ -403,14 +405,14 @@ r
             <div class="controls">
               <span class="calc" id="VolChilled">5.5</span> <span id="Unit_VChilled">Gallons</span>
               <br>
-              <span class="calc" id="HChilled">5</span> <span id="Unit_HChilled">Inches</span>
+              <span class="calc" id="HChilled">8.3</span> <span id="Unit_HChilled">Inches</span>
             </div>
           </div>
           <div class="control-group">
             <label class="control-label">Volume Packaged
               <br><span class="note">(To Bottle or keg)</span></label>
             <div class="controls">
-              <span class="calc" id="VolPackaged">4</span> <span id="Unit_VPackaged">Gallons</span>
+              <span class="calc" id="VolPackaged">5</span> <span id="Unit_VPackaged">Gallons</span>
             </div>
             <textarea id="notes" overflow: hidden; background-color: #D0D0D0; rows=6; style="margin-left: 0px;"
 placeholder="Yeast Strain: WYeast 1968              
