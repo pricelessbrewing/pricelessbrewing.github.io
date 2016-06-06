@@ -29,9 +29,10 @@ header {
 }
 
 .left-column-header {
-  background: #3e2e21;
+  background: #fbf4d3;
   clear: left;
   overflow-x:hidden;
+  width: 50%;
 }
 
 header a {
@@ -135,6 +136,7 @@ footer a:hover {
   background: #89cff0;
   padding-left: .5%;
   padding-right: .5%;
+  width: 50%;
 }
 
 h1,
