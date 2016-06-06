@@ -11,25 +11,27 @@ body {
   padding: 0;
   margin: 0;
   background: #802e1d;
-  overflow-x: hidden;
+  overflow-x:hidden;
 }
 
 header {
   padding: 0em 0 1em 0;
   background: #3e2e21;
   color: white;
-  overflow-x: hidden;
+  overflow-x:hidden;
 }
 
 .header-container {
   margin: 0 auto;
   display: block;
-  overflow-x: hidden;
+  overflow: auto;
+  overflow-x:hidden;
 }
 
 .left-column-header {
   background: #3e2e21;
   clear: left;
+  overflow-x:hidden;
 }
 
 header a {
@@ -274,11 +276,11 @@ input:focus {
 textarea {
     border: 3px solid #b4af9a;
     overflow: hidden;
-    padding: 1em 1em;
+    padding: 0em 0em;
     outline: none;
     background-color: #802e1d;
     resize: none;
-    width: 65%;
+    width: 90%;
   font-family:Raleway, sans-serif;
   font-size: 1em;
   color:#b4af9a;
