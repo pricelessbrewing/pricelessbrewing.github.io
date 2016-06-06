@@ -28,6 +28,7 @@ function init () {
     text.focus();
     text.select();
     resize();
+	
 }
 
 init();
@@ -49,7 +50,6 @@ function setInputDate(_id) {
   console.log(data);
   _dat.value = data;
 };
-
 setInputDate("#Brewday");
 
 var BatchVol, BoilRate, coefficient, DHop, EBoil, EstBrewhEff, EstConvWt, EstLauterEff, EstMashEff, ExConv, ExPot, FirstRun, Gabs, GalH, GBill,
@@ -64,8 +64,10 @@ Units_KettleVolume, Units_KettleWidth, Units_LossTot, Units_MashoutTemp, Units_M
 Units_PreboilVolume, Units_SecondRun, Units_Sparge, Units_STemp, Units_TempStrike, Units_Trub_Volume, Units_VChilled, Units_VolMash, Units_VolStart, Units_VolStrike, Units_VPackaged, Units_WaterTot,
 VolChilled, VolMash, VolMinSparge, VolPackaged, VolPost, VolPre, VolSparge, VolSparge2, VolStart, VolStrike, Volume_Coeff, Volumes, WaterTot, Weight_Coeff, Weight_Small_Coeff, YeastPitch;
 
+
 $(document).ready(function()
 {
+
  $('#calcForm').delegate('input[type=text]', 'change', function()
  {
   if(validateField(this))
@@ -83,6 +85,7 @@ $(document).ready(function()
 
 function allFieldsValid()
 {
+
  var fields = [
  'BatchVol',
  'GBill',
@@ -117,9 +120,9 @@ function byId(id)
 {
  return(document.getElementById(id));
 }
-
 function radioSelect(elem)
 {
+
  uarr = elem.getAttribute('data-units').split("|");
  Weights_Big = uarr[0];
  Units_GBill = Weights_Big;
@@ -203,7 +206,7 @@ function updateInputs()
   
   
    if (radio == 'imperial') {
-    if (preradio == 'metric') {
+     if (preradio == 'metric') {
       BatchVol = BatchVol * 0.264172;
       BatchVol = BatchVol.toFixed(2);
       BoilRate = BoilRate * 0.264172;
@@ -232,7 +235,7 @@ function updateInputs()
       Habs = Habs / 0.133526;
       Habs = Habs.toFixed(3);
     }   
-      if (preradio == 'grams') {
+     else if (preradio == 'grams') {
       HBill = HBill * 0.035274;
       HBill = HBill.toFixed(2);
       DHop = DHop * 0.035274;
@@ -240,6 +243,15 @@ function updateInputs()
       Habs = Habs / 0.035274;
       Habs = Habs.toFixed(3);
     }
+	else 
+	{ HBill = HBill * 0.035274;
+      HBill = HBill.toFixed(2);
+      DHop = DHop * 0.035274;
+      DHop = DHop.toFixed(2);
+      Habs = Habs / 0.035274;
+      Habs = Habs.toFixed(3);
+	}
+	
   }
   if (radio == 'grams') {
     if (preradio == 'metric') {
@@ -268,7 +280,7 @@ function updateInputs()
       Habs = Habs.toFixed(4);
 
     }
-    if (preradio == 'imperial') {
+    else if (preradio == 'imperial') {
       HBill = HBill / 0.035274;
       HBill = HBill.toFixed(2);
       DHop = DHop / 0.035274;
@@ -305,7 +317,7 @@ function updateInputs()
       Habs = Habs * 3.78541;
       Habs = Habs.toFixed(4);
     }
-    if (preradio == 'imperial') {
+    else if (preradio == 'imperial') {
       BatchVol = BatchVol / 0.264172;
       BatchVol = BatchVol.toFixed(2);
       BoilRate = BoilRate / 0.264172;
@@ -331,10 +343,37 @@ function updateInputs()
       HBill = HBill.toFixed(2);
       DHop = DHop / 0.035274;
       DHop = DHop.toFixed(2);
-      Gabs = Gabs * 2.08635;
+      Gabs = Gabs * 8.3454;
       Habs = Habs * 0.133526;
       Habs = Habs.toFixed(4);
     }
+	else {
+	BatchVol = BatchVol / 0.264172;
+      BatchVol = BatchVol.toFixed(2);
+      BoilRate = BoilRate / 0.264172;
+      BoilRate = BoilRate.toFixed(2);
+      VolSparge = VolSparge / 0.264172;
+      VolSparge = VolSparge.toFixed(2);
+      LossTrub = LossTrub / 0.264172;
+      LossTrub = LossTrub.toFixed(2);
+      LossFermTrub = LossFermTrub / 0.264172;
+      LossFermTrub = LossFermTrub.toFixed(2);
+      TempSparge = (TempSparge - 32) / 1.8;
+      TempSparge = TempSparge.toFixed(1)
+      TempGrain = (TempGrain - 32) / 1.8;
+      TempGrain = TempGrain.toFixed(1);
+      MashThickness = MashThickness / 0.479306;
+      MashThickness = MashThickness.toFixed(2);
+      GBill = GBill / 2.20462;
+      GBill = GBill.toFixed(2);
+      HopRatio = HBill / BatchVol;
+      TempMash = (TempMash - 32) / 1.8;
+      TempMash = TempMash.toFixed(1);
+      Gabs = Gabs * 8.3454;
+      Habs = Habs * 3.78541;
+      Habs = Habs.toFixed(4);
+	}
+	
   }
  byId('BatchVol').value = BatchVol;
  byId('GBill').value = GBill;
@@ -362,7 +401,7 @@ function updateCalc()
   return;
  }
   
-   BatchVol = parseFloat($('#BatchVol').val());
+ BatchVol = parseFloat($('#BatchVol').val());
  GBill = parseFloat($('#GBill').val());
  MeasMashGrav = parseFloat($('#MeasMashGrav').val());
  MeasPrebGrav = parseFloat($('#MeasPrebGrav').val());
