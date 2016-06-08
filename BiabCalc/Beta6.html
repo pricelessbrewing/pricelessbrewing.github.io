@@ -1,0 +1,455 @@
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+ <title>Priceless Brew in a Bag Calculator</title>
+ <meta name="description" content="">
+ <meta name="viewport" content="width=device-width">
+ <link href="Beta6.css" type="text/css" rel="stylesheet">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+ <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+ <script type="text/javascript" src="Calc/Beta6.js"></script>
+  <script src="https://cdn.jsdelivr.net/simplestorage/0.2.1/simpleStorage.min.js"></script>
+</head>
+<body>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-60124200-2', 'auto');-  ga('send', 'pageview');
+  </script>
+  <header>
+    <div class="left-column-header column">
+      <div class="container header-container">
+        <h1><img class="logo" src="images/logo.png" alt=""></h1>
+        <p>All the numbers you need on brew day.</p>
+      </div>
+    </div>
+
+    <div class="right-column-header column2">
+      <div class="container header-container">
+        <h1></h1>
+        <h2>Choose your units</h2>
+
+        <div class="control-group3">
+          <label for="imperial"><input name="units" value="imperial" data-units="lb|Gallon|Oz|F|Gal/Hr|Gal/Lb|Qt/Lb|Gal/Oz|Inches" type="radio" id="imperial"  onchange="radioSelect(this);updateCalc;">Imperial</label><br>
+          <label for="metric"><input name="units" value="metric" data-units="kg|Liter|gram|C|Liter/Hr|Liter/Kg|Liter/Kg|Liter/g|cm" type="radio" id="metric" onchange="radioSelect(this);updateCalc;">Metric</label><br>
+          <label for="grams"><input name="units" value="grams" data-units="lb|Gal|gram|F|Gal/Hr|Gal/Lb|Qt/Lb|Gal/g|Inches" type="radio" checked="checked" id="grams" onchange="radioSelect(this);updateCalc;">Imperial (hops as grams)</label><br>
+        </div>
+
+      </div>
+      
+    </div>
+
+            <button onclick="AutoScale()">AutoScale Recipe</button>
+                <button onclick="SaveData()">Save Defaults</button>
+                    <button onclick="LoadData()">Load Defaults</button>
+  </header>
+   <div role="main">
+    <form id="calcForm" class="form-horizontal">
+     <div class="left-column column">
+        <div class="container">
+          <h2>Recipe</h2>
+          <h3>Mouseover text for input cell boxes</h3>
+          <div class="control-group">
+            <label class="control-label" for="BeerName">Brew Name</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="BeerName" name="BeerName" value="InitiAle" title="Every brew deserves a name."></div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="Brewday">Brewday</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="Brewday" name="Brewday" value="InitiAle" title="Defaults to today"></div>
+          </div>
+
+           <div class="control-group">
+            <label class="control-label" for="TargetOG">Target OG</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="TargetOG" name="TargetOG" value="1.0650" title="Placeholder to automate grainbill"></div>
+          </div>
+          
+
+          <div class="control-group">
+            <label class="control-label" for="BatchVol">Batch Size</label>
+            <div class="controls">
+              <input type="text" class="input-mini" title="Desired volume into fermenter" id="BatchVol" name="BatchVol" value="5.5"><span id="Unit_BatchVol">G</span></div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="GBill">Grain Bill</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="GBill" name="GBill" value="12" required><span id="Unit_GBill">Lb</span></div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="HBill">Hop Bill</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="HBill" title="How many hops are being added during the boil? Affects Post boil volume" name="HBill" value="57" required><span id="Unit_Hop">gram</span></div>
+          </div>
+          <div class="control-group">
+            <div class="controls">
+              <label class="control-label" for="DHop">Dry Hops<br></label>
+              <input type="text" class="input-mini" id="DHop" title="Dry hops will affect bottling volume due to absorption rates" name="Dhop" value="0" required><span id="Unit_DHop">gram</span></div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="BoilTime">Length of Boil</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="BoilTime" name="BoilTime" value="60" required>Min</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="TempMash">Mash Temp</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="TempMash" name="TempMash" value="154" required><span id="Unit_MTemp">F</span></div>
+          </div>
+          <h2>Process</h2>
+          
+          <div class="control-group">
+            <label class="control-label" for="TempGrain">Grain Temp</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="TempGrain" name="TempGrain" value="72" required><span id="Unit_GTemp">F</span></div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="TempSparge">Sparging Temp</label>
+            <div class="controls">
+              <input type="text" class="input-mini" title="Temp. of Sparge water, affects mashout temp" id="TempSparge" name="TempSparge" value="168" required><span id="Unit_STemp">F</span></div>
+          </div>
+        
+          <div class="control-group">
+            <label class="control-label" for="MashThickness">Mash Thickness</label>
+            <div class="controls">
+              <input type="text" class="input-mini" title="I prefer a thickness around 1.75 for consistently high mash efficiency, prefernces vary with each brewer. Overrides Sparge volume, set to 0 to use custom sparge volume instead." id="MashThickness" name="MashThickness"
+                value="0.00" required><span id="Unit_MashThickness">Qt/Lb</span></div>
+          </div>
+         <div class="control-group">
+            <label class="control-label" for="VolSparge">Sparging Volume </label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="VolSparge" title="Volume as measured at Sparge Temp Volume" name="VolSparge" value="0" required><span id="Unit_Sparge">Gal</span></div>
+          </div>
+ 
+          <div class="control-group">
+            <label class="control-label" for="Gabs">Grain Absorption</label>
+            <div class="controls">
+              <input type="text" id="Gabs" name="Gabs" title="Expected grain absorption rate. Biab is typically 0.08, but can vary from 0.04-0.10. Depending on squeeze/draining method. Mash tun brewers typically experience 0.125." value="0.08" required><span id="Unit_Gabs">Gallon/Lb</span></div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="Habs">Hop Absorption</label>
+            <div class="controls">
+              <input type="text" class="input-mini" title="This varies depending on type of hop. For now leave at the default unless you know better. Hopefulyl will have more info soon." id="Habs" name="Habs" value="0.0014" required><span id="Unit_Habs">Gal/g</span></div>
+          </div>
+
+          <h2><p></p>Equipment</h2>
+
+<div class="control-group">
+            <label class="control-label" for="BoilRate">Boil-Off Rate</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="BoilRate" name="BoilRate" value="1.2" title="Ambient Volume boiled off during 1 hour." required><span id="Unit_BoilOff">Gal/Hr</span></div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="PotSize">How Big is your Kettle/Mashtun?</label>
+            <div class="controls">
+              <input type="text" class="input-mini" title="Affects recommended sparge volume which is calculated to avoid mash tun overflow." id="PotSize" name="PotSize" value="9.901" required><span id="Unit_KettleVolume">Gallon</span></div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="KettleID">How Wide is your Kettle/Mashtun?</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="KettleID" title="Used in Boil off estimation and all liquid heights, assumes circular straight walled cylinders. Keggles and non-circular kettles will vary." name="KettleID" value="13.898" required><span id="Unit_KettleWidth">Inches</span></div>
+          </div>
+  <div class="control-group">
+            <label class="control-label" for="LossTrub">Trub Loss from Kettle</label>
+            <div class="controls">
+              <input type="text" class="input-mini" title="Expected losses between after chilling the wort, and racking to the fermenter. Includes whirlpool losses. Affects brewhouse efficiency" id="LossTrub" name="LossTrub" value="0.0" required><span id="Unit_Trub_Volume">Gallons</span></div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="LossFermTrub">Trub Loss from Fermenter (10% of batch size)</label>
+            <div class="controls">
+              <input type="text" class="input-mini" title="Expected losses between after after fermentations, and bottling/kegging. Includes yeast cake." id="LossFermTrub" name="LossFermTrub" value="0.5" required><span id="Unit_FTrub_Volume">Gallons</span></div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="LossTunTrub">Trub Loss from Mashtun (10% of batch size)</label>
+            <div class="controls">
+              <input type="text" class="input-mini" title="Expected wort loss from mashtun, includes undrainable deadspace. Affects Mash and Lauter efficiencies. See Blog post for more info." id="LossTunTrub" name="LossTunTrub" value="0.0" required><span id="Unit_MTrub_Volume">Gallons</span></div>
+          </div>
+        </div>
+    
+
+        <!-- end left column -->
+      </div>
+       <div class="middle-column column">
+        <div class="container">
+
+          <h2>Efficiencies</h2>
+
+
+          <div class="control-group2">
+            <label class="control-label" for="MAGEstConv">Expected Conversion efficiency</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="MAGEstConv" title="Percentage of converted extract to potential extract. See Blog post for more info." name="MAGEstConv" value="95" required>%</div>
+          </div>
+          <div class="control-group2">
+            <label class="control-label" for="MeasPrebVolume">Measured Preboil Volume @Boil</label>
+            <div class="controls">
+              <input type="text" class="input-mini" title="Used to calculate measured mash,and lauter efficiencies and dissolved extract along with preboil gravity." id="MeasPrebVolume" name="MeasPrebVolume" value="0.00" required><span id="Unit_PreboilVolume">Gallons</span></div>
+          </div>
+          <div class="control-group2">
+            <label class="control-label" for="MeasMashGrav">Measured Mash Gravity</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="MeasMashGrav" title="Assuming strike volume is accurate, used to calculate measured conversion efficiency." name="MeasMashGrav" value="1.000" required>S.G.</div>
+          </div>
+          <div class="control-group2">
+            <label class="control-label" for="MeasPrebGrav">Measured Preboil Gravity</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="MeasPrebGrav" title="Assuming strike volume is accurate, used to calculate measured conversion efficiency. See blog post" name="MeasPrebGrav" value="1.000" required>S.G.</div>
+          </div>
+
+          <h2>Estimated Efficiencies</h2>
+
+
+
+          <div class="control-group">
+            <label class="control-label"> Lauter Efficiency </label>
+            <div class="controls"> <span class="calc" title="How effective was your sparge?. See blog post" id="EstLauterEff">95</span> %</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label"> Mash Efficiency</label>
+            <div class="controls"> <span class="calc" title="How effective was your mash and sparge? Mashtun losses will affect this. See blog post" id="EstMashEff">73</span> %</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label"> Brewhouse Efficiency</label>
+            <div class="controls"> <span class="calc" title="How effective was your sparge? Kettle losses will affect this. See blog post" id="EstBrewhEff">73</span> %</div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label">Run Off Ratio
+              <br><span class="note" ></span>
+
+            </label>
+            <div class="controls"> <span class="calc" title="Ratio of first runnings and second runnings. 0 indicates no sparge, 1 indicates equal first and second running volumes. See blog post." id="MAGRunRatio">0.75</span>
+              <br>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Mashout Temp
+              <br><span class="note"></span>
+
+            </label>
+            <div class="controls"> <span class="calc" title="Temp of grain bed after sparge is thoroughly mixed. Do not exceed 170F." id="TempMashout">168</span> <span id="Unit_MashoutTemp">F</span>
+              <br>
+            </div>
+          </div>
+          <h2>Measured Efficiencies</h2>
+
+          <div class="control-group">
+            <label class="control-label"> Conversion Efficiency</label>
+            <div class="controls"> <span class="calc" title="Determined by mash gravity, relies on accurate strike volume. See Blog post." id="MeasConv">0</span> %</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label"> Lauter Efficiency</label>
+            <div class="controls"> <span class="calc" title="Determined by Preboil gravity, relies on accurate preboil volume. See Blog post." id="MeasLautEff">0</span> %</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label"> Mash Efficiency</label>
+            <div class="controls"> <span class="calc" title="Determined by preboil gravity, relies on accurate preboil volume. See Blog post." id="MeasMashEff">73</span> %</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label"> Brewhouse Efficiency</label>
+            <div class="controls"> <span class="calc" title="Determined by preboil gravity, relies on accurate preboil volume. Affected by Kettle losses. See Blog post." id="MeasBrewhEff">73</span> %</div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Measured Grain Absorption</label>
+            <div class="controls"> <span class="calc" title="Determined by preboil volume, relies on accurate strike and sparge volumes." id="MeasGabs">0.111</span> <span id="Unit_MeasuredGabs">Gal/Lb</span></div>
+          </div>
+
+          <h2>Estimated Gravities</h2>
+
+          <div class="control-group">
+            <label class="control-label">Mash
+              <br><span class="note">Second Runnings</span>
+              <br><span class="note">Preboil</span>
+              <br><span class="note">Post Boil</span>
+            </label>
+            <div class="controls"> <span class="calc" id="SG1">0</span> SG
+              <br><span class="calc" id="SG2">0</span> SG
+              <br><span class="calc" id="SGPre">0</span> SG
+              <br><span class="calc" id="SGPost">0</span> SG
+            </div>
+          </div>
+
+          <h2>Measured Gravities</h2>
+
+          <div class="control-group">
+            <label class="control-label">Mash
+              <br><span class="note">Second Runnings</span>
+              <br><span class="note">Preboil</span>
+              <br><span class="note">Post Boil</span>
+            </label>
+            <div class="controls"> <span class="calc" id="MeasMashGrav2">0</span> SG
+              <br><span class="calc" id="MeasSecRunSG">0</span> SG
+              <br><span class="calc" id="MeasPrebGrav2">0</span> SG
+              <br><span class="calc" id="MeasPostSG">0</span> SG
+
+            </div>
+          </div>
+
+
+        </div>
+        <!-- end container -->
+      </div>
+      <div class="right-column column">
+        <div class="container">
+          <h2>General Results</h2>
+          
+          <div class="control-group">
+            <label class="control-label">OG difference</label>
+            <div class="controls">
+              <span class="calc" id="OGDifference">7.74  </span>S.G.
+          
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label">Total water needed</label>
+            <div class="controls">
+              <span class="calc" id="WaterTot">7.74</span> <span id="Unit_WaterTot">Gallon</span>
+              <br>
+              <span class="calc" id="HTot">11.79</span> <span id="Unit_HTot">Inches</span>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Strike temp</label>
+            <div class="controls">
+              <span class="calc" id="TempStrike">164.37</span> <span id="Unit_TempStrike">F</span>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Mash Thickness</label>
+            <div class="controls">
+              <span class="calc" id="MashThick">1.58</span> <span id="Unit_MashThickness2">Qt/Lb</span>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label"> Total volume loss</label>
+            <div class="controls">
+              <span class="calc" id="LossTot">2.24</span> <span id="Unit_LossTot">Gallon</span>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Gallon height</label>
+            <div class="controls">
+              <span class="calc" id="GalH">1.523</span> <span id="Unit_GallonHeight">Inches</span>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Estimated Boil off</label>
+            <div class="controls">
+              <span class="calc" id="EBoil">1.11</span> <span id="Unit_EBoil">Gal/Hr</span>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Minimum Sparging Volume
+              <br><span class="note"></span></label>
+            <div class="controls">
+              <span class="calc" id="VolMinSparge">0.00</span> <span id="Unit_MinSparge">Gal</span>
+              <br>
+            </div>
+          </div>
+          <h2>Water Volumes and Heights</h2>
+          <div class="control-group">
+            <label class="control-label">Water volume at 68F</label>
+            <div class="controls">
+              <span class="calc" id="VolStart">4.72</span> <span id="Unit_VolStart">Gal</span>
+              <br>
+              <span class="calc" id="HStart">7.22</span> <span id="Unit_HVolStart">Inches</span>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Strike water volume
+              <br><span class="note">(temp. adjusted at strike temp)</span></label>
+            <div class="controls">
+              <span class="calc" id="VolStrike">4.86</span> <span id="Unit_VolStrike">Gal</span>
+              <br>
+              <span class="calc" id="HStrike">7.40</span> <span id="Unit_HStrike">Inches</span>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Volume of mash with grains
+              <br><span class="note">(temp. adjusted at mash temp)</span></label>
+            <div class="controls">
+              <span class="calc" id="VolMash">5.83</span> <span id="Unit_VolMash">Gal</span>
+              <br> <span class="calc" id="HMash">8.87</span> <span id="Unit_HVolMash">Inches</span>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">First Runnings
+              <br><span class="note">(temp. adjusted at mash temp)</span></label>
+            <div class="controls">
+              <span class="calc" id="FirstRun">3.87</span> <span id="Unit_FirstRun">Gal</span>
+              <br>
+              <span class="calc" id="HFirstRun">5.89</span> <span id="Unit_HFirstRun">Inches</span>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">2nd Runnings
+              <br><span class="note">(temp. adjusted at mash temp)</span></label>
+            <div class="controls">
+              <span class="calc" id="SecRun">3.00</span> <span id="Unit_SecondRun">Gal</span>
+              <br>
+              <span class="calc" id="HSecRun">4.57</span> <span id="Unit_HSecondRun">Inches</span>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label">Pre boil
+              <br><span class="note">(temp. adjusted at 212F)</span></label>
+            <div class="controls">
+              <span class="calc" id="VolPre">7.08</span> <span id="Unit_Pre">Gal</span>
+              <br>
+              <span class="calc" id="HPre">10.78</span> <span id="Unit_HPre">Inches</span>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Post boil
+              <br><span class="note">(temp. adjusted at 212F)</span></label>
+            <div class="controls">
+              <span class="calc" id="VolPost">5.74</span> <span id="Unit_Post">Gal</span>
+              <br>
+              <span class="calc" id="HPost">8.74</span> <span id="Unit_HPost">Inches</span>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Out of Kettle Chilled
+              <br><span class="note">(If no chill adjust trub volumes)</span></label>
+            <div class="controls">
+              <span class="calc" id="VolChilled">5.5</span> <span id="Unit_VChilled">Gallons</span>
+              <br>
+              <span class="calc" id="HChilled">8.37</span> <span id="Unit_HChilled">Inches</span>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Volume Packaged
+              <br><span class="note">(To Bottle or keg)</span></label>
+            <div class="controls">
+              <span class="calc" id="VolPackaged">5</span> <span id="Unit_VPackaged">Gallons</span>
+            </div>
+<textarea class='autoExpand' rows='7' data-min-rows='7' placeholder="Yeast Strain: WYeast 1968              
+Yeast Cell count: 300B                    
+Brewday Notes:
+  Preboil was 0.2G high, adjust grain absorption lower next time.                                    
+  Remember to clean as you go!..."></textarea>
+        </div>
+
+        <!-- end container -->
+      </div>
+      <!-- end right column -->
+    </form>
+  </div>
+
+  <footer>
+
+    <p>Made by <a href="http://pricelessbrewing.github.io">Mark</a>, with web design by <a href="http://www.jedlehmann.com.au">Jed</a>. Mash analysis due to <a href="http://www.homebrewtalk.com/members/doug293cz/">Doug293cz</a> and of course <a href="http://www.braukaiser.com/wiki/index.php?title=Understanding_Efficiency">Braukaiser</a>      <span class="what-is">What is <a href="http://www.homebrewtalk.com/wiki/index.php/Brew_in_a_Bag">brew in a bag</a>?</span></p>
+    <p>This calculator would not be possible if not for the great discussions at <a href="http://Homebrewtalk.com">HomebrewTalk,</a><a href="http://www.reddit.com/r/Homebrewing/">R/Homebrewing, </a><a href="www.biabrewer.info">Biabrewer forums,</a> and the
+      <a href="http://biabbrewing.com/brew-day-prep/biab-calculators-and-software">BIAB Calculator & Converter @ biabbrewing.com</a></p>
+
+  </footer>
+</body>
+
+</html>
