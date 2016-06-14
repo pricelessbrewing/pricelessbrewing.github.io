@@ -840,6 +840,7 @@ function updateCalc() {
   MeasPrebVolume = MeasPrebVolume * 0.264172052358148;
   BatchVol = BatchVol * 0.264172052358148;
   Gabs = Gabs / 8.3454;
+  
   MashThickness = MashThickness * 2.08635;
   
   }
