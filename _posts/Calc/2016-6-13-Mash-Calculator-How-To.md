@@ -2,7 +2,7 @@
 layout: post
 title: "Calculator help page"
 modified:
-categories: methods
+categories: calc
 comments: true
 author: pricelessbrewing
 tags: []
