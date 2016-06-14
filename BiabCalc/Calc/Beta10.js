@@ -46,7 +46,7 @@ var BatchVol, BoilRate, coefficient, DHop, EBoil, EstBrewhEff, EstConvWt, EstLau
   Units_Gabs, Units_GallonHeight, Units_GBill, Units_GTemp, Units_Habs, Units_HChilled, Units_HFirstRun, Units_Hop, Units_HPost, Units_HPre, Units_HSecondRun, Units_HStrike, Units_HTot, Units_HVolMash, Units_HVolStart,
   Units_KettleVolume, Units_KettleWidth, Units_LossTot, Units_MashoutTemp, Units_MashThickness, Units_MashThickness2, Units_MeasuredGabs, Units_MinSparge, Units_MTemp, Units_MTrub_Volume, Units_Post, Units_Pre,
   Units_PreboilVolume, Units_SecondRun, Units_Sparge, Units_STemp, Units_TempStrike, Units_Trub_Volume, Units_VChilled, Units_VolMash, Units_VolStart, Units_VolStrike, Units_VPackaged, Units_WaterTot,
-  VolChilled, VolMash, VolMinSparge, VolPackaged, VolPost, VolPre, VolSparge, VolSparge2, VolStart, VolStrike, Volume_Coeff, Volumes, WaterTot, Weight_Coeff, Weight_Small_Coeff, YeastPitch, OGDifference, TargetOG, PreviousSparge,PreviousThickness,SavedRadio, DataName, BeerName, SavedMashThickness, SavedVolSparge,NoSpargeLauter,BatchSpargeLauter,EstSpargeEff,LauterGained,MeasuredSpargeEfficiency,ExpSpargeEf,VolSparge3,EstLauterEff2,LauterGained2,RS22,RCSTot2,SecRun2;
+  VolChilled, VolMash, VolMinSparge, VolPackaged, VolPost, VolPre, VolSparge, VolSparge2, VolStart, VolStrike, Volume_Coeff, Volumes, WaterTot, Weight_Coeff, Weight_Small_Coeff, YeastPitch, OGDifference, TargetOG, PreviousSparge,PreviousThickness,SavedRadio, DataName, BeerName, SavedMashThickness, SavedVolSparge,NoSpargeLauter,BatchSpargeLauter,EstSpargeEff,LauterGained,MeasuredSpargeEfficiency,ExpSpargeEf,VolSparge3,EstLauterEff2,LauterGained2,RS22,RCSTot2,SecRun2,VolStart2,FirstRun2;
 
 $(document).ready(function() {
   $('#calcForm').delegate('input[type=text]', 'change', function() {
@@ -382,17 +382,7 @@ function updateInputs() {
 }
 
 
-
-function convertInputs() {
-}
-
-function convertOutputs() {
-}
-
-
-
 function updateDisplay() {
-convertOutputs();
   byId('Unit_BatchVol').innerHTML = Volumes;
   byId('Unit_WaterTot').innerHTML = Units_WaterTot;
   byId('Unit_VolStrike').innerHTML = Units_VolStrike;
@@ -484,7 +474,6 @@ convertOutputs();
   $('#HPre').text(HPre.toFixed(2));
   $('#HPost').text(HPost.toFixed(2));
   $('#HChilled').text(HChilled.toFixed(2));
-  $('#MashThick').text(MashThick.toFixed(2));
   $('#VolMinSparge').text(VolMinSparge.toFixed(2));
   $('#VolChilled').text(VolChilled.toFixed(2));
   $('#VolPackaged').text(VolPackaged.toFixed(2));
@@ -546,45 +535,43 @@ convertOutputs();
   function MashAnalysis(){
   //initial analysis for no sparge setup
  var SpargeCoeff = parseFloat($('#SpargeCoeff').val());
-SavedMashThickness = MashThickness;
 SavedVolSparge = SecRun;
 
-MashThickness = 0;
-VolStart = WaterTot;
-  FirstRun = (VolStart - LossGrain - LossTunTrub) * MashAdj;
+VolStart2 = WaterTot;
+  FirstRun2 = (VolStart2 - LossGrain - LossTunTrub) * MashAdj;
   MAGPot = 37.212;
   MAGMoist = 0.04;
   SGSuccrose = 46.173;
   MAGDryG = (1 - MAGMoist) * GBill;
   ExPot = MAGPot / SGSuccrose;
   ExConv = ExPot * (MAGEstConv / 100);
-  MashWaterWt1 = (VolStart * 8.3304) + (GBill - MAGDryG);
+  MashWaterWt1 = (VolStart2 * 8.3304) + (GBill - MAGDryG);
   MSW1 = MAGDryG * ExConv;
   Plato1 = (100 * MSW1) / (MSW1 + MashWaterWt1);
   SG1 = 1 + (Plato1 / (258.6 - 0.879551 * Plato1));
-  RW1 = (SG1 * (FirstRun / 1.022494888) * 8.3304);
+  RW1 = (SG1 * (FirstRun2 / 1.022494888) * 8.3304);
   RS1 = (RW1 * Plato1) / 100;
   NoSpargeLauter = 100 * (RS1 / MSW1);
   
   //Secondary Analysis for equal runnings setup
   VolSparge = (VolPre/1.022494888)/ 2;
-  VolStart = (WaterTot - VolSparge);
-  FirstRun = (VolStart - LossGrain - LossTunTrub) * MashAdj;
+  VolStart2 = (WaterTot - VolSparge);
+  FirstRun2 = (VolStart2 - LossGrain - LossTunTrub) * MashAdj;
   MAGPot = 37.212;
   MAGMoist = 0.04;
   SGSuccrose = 46.173;
   MAGDryG = (1 - MAGMoist) * GBill;
   ExPot = MAGPot / SGSuccrose;
   ExConv = ExPot * (MAGEstConv / 100);
-  MashWaterWt1 = (VolStart * 8.3304) + (GBill - MAGDryG);
+  MashWaterWt1 = (VolStart2 * 8.3304) + (GBill - MAGDryG);
   MSW1 = MAGDryG * ExConv;
   Plato1 = (100 * MSW1) / (MSW1 + MashWaterWt1);
   SG1 = 1 + (Plato1 / (258.6 - 0.879551 * Plato1));
-  RW1 = (SG1 * (FirstRun / 1.022494888) * 8.3304);
+  RW1 = (SG1 * (FirstRun2 / 1.022494888) * 8.3304);
   RS1 = (RW1 * Plato1) / 100;
   RCWtr1 = RW1 - RS1;
   RetS1 = MSW1 - RS1;
-  RetWat1 = VolStart * 8.3304 - RCWtr1;
+  RetWat1 = VolStart2 * 8.3304 - RCWtr1;
   MWT2 = ((VolSparge * 8.3304) + RetWat1);
   MashSugarWt2 = RetS1;
   Plato2 = (100 * MashSugarWt2) / (MashSugarWt2 + MWT2);
@@ -596,10 +583,8 @@ VolStart = WaterTot;
   LauterGained = BatchSpargeLauter - NoSpargeLauter;
   //final analysis on input variables
 
-  MashThickness = SavedMashThickness;
   VolSparge = SavedVolSparge;
-  VolStart = (WaterTot - VolSparge);
-    FirstRun = (VolStart - LossGrain - LossTunTrub) * MashAdj;
+
   SecRun = VolSparge;
   MAGPot = 37.212;
   MAGFine = 0.7797;
@@ -764,14 +749,25 @@ function updateCalc() {
   LossGrain = GBill * Gabs;
   LossTot = LossGrain + LossHop + LossBoil + LossTrub + LossTunTrub;
   WaterTot = BatchVol + LossTot;
-  MashThick = (WaterTot - VolSparge) * 4 / GBill;
-  if (MashThickness == 0) {
+  if (MashThickness == 0) 
+  {
     VolSparge2 = 0;
-  } else {
-    VolSparge2 = WaterTot - (GBill * MashThickness / 4);
-    MashThick = MashThickness;
-    VolSparge = VolSparge2;
+  } else 
+  {
+  if (radio == 'metric')
+  {
+  VolSparge = WaterTot - (GBill * MashThickness);
+	  MashThickness = (WaterTot - VolSparge) / GBill;
+	  
+  
   }
+  if (radio !== 'metric')
+  {
+    VolSparge = WaterTot - (GBill * MashThickness / 4);
+	  MashThickness = (WaterTot - VolSparge) * 4 / GBill;
+  }
+  }
+  
   VolStart = (WaterTot - VolSparge);
   TempStrike = TempMash + (0.05 * GBill / VolStart) * (TempMash - TempGrain);
        if (radio =='metric'){
@@ -841,7 +837,7 @@ function updateCalc() {
   BatchVol = BatchVol * 0.264172052358148;
   Gabs = Gabs / 8.3454;
   
-  MashThickness = MashThickness * 2.08635;
+  MashThickness = MashThickness / 2.08635;
   
   }
   MashAnalysis();
@@ -879,7 +875,7 @@ function updateCalc() {
   BatchVol = BatchVol / 0.264172052358148;
   TempStrike = ( TempStrike - 32 ) / 1.8;
     Gabs = Gabs * 8.3454;
-	  MashThickness = MashThickness / 2.08635;
+	  MashThickness = MashThickness * 2.08635;
   
   }
   PreviousSparge = VolSparge;
