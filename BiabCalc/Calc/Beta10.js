@@ -550,7 +550,7 @@ SavedMashThickness = MashThickness;
 SavedVolSparge = SecRun;
 
 MashThickness = 0;
-VolStart = (WaterTot);
+VolStart = WaterTot;
   FirstRun = (VolStart - LossGrain - LossTunTrub) * MashAdj;
   MAGPot = 37.212;
   MAGMoist = 0.04;
@@ -811,6 +811,7 @@ function updateCalc() {
   GBill = GBill * 2.20462262184878;
   VolStart = VolStart * 0.264172052358148;
   LossGrain = LossGrain * 0.264172052358148;
+  WaterTot = WaterTot * 0.264172052358148;
   MashAdj = 1.022494888;
   StrikeAdj = 1.025641026;
   VolStrike = VolStart * StrikeAdj;
@@ -834,12 +835,12 @@ function updateCalc() {
   HSecRun = HSecRun * 0.3937007874015750000000;
   KettleID = KettleID * 0.3937007874015750000000;
   EBoil = (0.0058 * KettleID * KettleID) - (0.0009 * KettleID) + 0.0038;
-  WaterTot = WaterTot * 0.264172052358148;
   VolSparge = VolSparge * 0.264172052358148;
   BoilRate = BoilRate * 0.264172052358148;
   MeasPrebVolume = MeasPrebVolume * 0.264172052358148;
   BatchVol = BatchVol * 0.264172052358148;
   Gabs = Gabs / 8.3454;
+  MashThickness = MashThickness * 2.08635;
   
   }
   MashAnalysis();
@@ -850,6 +851,7 @@ function updateCalc() {
   VolStart = VolStart / 0.264172052358148;
   VolStrike = VolStart / StrikeAdj;
     LossGrain = LossGrain / 0.264172052358148;
+	  WaterTot = WaterTot / 0.264172052358148;
   VolMash = VolMash / 0.264172052358148;
   VolPre = VolPre / 0.264172052358148;
   VolPost = VolPost / 0.264172052358148;
@@ -870,13 +872,13 @@ function updateCalc() {
   HSecRun = HSecRun / 0.3937007874015750000000;
   KettleID = KettleID / 0.3937007874015750000000;
   EBoil = (0.0058 * KettleID * KettleID) - (0.0009 * KettleID) + 0.0038;
-  WaterTot = WaterTot / 0.264172052358148;
   VolSparge = VolSparge / 0.264172052358148;
   BoilRate = BoilRate / 0.264172052358148;
   MeasPrebVolume = MeasPrebVolume / 0.264172052358148;
   BatchVol = BatchVol / 0.264172052358148;
   TempStrike = ( TempStrike - 32 ) / 1.8;
     Gabs = Gabs * 8.3454;
+	  MashThickness = MashThickness / 2.08635;
   
   }
   PreviousSparge = VolSparge;
