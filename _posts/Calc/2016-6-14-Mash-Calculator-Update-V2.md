@@ -149,7 +149,7 @@ Take the preboil volume and gravity, and analyze it for postboil info. Automatic
 
 ## Flavor/aroma wheel ie. Scott Janish'
 
-I'm a big fan of scotts work over at his blog %link here% and would love to encorporate his concept after the recipe formulation is in place. There will be a flavor/aroma intensity function in place as well, so that it diminishes as the boil duration increases. IE a 60 minute addition will contribute less flavor, and minimal aroma on the respective profiles than a flameout, whirlpool, or dryhop addition. 
+I'm a big fan of scotts work over at his blog, [Hop Oils Calculator](http://scottjanish.com/hop-oils-calulator/) and would love to encorporate his concept after the recipe formulation is in place. There will be a flavor/aroma intensity function in place as well, so that the contributions of a hop addition diminishes as the boil duration increases. IE a 60 minute addition will contribute less flavor, and minimal aroma on the respective profiles than a flameout, whirlpool, or dryhop addition. 
 
 # Name change
 
