@@ -5,10 +5,10 @@ modified:
 categories: calc
 comments: true
 author: pricelessbrewing
-tags: [calc]
+tags: []
 image:
   feature:
-date: 2016-1-10 T15:05:45-05:00
+date: 2016-6-14 T15:05:45-05:00
 ---
 {% include _toc.html %}
 
