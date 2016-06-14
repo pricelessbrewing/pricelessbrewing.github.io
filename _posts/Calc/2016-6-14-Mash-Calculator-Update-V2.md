@@ -8,11 +8,9 @@ author: pricelessbrewing
 tags: [calc]
 image:
   feature:
-date: 2016-6-14 T12:05:45-05:00
+date: 2016-6-14 T11:05:45-05:00
 ---
 {% include _toc.html %}
-
-Welcome
 
 Welcome to the release notes for my [mash calculator](http://pricelessbrewing.github.io/BiabCalc/)! Thanks for using it, [Contact me](http://pricelessbrewing.github.io/Contact/) here for further questions/comments/suggestions etc etc. 
 
