@@ -8,7 +8,7 @@ author: pricelessbrewing
 tags: [calc]
 image:
   feature:
-date: 2016-6-14 T10:05:45-05:00
+date: 2016-6-14 T12:05:45-05:00
 ---
 {% include _toc.html %}
 
