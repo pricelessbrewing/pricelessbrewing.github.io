@@ -299,10 +299,10 @@ function updateInputs() {
     } else if (preradio == 'imperial') {
       BatchVol = BatchVol / 0.264172052358148;
       BatchVol = BatchVol.toFixed(2);
-	  	  PotSize = PotSize / 0.264172052358148;
-	        PotSize = PotSize.toFixed(2);
-					KettleID = KettleID / 0.393700787401575;
-		KettleID = KettleID.toFixed(2);
+	  PotSize = PotSize / 0.264172052358148;
+	  PotSize = PotSize.toFixed(2);
+	  KettleID = KettleID / 0.393700787401575;
+	  KettleID = KettleID.toFixed(2);
       BoilRate = BoilRate / 0.264172052358148;
       BoilRate = BoilRate.toFixed(2);
       VolSparge = VolSparge / 0.264172052358148;
@@ -453,12 +453,10 @@ function updateDisplay() {
   $('#MeasPrebPlato').text(MeasPrebPlato.toFixed(2));
   $('#TempMashout').text(TempMashout.toFixed(1));
   $('#VolStrike').text(VolStrike.toFixed(2));
-  $('#VolSparge2').text(VolSparge2.toFixed(2));
   $('#LossBoil').text(LossBoil.toFixed(2));
   $('#LossHop').text(LossHop.toFixed(2));
   $('#LossGrain').text(LossGrain.toFixed(2));
   $('#LossTot').text(LossTot.toFixed(2));
-  $('#LossFermTrub').text(LossFermTrub.toFixed(2));
   $('#VolStart').text(VolStart.toFixed(2));
   $('#VolMash').text(VolMash.toFixed(2));
   $('#VolPre').text(VolPre.toFixed(2));
@@ -474,6 +472,7 @@ function updateDisplay() {
   $('#HPre').text(HPre.toFixed(2));
   $('#HPost').text(HPost.toFixed(2));
   $('#HChilled').text(HChilled.toFixed(2));
+  $('#MashThick').text(MashThick.toFixed(2));
   $('#VolMinSparge').text(VolMinSparge.toFixed(2));
   $('#VolChilled').text(VolChilled.toFixed(2));
   $('#VolPackaged').text(VolPackaged.toFixed(2));
@@ -523,7 +522,6 @@ function updateDisplay() {
   $('#EstMashEff').text(EstMashEff.toFixed(1));
   $('#PlatoPre').text(PlatoPre.toFixed(3));
   $('#SGPre').text(SGPre.toFixed(3));
-  $('#BoilRate').text(BoilRate.toFixed(4));
   $('#TotalPoints').text(TotalPoints.toFixed(0));
   $('#PlatoPost').text(PlatoPost.toFixed(0));
   $('#SGPost').text(SGPost.toFixed(3));
@@ -726,6 +724,32 @@ function updateCalc() {
   StrikeAdj = parseFloat($('#StrikeAdj').val());
   LossFermTrub = parseFloat($('#LossFermTrub').val());
   MashThickness = parseFloat($('#MashThickness').val());
+  
+    //convert metric to imperial
+  
+  if (radio == 'metric')
+  {
+  GBill = GBill * 2.20462262184878;
+  KettleID = KettleID * 0.3937007874015750000000;
+  VolSparge = VolSparge * 0.264172052358148;
+  BoilRate = BoilRate * 0.264172052358148;
+  BatchVol = BatchVol * 0.264172052358148;
+  Gabs = Gabs / 8.3454;
+  PotSize = PotSize * 0.264172052358148;
+  LossTrub = LossTrub * 0.264172052358148;
+  LossTunTrub = LossTunTrub * 0.264172052358148;
+  LossFermTrub = LossFermTrub * 0.264172052358148;
+  HBill = HBill * 0.035274;
+  DHop = DHop * 0.035274;
+  TempSparge = (TempSparge * 1.8) + 32;
+  TempGrain = (TempGrain * 1.8) + 32;
+  MashThickness = MashThickness * 0.479305709267586;
+  TempMash = (TempMash * 1.8) + 32;
+  Habs = Habs / 0.133526;
+  
+  }
+ 
+  
   //Make a new sparge input set mashThicknes to zero
   if (PreviousSparge !== VolSparge)
     { if (VolSparge > 0) {
@@ -749,33 +773,20 @@ function updateCalc() {
   LossGrain = GBill * Gabs;
   LossTot = LossGrain + LossHop + LossBoil + LossTrub + LossTunTrub;
   WaterTot = BatchVol + LossTot;
-  if (MashThickness == 0) 
-  {
+  
+    MashThick = (WaterTot - VolSparge) * 4 / GBill;
+  if (MashThickness == 0) {
     VolSparge2 = 0;
-  } else 
-  {
-  if (radio == 'metric')
-  {
-  VolSparge = WaterTot - (GBill * MashThickness);
-	  MashThickness = (WaterTot - VolSparge) / GBill;
-	  
-  
-  }
-  if (radio !== 'metric')
-  {
-    VolSparge = WaterTot - (GBill * MashThickness / 4);
-	  MashThickness = (WaterTot - VolSparge) * 4 / GBill;
-  }
+  } else {
+    VolSparge2 = WaterTot - (GBill * MashThickness / 4);
+    MashThick = MashThickness;
+    VolSparge = VolSparge2;
   }
   
+
+
   VolStart = (WaterTot - VolSparge);
   TempStrike = TempMash + (0.05 * GBill / VolStart) * (TempMash - TempGrain);
-       if (radio =='metric'){
-  TempMash = (TempMash * 1.8) + 32;
-  TempGrain = (TempGrain * 1.8) + 32;
-    TempStrike = TempMash + ( 0.05 * ( GBill * 2.20462262184878
-) / ( VolStart * 0.264172052358148 )) * (TempMash - TempGrain);
-  }
   MashAdj = 1.022494888;
   StrikeAdj = 1.025641026;
   VolStrike = VolStart * StrikeAdj;
@@ -800,55 +811,51 @@ function updateCalc() {
   HSecRun = SecRun * GalH;
   EBoil = (0.0058 * KettleID * KettleID) - (0.0009 * KettleID) + 0.0038;
   
-  //convert metric to imperial
-  
-  if (radio == 'metric')
-  {
-  GBill = GBill * 2.20462262184878;
-  VolStart = VolStart * 0.264172052358148;
-  LossGrain = LossGrain * 0.264172052358148;
-  WaterTot = WaterTot * 0.264172052358148;
-  MashAdj = 1.022494888;
-  StrikeAdj = 1.025641026;
-  VolStrike = VolStart * StrikeAdj;
-  VolMash = VolMash * 0.264172052358148;
-  VolPre = VolPre * 0.264172052358148;
-  VolPost = VolPost * 0.264172052358148;
-  VolChilled = VolChilled * 0.264172052358148;
-  VolPackaged = VolPackaged * 0.264172052358148;
-  GalH = GalH * 0.3937007874015750000000;
-  HTot = HTot * 0.3937007874015750000000;
-  HStart = HStart * 0.3937007874015750000000;
-  HStrike = HStrike * 0.3937007874015750000000;
-  HMash = HMash * 0.3937007874015750000000;
-  HPre = HPre * 0.3937007874015750000000;
-  HChilled = HChilled * 0.3937007874015750000000;
-  VolMinSparge = VolMinSparge * 0.264172052358148;
-  HPost = HPost * 0.3937007874015750000000;
-  FirstRun =  FirstRun * 0.264172052358148;
-  HFirstRun = HFirstRun * 0.3937007874015750000000;
-  SecRun = SecRun * 0.264172052358148;
-  HSecRun = HSecRun * 0.3937007874015750000000;
-  KettleID = KettleID * 0.3937007874015750000000;
-  EBoil = (0.0058 * KettleID * KettleID) - (0.0009 * KettleID) + 0.0038;
-  VolSparge = VolSparge * 0.264172052358148;
-  BoilRate = BoilRate * 0.264172052358148;
-  MeasPrebVolume = MeasPrebVolume * 0.264172052358148;
-  BatchVol = BatchVol * 0.264172052358148;
-  Gabs = Gabs / 8.3454;
-  
-  MashThickness = MashThickness / 2.08635;
-  
-  }
-  MashAnalysis();
+
+
+ MashAnalysis();
+ 
+ //convert both inputs and outputs to imperial, if it's in metric.
     if (radio == 'metric')
   {
+       BatchVol = BatchVol / 0.264172052358148;
+      BatchVol = BatchVol.toFixed(2);
+	  PotSize = PotSize / 0.264172052358148;
+	  PotSize = PotSize.toFixed(2);
+	  KettleID = KettleID / 0.393700787401575;
+	  KettleID = KettleID.toFixed(2);
+      BoilRate = BoilRate / 0.264172052358148;
+      BoilRate = BoilRate.toFixed(2);
+      VolSparge = VolSparge / 0.264172052358148;
+      VolSparge = VolSparge.toFixed(2);
+      LossTrub = LossTrub / 0.264172052358148;
+      LossTrub = LossTrub.toFixed(2);
+      LossFermTrub = LossFermTrub / 0.264172052358148;
+      LossFermTrub = LossFermTrub.toFixed(2);
+      TempSparge = (TempSparge - 32) / 1.8;
+      TempSparge = TempSparge.toFixed(1)
+      TempGrain = (TempGrain - 32) / 1.8;
+      TempGrain = TempGrain.toFixed(1);
+      MashThickness = MashThickness / 0.479305709267586;
+      MashThickness = MashThickness.toFixed(2);
+      GBill = GBill / 2.20462262184878;
+      GBill = GBill.toFixed(2);
+      HopRatio = HBill / BatchVol;
+      TempMash = (TempMash - 32) / 1.8;
+      TempMash = TempMash.toFixed(1);
+      HBill = HBill / 0.035274;
+      HBill = HBill.toFixed(2);
+      DHop = DHop / 0.035274;
+      DHop = DHop.toFixed(2);
+      Gabs = Gabs * 8.3454;
+      Habs = Habs * 0.133526;
+      Habs = Habs.toFixed(4);
   
-  GBill = GBill / 2.20462262184878;
+  
   VolStart = VolStart / 0.264172052358148;
   VolStrike = VolStart / StrikeAdj;
-    LossGrain = LossGrain / 0.264172052358148;
-	  WaterTot = WaterTot / 0.264172052358148;
+  LossGrain = LossGrain / 0.264172052358148;
+  WaterTot = WaterTot / 0.264172052358148;
   VolMash = VolMash / 0.264172052358148;
   VolPre = VolPre / 0.264172052358148;
   VolPost = VolPost / 0.264172052358148;
@@ -866,16 +873,13 @@ function updateCalc() {
   FirstRun =  FirstRun / 0.264172052358148;
   HFirstRun = HFirstRun / 0.3937007874015750000000;
   SecRun = SecRun / 0.264172052358148;
+    SecRun2 = SecRun2 / 0.264172052358148;
   HSecRun = HSecRun / 0.3937007874015750000000;
-  KettleID = KettleID / 0.3937007874015750000000;
   EBoil = (0.0058 * KettleID * KettleID) - (0.0009 * KettleID) + 0.0038;
-  VolSparge = VolSparge / 0.264172052358148;
-  BoilRate = BoilRate / 0.264172052358148;
   MeasPrebVolume = MeasPrebVolume / 0.264172052358148;
-  BatchVol = BatchVol / 0.264172052358148;
   TempStrike = ( TempStrike - 32 ) / 1.8;
-    Gabs = Gabs * 8.3454;
-	  MashThickness = MashThickness * 2.08635;
+  MashThick = MashThick * 2.08635;
+  
   
   }
   PreviousSparge = VolSparge;
