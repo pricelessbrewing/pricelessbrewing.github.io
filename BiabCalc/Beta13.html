@@ -8,7 +8,7 @@
  <link href="Beta10.css" type="text/css" rel="stylesheet">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
- <script type="text/javascript" src="Calc/Beta10.js"></script>
+ <script type="text/javascript" src="calc/Beta12.js"></script>
   <script src="https://cdn.jsdelivr.net/simplestorage/0.2.1/simpleStorage.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -81,39 +81,39 @@
           </div>
 
            <div class="control-group">
-            <label class="control-label" for="TargetOG" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Target-OG')" >Target OG</label>
+            <label class="control-label" for="TargetOG" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#target-og')" >Target OG</label>
             <div class="controls">
               <input type="text" class="input-mini" id="TargetOG" name="TargetOG" value="1.0650" title="Enter your recipe OG here, it's both for note taking and for the new autoscale function.*"></div>
           </div>
           
 
           <div class="control-group">
-            <label class="control-label" for="BatchVol" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Batch-Size')" >Batch Size</label>
+            <label class="control-label" for="BatchVol" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#batch-size')" >Batch Size</label>
             <div class="controls">
               <input type="text" class="input-mini" title="Desired volume into fermenter" id="BatchVol" name="BatchVol" value="5.5"><span id="Unit_BatchVol">G</span></div>
           </div>
           <div class="control-group">
-            <label class="control-label" for="GBill" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Grain-Bill')" >Grain Bill</label>
+            <label class="control-label" for="GBill" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#grain-bill')" >Grain Bill</label>
             <div class="controls">
               <input type="text" class="input-mini" id="GBill" name="GBill" value="12" required><span id="Unit_GBill">Lb</span></div>
           </div>
           <div class="control-group">
-            <label class="control-label" for="HBill"  onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Hop-Bill')">Hop Bill</label>
+            <label class="control-label" for="HBill"  onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#hop-bill')">Hop Bill</label>
             <div class="controls">
               <input type="text" class="input-mini" id="HBill" title="How many hops are being added during the boil? Affects Post boil volume" name="HBill" value="57" required><span id="Unit_Hop">gram</span></div>
           </div>
           <div class="control-group">
             <div class="controls">
-              <label class="control-label" for="Dhop" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Dry-Hops')" >Dry Hops<br></label>
+              <label class="control-label" for="Dhop" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#dry-hops')" >Dry Hops<br></label>
               <input type="text" class="input-mini" id="Dhop" title="Dry hops will affect bottling volume due to absorption rates" name="Dhop" value="0" required><span id="Unit_DHop">gram</span></div>
           </div>
           <div class="control-group">
-            <label class="control-label" for="BoilTime" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Boil-Time')" >Length of Boil</label>
+            <label class="control-label" for="BoilTime" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#boil-time')" >Length of Boil</label>
             <div class="controls">
               <input type="text" class="input-mini" id="BoilTime" name="BoilTime" value="60" required>Min</div>
           </div>
           <div class="control-group">
-            <label class="control-label" for="TempMash" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Mash-Temp')" >Mash Temp</label>
+            <label class="control-label" for="TempMash" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#mash-temp')" >Mash Temp</label>
             <div class="controls">
               <input type="text" class="input-mini" id="TempMash" name="TempMash" value="154" required><span id="Unit_MTemp">F</span></div>
           </div>
@@ -123,35 +123,35 @@
 
           
           <div class="control-group">
-            <label class="control-label" for="TempGrain" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Grain-Temp')" >Grain Temp</label>
+            <label class="control-label" for="TempGrain" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#grain-temp')" >Grain Temp</label>
             <div class="controls">
               <input type="text" class="input-mini" id="TempGrain" name="TempGrain" value="72" required><span id="Unit_GTemp">F</span></div>
           </div>
           <div class="control-group">
-            <label class="control-label" for="TempSparge" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Sparging-Temp')" >Sparging Temp</label>
+            <label class="control-label" for="TempSparge" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#sparging-temp')" >Sparging Temp</label>
             <div class="controls">
               <input type="text" class="input-mini" title="Temp. of Sparge water, affects mashout temp" id="TempSparge" name="TempSparge" value="168" required><span id="Unit_STemp">F</span></div>
           </div>
         
           <div class="control-group">
-            <label class="control-label" for="MashThickness" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Mash-Thickness')" >Mash Thickness</label>
+            <label class="control-label" for="MashThickness" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#mash-thickness')" >Mash Thickness</label>
             <div class="controls">
               <input type="text" class="input-mini" title="I prefer a thickness around 1.75 for consistently high mash efficiency, prefernces vary with each brewer. Overrides Sparge volume, set to 0 to use custom sparge volume instead." id="MashThickness" name="MashThickness"
                 value="0.00" required><span id="Unit_MashThickness">Qt/Lb</span></div>
           </div>
          <div class="control-group">
-            <label class="control-label" for="VolSparge" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Sparge-Volume')" >Sparging Volume </label>
+            <label class="control-label" for="VolSparge" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#sparge-volume')" >Sparging Volume </label>
             <div class="controls">
               <input type="text" class="input-mini" id="VolSparge" title="Volume as measured at Sparge Temp Volume" name="VolSparge" value="0" required><span id="Unit_Sparge">Gal</span></div>
           </div>
  
           <div class="control-group">
-            <label class="control-label" for="Gabs" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Grain-Absorption-Rate')" >Grain Absorption</label>
+            <label class="control-label" for="Gabs" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#grain-absorption-rate')" >Grain Absorption</label>
             <div class="controls">
               <input type="text" id="Gabs" name="Gabs" title="Expected grain absorption rate. Biab is typically 0.08, but can vary from 0.04-0.10. Depending on squeeze/draining method. Mash tun brewers typically experience 0.125." value="0.08" required><span id="Unit_Gabs">Gallon/Lb</span></div>
           </div>
           <div class="control-group">
-            <label class="control-label" for="Habs"onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Hop-Absorption-Rate')" >Hop Absorption</label>
+            <label class="control-label" for="Habs"onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#hop-absorption-rate')" >Hop Absorption</label>
             <div class="controls">
               <input type="text" class="input-mini" title="This varies depending on type of hop. For now leave at the default unless you know better. Hopefulyl will have more info soon." id="Habs" name="Habs" value="0.0014" required><span id="Unit_Habs">Gal/g</span></div>
           </div>
@@ -160,32 +160,32 @@
 <div id="Equipment">
 
 <div class="control-group">
-            <label class="control-label" for="BoilRate" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Boil-Off-Rate')" >Boil-Off Rate</label>
+            <label class="control-label" for="BoilRate" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#boil-off-rate')" >Boil-Off Rate</label>
             <div class="controls">
               <input type="text" class="input-mini" id="BoilRate" name="BoilRate" value="1.2" title="Ambient Volume boiled off during 1 hour." required><span id="Unit_BoilOff">Gal/Hr</span></div>
           </div>
           <div class="control-group">
-            <label class="control-label" for="PotSize" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Kettle-/-Mashtun-Volume')" >Kettle Volume</label>
+            <label class="control-label" for="PotSize" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#kettle-/-mashtun-volume')" >Kettle Volume</label>
             <div class="controls">
               <input type="text" class="input-mini" title="Affects recommended sparge volume which is calculated to avoid mash tun overflow." id="PotSize" name="PotSize" value="9.901" required><span id="Unit_KettleVolume">Gallon</span></div>
           </div>
           <div class="control-group">
-            <label class="control-label" for="KettleID" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Kettle-Width')" >Kettle Width</label>
+            <label class="control-label" for="KettleID" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#kettle-width')" >Kettle Width</label>
             <div class="controls">
               <input type="text" class="input-mini" id="KettleID" title="Used in Boil off estimation and all liquid heights, assumes circular straight walled cylinders. Keggles and non-circular kettles will vary." name="KettleID" value="13.898" required><span id="Unit_KettleWidth">Inches</span></div>
           </div>
   <div class="control-group">
-            <label class="control-label" for="LossTrub" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Kettle-Losses')" >Kettle losses</label>
+            <label class="control-label" for="LossTrub" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#kettle-losses')" >Kettle losses</label>
             <div class="controls">
               <input type="text" class="input-mini" title="Expected losses between after chilling the wort, and racking to the fermenter. Includes whirlpool losses. Affects brewhouse efficiency" id="LossTrub" name="LossTrub" value="0.0" required><span id="Unit_Trub_Volume">Gallons</span></div>
           </div>
           <div class="control-group">
-            <label class="control-label" for="LossFermTrub" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Loss-Ferm-Trub')" >Packaging Losses</label>
+            <label class="control-label" for="LossFermTrub" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#loss-ferm-trub')" >Packaging Losses</label>
             <div class="controls">
               <input type="text" class="input-mini" title="Expected losses between after after fermentations, and bottling/kegging. Includes yeast cake. Typical value is ~10% of batch size." id="LossFermTrub" name="LossFermTrub" value="0.5" required><span id="Unit_FTrub_Volume">Gallons</span></div>
           </div>
           <div class="control-group">
-            <label class="control-label" for="LossTunTrub" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Mash-Tun-Loss')" >Mashtun Losses</label>
+            <label class="control-label" for="LossTunTrub" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#mash-tun-loss')" >Mashtun Losses</label>
             <div class="controls">
               <input type="text" class="input-mini" title="Expected wort loss from mashtun, includes undrainable deadspace. Affects Mash and Lauter efficiencies. For maximum lauter efficiency, this should be minimized as much as possible. See Blog post for more info." id="LossTunTrub" name="LossTunTrub" value="0.0" required><span id="Unit_MTrub_Volume">Gallons</span></div>
           </div>
@@ -202,28 +202,28 @@
 
 
           <div class="control-group2">
-            <label class="control-label" for="MAGEstConv" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Expected-Conversion-Efficiency')" >Expected Conversion efficiency</label>
+            <label class="control-label" for="MAGEstConv" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#expected-conversion-efficiency')" >Expected Conversion efficiency</label>
             <div class="controls">
               <input type="text" class="input-mini" id="MAGEstConv" title="Percentage of converted extract to potential extract. See Blog post for more info." name="MAGEstConv" value="95" required>%</div>
           </div>
 		  
 		            <div class="control-group2">
-            <label class="control-label" for="SpargeCoeff" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Sparge-Coefficient')">Sparge Coefficient</label>
+            <label class="control-label" for="SpargeCoeff" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#sparge-coefficient')">Sparge Coefficient</label>
             <div class="controls">
               <input type="text" class="input-mini" id="SpargeCoeff" title="This is NOT the same as sparge efficiency. This is used to as a linear coefficient to adjust the estimated sparge efficiency and generalize the batch sparge simulations for non-ideal batch sparge processess. See blog for more info." name="SpargeCoeff" value="100" required>%</div>
           </div>
           <div class="control-group2">
-            <label class="control-label" for="MeasPrebVolume" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Measured-Preboil-Volume')" >Measured Preboil Volume @Boil</label>
+            <label class="control-label" for="MeasPrebVolume" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#measured-preboil-volume')" >Measured Preboil Volume @Boil</label>
             <div class="controls">
               <input type="text" class="input-mini" title="Used to calculate measured mash,and lauter efficiencies and dissolved extract along with preboil gravity." id="MeasPrebVolume" name="MeasPrebVolume" value="0.00" required><span id="Unit_PreboilVolume">Gallons</span></div>
           </div>
           <div class="control-group2">
-            <label class="control-label" for="MeasMashGrav" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Measured-Mash-Gravity')" >Measured Mash Gravity</label>
+            <label class="control-label" for="MeasMashGrav" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#measured-mash-gravity')" >Measured Mash Gravity</label>
             <div class="controls">
               <input type="text" class="input-mini" id="MeasMashGrav" title="Assuming strike volume is accurate, used to calculate measured conversion efficiency." name="MeasMashGrav" value="1.000" required>S.G.</div>
           </div>
           <div class="control-group2">
-            <label class="control-label" for="MeasPrebGrav" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Measured-Preboil-Gravity')" >Measured Preboil Gravity</label>
+            <label class="control-label" for="MeasPrebGrav" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#measured-preboil-gravity')" >Measured Preboil Gravity</label>
             <div class="controls">
               <input type="text" class="input-mini" id="MeasPrebGrav" title="Assuming strike volume is accurate, used to calculate measured conversion efficiency. See blog post" name="MeasPrebGrav" value="1.000" required>S.G.</div>
           </div>
@@ -234,21 +234,21 @@
 
 
           <div class="control-group">
-            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Lauter-Efficiency')" > Lauter Efficiency </label>
+            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#lauter-efficiency')" > Lauter Efficiency </label>
             <div class="controls"> <span class="calc" title="How effective was your sparge?. See blog post" id="EstLauterEff">95</span> %</div>
           </div>
 
           <div class="control-group">
-            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Mash-Efficiency')" > Mash Efficiency</label>
+            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#mash-efficiency')" > Mash Efficiency</label>
             <div class="controls"> <span class="calc" title="How effective was your mash and sparge? Mashtun losses will affect this. See blog post" id="EstMashEff">73</span> %</div>
           </div>
           <div class="control-group">
-            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Brewhouse-Efficiency')" > Brewhouse Efficiency</label>
+            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#brewhouse-efficiency')" > Brewhouse Efficiency</label>
             <div class="controls"> <span class="calc" title="How effective was your sparge? Kettle losses will affect this. See blog post" id="EstBrewhEff">73</span> %</div>
           </div>
 
           <div class="control-group">
-            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Run-Off-Ratio')" >Run Off Ratio
+            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#run-off-ratio')" >Run Off Ratio
               <br><span class="note" ></span>
 
             </label>
@@ -257,7 +257,7 @@
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Mashout-Temp')" >Mashout Temp
+            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#mashout-temp')" >Mashout Temp
               <br><span class="note"></span>
 
             </label>
@@ -300,10 +300,10 @@
 
 
           <div class="control-group">
-            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Mash-/-First-Runnings)" >Mash
-              <br><span class="note" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Second-Runnings')"  >Second Runnings</span>
-              <br><span class="note"onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Preboil')"  >Preboil</span>
-              <br><span class="note" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Postboil')"  >Post Boil</span>
+            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#mash-/-first-runnings)" >Mash
+              <br><span class="note" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#second-runnings')"  >Second Runnings</span>
+              <br><span class="note"onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#preboil')"  >Preboil</span>
+              <br><span class="note" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#postboil')"  >Post Boil</span>
             </label>
             <div class="controls"> <span class="calc" id="SG1">0</span> SG
               <br><span class="calc" id="SG2">0</span> SG
@@ -343,7 +343,7 @@
           <h2>General Results</h2>
           
           <div class="control-group">
-            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#OG-Difference')"  >OG difference</label>
+            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#og-difference')"  >OG difference</label>
             <div class="controls">
               <span class="calc" id="OGDifference">7.74  </span>S.G.
           
@@ -351,7 +351,7 @@
           </div>
 
           <div class="control-group">
-            <label class="control-label"onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Total-Water-Needed')"  >Total water needed</label>
+            <label class="control-label"onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#total-water-needed')"  >Total water needed</label>
             <div class="controls">
               <span class="calc" id="WaterTot">7.74</span> <span id="Unit_WaterTot">Gallon</span>
               <br>
@@ -359,37 +359,37 @@
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Strike-Temp')"  >Strike temp</label>
+            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#strike-temp')"  >Strike temp</label>
             <div class="controls">
               <span class="calc" id="TempStrike">164.37</span> <span id="Unit_TempStrike">F</span>
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#MashThickness')"  >Mash Thickness</label>
+            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#mashthickness')"  >Mash Thickness</label>
             <div class="controls">
               <span class="calc" id="MashThick">1.58</span> <span id="Unit_MashThickness2">Qt/Lb</span>
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Total-Volume-Loss')"  > Total volume loss</label>
+            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#total-volume-loss')"  > Total volume loss</label>
             <div class="controls">
               <span class="calc" id="LossTot">2.24</span> <span id="Unit_LossTot">Gallon</span>
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Gallon-Height')"  >Gallon height</label>
+            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#gallon-height')"  >Gallon height</label>
             <div class="controls">
               <span class="calc" id="GalH">1.523</span> <span id="Unit_GallonHeight">Inches</span>
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Estimated-Boil-Off')" >Estimated Boil off</label>
+            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#estimated-boil-off')" >Estimated Boil off</label>
             <div class="controls">
               <span class="calc" id="EBoil">1.11</span> <span id="Unit_EBoil">Gal/Hr</span>
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Minimum-Sparging-Volume')">Minimum Sparging Volume
+            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#minimum-sparging-volume')">Minimum Sparging Volume
               <br><span class="note"></span></label>
             <div class="controls">
               <span class="calc" id="VolMinSparge">0.00</span> <span id="Unit_MinSparge">Gal</span>
@@ -398,7 +398,7 @@
           </div>
           <h2>Water Volumes and Heights</h2>
           <div class="control-group">
-            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Water-Volume-at-68F')"  >Water volume at 68F</label>
+            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#water-volume-at-68f')"  >Water volume at 68F</label>
             <div class="controls">
               <span class="calc" id="VolStart">4.72</span> <span id="Unit_VolStart">Gal</span>
               <br>
@@ -406,7 +406,7 @@
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Strike-Water-Volume')"  >Strike water volume
+            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#strike-water-volume')"  >Strike water volume
               <br><span class="note">(temp. adjusted at strike temp)</span></label>
             <div class="controls">
               <span class="calc" id="VolStrike">4.86</span> <span id="Unit_VolStrike">Gal</span>
@@ -415,7 +415,7 @@
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Volume-of-Mash')"  >Volume of mash with grains
+            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#volume-of-mash')"  >Volume of mash with grains
               <br><span class="note">(temp. adjusted at mash temp)</span></label>
             <div class="controls">
               <span class="calc" id="VolMash">5.83</span> <span id="Unit_VolMash">Gal</span>
@@ -423,7 +423,7 @@
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#First-Runnings')"  >First Runnings
+            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#first-runnings')"  >First Runnings
               <br><span class="note">(temp. adjusted at mash temp)</span></label>
             <div class="controls">
               <span class="calc" id="FirstRun">3.87</span> <span id="Unit_FirstRun">Gal</span>
@@ -432,7 +432,7 @@
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Second-Runnings')"  >2nd Runnings
+            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#second-runnings')"  >2nd Runnings
               <br><span class="note">(temp. adjusted at mash temp)</span></label>
             <div class="controls">
               <span class="calc" id="SecRun">3.00</span> <span id="Unit_SecondRun">Gal</span>
@@ -442,7 +442,7 @@
           </div>
 
           <div class="control-group">
-            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Preboil')"  >Pre boil
+            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#preboil')"  >Pre boil
               <br><span class="note">(temp. adjusted at 212F)</span></label>
             <div class="controls">
               <span class="calc" id="VolPre">7.08</span> <span id="Unit_Pre">Gal</span>
@@ -451,7 +451,7 @@
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Post-Boil')" >Post boil
+            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#post-boil')" >Post boil
               <br><span class="note">(temp. adjusted at 212F)</span></label>
             <div class="controls">
               <span class="calc" id="VolPost">5.74</span> <span id="Unit_Post">Gal</span>
@@ -460,7 +460,7 @@
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Out-of-Kettle-Chilled')"  >Out of Kettle Chilled
+            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#out-of-kettle-chilled')"  >Out of Kettle Chilled
               <br><span class="note">(If no chill adjust trub volumes)</span></label>
             <div class="controls">
               <span class="calc" id="VolChilled">5.5</span> <span id="Unit_VChilled">Gallons</span>
@@ -469,7 +469,7 @@
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#Packaged-Volume')"  >Volume Packaged
+            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#packaged-volume')"  >Volume Packaged
               <br><span class="note">(To Bottle or keg)</span></label>
             <div class="controls">
               <span class="calc" id="VolPackaged">5</span> <span id="Unit_VPackaged">Gallons</span>
