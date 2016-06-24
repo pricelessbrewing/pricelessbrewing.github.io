@@ -1,0 +1,274 @@
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+ <title>Dms Estimator</title>
+ <meta name="description" content="">
+ <meta name="viewport" content="width=device-width">
+ <link href="Testing.css" type="text/css" rel="stylesheet">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+ <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+ <script type="text/javascript" src="Calc/DMS.js"></script>
+  <script src="https://cdn.jsdelivr.net/simplestorage/0.2.1/simpleStorage.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  
+  </head>
+<body>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-60124200-2', 'auto');-  ga('send', 'pageview');
+  </script>
+  <header>
+  
+    <div class="left-column-header column3">
+      <div class="container header-container">
+        <h1><img class="logo" src="images/logo.png" alt=""></h1>
+			          <p>All the numbers you need on brew day.</p>
+      </div>
+
+    </div>
+
+    <div class="right-column-header column2">
+      <div class="container header-container">
+
+		  <a href="javascript:toggleDiv('choices');"><h2>Put a lid on it?</h2></a>
+		  
+<div id="choices" style="display:none;">
+        <div class="control-group" id="Lid1" >
+          <label for="boil"><input name="units" value="boil" type="checkbox" id="boil"  onchange="updateCalc();">Closed Boil</label><br><br>
+        </div> 
+		
+		        <div class="control-group" id="Lid2" >
+          <label for="Heat"><input name="units" value="Heat" type="checkbox" id="Heat"  onchange="updateCalc();">Closed Heating</label><br><br>
+        </div> 
+		
+				        <div class="control-group" id="Lid3">
+          <label for="Chilling"><input name="units" value="Chilling" type="checkbox" id="Chilling"  onchange="updateCalc();">Closed Cooling</label><br><br>
+        </div> 
+		
+		
+</div>
+			  
+
+
+	  </div>
+		  
+    </div>
+
+  </header>
+ <div role="main">
+    <form id="calcForm" class="form-horizontal">
+     <div class="left-column column">
+        <div class="container">		  
+		  <a href="javascript:toggleDiv('Recipe');" ><h2><p></p>Recipe</h2></a>
+<div id="Recipe">
+
+          <h3>Mouseover text for input cell boxes</h3>
+          
+          <div class="control-group">
+            <label class="control-label" for="GBill" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#grain-bill')" >Grain Bill</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="GBill" name="GBill" value="6.5" required>kg</div>
+          </div>
+		  
+		  		            <div class="control-group">
+            <label class="control-label" for="SMMContent" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#grain-bill')" >Malt SMM Content</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="SMMContent" name="SMMContent" value="5" required> &#181 gram</div>
+          </div>
+		  
+		  
+          <div class="control-group">
+            <label class="control-label" for="VolPre" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#batch-size')" >Preboil Volume</label>
+            <div class="controls">
+              <input type="text" class="input-mini" title="Desired volume into fermenter" id="VolPre" name="VolPre" value="30">Liters</div>
+          </div>
+		  
+		  
+</div>		   
+
+		  <a href="javascript:toggleDiv('Process');" ><h2><p></p>Temps</h2></a>
+<div id="Temps">
+
+
+          <div class="control-group">
+            <label class="control-label" for="TempMash" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#mash-temp')" >Mash runoff Temp</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="TempMash" name="TempMash" value="65" required>C</div>
+          </div>
+		  
+		            <div class="control-group">
+            <label class="control-label" for="TempBoil" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#mash-temp')" >Peak Temp</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="TempBoil" name="TempBoil" value="82" required>C</div>
+          </div>
+		  
+		  		  	<div class="control-group">
+            <label class="control-label" for="TempWater" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#mash-temp')" >Water Temp</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="TempWater" name="TempWater" value="12" required>C</div>
+          </div>
+		  
+		  	<div class="control-group">
+            <label class="control-label" for="TempChilled" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#mash-temp')" >Cooled Temp</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="TempChilled" name="TempChilled" value="20" required>C</div>
+          </div>
+
+
+</div>
+
+		  <a href="javascript:toggleDiv('Process');" ><h2><p></p>Times</h2></a>
+<div id="Times">
+
+          
+		  	<div class="control-group">
+            <label class="control-label" for="TimeHeating" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#mash-temp')" >Time Heating</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="TimeHeating" name="TimeHeating" value="20" required>Min</div>
+          </div>
+		  
+		  		  	<div class="control-group">
+            <label class="control-label" for="TimeCooling" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#mash-temp')" >Time Cooling</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="TimeCooling" name="TimeCooling" value="60" required>Min</div>
+          </div>
+
+                  <div class="control-group">
+            <label class="control-label" for="BoilTime" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#boil-time')" >Length of Boil / Pasteurization</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="BoilTime" name="BoilTime" value="15" required>Min</div>
+          </div>
+
+ 
+     
+
+</div>
+
+    </div>
+
+        <!-- end left column -->
+      </div>
+        <div class="middle-column column">
+        <div class="container">
+	  
+	  
+	  		  <a href="javascript:toggleDiv('Weather');" ><h2><p></p>Weather</h2></a>
+<div id="Weather">
+
+		  
+		  <div class="control-group">
+            <label class="control-label" for="RH" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#boil-time')" >Relative Humidity</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="RH" name="RH" value="50" required>%</div>
+          </div>
+		  
+		   <div class="control-group">
+            <label class="control-label" for="AtmTemp" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#boil-time')" >Atmospheric Temp</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="AtmTemp" name="AtmTemp" value="20" required>C</div>
+          </div>
+		  
+		  		   <div class="control-group">
+            <label class="control-label" for="WindSpeed" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#boil-time')" >Wind Speed</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="WindSpeed" name="WindSpeed" value="0" required> m/s</div>
+          </div>
+
+		                   <div class="control-group">
+            <label class="control-label" for="Pressure" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#boil-time')" >Atmospheric Pressure</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="Pressure" name="Pressure" value="1013" required>hPa</div>
+          </div>
+ 
+     
+
+</div>
+
+<a href="javascript:toggleDiv('Equipment');" ><h2><p></p>Equipment</h2></a>
+<div id="Equipment">
+
+<div class="control-group">
+            <label class="control-label" for="BoilRate" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#boil-off-rate')" >Boil-Off Rate</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="BoilRate" name="BoilRate" value="4.75" title="Ambient Volume boiled off during 1 hour." required> L/Hr</div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label" for="KettleID" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#kettle-width')" >Kettle Width</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="KettleID" title="Used in Boil off estimation and all liquid heights, assumes circular straight walled cylinders. Keggles and non-circular kettles will vary." name="KettleID" value="35.3" required>cm</div>
+          </div>
+        </div>
+
+		</div>
+        <!-- end container -->
+      </div>
+ 
+ <div class="right-column column">
+        <div class="container">
+
+          <h2>General Results</h2>
+          
+ 
+
+         
+          <div class="control-group">
+            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#strike-temp')"  >Final DMS concentration</label>
+            <div class="controls">
+              <span class="calc" id="ConcDMSInitial">5.4</span>  &#181 g/L
+            </div>
+          </div>
+		  
+		            <div class="control-group">
+            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#strike-temp')"  >DMS at start of boil</label>
+            <div class="controls">
+              <span class="calc" id="ConcDMSMash">5.5</span>  &#181 g/L
+            </div>
+          </div>
+		  
+		  		            <div class="control-group">
+            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#strike-temp')"  >DMS at end of boil</label>
+            <div class="controls">
+              <span class="calc" id="ConcDMSBoil">10.7</span>  &#181 g/L
+            </div>
+          </div>
+		  
+		  		  		            <div class="control-group">
+            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#strike-temp')"  >DMS volatized during chilling process</label>
+            <div class="controls">
+              <span class="calc" id="ConcDMSVolChilled">5.3</span>  &#181 g/L
+            </div>
+          </div>
+		  
+		            
+  
+  </div>
+        <!-- end container -->
+      </div>
+      <!-- end right column -->
+    </form>
+  </div>
+
+
+  
+  <footer>
+      <p>Placed online by <a href="http://pricelessbrewing.github.io">Pricelessbrewing</a> <p></p> 
+	  <span class="what-is"><a href="http://www.milkthefunk.com/wiki/Dimethyl_Sulfide" target="_blank">Milk The Funk wiki</a></span>
+<a href="javascript:toggleDiv('Credits');" ><h2><p></p>Credits</h2></a>
+<div id="Credits" style="display:none;">
+    <p>Initial web design by <a href="http://www.jedlehmann.com.au" target="_blank">Jed</a>. Formulas due to 
+	Mark Hammond . 
+</div>
+
+
+<!--<hr/>-->
+  </footer>
+</body>
+
+</html>
