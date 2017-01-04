@@ -36,7 +36,7 @@ $(document)
     this.rows = minRows + rows;
   });
 
-var BatchVol, BoilRate, coefficient, DHop, EBoil, EstBrewhEff, EstConvWt, EstLauterEff, EstMashEff, ExConv, ExPot, FirstRun, Gabs, GalH, GBill,
+var BatchVol, DataName, BoilRate, coefficient, DHop, EBoil, EstBrewhEff, EstConvWt, EstLauterEff, EstMashEff, ExConv, ExPot, FirstRun, Gabs, GalH, GBill,
   Habs, HBill, HChilled, HFirstRun, HMash, HPost, HPre, HSecRun, HStart, HStrike, HTot, KettleID, LossBoil, LossFermTrub, LossGrain, LossHop, LossTot, LossTrub,
   MAGDryG, MAGEstConv, MAGFine, MAGMoist, MAGPot, MAGRunRatio, MAGTotWater, MAGVolWater, MAGWtWater, MashAdj, MashSugarWt2, MashThick, MashWaterWt1,
   MeasBrewhEff, MeasConv, MeasGabs, MeasLautEff, MeasLautWT, MeasMashEff, MeasMashGrav2, MeasMashPlato, MeasMashSugarWT, MeasMashWortWT, MeasMashWT,
@@ -82,6 +82,7 @@ function allFieldsValid() {
     'Gabs',
     'Habs',
     'EBoil',
+	'DataName',
   ];
   for (i = 0; i < fields.length; i++) {
     if (!$('#' + fields[i]).val().match(/^d*(.\d+)?/)) {
@@ -428,6 +429,7 @@ function updateDisplay() {
   byId('Unit_LossTot').innerHTML = Units_LossTot;
   byId('Unit_MTrub_Volume').innerHTML = Units_MTrub_Volume;
   byId('Unit_MashThickness').innerHTML = Units_MashThickness;
+    $('#DataName').text(Saved);
   $('#WaterTot').text(WaterTot.toFixed(2));
   $('#YeastPitch').text(YeastPitch.toFixed(0));
   $('#MeasConv').text(MeasConv.toFixed(1));
@@ -960,7 +962,47 @@ MAGEstConv = byId('MAGEstConv').value;
 SavedRadio = $("input[name=units]:checked").val()
 SavedArray = [BatchVol,GBill,HBill,DHop,BoilTime,TempMash,TempGrain,TempSparge,VolSparge,Gabs,Habs,BoilRate,PotSize,KettleID,LossTrub,LossFermTrub,LossTunTrub,MAGEstConv,SavedRadio,MashThickness];
 Saved = SavedArray.join();
+updateCalc();
 }
+
+function ExportData()
+{
+CreateSaved();
+	alert(Saved);
+}
+
+var ImportData = function ImportData() {
+
+DataName = byId('DataName').value;
+ Saved = DataName;
+ SavedArray = Saved.split(",")
+  byId('BatchVol').value = SavedArray[0];
+  byId('GBill').value = SavedArray[1];
+  byId('HBill').value = SavedArray[2];
+  byId('Dhop').value = SavedArray[3];
+  byId('BoilTime').value = SavedArray[4];
+  byId('TempMash').value = SavedArray[5];
+  byId('TempGrain').value = SavedArray[6];
+  byId('TempSparge').value = SavedArray[7];
+  byId('VolSparge').value = SavedArray[8];
+  byId('Gabs').value = SavedArray[9];
+  byId('Habs').value = SavedArray[10];
+  byId('BoilRate').value = SavedArray[11];
+  byId('PotSize').value = SavedArray[12];
+  byId('KettleID').value = SavedArray[13];
+  byId('LossTrub').value = SavedArray[14];
+  byId('LossTunTrub').value = SavedArray[15];
+  byId('LossFermTrub').value = SavedArray[16];
+  byId('MAGEstConv').value = SavedArray[17];
+  byId('MashThickness').value = SavedArray[19];
+  SavedRadio = SavedArray[18];
+  document.getElementById(SavedRadio).checked = true;
+  byId('MashThickness').value = SavedArray[19];
+  preradio=SavedRadio;
+  radio = preradio;
+  updateCalc();
+}
+
 
 var LoadData = function LoadData() {
 
