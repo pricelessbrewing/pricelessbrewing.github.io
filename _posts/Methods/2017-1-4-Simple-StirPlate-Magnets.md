@@ -13,7 +13,7 @@ date: 2017-1-4 T15:05:45-05:00
 
 Welcome back, I know it's been awhile! Hope everyone had a happy new years.
 <p></p><p>
-I purchased an additional magnetic phone mount, and was thoroughly underwhelmed. The piece that holds the magnetic disk has a very short rotational range before it releases, and I found it coming off with my phone whenever I removed it. As the tinkering homebrewer I am, I thought to myself, "Hmmm... I wonder if I can modify this and use it for brewing?". 
+I purchased an additional magnetic phone mount, and was thoroughly underwhelmed. The piece that holds the magnetic disk has a very short rotational range before it releases, and I found it coming off with my phone whenever I removed it. As the tinkering homebrewer I am, I thought to myself, "Hmmm... I wonder if I can modify this and use it for brewing?". The desire is not a new one, it's very similar in function, and design to the <a href="http://www.homebrewfinds.com/2015/02/3d-printed-stir-plate-magnet-mounting-thingy-with-videos.html"> Stir Plate Magnet Mounting-Thingy! from homebrewfinds.</a>
 </p>
 <p></p><p>
 Tl;dr Yes, it makes a very simple premade magnet holder. 
