@@ -38,7 +38,7 @@ Remove the plastic/silicone/rubber shell that's covering the four magnets and th
 	<a href="http://pricelessbrewing.github.io/images/Magnet_3.jpg"><img src="http://pricelessbrewing.github.io/images/Magnet_3.jpg" width="392" height="216"></a>
 </figure>
 
-<[pRight now the magnets all have their magnetic field pointing in the same direction, upwards. You want to flip two of them over that are on the same side, this will align the magnetic fields in the desired way, and hold the stir bar in place. Some may benefit from removing two of the magnets all together, and leaving two magnets that are anti-parallel. This may improve stirbar stability for some, but my stir plate did not need it. 
+<p>Right now the magnets all have their magnetic field pointing in the same direction, upwards. You want to flip two of them over that are on the same side, this will align the magnetic fields in the desired way, and hold the stir bar in place. Some may benefit from removing two of the magnets all together, and leaving two magnets that are anti-parallel. This may improve stirbar stability for some, but my stir plate did not need it. 
 
 <figure>
 	<a href="http://pricelessbrewing.github.io/images/Magnet_4.jpg"><img src="http://pricelessbrewing.github.io/images/Magnet_4.jpg" width="392" height="216"></a>
