@@ -8,7 +8,7 @@ author: pricelessbrewing
 tags: [calc]
 image:
   feature:
-date: 2016-6-14 T11:05:45-05:00
+date: 2017-1-4 T11:05:45-05:00
 ---
 {% include _toc.html %}
 
@@ -121,19 +121,21 @@ Note: Not all variables have a on click function, but the majority do. It was te
 
 Note2: Some of the links appear to be broken, I think I got most of them but send me a message if you find one!
 
+# V2.1 Import / Export functions
 
-# Known Bugs
+Similar to the save/load data, you can now import/export data via a text string. This means you can send it to yourself on another device, say from your computer to your phone, or you can share it online when comparing notes or saving in a spreadsheet brewday database.
 
-## Mash efficiency analysis being off for metric
+## Exporting
 
-This is an isolated issue with firefox. I have no idea what's going on here. It works perfectly fine when ran locally, in chrome, and on my phone. Might be some sort of compatibility issue. If you happen to know what's going on, please let me know!
+ Just click the "export data" function, and a text string will pop-up containing all the current variables. Copy it, and paste it whereever you'd like to backup the recipe and data.
 
-For now, if there's an issue for you, use the either of the other radios for efficiency analysis. 
+ {% highlight text %}
+5.50,12,57,0,60,154.0,72.0,168.1,0.00,0.08,0.0014,1.20,9.90,13.90,0.00,0.50,0,95,grams,0.00
+{% endhighlight %}
 
-## Mashout temp for metric
+## Importing
 
-Looks like I forgot to convert this back to Celsius. I'll fix it tomorrow. 
-
+ Take your text string, and paste it into the "Saved Data" textbox that by default is listed as "Small batch" I believe. Click "Import Data", and the string will be parsed, and the calculator will update automatically. You can then convert the entire recipe into the desired units, or scale the recipe automatically using the Target OG and the Autoscale recipe function, or do whatever else you'd like to do. You now have backups and shareable recipes without having to deal with screenshots and manual transcribing!
 
 # What's next?
 
