@@ -10,9 +10,6 @@ image:
   feature:
 date: 2017-1-4 T15:05:45-05:00
 ---
-{% include _toc.html %}
-
-# Greetings!
 
 Welcome back, I know it's been awhile! Hope everyone had a happy new years.
 
