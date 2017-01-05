@@ -24,7 +24,6 @@ While I'm confident many different models and styles will be applicable, I have 
 
 <figure>
 	<a href="http://pricelessbrewing.github.io/images/Magnet_1.jpg"><img src="http://pricelessbrewing.github.io/images/Magnet_1.jpg" width="392" height="216"></a>
-	<figcaption><br><a href="http://pricelessbrewing.github.io/images/Magnet_1.jpg" title="Preparing to decant">Preparing to decant</a></figcaption>
 </figure>
 
 
@@ -32,7 +31,6 @@ Take the backplate off, which is attached via a single screw.
 
 <figure>
 	<a href="http://pricelessbrewing.github.io/images/Magnet_2.jpg"><img src="http://pricelessbrewing.github.io/images/Magnet_2.jpg" width="392" height="216"></a>
-	<figcaption><br><a href="http://pricelessbrewing.github.io/images/Magnet_2.jpg">
 </figure>
 
 Remove the plastic/silicone/rubber shell that's covering the four magnets and the metal disk. 
@@ -45,14 +43,12 @@ Right now the magnets all have their magnetic field pointing in the same directi
 
 <figure>
 	<a href="http://pricelessbrewing.github.io/images/Magnet_4.jpg"><img src="http://pricelessbrewing.github.io/images/Magnet_4.jpg" width="392" height="216"></a>
-	<figcaption><br><a href="http://pricelessbrewing.github.io/images/Magnet_4.jpg">
 </figure>
 
 Reassamble the phone mount, and place the stirbar atop. It should center itself and spin with the magnetic disk. Now place the disk onto a fan, and adhere via desired method. I use tape for testing and switch to hot glue when permanent. It should be very easy as they're nearly the same diameter as a fans center surface. There should be no wobble when centered. 
 
 <figure>
 	<a href="http://pricelessbrewing.github.io/images/Magnet_5.jpg"><img src="http://pricelessbrewing.github.io/images/Magnet_5.jpg" width="392" height="216"></a>
-	<figcaption><br><a href="http://pricelessbrewing.github.io/images/Magnet_5.jpg">
 </figure>
 
 The main downside is the strength of the included magnets, but these should be easy to replace if needed for a larger 5L starter. Mine is able to maintain a sufficient dimple vortex, but ymmv with the fans rpm, as well as the supplied voltage. 
