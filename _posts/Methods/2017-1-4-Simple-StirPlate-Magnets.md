@@ -19,7 +19,7 @@ I purchased an additional magnetic phone mount, and was thoroughly underwhelmed.
 Tl;dr Yes, it makes a very simple premade magnet holder. 
 </p>
 <p></p><p>
-While I'm confident many different models and styles will be applicable, I have only tried this one particular model. They're likely produced in mass and rebranded for different companies, just find out if the piece being used is attached via a screw or via another method. Other models may need to be cut off or otherwise modified. Moreover, there's almost always a sale on these for $4-$5 each.
+While I'm confident different models and styles will be usable, I have only tried with this one particular model. They're likely produced in mass and rebranded for different companies, just find out if the piece being used is attached via a screw or via another method. Other models may need to be cut off or otherwise modified. Moreover, there's almost always a sale on these for $4-$5 each.
 </p>
 <figure>
 	<a href="http://pricelessbrewing.github.io/images/Magnet_1.jpg"><img src="http://pricelessbrewing.github.io/images/Magnet_1.jpg" width="392" height="216"></a>
