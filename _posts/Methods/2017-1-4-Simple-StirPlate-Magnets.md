@@ -12,11 +12,11 @@ date: 2017-1-4 T15:05:45-05:00
 ---
 
 Welcome back, I know it's been awhile! Hope everyone had a happy new years.
-
+<br><br>
 I purchased an additional magnetic phone mount, and was thoroughly underwhelmed. The piece that holds the magnetic disk has a very short rotational range before it releases, and I found it coming off with my phone whenever I removed it. As the tinkering homebrewer I am, I thought to myself, "Hmmm... I wonder if I can modify this and use it for brewing?". 
-
+<br>
 Tl;dr Yes, it makes a very simple premade magnet holder. 
-
+<br>
 While I'm confident many different models and styles will be applicable, I have only tried this one particular model. They're likely produced in mass and rebranded for different companies, just find out if the piece being used is attached via a screw or via another method. Other models may need to be cut off or otherwise modified. Moreover, there's almost always a sale on these for $4-$5 each.
 
 <figure>
@@ -49,7 +49,7 @@ Reassamble the phone mount, and place the stirbar atop. It should center itself 
 </figure>
 
 The main downside is the strength of the included magnets, but these should be easy to replace if needed for a larger 5L starter. Mine is able to maintain a sufficient dimple vortex, but ymmv with the fans rpm, as well as the supplied voltage. 
-
+<br>
 I promise at some point I'll actually blog about beer, and not just brewing nerd stuff, maybe, eventually. 
 ---
 
