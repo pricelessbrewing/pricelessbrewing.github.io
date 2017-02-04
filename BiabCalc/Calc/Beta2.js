@@ -46,8 +46,11 @@ var BatchVol, DataName, BoilRate, coefficient, DHop, EBoil, EstBrewhEff, EstConv
   Units_Gabs, Units_GallonHeight, Units_GBill, Units_GTemp, Units_Habs, Units_HChilled, Units_HFirstRun, Units_Hop, Units_HPost, Units_HPre, Units_HSecondRun, Units_HStrike, Units_HTot, Units_HVolMash, Units_HVolStart,
   Units_KettleVolume, Units_KettleWidth, Units_LossTot, Units_MashoutTemp, Units_MashThickness, Units_MashThickness2, Units_MeasuredGabs, Units_MinSparge, Units_MTemp, Units_MTrub_Volume, Units_Post, Units_Pre,
   Units_PreboilVolume, Units_SecondRun, Units_Sparge, Units_STemp, Units_TempStrike, Units_Trub_Volume, Units_VChilled, Units_VolMash, Units_VolStart, Units_VolStrike, Units_VPackaged, Units_WaterTot,
-  VolChilled, VolMash, VolMinSparge, VolPackaged, VolPost, VolPre, VolSparge, VolSparge2, VolStart, VolStrike, Volume_Coeff, Volumes, WaterTot, Weight_Coeff, Weight_Small_Coeff, YeastPitch, OGDifference, TargetOG, PreviousSparge,PreviousThickness,SavedRadio, DataName, BeerName, SavedMashThickness, SavedVolSparge,NoSpargeLauter,BatchSpargeLauter,EstSpargeEff,LauterGained,MeasuredSpargeEfficiency,ExpSpargeEf,VolSparge3,EstLauterEff2,LauterGained2,RS22,RCSTot2,SecRun2,VolStart2,FirstRun2;
+  VolChilled, VolMash, VolMinSparge, VolPackaged, VolPost, VolPre, VolSparge, VolSparge2, VolStart, VolStrike, Volume_Coeff, Volumes, WaterTot, Weight_Coeff, Weight_Small_Coeff, YeastPitch, OGDifference, TargetOG, PreviousSparge,PreviousThickness,SavedRadio, DataName, BeerName, SavedMashThickness, SavedVolSparge,NoSpargeLauter,BatchSpargeLauter,EstSpargeEff,LauterGained,MeasuredSpargeEfficiency,ExpSpargeEf,VolSparge3,EstLauterEff2,LauterGained2,RS22,RCSTot2,SecRun2,VolStart2,FirstRun2, OverrideBrewhouse,ManualSGPost,ManualSGPre,OverrideBrewhouseCheck,Style,Brewday,now,today,YeastRate,StarterSize;
 
+now = new Date();
+ today = (now.getMonth() + 1) + '-' + now.getDate();
+  
 $(document).ready(function() {
   $('#calcForm').delegate('input[type=text]', 'change', function() {
     if (validateField(this)) {
@@ -62,8 +65,9 @@ $(document).ready(function() {
 });
 
 function allFieldsValid() {
-
+//check if all input cells are valid, if not it doesn't run updateCalc
   var fields = [
+  	'OverrideBrewhouse',
     'BatchVol',
     'GBill',
     'HBill',
@@ -83,6 +87,11 @@ function allFieldsValid() {
     'Habs',
     'EBoil',
 	'DataName',
+	'MAGPot',
+	'Style',
+	'Brewday'
+	
+	
   ];
   for (i = 0; i < fields.length; i++) {
     if (!$('#' + fields[i]).val().match(/^d*(.\d+)?/)) {
@@ -151,6 +160,7 @@ function radioSelect(elem) {
 }
 
 function updateInputs() {
+	OverrideBrewhouse = parseFloat($('#OverrideBrewhouse').val());
   SpargeCoeff = parseFloat($('#SpargeCoeff').val());
   BatchVol = parseFloat($('#BatchVol').val());
   GBill = parseFloat($('#GBill').val());
@@ -176,10 +186,15 @@ function updateInputs() {
   StrikeAdj = parseFloat($('#StrikeAdj').val());
   LossFermTrub = parseFloat($('#LossFermTrub').val());
   MashThickness = parseFloat($('#MashThickness').val());
+  MAGPot = parseFloat($('#MAGPot').val());
+  Style = parseFloat($('#Style').val());
+   Brewday = parseFloat($('#Brewday').val());
+ 
 
   if (radio == 'imperial') {
     if (preradio == 'metric') {
       BatchVol = BatchVol * 0.264172052358148;
+	  BatchVol = BatchVol.toFixed(2);
 	  PotSize = PotSize * 0.264172052358148;
 		PotSize = PotSize.toFixed(2);
 		KettleID = KettleID * 0.393700787401575;
@@ -379,9 +394,13 @@ function updateInputs() {
   byId('Gabs').value = Gabs;
   byId('Habs').value = Habs;
   byId('MashThickness').value = MashThickness;
+  byId('MAGPot').value = MAGPot;
+  byId('OverrideBrewhouse').value = OverrideBrewhouse;
+  
   updateCalc();
 }
 
+//UpdateDisplay is used to convert unit labels, and to update input variable cells where the value is changed via a datastring import/load, or via a function, or changed dynamically. 
 
 function updateDisplay() {
   byId('Unit_BatchVol').innerHTML = Volumes;
@@ -429,7 +448,6 @@ function updateDisplay() {
   byId('Unit_LossTot').innerHTML = Units_LossTot;
   byId('Unit_MTrub_Volume').innerHTML = Units_MTrub_Volume;
   byId('Unit_MashThickness').innerHTML = Units_MashThickness;
-    $('#DataName').text(Saved);
   $('#WaterTot').text(WaterTot.toFixed(2));
   $('#YeastPitch').text(YeastPitch.toFixed(0));
   $('#MeasConv').text(MeasConv.toFixed(1));
@@ -437,9 +455,9 @@ function updateDisplay() {
   $('#MeasMashSugarWT').text(MeasMashSugarWT.toFixed(1));
   $('#MeasSecRunSG').text(MeasMashWortWT.toFixed(1));
   $('#MeasMashEff').text(MeasMashEff.toFixed(1));
-  $('#MeasPostSG').text(MeasPostSG.toFixed(4));
-  $('#MeasMashGrav2').text(MeasMashGrav2.toFixed(4));
-  $('#MeasSecRunSG').text(MeasSecRunSG.toFixed(4));
+  $('#MeasPostSG').text(MeasPostSG.toFixed(3));
+  $('#MeasMashGrav2').text(MeasMashGrav2.toFixed(3));
+  $('#MeasSecRunSG').text(MeasSecRunSG.toFixed(3));
   $('#MeasPrebSugarWT').text(MeasPrebSugarWT.toFixed(4));
   $('#MeasSecRunPlato').text(MeasSecRunPlato.toFixed(4));
   $('#MeasGabs').text(MeasGabs.toFixed(3));
@@ -489,7 +507,7 @@ function updateDisplay() {
   $('#MAGEstConv').text(MAGEstConv.toFixed(2));
   $('#MAGRunRatio').text(MAGRunRatio.toFixed(2));
   $('#SGSuccrose').text(SGSuccrose.toFixed(2));
-  $('#MeasPrebGrav2').text(MeasPrebGrav2.toFixed(4));
+  $('#MeasPrebGrav2').text(MeasPrebGrav2.toFixed(3));
   $('#MAGDryG').text(MAGDryG.toFixed(2));
   $('#MAGVolWater').text(MAGVolWater.toFixed(2));
   $('#MAGWtWater').text(MAGWtWater.toFixed(2));
@@ -519,8 +537,8 @@ function updateDisplay() {
   $('#TrueAbs2').text(TrueAbs2.toFixed(3));
   $('#RCSTot').text(RCSTot.toFixed(2));
   $('#EstLauterEff').text(EstLauterEff.toFixed(1));
-    $('#EstSpargeEff').text(EstSpargeEff.toFixed(1));
-	    $('#MeasuredSpargeEfficiency').text(MeasuredSpargeEfficiency.toFixed(1));
+  $('#EstSpargeEff').text(EstSpargeEff.toFixed(1));
+  $('#MeasuredSpargeEfficiency').text(MeasuredSpargeEfficiency.toFixed(1));
   $('#EstMashEff').text(EstMashEff.toFixed(1));
   $('#PlatoPre').text(PlatoPre.toFixed(3));
   $('#SGPre').text(SGPre.toFixed(3));
@@ -530,17 +548,32 @@ function updateDisplay() {
   $('#SugarTot').text(SugarTot.toFixed(4));
   $('#RetSF').text(RetSF.toFixed(4));
   $('#OGDifference').text(OGDifference.toFixed(4));
+  $('#OverrideBrewhouse').text(OverrideBrewhouse.toFixed(2));
+  $('#BeerName').text(BeerName);
+  $('#Style').text(Style);
+  $('#TargetOG').text(TargetOG);
+  $('#SpargeCoeff').text(SpargeCoeff.toFixed(0));
+  $('#MeasPrebGrav').text(MeasPrebGrav.toFixed(3));
+  $('#MeasMashGrav').text(MeasMashGrav.toFixed(3));
+  $('#MeasPrebVolume').text(MeasPrebVolume.toFixed(2));
+  $('#YeastPitch').text(YeastPitch.toFixed(0));
+  $('#YeastRate').text(YeastRate.toFixed(2));
+    $('#StarterSize').text(StarterSize.toFixed(1));
+
+
+  
 }
 
   function MashAnalysis(){
+	  
   //initial analysis for no sparge setup
+  
  var SpargeCoeff = parseFloat($('#SpargeCoeff').val());
 SavedVolSparge = SecRun;
 
 VolStart2 = WaterTot;
   FirstRun2 = (VolStart2 - LossGrain - LossTunTrub) * MashAdj;
-  MAGPot = 37.212;
-  MAGMoist = 0.04;
+  MAGMoist = 0.00;
   SGSuccrose = 46.173;
   MAGDryG = (1 - MAGMoist) * GBill;
   ExPot = MAGPot / SGSuccrose;
@@ -557,8 +590,7 @@ VolStart2 = WaterTot;
   VolSparge = (VolPre/1.022494888)/ 2;
   VolStart2 = (WaterTot - VolSparge);
   FirstRun2 = (VolStart2 - LossGrain - LossTunTrub) * MashAdj;
-  MAGPot = 37.212;
-  MAGMoist = 0.04;
+  MAGMoist = 0.00;
   SGSuccrose = 46.173;
   MAGDryG = (1 - MAGMoist) * GBill;
   ExPot = MAGPot / SGSuccrose;
@@ -581,14 +613,13 @@ VolStart2 = WaterTot;
   RCSTot = RS1 + RS2;
   BatchSpargeLauter = 100 * (RCSTot / MSW1);
   LauterGained = BatchSpargeLauter - NoSpargeLauter;
+  
   //final analysis on input variables
 
   VolSparge = SavedVolSparge;
 
   SecRun = VolSparge;
-  MAGPot = 37.212;
   MAGFine = 0.7797;
-  MAGMoist = 0.04;
   MAGRunRatio = Math.max(SecRun / FirstRun, 0);
   SGSuccrose = 46.173;
   MAGDryG = (1 - MAGMoist) * GBill;
@@ -646,6 +677,10 @@ VolStart2 = WaterTot;
 	}
 	
   EstMashEff = EstLauterEff * MAGEstConv / 100;
+  EstBrewhEff = VolChilled / (VolPost / 1.043841336) * EstMashEff;
+  
+  
+ 
   PlatoPre = (100 * RCSTot) / (RCSTot + RecW2 + RCWtr1);
   SGPre = 1 + (PlatoPre / (258.6 - 0.879551 * PlatoPre));
   RetSF = RetS2;
@@ -654,9 +689,12 @@ VolStart2 = WaterTot;
   PlatoPost = (100 * RCSTot) / (RCSTot + RecW2 + RCWtr1 - (BoilRate * 8.3304 * (BoilTime / 60)));
   SGPost = 1 + (PlatoPost / (258.6 - 0.879551 * PlatoPost));
   TempMashout = (TempMash * (GBill + 5 * (GBill * Gabs)) + (5 * TempSparge * VolSparge)) / (GBill + 5 * (VolSparge + (GBill * Gabs)));
+  
+  
+  //Measured gravities and efficiencies
   MeasMashPlato = -616.868 + (1111.14 * MeasMashGrav) - (630.272 * MeasMashGrav * MeasMashGrav) + (135.997 * MeasMashGrav * MeasMashGrav * MeasMashGrav);
   MeasGabs = Math.min(MeasPrebVolume, (VolStart - ((MeasPrebVolume/ 1.043841336) - VolSparge)) / GBill);
-  MeasMashWT = -((VolStart * 8.335 + (GBill * 0.04)) * MeasMashPlato) / (-100 + MeasMashPlato);
+  MeasMashWT = -((VolStart * 8.335 + (GBill * MAGMoist)) * MeasMashPlato) / (-100 + MeasMashPlato);
   MeasConv = Math.max(100 * MeasMashWT / SugarTot, 0);
   MeasPrebPlato = -616.868 + (1111.14 * MeasPrebGrav) - (630.272 * MeasPrebGrav * MeasPrebGrav) + (135.997 * MeasPrebGrav * MeasPrebGrav * MeasPrebGrav);
   MeasPrebWortWT = MeasPrebGrav * (MeasPrebVolume / 1.043841336) * 8.3304;
@@ -667,7 +705,7 @@ VolStart2 = WaterTot;
   MeasLautWT = Math.max(0, MeasPrebWT - MeasMashWT);
   MeasLautEff = 100 * MeasPrebWT / EstConvWt;
   MeasuredSpargeEfficiency = Math.max(0, 100 * ((MeasLautEff - NoSpargeLauter) / LauterGained));
-  EstBrewhEff = VolChilled / (VolPost / 1.043841336) * EstMashEff;
+
   MeasBrewhEff = VolChilled / (VolPost / 1.043841336) * MeasMashEff;
   MeasPrebGrav2 = MeasPrebGrav;
   MeasMashGrav2 = MeasMashGrav;
@@ -681,14 +719,22 @@ VolStart2 = WaterTot;
   MeasPostPlato = -616.868 + (1111.14 * MeasPostSG) - (630.272 * MeasPostSG * MeasPostSG) + (135.997 * MeasPostSG * MeasPostSG * MeasPostSG);
 
   
-  
 
   if (MeasPostSG > 1) {
-    YeastPitch = .75 * 3785.41 * BatchVol * MeasPostPlato / 1000;
+    YeastPitch = YeastRate * 3785.41 * BatchVol * MeasPostPlato / 1000;
   } else {
-    YeastPitch = .75 * 3785.41 * BatchVol * PlatoPost / 1000;
+    YeastPitch = YeastRate * 3785.41 * BatchVol * PlatoPost / 1000;
   }
-  
+ 
+	StarterSize = (YeastPitch - 75 ) / 141;
+	
+	
+  	if (OverrideBrewhouse != EstBrewhEff)
+		{
+		SGPost = (1+(((OverrideBrewhouse / 100) * MAGPot * GBill )/ VolChilled)/1000);
+		SGPre = 1+((((SGPost - 1)* 1000) * VolChilled)/(6.94/1.043841336))/1000;
+		}
+		
   }
 
 
@@ -698,11 +744,12 @@ function updateCalc() {
   if (!allFieldsValid()) {
     return;
   }
-  
-   SpargeCoeff = parseFloat($('#SpargeCoeff').val());
+  //Input Variables are taken here
+  SpargeCoeff = parseFloat($('#SpargeCoeff').val());
   TargetOG = parseFloat($('#TargetOG').val());
   BatchVol = parseFloat($('#BatchVol').val());
   GBill = parseFloat($('#GBill').val());
+  MAGPot = parseFloat($('#MAGPot').val());
   MeasMashGrav = parseFloat($('#MeasMashGrav').val());
   MeasPrebGrav = parseFloat($('#MeasPrebGrav').val());
   MAGEstConv = parseFloat($('#MAGEstConv').val());
@@ -719,13 +766,16 @@ function updateCalc() {
   PotSize = parseFloat($('#PotSize').val());
   KettleID = parseFloat($('#KettleID').val());
   LossTrub = parseFloat($('#LossTrub').val());
-  TargetOG = parseFloat($('#TargetOG').val());
   Gabs = parseFloat($('#Gabs').val());
   Habs = parseFloat($('#Habs').val());
   MashAdj = parseFloat($('#MashAdj').val());
   StrikeAdj = parseFloat($('#StrikeAdj').val());
   LossFermTrub = parseFloat($('#LossFermTrub').val());
   MashThickness = parseFloat($('#MashThickness').val());
+  OverrideBrewhouse = parseFloat($('#OverrideBrewhouse').val());
+  YeastRate = parseFloat($('#YeastRate').val());
+  
+  
   
     //convert metric to imperial
   
@@ -752,7 +802,7 @@ function updateCalc() {
   }
  
   
-  //Make a new sparge input set mashThicknes to zero
+  //Make a new sparge input set mashThickness to zero
   if (PreviousSparge !== VolSparge)
     { if (VolSparge > 0) {
      MashThickness = 0;
@@ -770,10 +820,10 @@ function updateCalc() {
     }
 	}
   HopRatio = HBill / BatchVol;
-  LossBoil = BoilTime * BoilRate / 60;
+  LossBoil = (BoilTime * BoilRate / 60) / 1.043841336;
   LossHop = HBill * Habs;
   LossGrain = GBill * Gabs;
-  LossTot = LossGrain + LossHop + LossBoil + LossTrub + LossTunTrub;
+  LossTot = LossGrain + LossHop + (LossBoil) + LossTrub + LossTunTrub;
   WaterTot = BatchVol + LossTot;
   
     MashThick = (WaterTot - VolSparge) * 4 / GBill;
@@ -789,8 +839,11 @@ function updateCalc() {
 
   VolStart = (WaterTot - VolSparge);
   TempStrike = TempMash + (0.05 * GBill / VolStart) * (TempMash - TempGrain);
-  MashAdj = 1.022494888;
-  StrikeAdj = 1.025641026;
+  MashAdj = ( 4.13643 * Math.pow(10,-16) * Math.pow($('#TempMash').val(),6) - 4.05998 * Math.pow(10,-13) * Math.pow($('#TempMash').val(),5) + 1.61536 * Math.pow(10,-10) * Math.pow($('#TempMash').val(),4) - 3.44854 * Math.pow(10,-8) * Math.pow($('#TempMash').val(),3) + 0.00000532769 * Math.pow($('#TempMash').val(),2) - 0.000292675 * $('#TempMash').val() + 1.00493);
+  
+  //1.022494888;
+  StrikeAdj = ( 4.13643 * Math.pow(10,-16) * Math.pow($('#TempStrike').val(),6) - 4.05998 * Math.pow(10,-13) * Math.pow($('#TempStrike').val(),5) + 1.61536 * Math.pow(10,-10) * Math.pow($('#TempStrike').val(),4) - 3.44854 * Math.pow(10,-8) * Math.pow($('#TempStrike').val(),3) + 0.00000532769 * Math.pow($('#TempStrike').val(),2) - 0.000292675 * $('#TempStrike').val() + 1.00493);
+  
   VolStrike = VolStart * StrikeAdj;
   VolMash = (VolStart + GBill * 0.08) * MashAdj;
   VolPre = (WaterTot - LossGrain - LossTunTrub) * 1.043841336;
@@ -889,6 +942,7 @@ function updateCalc() {
   OGDifference = TargetOG - SGPost;
   updateDisplay();
   preradio = radio;
+
 }
 
 
@@ -903,9 +957,15 @@ function AutoScale() {
     byId('GBill').value = GBill;
     updateCalc();
   } 
-    //small Jumps UP.
-  while (OGDifference > 0.00001) {
+    //medium Jumps UP.
+  while (OGDifference > 0.001) {
     GBill = GBill + 0.01;
+    byId('GBill').value = GBill;
+    updateCalc();
+  }
+      //small Jumps UP.
+  while (OGDifference > 0.0001) {
+    GBill = GBill + 0.001;
     byId('GBill').value = GBill;
     updateCalc();
   }
@@ -919,17 +979,23 @@ function AutoScale() {
     byId('GBill').value = GBill;
     updateCalc();
   }
-      //small Jumps down.
-    while (OGDifference < -0.00001) {
+      //medium Jumps down.
+    while (OGDifference < -0.001) {
     GBill = GBill - 0.01;
     byId('GBill').value = GBill;
     updateCalc();
   }
+        //small Jumps down.
+    while (OGDifference < -0.0001) {
+    GBill = GBill - 0.001;
+    byId('GBill').value = GBill;
+    updateCalc();
+  }
     }//close downward search
+	  GBill = GBill.toFixed(3);
   byId('GBill').value = GBill;
-  GBill = GBill.toFixed(3);
   OGDifference=0.00000001;
-	  $('#OGDifference').text(OGDifference.toFixed(3));
+	$('#OGDifference').text(OGDifference.toFixed(3));
 }
 function SaveData() {
 CreateSaved();
@@ -959,8 +1025,17 @@ LossTrub = byId('LossTrub').value;
 LossFermTrub = byId('LossFermTrub').value;
 LossTunTrub = byId('LossTunTrub').value;
 MAGEstConv = byId('MAGEstConv').value;
-SavedRadio = $("input[name=units]:checked").val()
-SavedArray = [BatchVol,GBill,HBill,DHop,BoilTime,TempMash,TempGrain,TempSparge,VolSparge,Gabs,Habs,BoilRate,PotSize,KettleID,LossTrub,LossFermTrub,LossTunTrub,MAGEstConv,SavedRadio,MashThickness];
+SavedRadio = $("input[name=units]:checked").val();
+TargetOG = byId('TargetOG').value;
+Style = byId('Style').value;
+Brewday = byId('Brewday').value;
+MAGPot = byId('MAGPot').value;
+SpargeCoeff = byId('SpargeCoeff').value;
+MeasPrebVolume = byId('MeasPrebVolume').value;
+MeasMashGrav = byId('MeasMashGrav').value;
+MeasPrebGrav = byId('MeasPrebGrav').value;
+
+SavedArray = [BatchVol,GBill,HBill,DHop,BoilTime,TempMash,TempGrain,TempSparge,VolSparge,Gabs,Habs,BoilRate,PotSize,KettleID,LossTrub,LossFermTrub,LossTunTrub,MAGEstConv,SavedRadio,MashThickness,BeerName,Style,TargetOG,Brewday,MAGPot,SpargeCoeff,MeasPrebVolume,MeasMashGrav,MeasPrebGrav];
 Saved = SavedArray.join();
 updateCalc();
 }
@@ -968,16 +1043,17 @@ updateCalc();
 function ExportData()
 {
 CreateSaved();
-	alert(Saved);
+byId('DataName').value = "" + Saved;
 }
 
 var ImportData = function ImportData() {
 
 DataName = byId('DataName').value;
 //Check SavedData 
-if (DataName.length <50)
+if (DataName.length <60)
 {
 //do nothing
+  byId('DataName').value = "Import Failed, paste data string here to import.";
 }
 else {
 
@@ -998,15 +1074,26 @@ else {
   byId('PotSize').value = SavedArray[12];
   byId('KettleID').value = SavedArray[13];
   byId('LossTrub').value = SavedArray[14];
-  byId('LossTunTrub').value = SavedArray[15];
-  byId('LossFermTrub').value = SavedArray[16];
+  byId('LossTunTrub').value = SavedArray[16];
+  byId('LossFermTrub').value = SavedArray[15];
   byId('MAGEstConv').value = SavedArray[17];
   byId('MashThickness').value = SavedArray[19];
   SavedRadio = SavedArray[18];
   document.getElementById(SavedRadio).checked = true;
-  byId('MashThickness').value = SavedArray[19];
+  byId('BeerName').value = SavedArray[20];
+  byId('Style').value = SavedArray[21];
+  byId('TargetOG').value = SavedArray[22];
+  byId('Brewday').value = SavedArray[23];
+  byId('MAGPot').value = SavedArray[24];
+  byId('SpargeCoeff').value = SavedArray[25];
+  byId('MeasPrebVolume').value = SavedArray[26];
+  byId('MeasMashGrav').value = SavedArray[27];
+  byId('MeasPrebGrav').value = SavedArray[28];
   preradio=SavedRadio;
   radio = preradio;
+  
+    byId('DataName').value = "Import of " + byId('BeerName').value +" Complete";
+  
 }
   updateCalc();
 }
@@ -1015,8 +1102,50 @@ else {
 var LoadData = function LoadData() {
 
 DataName = byId('DataName').value;
- Saved = localStorage.getItem(DataName);
- SavedArray = Saved.split(",")
+ Load = localStorage.getItem(DataName);
+ CreateSaved();
+ if (Load == Saved)
+ {
+ }
+ else if (DataName == "Reset")
+ {
+  byId('BatchVol').value = 5.5;
+  byId('GBill').value = 12;
+  byId('HBill').value = 57;
+  byId('Dhop').value = 0;
+  byId('BoilTime').value = 60;
+  byId('TempMash').value = 154;
+  byId('TempGrain').value = 72;
+  byId('TempSparge').value = 168;
+  byId('VolSparge').value = 0;
+  byId('Gabs').value = 0.08;
+  byId('Habs').value = 0.0014;
+  byId('BoilRate').value = 1.2;
+  byId('PotSize').value = 9;
+  byId('KettleID').value = 13.898;
+  byId('LossTrub').value = 0;
+  byId('LossTunTrub').value = 0;
+  byId('LossFermTrub').value = 0.5;
+  byId('MAGEstConv').value = 95;
+  byId('MashThickness').value = 0;
+    SavedRadio = SavedArray[18];
+  document.getElementById(SavedRadio).checked = true;
+  radio = preradio;
+  byId('BeerName').value = "InitiAle";
+  byId('Style').value = "Stout";
+  byId('TargetOG').value = "1.060";
+  byId('Brewday').value = today;
+  byId('MAGPot').value = 33;
+  byId('SpargeCoeff').value = 100;
+  byId('MeasPrebVolume').value = VolPre;
+  byId('MeasMashGrav').value = SG1;
+  byId('MeasPrebGrav').value = SGPre;
+  
+      byId('DataName').value = "Values reset to default";
+ }
+ 
+ else {
+ SavedArray = Load.split(",")
   byId('BatchVol').value = SavedArray[0];
   byId('GBill').value = SavedArray[1];
   byId('HBill').value = SavedArray[2];
@@ -1032,15 +1161,27 @@ DataName = byId('DataName').value;
   byId('PotSize').value = SavedArray[12];
   byId('KettleID').value = SavedArray[13];
   byId('LossTrub').value = SavedArray[14];
-  byId('LossTunTrub').value = SavedArray[15];
-  byId('LossFermTrub').value = SavedArray[16];
+  byId('LossTunTrub').value = SavedArray[16];
+  byId('LossFermTrub').value = SavedArray[15];
   byId('MAGEstConv').value = SavedArray[17];
     byId('MashThickness').value = SavedArray[19];
   SavedRadio = SavedArray[18];
   document.getElementById(SavedRadio).checked = true;
-  byId('MashThickness').value = SavedArray[19];
+  radio = preradio;
+  byId('BeerName').value = SavedArray[20];
+  byId('Style').value = SavedArray[21];
+  byId('TargetOG').value = SavedArray[22];
+  byId('Brewday').value = SavedArray[23];
+  byId('MAGPot').value = SavedArray[24];
+  byId('SpargeCoeff').value = SavedArray[25];
+  byId('MeasPrebVolume').value = SavedArray[26];
+  byId('MeasMashGrav').value = SavedArray[27];
+  byId('MeasPrebGrav').value = SavedArray[28];
   preradio=SavedRadio;
   radio = preradio;
+  
+      byId('DataName').value = "Import of " + byId('BeerName').value +" Complete";
+ }
   updateCalc();
 }
 
@@ -1050,6 +1191,11 @@ function byId(id) {
 
 window.onload = LoadData;
 
+window.onload = Advanced();
+
+window.onload = updateCalc();
+
+
 function validateField(field) {
   $field = $(field);
   if ($field.val().match(/^d*(.\d+)?/)) {
@@ -1058,5 +1204,63 @@ function validateField(field) {
   }
   $field.parents('div.control-group:first').addClass('error');
   return false;
+}
+
+function Simple() {
+
+	
+$('#MAGPotToggle').hide();
+$('#TempSpargeToggle').hide();
+$('#BeerNameToggle').hide();
+$('#StyleToggle').hide();
+$('#BrewdayToggle').hide();
+$('#TargetOGToggle').hide();
+$('#YeastRateToggle').hide();
+$('#HBillToggle').hide();
+$('#DHopToggle').hide();
+$('#MiddlecolumnToggle').hide();
+$('#SimpleToggle').hide();
+$('#AdvancedToggle').show();
+
+	   
+}
+function Advanced() {
+$('#MAGPotToggle').show();
+$('#TempSpargeToggle').show();
+$('#BeerNameToggle').show();
+$('#StyleToggle').show();
+$('#BrewdayToggle').show();
+$('#TargetOGToggle').show();
+$('#YeastRateToggle').show();
+$('#HBillToggle').show();
+$('#DHopToggle').show();
+$('#SimpleToggle').show();
+$('#AdvancedToggle').hide();
+$('#MiddlecolumnToggle').show();
+
+	   
+}
+
+function BrewhouseToggle() {
+
+	
+	   byId('OverrideBrewhouse').value = EstBrewhEff.toFixed(1);;
+
+$('#BrewHouseToggle').toggle();
+updateCalc();
+}
+
+function MeasuredEffToggle() {
+byId('MeasPrebVolume').value = VolPre.toFixed(2);
+byId('MeasPrebGrav').value = SGPre.toFixed(3);
+byId('MeasMashGrav').value = SG1.toFixed(3);
+$('#MeasuredEff').toggle();
+updateCalc();
+}
+
+function YeastToggle() {
+	
+$('#BrewHouseToggle').toggle();
+updateCalc();
 }
 

@@ -1,0 +1,138 @@
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+ <title>Thermal Expansion</title>
+ <meta name="description" content="">
+ <meta name="viewport" content="width=device-width">
+ <link href="Beta10.css" type="text/css" rel="stylesheet">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+ <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+ <script type="text/javascript" src="Calc/Thermal.js"></script>
+  <script src="https://cdn.jsdelivr.net/simplestorage/0.2.1/simpleStorage.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  
+  </head>
+<body>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-60124200-2', 'auto');-  ga('send', 'pageview');
+  </script>
+  <header>
+  
+    <div class="left-column-header column3">
+      <div class="container header-container">
+        <h1><img class="logo" src="images/logo.png" alt=""></h1>
+			          <p>Standalone thermal expansion calculator.</p>
+      </div>
+
+    </div>
+
+
+  </header>
+ <div role="main">
+    <form id="calcForm" class="form-horizontal">
+     <div class="left-column column">
+        <div class="container">		  
+		  <a href="javascript:toggleDiv('Recipe');" ><h2><p></p>Recipe</h2></a>
+<div id="Recipe">
+
+          <h3>Mouseover text for input cell boxes</h3>
+          
+          <div class="control-group">
+            <label class="control-label" for="Volume" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#grain-bill')" >Volume</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="Volume" name="Volume" value="7.5" required>Gal</div>
+          </div>
+		  
+		  		            <div class="control-group">
+            <label class="control-label" for="Temp" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#grain-bill')" >Current Temperature</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="Temp" name="Temp" value="120" required> F</div>
+          </div>
+		  
+		  	            <div class="control-group">
+            <label class="control-label" for="FinalTemp" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#grain-bill')" >Final Temperature</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="FinalTemp" name="FinalTemp" value="155" required> F</div>
+          </div>
+	
+		  
+</div>		   
+
+
+    </div>
+
+        <!-- end left column -->
+      </div>
+        <div class="middle-column column">
+        <div class="container">
+	  
+	  
+
+		</div>
+        <!-- end container -->
+      </div>
+ 
+ <div class="right-column column">
+        <div class="container">
+
+          <h2>General Results</h2>
+         
+
+		  
+		            <div class="control-group">
+            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#strike-temp')"  >Room temp volume</label>
+            <div class="controls">
+              <span class="calc" id="RoomTempVolume">7.49</span>  gal
+            </div>
+          </div>
+		  
+		  		            <div class="control-group">
+            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#strike-temp')"  >Volume at boil</label>
+            <div class="controls">
+              <span class="calc" id="BoilTempVolume">7.82</span>  gal
+            </div>
+          </div>
+		  
+		  		            <div class="control-group">
+            <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#strike-temp')"  >Volume at Final Temp</label>
+            <div class="controls">
+              <span class="calc" id="FinalTempVolume">7.65</span>  gal
+            </div>
+          </div>
+		  
+		
+		  
+
+		  
+		  
+		            
+  
+  </div>
+        <!-- end container -->
+      </div>
+      <!-- end right column -->
+    </form>
+  </div>
+
+
+  
+  <footer>
+      <p>Created by <a href="http://pricelessbrewing.github.io">Pricelessbrewing</a> <p></p> 
+	  <span class="what-is"><a href="https://pricelessbrewing.github.io/BiabCalc/" target="_blank">Mash Calculator</a></span>
+<a href="javascript:toggleDiv('Credits');" ><h2><p></p>Credits</h2></a>
+   Formulas based on thermal expansion for water at varying temperature with dataset restricted to 70F to 212F for greatest accuracy for brewers. 
+
+
+
+<!--<hr/>-->
+  </footer>
+</body>
+
+</html>

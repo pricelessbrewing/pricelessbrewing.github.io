@@ -41,7 +41,7 @@ header {
   background: #3e2e21;
   clear: left;
   overflow-x:hidden;
-  width: 66%;
+  width: 33%;
 }
 
 
@@ -151,8 +151,7 @@ input[type="radio"] {
   overflow: auto;
   overflow-x: hidden;
   padding: 2em 0 3em 0;
-  width: 33%;
-  min-width:200px;
+
 }
 
 .left-column {
@@ -226,11 +225,10 @@ input:focus {
 }
 
 .left-column-header .control-group {
-  padding: 0.8em 0;
-  width: 50%;
+  width: 200%;
   float: left;
-  margin: 0;
-  display: inline-block;
+  padding: 0em 0em 0em 0em;
+  clear: both;
   color: #3e2e21;
 }
 
