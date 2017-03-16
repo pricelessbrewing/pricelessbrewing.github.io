@@ -50,9 +50,9 @@ function updateCalc() {
 
 	
 	
-		TempAdjustment =( 4.13643 * Math.pow(10,-16) * Math.pow($('#Temp').val(),6) - 4.05998 * Math.pow(10,-13) * Math.pow($('#Temp').val(),5) + 1.61536 * Math.pow(10,-10) * Math.pow($('#Temp').val(),4) - 3.44854 * Math.pow(10,-8) * Math.pow($('#Temp').val(),3) + 0.00000532769 * Math.pow($('#Temp').val(),2) - 0.000292675 * $('#Temp').val() + 1.00493);
+		TempAdjustment =( 4.13643 * Math.pow(10,-16) * Math.pow($('#Temp').val(),6) - 4.05998 * Math.pow(10,-13) * Math.pow($('#Temp').val(),5) + 1.61536 * Math.pow(10,-10) * Math.pow($('#Temp').val(),4) - 3.44854 * Math.pow(10,-8) * Math.pow($('#Temp').val(),3) + 0.00000532769 * Math.pow($('#Temp').val(),2) - 0.000292675 * $('#Temp').val() + 1.00493)/1.0019647220067072;
 		
-		FinalTempAdjustment = ( 4.13643 * Math.pow(10,-16) * Math.pow($('#FinalTemp').val(),6) - 4.05998 * Math.pow(10,-13) * Math.pow($('#FinalTemp').val(),5) + 1.61536 * Math.pow(10,-10) * Math.pow($('#FinalTemp').val(),4) - 3.44854 * Math.pow(10,-8) * Math.pow($('#FinalTemp').val(),3) + 0.00000532769 * Math.pow($('#FinalTemp').val(),2) - 0.000292675 * $('#FinalTemp').val() + 1.00493);
+		FinalTempAdjustment = ( 4.13643 * Math.pow(10,-16) * Math.pow($('#FinalTemp').val(),6) - 4.05998 * Math.pow(10,-13) * Math.pow($('#FinalTemp').val(),5) + 1.61536 * Math.pow(10,-10) * Math.pow($('#FinalTemp').val(),4) - 3.44854 * Math.pow(10,-8) * Math.pow($('#FinalTemp').val(),3) + 0.00000532769 * Math.pow($('#FinalTemp').val(),2) - 0.000292675 * $('#FinalTemp').val() + 1.00493)/1.0019647220067072;
 		
 		
 			RoomTempVolume = Volume / TempAdjustment;
