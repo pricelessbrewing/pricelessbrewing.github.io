@@ -536,7 +536,7 @@ function updateDisplay() {
   byId('Unit_MTrub_Volume').innerHTML = Units_MTrub_Volume;
   byId('Unit_MashThickness').innerHTML = Units_MashThickness;
   $('#WaterTot').text(WaterTot.toFixed(2));
-  $('#MashThick').text(MashThickness);
+  $('#MashThick').text(MashThickness.toFixed(3));
   $('#VolSparge').text(VolSparge);
   $('#MashThickness').text(MashThickness);
   $('#YeastPitch').text(YeastPitch.toFixed(0));
@@ -776,26 +776,14 @@ data.addColumn('number', 'NoSparge Brewhouse');
 
   // load data
   for (var i = 0; i < LauterArray.length; i++) {
-    var row = [
-	GBillArray[i], 
-	LauterArray[i],
-	LauterNoSpargeArray[i], 
-	MashArray[i], 
-	MashNoSpargeArray[i], 
-	BrewhouseArray[i], 
-	BrewhouseNoSpargeArray[i]];
+    var row = [GBillArray[i], LauterArray[i],LauterNoSpargeArray[i], MashArray[i], MashNoSpargeArray[i], BrewhouseArray[i], BrewhouseNoSpargeArray[i]];
     data.addRow(row);
   }
 
   var options = {
 	  
 title:'Efficiency vs Grain Bill Curves specific to you',
-chartArea:{
-    left:'10%',
-    top: 20,
-	bottom: 20,
-    width: '70%',
-	height: '80%',
+chartArea:{left:'10%',top: 20,bottom: 20,width: '70%',height: '80%',
   }
   }
  //chartArea: {left: 50}
