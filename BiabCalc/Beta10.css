@@ -103,6 +103,8 @@ footer a:visited {
   text-decoration: none;
 }
 
+
+
 footer a:hover {
   border-bottom: 1px solid white;
 }
@@ -159,18 +161,7 @@ input[type="radio"] {
   clear: left;
 }
 
-.middle-column {
-  background: #89cff0;
-  padding-left: .5%;
-  padding-right: .5%;
-}
 
-.middle-column-header {
-  background: #89cff0;
-  padding-left: .5%;
-  padding-right: .5%;
-  width: 50%;
-}
 
 h1,
 h2,
@@ -200,6 +191,7 @@ label {
   font-weight: 700;
 }
 
+
 input {
   margin-right: 5px;
   margin-top: 0.2em;
@@ -209,6 +201,16 @@ input {
   width: 45%;
   outline: none;
   border: 2px solid #f1e4a7;
+}
+input[name="paypal"] {
+  margin-right: 0px;
+  margin-top: 0em;
+  padding: 0;
+  background: #fffded;
+  width: 8%;
+  outline: none;
+   border: 0;
+
 }
 
 input:focus {
@@ -257,8 +259,26 @@ input:focus {
   margin-right: 0;
 }
 
+.middle-column {
+	width: 30%;
+  background: #89cff0;
+  padding-left: .5%;
+  padding-right: .5%;
+  display: block;
+  float: left;
+  overflow: auto;
+  padding: 2em 0 em 0;
+}
+
+.middle-column-header {
+  background: #89cff0;
+  padding-left: .5%;
+  padding-right: .5%;
+  width: 50%;
+}
+
 .middle-column .control-group {
- #93321f;
+
   padding: 0.893em 0;
   width: 100%;
   float: left;
@@ -275,6 +295,27 @@ input:focus {
   margin: 0;
   display: inline-block;
   color: #6633cc;
+}
+
+.middle-column .control-group3 {
+  border-top: 1px solid #93321f;
+  padding: 0.3em 0;
+  width: 50%;
+  float: left;
+  margin: 0;
+  display: inline-block;
+  color: #6633cc;
+}
+
+.middle-column .label {
+  width: 10%;
+  font-size: 0.9em;
+  display: inline-block;
+  float: left;
+  clear: both;
+  margin-right: 5%;
+  color: #6633cc;
+  padding-left: 0em;
 }
 
 .middle-column-header .control-group {
@@ -304,7 +345,7 @@ input:focus {
 textarea{  
   display:block;
   background-color: #802e1d;
-  overflow:hidden;
+  overflow:auto;
   padding:10px;
   width:90%;
   margin:50px auto;
@@ -312,8 +353,9 @@ textarea{
   border:6px solid #556677;
   font-family:Raleway, sans-serif;
   font-size: 1em;
-  resize: none;
   color:#b4af9a;
+  resize: none;
+
 }
 
 .right-column-header .control-group {
@@ -331,14 +373,6 @@ textarea{
   border-bottom: 1px solid #93321f;
 }
 
-.middle-column label {
-  width: 65%;
-  font-size: 0.9em;
-  display: inline-block;
-  float: left;
-  clear: both;
-  margin-right: 5%;
-}
 
 .right-column label {
   width: 65%;
@@ -448,6 +482,13 @@ dir {
 .units .active:hover {
   color: #D76711;
 }
+
+ .chart {
+  padding: 0 0 0 0;
+
+}    
+	   
+       
 
 @media all and (max-width: 1080px) {
   .left-column,
