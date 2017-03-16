@@ -1011,7 +1011,8 @@ VolStart2 = WaterTot;
 	//Gravity points
 	
 
-		
+GBillArrayIndex = (GBill-5)/0.1;
+GBillArrayIndex = GBillArrayIndex.toFixed(0);
 	MashSG =  ((1+((100*MAGPot*GBill)/(MAGPot*GBill+SGSuccrose*8.3304*MeasuredStrikeVol)/(258.6-227.1*((100*MAGPot*GBill)/(MAGPot*GBill+SGSuccrose*8.3304*MeasuredStrikeVol)/258.2)))));
 	MashWortWeight =(((MAGPot*GBill)/SGSuccrose)+(8.3304*MeasuredStrikeVol));
 	MashWortVolume = MashWortWeight/(8.3304*MashSG);
@@ -1041,7 +1042,7 @@ VolStart2 = WaterTot;
 
 		
 		
-	GBillArrayIndex = (GBill-5)/0.1;
+
 	
 					if (MeasuredMash > 0 && MeasuredChilledGrav > 1.001 && MeasuredChilledTempVol > 0.1) {
 	ChilledGravPoints = ((MeasuredChilledGrav-1)*1000)*MeasuredChilledTempVol;
