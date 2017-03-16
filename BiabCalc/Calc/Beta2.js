@@ -783,7 +783,7 @@ data.addColumn('number', 'NoSparge Brewhouse');
   var options = {
 	  
 title:'Efficiency vs Grain Bill',
-chartArea:{left:'10%',top: 20,bottom: 20,width: '70%',height: '100%',
+chartArea:{left:'10%',top: 20,bottom: 40,width: '70%',height: '80%',
 },
         hAxis: {
           title: 'Grain Bill (Lb)',
