@@ -16,11 +16,12 @@ $(function() {
             "That sounds fucking terrible",
             "I don't wanna fucking brew that",
             "Sounds like catpiss",
+			"Do I look like I live on the west coast?",
             "Ya'll mothefuckers need hops",
             "Fuck that idea"
         ],
         template: [
-            "@adjective @style made with a grist of @basegrain, @flakedgrain, @specialtygrain, and a hop bill of  @cheaterhop, @cheaterhop, and @hop",
+            "@adjective @style made with @yeast, a grist of @basegrain, @grainweight of @flakedgrain, and @grainweight of @specialtygrain. A hop bill of @weight at @time of @cheaterhop, @cheaterhop, and @hop. Dry hop @day with @weight @cheaterhop, @cheaterhop, and @hop.",
         ],
         style: [
             "NE IPA",
@@ -43,6 +44,7 @@ $(function() {
             "huell melon",
             "lemon drop",
              "Mandarina bavaria",
+			 "Idaho 007",
              "mosaic",
             "nelson sauvin",
             "eureka",
@@ -51,6 +53,7 @@ $(function() {
             "wai-iti",
             "waimea",
             "wakatu",
+			"azacca",
             "zythos"
         ],
 		        hop: [
@@ -113,6 +116,31 @@ $(function() {
             "abbey malt",
             "chit malt",
         ],
+		
+		        grainweight: [
+            "10%",
+			"5%",
+			"15%",
+			"20%",
+			"25%",
+			"30%",
+        ],
+		
+				yeast: [
+            "wlp 001",
+            "wlp 002",
+			"wlp 007",
+			"wlp 008",
+			"wlp 028",
+            "wyeast 1028",
+			"wyeast 1056",
+			"wyeast 1098",
+			"wyeast 1318",
+			"wyeast 1968",
+			"conan",
+			"wlp 644",
+
+        ],
 		grain: [
             "2 row",
             "marris otter",
@@ -137,7 +165,28 @@ $(function() {
             "abbey malt",
             "chit malt",
             "torrefied wheat"
-        ]
+        ],
+		        time: [
+            "15 min",
+			 "10 min",
+			"5 min",
+			"0 min",
+            "whirlpool"
+        ],
+			 day: [
+			 "day 3",
+			 "day 4",
+            "day 2"
+        ],
+			weight: [
+            "1 oz each ",
+			 "2 oz each ",
+			"3 oz each ",
+			"4 oz each ",
+			"a whole god damn lb each"
+        ],
+		
+		
     });
 
     // Populate using a JSON file

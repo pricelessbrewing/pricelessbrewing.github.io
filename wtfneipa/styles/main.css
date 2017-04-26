@@ -11,8 +11,8 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
-	height: 100%;
-	background-image: url("http://motherboard-images.vice.com/content-images/article/no-id/1453914694026148.jpg");
+    height: auto;
+	background-image: url("https://i1.wp.com/www.fivebladesbrewing.com/wp-content/uploads/2016/06/totes-wide.jpg?resize=1024%2C679&ssl=1");
 	background-size: cover;
 }
 
