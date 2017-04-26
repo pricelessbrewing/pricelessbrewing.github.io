@@ -485,6 +485,8 @@ dir {
 
  .chart {
   padding: 0 0 0 0;
+      width: auto;
+    margin: 0 auto !important;
 
 }    
 	   

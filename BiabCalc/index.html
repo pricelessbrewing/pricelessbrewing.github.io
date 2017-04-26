@@ -49,7 +49,7 @@
 
           <h1><img class="logo" src="images/logo.png" alt=""></h1>
           <p>All the numbers you need on brew day.
-            <br><a href="https://pricelessbrewing.github.io/calc/Mash-Calculator-Update-V2/#v21-import--export-functions">Version 2.4</a></p>
+            <br><a href="https://pricelessbrewing.github.io/calc/Mash-Calculator-Update-V2/#v21-import--export-functions">Version 2.5</a></p>
 
 
         </div>
@@ -186,7 +186,7 @@
               <div id="HBillToggle" class="control-group">
                 <label class="control-label" for="HBill" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#hop-bill')">Hop Bill</label>
                 <div class="controls">
-                  <input type="text" class="input-mini" id="HBill" title="How many hops are being added during the boil? Affects Post boil volume" name="HBill" value="57" required><span id="Unit_Hop">gram</span></div>
+                  <input type="text" class="input-mini" id="HBill" title="How many hops are being added during the boil? Affects Post boil volume" name="HBill" value="0" required><span id="Unit_Hop">gram</span></div>
               </div>
               <div class="control-group">
                 <div id="DHopToggle" class="controls">
@@ -654,12 +654,6 @@
               </div>
             </div>
             <div class="control-group">
-              <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#mashthickness')">Mash Thickness</label>
-              <div class="controls">
-                <span class="calc" id="MashThick">1.58</span> <span id="Unit_MashThickness2">Qt/Lb</span>
-              </div>
-            </div>
-            <div class="control-group">
               <label class="control-label" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#total-volume-loss')"> Total volume loss</label>
               <div class="controls">
                 <span class="calc" id="LossTot">2.24</span> <span id="Unit_LossTot">Gallon</span>
@@ -825,8 +819,7 @@
                 <span class="calc" id="MeasuredBrewhouseFeedback">9  </span> / 10
               </div>
             </div>
-			            <h2>Efficiency Estimation Curves</h2>
-		 <div class="chart" id="curve_chart" style="width: 100%; height: 250px"></div>
+
 
 		 
             <textarea id="FeedbackText" class='autoExpand' rows='8' data-min-rows='8' placeholder="Placeholder for dynamic efficiency troubleshooting suggestions and links"></textarea>
@@ -838,9 +831,10 @@
       </div>
 	 
 
-
-
-	  
+		          <div id="EfficiencyChartToggle" style="display:none;">
+			            <h2 align="center">Efficiency Estimation vs Grain Bill Curves</h2>
+		 <div class="chart" id="curve_chart" style="width: 50%; height: 50%" ></div>
+	  </div>
 	  
       <footer>
         <p><span class="what-is">What is <a href="http://www.homebrewtalk.com/wiki/index.php/Brew_in_a_Bag">brew in a bag</a>?</span></p>

@@ -1,0 +1,53 @@
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+ <title>Thermal Expansion</title>
+ <meta name="description" content="">
+ <meta name="viewport" content="width=device-width">
+ <link href="Beta10.css" type="text/css" rel="stylesheet">
+ <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+ <script type="text/javascript" src="Calc/Testing.js"></script>
+  <script src="https://cdn.jsdelivr.net/simplestorage/0.2.1/simpleStorage.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  
+  </head>
+<body>
+
+  <header>
+  
+    <div class="left-column-header column3">
+      <div class="container header-container">
+
+      </div>
+
+    </div>
+
+
+  </header>
+ <div role="main">
+    <form id="calcForm" class="form-horizontal">
+    
+          <div class="control-group">
+            <label class="control-label" for="MashThickness" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#grain-bill')" >Mash Thickness</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="MashThickness" name="MashThickness" value="7.5" required>Gal</div>
+          </div>
+		  		            <div class="control-group">
+            <label class="control-label" for="VolSparge" onclick="return popitup('http://pricelessbrewing.github.io/calc/Mash-Calculator-How-To/#grain-bill')" >Sparge Volume</label>
+            <div class="controls">
+              <input type="text" class="input-mini" id="VolSparge" name="VolSparge" value="120" required> F</div>
+          </div>
+
+      <!-- end right column -->
+    </form>
+  </div>
+
+  <footer>
+
+  </footer>
+</body>
+
+</html>

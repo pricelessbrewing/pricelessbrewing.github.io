@@ -1,0 +1,64 @@
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <title>Priceless Brew in a Bag Calculator</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link href="Beta10.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="Calc/Beta2.js"></script>
+    <script src="https://cdn.jsdelivr.net/simplestorage/0.2.1/simpleStorage.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <header>
+    </header>
+    <div role="main">
+      <form id="calcForm" class="form-horizontal">
+        <div class="left-column column">
+          <div class="container">
+
+
+            
+            <div id="ProcessToggle">
+              <a><h2><p></p>Process</h2></a>
+              <div id="Process">
+
+
+                <div class="control-group">
+                  <label class="control-label" for="MashThickness">Mash Thickness</label>
+                  <div class="controls">
+                    <input type="text" class="input-mini" title="I prefer a thickness around 1.75 for consistently high mash efficiency, prefernces vary with each brewer. Overrides Sparge volume, set to 0 to use custom sparge volume instead." id="MashThickness" name="MashThickness"
+                    value="2.56" required><span>Qt/Lb</span></div>
+                </div>
+				
+				
+                <div  class="control-group">
+                  <label class="control-label" for="VolSparge">Sparging Volume </label>
+                  <div class="controls">
+                    <input type="text" class="input-mini" id="VolSparge" title="Volume as measured at Sparge Temp Volume" name="VolSparge" value="0" required><span>Gal</span></div>
+                </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+  
+
+      </form>
+      </div>
+      <footer>
+      </footer>
+  </body>
+
+</html>
