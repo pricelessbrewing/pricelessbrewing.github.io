@@ -19,7 +19,7 @@ HBT: PricelessBrewing
 
 Reddit: Pricelessbrew
 
-Github: Pricelssbrewing
+Github: Pricelessbrewing
 
 Twitter: Priceless_mark
 
