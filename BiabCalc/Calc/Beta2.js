@@ -1406,22 +1406,22 @@ ChangeInMashThickness();
 	VolStart = WaterTot - VolSparge;
 	TempStrike = TempMash + 0.05 * GBill / VolStart * (TempMash - TempGrain);
 	MashAdj =
-		4.13643 * Math.pow(10, -16) * Math.pow($("#TempMash").val(), 6) -
-		4.05998 * Math.pow(10, -13) * Math.pow($("#TempMash").val(), 5) +
-		1.61536 * Math.pow(10, -10) * Math.pow($("#TempMash").val(), 4) -
-		3.44854 * Math.pow(10, -8) * Math.pow($("#TempMash").val(), 3) +
-		0.00000532769 * Math.pow($("#TempMash").val(), 2) -
-		0.000292675 * $("#TempMash").val() +
+		4.13643 * Math.pow(10, -16) * Math.pow(TempMash, 6) -
+		4.05998 * Math.pow(10, -13) * Math.pow(TempMash, 5) +
+		1.61536 * Math.pow(10, -10) * Math.pow(TempMash, 4) -
+		3.44854 * Math.pow(10, -8) * Math.pow(TempMash, 3) +
+		0.00000532769 * Math.pow(TempMash, 2) -
+		0.000292675 * TempMash +
 		1.00493;
 
 	//1.022494888;
 	StrikeAdj =
-		4.13643 * Math.pow(10, -16) * Math.pow($("#TempStrike").val(), 6) -
-		4.05998 * Math.pow(10, -13) * Math.pow($("#TempStrike").val(), 5) +
-		1.61536 * Math.pow(10, -10) * Math.pow($("#TempStrike").val(), 4) -
-		3.44854 * Math.pow(10, -8) * Math.pow($("#TempStrike").val(), 3) +
-		0.00000532769 * Math.pow($("#TempStrike").val(), 2) -
-		0.000292675 * $("#TempStrike").val() +
+		4.13643 * Math.pow(10, -16) * Math.pow(TempStrike, 6) -
+		4.05998 * Math.pow(10, -13) * Math.pow(TempStrike, 5) +
+		1.61536 * Math.pow(10, -10) * Math.pow(TempStrike, 4) -
+		3.44854 * Math.pow(10, -8) * Math.pow(TempStrike, 3) +
+		0.00000532769 * Math.pow(TempStrike, 2) -
+		0.000292675 * TempStrike +
 		1.00493;
 
 	VolStrike = VolStart * StrikeAdj;
